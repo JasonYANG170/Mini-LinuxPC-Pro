@@ -1,0 +1,1997 @@
+Package: cuda-drivers-fabricmanager-450
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+Description-en: Meta-package for FM and Driver
+ Convenience meta-package for installing fabricmanager and the cuda-drivers
+ meta-package simultaneously while keeping version equivalence. This meta-
+ package is branch-specific.
+
+Package: cuda-drivers-fabricmanager-460
+Description-md5: 9eb2a396b56a6795e2a5e70ccb87e231
+Description-en: Transitional package for cuda-drivers-fabricmanager-510
+ This is a transitional package for cuda-drivers-fabricmanager-510, and can be
+ safely removed after the installation is complete.
+
+Package: cuda-drivers-fabricmanager-470
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+Description-en: Meta-package for FM and Driver
+ Convenience meta-package for installing fabricmanager and the cuda-drivers
+ meta-package simultaneously while keeping version equivalence. This meta-
+ package is branch-specific.
+
+Package: cuda-drivers-fabricmanager-510
+Description-md5: c042110895aa3a6abc431d431fc85bed
+Description-en: Transitional package for cuda-drivers-fabricmanager-515
+ This is a transitional package for cuda-drivers-fabricmanager-515, and can be
+ safely removed after the installation is complete.
+
+Package: cuda-drivers-fabricmanager-525
+Description-md5: 79d09248104f4f2ac9d5cef6b9817c8f
+Description-en: Meta-package for FM and Driver (transitional package)
+ Transitional package for upgrades. This package can be safely removed.
+
+Package: cuda-drivers-fabricmanager-535
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+Description-en: Meta-package for FM and Driver
+ Convenience meta-package for installing fabricmanager and the cuda-drivers
+ meta-package simultaneously while keeping version equivalence. This meta-
+ package is branch-specific.
+
+Package: libclamunrar
+Description-md5: 838276738daaffecf22ce5427760f59c
+Description-en: anti-virus utility for Unix - unrar support
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav9, which can be used by other software.
+ .
+ This metapackage depends on the current libclamunrarX binary library to
+ ensure a new libclamunrarY will be installed after a soname update.
+
+Package: libclamunrar9
+Description-md5: 81aaa76cb9df5259f364d29eeca2acc6
+Description-en: anti-virus utility for Unix - unrar support
+ Clam AntiVirus is an anti-virus toolkit for Unix. The main purpose of
+ this software is the integration with mail servers (attachment
+ scanning). The package provides a flexible and scalable
+ multi-threaded daemon in the clamav-daemon package, a command-line
+ scanner in the clamav package, and a tool for automatic updating via
+ the Internet in the clamav-freshclam package. The programs are based
+ on libclamav9, which can be used by other software.
+ .
+ This package provides support for RAR packaged files or mail attachments.
+ Support will be available once this package is installed and clamd or a local
+ clamscan is restarted.
+
+Package: libcuda1-384
+Description-md5: c6dbe40660b5059827bb841b3e8d47a1
+Description-en: Transitional package for nvidia-headless-390
+ This is a transitional package for nvidia-headless-390, and can be
+ safely removed after the installation is complete.
+
+Package: libnvidia-nscq-450
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+Description-en: NVSwitch Configuration and Query library
+ NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
+ stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: libnvidia-nscq-460
+Description-md5: a5a3ff49e04b212952436176f612dac4
+Description-en: Transitional package for libnvidia-nscq-510
+ This is a transitional package for libnvidia-nscq-510, and can be
+ safely removed after the installation is complete.
+
+Package: libnvidia-nscq-470
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+Description-en: NVSwitch Configuration and Query library
+ NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
+ stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: libnvidia-nscq-510
+Description-md5: ba05d1c177ba9c73c05d203919c8b1f5
+Description-en: Transitional package for libnvidia-nscq-515
+ This is a transitional package for libnvidia-nscq-515, and can be
+ safely removed after the installation is complete.
+
+Package: libnvidia-nscq-525
+Description-md5: 86ca362cda0acfaa2c36ef6c8dc23cb5
+Description-en: Transitional package for libnvidia-nscq-535
+ This is a transitional package for libnvidia-nscq-535, and can be
+ safely removed after the installation is complete.
+
+Package: libnvidia-nscq-535
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+Description-en: NVSwitch Configuration and Query library
+ NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
+ stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: linux-modules-nvidia-390-5.19.0-1010-nvidia
+Description-md5: cc07556d69dbcd761a28c3acec8d236e
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-390-5.19.0-1010-nvidia-lowlatency
+Description-md5: 9eaca8bc48219e8766a4a2f5872a52b5
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-390-5.19.0-1014-nvidia
+Description-md5: 85d0b1bb6e7340b8f1e3fcf9a84cdd34
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-390-5.19.0-1014-nvidia-lowlatency
+Description-md5: 3f8a267a635157b1e2a70ff730ad8b03
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-390-nvidia-5.19
+Description-md5: a31143981ec9b250ade1857062598216
+Description-en: Extra drivers for nvidia-390 for the nvidia-5.19 flavour
+ Install extra signed nvidia-390 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-390-nvidia-lowlatency-5.19
+Description-md5: 444cd1ef7cde9335a2da5b50194b733b
+Description-en: Extra drivers for nvidia-390 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-390 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-390-nvidia-lowlatency-edge
+Description-md5: c8cffe18a3bea9dd26d1261f318878a5
+Description-en: Extra drivers for nvidia-390 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-390 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-435-nvidia-5.19
+Description-md5: 319a7313078334aec43f7ffddd4e01e6
+Description-en: Extra drivers for nvidia-435 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -435 to -470.
+
+Package: linux-modules-nvidia-435-nvidia-lowlatency-5.19
+Description-md5: 298abeeae06a9ba64414cc6d804d530a
+Description-en: Extra drivers for nvidia-435 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -435 to -470.
+
+Package: linux-modules-nvidia-435-nvidia-lowlatency-edge
+Description-md5: 298abeeae06a9ba64414cc6d804d530a
+Description-en: Extra drivers for nvidia-435 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -435 to -470.
+
+Package: linux-modules-nvidia-440-nvidia-5.19
+Description-md5: 0a2df019de22ac2d498b6f90e553f057
+Description-en: Extra drivers for nvidia-440 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -440 to -470.
+
+Package: linux-modules-nvidia-440-nvidia-lowlatency-5.19
+Description-md5: 161044357d5180e0e1ec2dc771023f93
+Description-en: Extra drivers for nvidia-440 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -440 to -470.
+
+Package: linux-modules-nvidia-440-nvidia-lowlatency-edge
+Description-md5: 161044357d5180e0e1ec2dc771023f93
+Description-en: Extra drivers for nvidia-440 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -440 to -470.
+
+Package: linux-modules-nvidia-440-server-nvidia-5.19
+Description-md5: c237a367611ffaccafc5476f47dddfe4
+Description-en: Extra drivers for nvidia-440-server for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -440-server to -450-server.
+
+Package: linux-modules-nvidia-440-server-nvidia-lowlatency-5.19
+Description-md5: 06f75a5b595fd9472c2e93da94555352
+Description-en: Extra drivers for nvidia-440-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -440-server to -450-server.
+
+Package: linux-modules-nvidia-440-server-nvidia-lowlatency-edge
+Description-md5: 06f75a5b595fd9472c2e93da94555352
+Description-en: Extra drivers for nvidia-440-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -440-server to -450-server.
+
+Package: linux-modules-nvidia-450-nvidia-5.19
+Description-md5: 4dddc98152ef03b86282a9bbeef0ea44
+Description-en: Extra drivers for nvidia-450 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -450 to -470.
+
+Package: linux-modules-nvidia-450-nvidia-lowlatency-5.19
+Description-md5: e28aa0076320ca18cdb2edd1b2354e74
+Description-en: Extra drivers for nvidia-450 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -450 to -470.
+
+Package: linux-modules-nvidia-450-nvidia-lowlatency-edge
+Description-md5: e28aa0076320ca18cdb2edd1b2354e74
+Description-en: Extra drivers for nvidia-450 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -450 to -470.
+
+Package: linux-modules-nvidia-450-server-5.19.0-1010-nvidia
+Description-md5: 0f49e3bbefd91391942c310e302eed2f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-450-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: ca88fd452ed8033a4bdd04d4329d6b93
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-450-server-5.19.0-1014-nvidia
+Description-md5: 6c8f25ee468d06af651f5983f6343982
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-450-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: a5a475182c925c7d8866c430186299ca
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-450-server-nvidia-5.19
+Description-md5: d51c7a42f52cc67e89cd4eebd6e689fd
+Description-en: Extra drivers for nvidia-450-server for the nvidia-5.19 flavour
+ Install extra signed nvidia-450-server modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-450-server-nvidia-lowlatency-5.19
+Description-md5: 3b8e8973c3ce7d6069b25b72964c3573
+Description-en: Extra drivers for nvidia-450-server for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-450-server modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-450-server-nvidia-lowlatency-edge
+Description-md5: b6c01ce6379789882e097c6cd84bdc13
+Description-en: Extra drivers for nvidia-450-server for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-450-server modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-455-nvidia-5.19
+Description-md5: b3d54a32a9a1ab765b3f72285ee26bdf
+Description-en: Extra drivers for nvidia-455 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -455 to -470.
+
+Package: linux-modules-nvidia-455-nvidia-lowlatency-5.19
+Description-md5: 15622393c7d1a1ee3074fd2cf410468a
+Description-en: Extra drivers for nvidia-455 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -455 to -470.
+
+Package: linux-modules-nvidia-455-nvidia-lowlatency-edge
+Description-md5: 15622393c7d1a1ee3074fd2cf410468a
+Description-en: Extra drivers for nvidia-455 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -455 to -470.
+
+Package: linux-modules-nvidia-460-nvidia-5.19
+Description-md5: 5e061c760eb08f6878a25cd34b20d316
+Description-en: Extra drivers for nvidia-460 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -460 to -470.
+
+Package: linux-modules-nvidia-460-nvidia-lowlatency-5.19
+Description-md5: d2042240deb84a519d79110a2c68a7ba
+Description-en: Extra drivers for nvidia-460 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -460 to -470.
+
+Package: linux-modules-nvidia-460-nvidia-lowlatency-edge
+Description-md5: d2042240deb84a519d79110a2c68a7ba
+Description-en: Extra drivers for nvidia-460 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -460 to -470.
+
+Package: linux-modules-nvidia-460-server-nvidia-5.19
+Description-md5: e5c99f2ac828b652911890429bb7ee7d
+Description-en: Extra drivers for nvidia-460-server for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -460-server to -470-server.
+
+Package: linux-modules-nvidia-460-server-nvidia-lowlatency-5.19
+Description-md5: a524ccb91d5114ac398b42c3b0269f88
+Description-en: Extra drivers for nvidia-460-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -460-server to -470-server.
+
+Package: linux-modules-nvidia-460-server-nvidia-lowlatency-edge
+Description-md5: a524ccb91d5114ac398b42c3b0269f88
+Description-en: Extra drivers for nvidia-460-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -460-server to -470-server.
+
+Package: linux-modules-nvidia-465-nvidia-5.19
+Description-md5: d25a1a5ef413c82dfa0feed3f89186f7
+Description-en: Extra drivers for nvidia-465 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -465 to -470.
+
+Package: linux-modules-nvidia-465-nvidia-lowlatency-5.19
+Description-md5: 1ebb6e36b82d08818f75f73245ea7c75
+Description-en: Extra drivers for nvidia-465 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -465 to -470.
+
+Package: linux-modules-nvidia-465-nvidia-lowlatency-edge
+Description-md5: 1ebb6e36b82d08818f75f73245ea7c75
+Description-en: Extra drivers for nvidia-465 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -465 to -470.
+
+Package: linux-modules-nvidia-470-5.19.0-1010-nvidia
+Description-md5: 420815a306dd4bcbcc9fa01065de8e55
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-5.19.0-1010-nvidia-lowlatency
+Description-md5: 473b9d913600381a0d9d93c0b0a70810
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-5.19.0-1014-nvidia
+Description-md5: 12d9186b40737cb00aad8f20cc339177
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-5.19.0-1014-nvidia-lowlatency
+Description-md5: 95efa08dee103d706bacb5709fb246fe
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-nvidia-5.19
+Description-md5: db551e5fa92125db4fd617057c9e1c05
+Description-en: Extra drivers for nvidia-470 for the nvidia-5.19 flavour
+ Install extra signed nvidia-470 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-470-nvidia-lowlatency-5.19
+Description-md5: 4e7eb82b245241721fde760adad4a43a
+Description-en: Extra drivers for nvidia-470 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-470 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-470-nvidia-lowlatency-edge
+Description-md5: 843cabd3c8ee2e35b4a9b7ee2c295248
+Description-en: Extra drivers for nvidia-470 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-470 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-470-server-5.19.0-1010-nvidia
+Description-md5: 2a602c7fa47758e25fbf2a21c82a28e1
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: 1a2924d518656cf2255012d5c63bf5f3
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-server-5.19.0-1014-nvidia
+Description-md5: a3483fc4eb534baa894f92d60a1812d8
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: 9ef823ca86b01b05c865cccba5efd5dd
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-470-server-nvidia-5.19
+Description-md5: 9633441bbe7e01945271fd253ccec65e
+Description-en: Extra drivers for nvidia-470-server for the nvidia-5.19 flavour
+ Install extra signed nvidia-470-server modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-470-server-nvidia-lowlatency-5.19
+Description-md5: b5e85c47867d23b21f2efd658fc0df5a
+Description-en: Extra drivers for nvidia-470-server for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-470-server modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-470-server-nvidia-lowlatency-edge
+Description-md5: d9cf3b9306d9a24a242be16754a37714
+Description-en: Extra drivers for nvidia-470-server for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-470-server modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-495-nvidia-5.19
+Description-md5: 7188b86430acc7b8934c0a45d66cf718
+Description-en: Extra drivers for nvidia-495 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-495-nvidia-edge
+Description-md5: 7188b86430acc7b8934c0a45d66cf718
+Description-en: Extra drivers for nvidia-495 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-495-nvidia-lowlatency-5.19
+Description-md5: ce97e841dadcf14160ceab7568003031
+Description-en: Extra drivers for nvidia-495 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-495-nvidia-lowlatency-edge
+Description-md5: ce97e841dadcf14160ceab7568003031
+Description-en: Extra drivers for nvidia-495 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-510-5.19.0-1010-nvidia
+Description-md5: 0abed14dbd4dffe42f2f2afc2621f063
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-5.19.0-1010-nvidia-lowlatency
+Description-md5: cd43f28dba4d28f7c98cdbed7a0df400
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-5.19.0-1014-nvidia
+Description-md5: 6930419859b0c8588274caf60c88af73
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-5.19.0-1014-nvidia-lowlatency
+Description-md5: 45a3585b3307517485ac10b63b64b0c2
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-nvidia-5.19
+Description-md5: d1b4b19ed3263ac9717b7c593bb7996c
+Description-en: Extra drivers for nvidia-510 for the nvidia-5.19 flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-510-nvidia-edge
+Description-md5: 78dc7af88724522fdae595768499b9c4
+Description-en: Extra drivers for nvidia-510 for the nvidia-edge flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-edge flavour.
+
+Package: linux-modules-nvidia-510-nvidia-lowlatency-5.19
+Description-md5: de8681b0a3d7b7e588c27fca37574cad
+Description-en: Extra drivers for nvidia-510 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-510-nvidia-lowlatency-edge
+Description-md5: c166e38d7ea5a790201610150be405b7
+Description-en: Extra drivers for nvidia-510 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-510-server-nvidia-5.19
+Description-md5: fd85468baaea5239288b00e80da75e6e
+Description-en: Extra drivers for nvidia-510-server for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -510-server to -515-server.
+
+Package: linux-modules-nvidia-510-server-nvidia-lowlatency-5.19
+Description-md5: 663a9a33c4174fec2690e64468128820
+Description-en: Extra drivers for nvidia-510-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -510-server to -515-server.
+
+Package: linux-modules-nvidia-510-server-nvidia-lowlatency-edge
+Description-md5: 663a9a33c4174fec2690e64468128820
+Description-en: Extra drivers for nvidia-510-server for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -510-server to -515-server.
+
+Package: linux-modules-nvidia-515-5.19.0-1010-nvidia
+Description-md5: e1e4e03c3493909030ad3d85c7e51620
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-5.19.0-1010-nvidia-lowlatency
+Description-md5: 36d058a8dc7fd788abcfeae5300e2d94
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-5.19.0-1014-nvidia
+Description-md5: d7cb6d1f24ef8d49ab2add3a9d57d2a3
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-5.19.0-1014-nvidia-lowlatency
+Description-md5: f19e138684f55084ca67926bc0cce378
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-nvidia-5.19
+Description-md5: 2fd52a1ede515e53cf07d91e95354348
+Description-en: Extra drivers for nvidia-515 for the nvidia-5.19 flavour
+ Install extra signed nvidia-515 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-515-nvidia-lowlatency-5.19
+Description-md5: 4c9a32e77e731bc107c7ff233514f215
+Description-en: Extra drivers for nvidia-515 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-515 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-515-nvidia-lowlatency-edge
+Description-md5: 44eb0c94cc5f32b14293ed4b397d4943
+Description-en: Extra drivers for nvidia-515 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-515 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1010-nvidia
+Description-md5: 2d9511ab0d92c1e9618add277edcabe0
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: 71f24a37aaf3fc8404d173e824183ba5
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1014-nvidia
+Description-md5: 109104461afd6881a9a6a1ab4e592b09
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: e414d93432219b0c2b9e84920c7ba542
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-nvidia-5.19
+Description-md5: 72f56870b4ef42a15249c8a18aa9be1c
+Description-en: Extra drivers for nvidia-515-server for the nvidia-5.19 flavour
+ Install extra signed nvidia-515-server modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-515-server-nvidia-lowlatency-5.19
+Description-md5: 69464081880d5de7236615330ecab3aa
+Description-en: Extra drivers for nvidia-515-server for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-515-server modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-515-server-nvidia-lowlatency-edge
+Description-md5: 105cbd11c9412ab40655f00b71507fc1
+Description-en: Extra drivers for nvidia-515-server for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-515-server modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-520-nvidia-5.19
+Description-md5: 80fc8cef3b22035f5700fe6d65da07f3
+Description-en: Extra drivers for nvidia-520 for the nvidia flavour (dummy transitional package)
+ Transitional package for upgrades of -520 to -525.
+
+Package: linux-modules-nvidia-520-nvidia-lowlatency-5.19
+Description-md5: 65a739c138cd70420869fdfd37235a37
+Description-en: Extra drivers for nvidia-520 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -520 to -525.
+
+Package: linux-modules-nvidia-520-nvidia-lowlatency-edge
+Description-md5: 65a739c138cd70420869fdfd37235a37
+Description-en: Extra drivers for nvidia-520 for the nvidia-lowlatency flavour (dummy transitional package)
+ Transitional package for upgrades of -520 to -525.
+
+Package: linux-modules-nvidia-525-5.19.0-1010-nvidia
+Description-md5: ab16a6ce7b81ee17facb0b7398844b27
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-5.19.0-1010-nvidia-lowlatency
+Description-md5: b5d96305dc537e4ce2dd6aad47b692e4
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-5.19.0-1014-nvidia
+Description-md5: 0edfb8627052dbefd8b4f023f6682e64
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-5.19.0-1014-nvidia-lowlatency
+Description-md5: 01a03356121d292b9418a2557e25bb6b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-nvidia-5.19
+Description-md5: 08bdbdc3d6eb23d1da952ea81834c026
+Description-en: Extra drivers for nvidia-525 for the nvidia-5.19 flavour
+ Install extra signed nvidia-525 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-525-nvidia-lowlatency-5.19
+Description-md5: 997676d19e3640e27beb73438472db50
+Description-en: Extra drivers for nvidia-525 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-525 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-525-nvidia-lowlatency-edge
+Description-md5: 3996069f286843584bcb8b194f7bee3f
+Description-en: Extra drivers for nvidia-525 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-525 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1010-nvidia
+Description-md5: a03b968dc2126d5877f25aea9d3e8bcf
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1010-nvidia-lowlatency
+Description-md5: e97e3e1d373d002f52a31b920942b2cb
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1014-nvidia
+Description-md5: d2e89fdedde71175f8218871e4fca1c1
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1014-nvidia-lowlatency
+Description-md5: 82bddb868c3bea67890cbe9bbe0b70a1
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-nvidia-5.19
+Description-md5: 84a071dde3ff8c9c755378e1e9233546
+Description-en: Extra drivers for nvidia-525-open for the nvidia-5.19 flavour
+ Install extra signed nvidia-525-open modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-525-open-nvidia-lowlatency-5.19
+Description-md5: 9d15b62f2a879dcfb03cccc4f7d62719
+Description-en: Extra drivers for nvidia-525-open for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-525-open modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-525-open-nvidia-lowlatency-edge
+Description-md5: 2f3815ad583e731bec1a13c1bd1f5713
+Description-en: Extra drivers for nvidia-525-open for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-525-open modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1010-nvidia
+Description-md5: 041fe3fddaf81bd432d55021c9bb780d
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: f3d249ff4006c871b7a8b37a7e023cfb
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1014-nvidia
+Description-md5: 579432f547f86d6d27dcce7b563386fa
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: f3359cd2ad7a86e9d1a22525c31ac40b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-nvidia-5.19
+Description-md5: 012e92d765b700468f7ecd224a895cea
+Description-en: Extra drivers for nvidia-525-server for the nvidia-5.19 flavour
+ Install extra signed nvidia-525-server modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-525-server-nvidia-lowlatency-5.19
+Description-md5: 76c9ac4ded7b38336baec9744634df7f
+Description-en: Extra drivers for nvidia-525-server for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-525-server modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-525-server-nvidia-lowlatency-edge
+Description-md5: 54dc2b1f0360d6b3c6d5246714dd9d9f
+Description-en: Extra drivers for nvidia-525-server for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-525-server modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-530-5.19.0-1010-nvidia
+Description-md5: cf10fc47bf32688a4f3ef66a3c7bf1db
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-5.19.0-1010-nvidia-lowlatency
+Description-md5: 19f5478fec079bc0b117b9b25a9f026f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-5.19.0-1014-nvidia
+Description-md5: 69601951147386c9b7a74dc554506563
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-5.19.0-1014-nvidia-lowlatency
+Description-md5: 34320e12d170542260a1941e8fc4f6a8
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-nvidia-5.19
+Description-md5: 54b312789780c54e373383d0c1b4dc13
+Description-en: Extra drivers for nvidia-530 for the nvidia-5.19 flavour
+ Install extra signed nvidia-530 modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-530-nvidia-lowlatency-5.19
+Description-md5: 2976319dda764b6794790b21f77b2ba6
+Description-en: Extra drivers for nvidia-530 for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-530 modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-530-nvidia-lowlatency-edge
+Description-md5: c37451a6c7a6237f5c010f8622820a90
+Description-en: Extra drivers for nvidia-530 for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-530 modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1010-nvidia
+Description-md5: 2309806cc6c6a4c8e01e5e031055edb2
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1010-nvidia-lowlatency
+Description-md5: d78cf1e3462fcf2a03b4f9770853f60a
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1014-nvidia
+Description-md5: 8f76eb1b84c3272116311e5d7ed60542
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1014-nvidia-lowlatency
+Description-md5: ce2eb84d945c4127bd40787d4ac7f9a0
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-nvidia-5.19
+Description-md5: f486e256835b166283b599b3d450a1c9
+Description-en: Extra drivers for nvidia-530-open for the nvidia-5.19 flavour
+ Install extra signed nvidia-530-open modules compatible with the nvidia-5.19 flavour.
+
+Package: linux-modules-nvidia-530-open-nvidia-lowlatency-5.19
+Description-md5: 200f0b3a01aa51899361f668bdda25a0
+Description-en: Extra drivers for nvidia-530-open for the nvidia-lowlatency-5.19 flavour
+ Install extra signed nvidia-530-open modules compatible with the nvidia-lowlatency-5.19 flavour.
+
+Package: linux-modules-nvidia-530-open-nvidia-lowlatency-edge
+Description-md5: e1478f6be9ba90590b3fb4c4fb0b0eb6
+Description-en: Extra drivers for nvidia-530-open for the nvidia-lowlatency-edge flavour
+ Install extra signed nvidia-530-open modules compatible with the nvidia-lowlatency-edge flavour.
+
+Package: linux-objects-nvidia-390-5.19.0-1010-nvidia
+Description-md5: a30ad007efc247809984f5efbeecc357
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-390-5.19.0-1010-nvidia-lowlatency
+Description-md5: 6fe73fe5107f0617d38117d9e4e6fd81
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-390-5.19.0-1014-nvidia
+Description-md5: c14fcba4eadf865e33dde41e9270527c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-390-5.19.0-1014-nvidia-lowlatency
+Description-md5: 2404281fc4bea6ff2698b3beab453c54
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-390-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-450-server-5.19.0-1010-nvidia
+Description-md5: 36c7da4c4be352343d51b41ccd7bd67c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-450-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: f236708d2d6af388a1d7d432ffc073f7
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-450-server-5.19.0-1014-nvidia
+Description-md5: 19f9a3b93a77e40b71a3a452c2b4e903
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-450-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: 4ab2b7300ab9ab41abbdee10b61c1879
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-450-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-5.19.0-1010-nvidia
+Description-md5: bb4d161152e0cb899f9b8c68e9586961
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-5.19.0-1010-nvidia-lowlatency
+Description-md5: 4f9bf846cc8d0421f4b94ae16e887609
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-5.19.0-1014-nvidia
+Description-md5: 547c7d9a986e4653cfe8ad012cd04f00
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-5.19.0-1014-nvidia-lowlatency
+Description-md5: a353b260a9c96bc0258254af06a3908b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-server-5.19.0-1010-nvidia
+Description-md5: 14b2e584cb15205cc8d5640ff26b9481
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: 0c45d6c238883ea92aafa771a64cfb9f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-server-5.19.0-1014-nvidia
+Description-md5: d0e7f509e2b1f506d604f58a1b994ee9
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-470-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: 21ebd823c8ec33be6eae3d0011bd396a
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-470-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-510-5.19.0-1010-nvidia
+Description-md5: 66e64b78346937a027ba353368160061
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-510-5.19.0-1010-nvidia-lowlatency
+Description-md5: 1325a41a8d7b97563f4055bef60f809c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-510-5.19.0-1014-nvidia
+Description-md5: 0227a0eea02855c52c0ed85ea0bea25e
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-510-5.19.0-1014-nvidia-lowlatency
+Description-md5: 92ad06878fdc7dacd24b89afeecb97ba
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1010-nvidia
+Description-md5: d03a69bfa47ed380b0191a44d69e54ad
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1010-nvidia-lowlatency
+Description-md5: 1b5ae8d76326753902b8b30f683212e4
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1014-nvidia
+Description-md5: 4bbf5fa084ab3b94e5e055cc6ebac41f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1014-nvidia-lowlatency
+Description-md5: a06ddaa69976e8803df7ab623f384d00
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1010-nvidia
+Description-md5: bf06099c6a2efafb16ac032ea01016bd
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: e193ce919ba88108c1e69b8ccf3dca44
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1014-nvidia
+Description-md5: c965d2a080f15b5b7cdeec8ebe217ce5
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: ac6bbec81c9cc9f8a28b306e1c4be01b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1010-nvidia
+Description-md5: b41efc403bc1b56b90dd61f3f2ef2aec
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1010-nvidia-lowlatency
+Description-md5: d2afc2c4d3467a39ebe19aba6370bb9d
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1014-nvidia
+Description-md5: 409e55c223c04b5212a9cdf843536176
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1014-nvidia-lowlatency
+Description-md5: d65f9899820529c9fb7da9583fe1b360
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1010-nvidia
+Description-md5: b40f2a33c5308101afbf31a0581b4c51
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1010-nvidia-lowlatency
+Description-md5: 6bf2f388f60570ebc0e38b3f8573e30f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1014-nvidia
+Description-md5: a6f82132ae19af43e59267e634d25c19
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1014-nvidia-lowlatency
+Description-md5: 7d3a2687f869408b0613885b9a020f24
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1010-nvidia
+Description-md5: 871ab04ed66de652ec777e65a11bafe7
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1010-nvidia-lowlatency
+Description-md5: f204f6e3c253733f848a90576f5b7c77
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1014-nvidia
+Description-md5: e27ff5f5ad81dccbb6d328adb48ab917
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1014-nvidia-lowlatency
+Description-md5: 67e7eed5d0f1c3715f36614a2da7f4e8
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1010-nvidia
+Description-md5: 03a47f8f6993f2a5c8461b4ec1391631
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1010-nvidia-lowlatency
+Description-md5: fe3a148dcc7aea42c07a1d505f082127
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1014-nvidia
+Description-md5: ed3746298c1e541afe6f7b42d4f3581b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1014-nvidia-lowlatency
+Description-md5: 018a98607c610b99c3bbcda21bfa850c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1010-nvidia
+Description-md5: 982bb11cc6cd6971662982c9ad53c0b2
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1010-nvidia-lowlatency
+Description-md5: aa2d0d9d78a94b5ab0f96151998dbc81
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1014-nvidia
+Description-md5: dc73d4ef3552efc857f4e506461f25d8
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1014-nvidia-lowlatency
+Description-md5: ea4f6811b2c3ce7829eaca4fc0cb3685
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-lowlatency* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-signatures-nvidia-5.19.0-1010-nvidia
+Description-md5: b88df409b0e4fd72d78c45a0f4f07f2f
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1010-nvidia
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1010-nvidia.
+ .
+ You likely do not want to install this package directly.
+
+Package: linux-signatures-nvidia-5.19.0-1010-nvidia-lowlatency
+Description-md5: 651d143a3743c1fe778a3ffa6dabbf75
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1010-nvidia-lowlatency
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1010-nvidia-lowlatency.
+ .
+ You likely do not want to install this package directly.
+
+Package: linux-signatures-nvidia-5.19.0-1014-nvidia
+Description-md5: 77eaa5756c7313a2ecff4b0576db31ae
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1014-nvidia.
+ .
+ You likely do not want to install this package directly.
+
+Package: linux-signatures-nvidia-5.19.0-1014-nvidia-lowlatency
+Description-md5: 870cdd568a21cad395940f7ed1610210
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia-lowlatency
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1014-nvidia-lowlatency.
+ .
+ You likely do not want to install this package directly.
+
+Package: nvidia-fabricmanager-450
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+Description-en: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+
+Package: nvidia-fabricmanager-460
+Description-md5: 127ff08d88ec25e06d9075de2427bd02
+Description-en: Transitional package for nvidia-fabricmanager-#FLAVOUR#
+ This is a transitional package for nvidia-fabricmanager-#FLAVOUR#, and can be
+ safely removed after the installation is complete.
+
+Package: nvidia-fabricmanager-470
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+Description-en: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+
+Package: nvidia-fabricmanager-510
+Description-md5: 127ff08d88ec25e06d9075de2427bd02
+Description-en: Transitional package for nvidia-fabricmanager-#FLAVOUR#
+ This is a transitional package for nvidia-fabricmanager-#FLAVOUR#, and can be
+ safely removed after the installation is complete.
+
+Package: nvidia-fabricmanager-525
+Description-md5: 06ff0a5beaed94dd1612653f803516ef
+Description-en: Fabric Manager for NVSwitch based systems. (transitional package)
+ Transitional package for upgrades. This package can be safely removed.
+
+Package: nvidia-fabricmanager-535
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+Description-en: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+
+Package: nvidia-fabricmanager-dev-450
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+Description-en: Fabric Manager API headers and associated library
+ Fabric Manager API headers and associated library
+
+Package: nvidia-fabricmanager-dev-460
+Description-md5: 4c618489bfcef074354d2863174c8037
+Description-en: Transitional package for nvidia-fabricmanager-dev-510
+ This is a transitional package for nvidia-fabricmanager-dev-510, and can be
+ safely removed after the installation is complete.
+
+Package: nvidia-fabricmanager-dev-470
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+Description-en: Fabric Manager API headers and associated library
+ Fabric Manager API headers and associated library
+
+Package: nvidia-fabricmanager-dev-510
+Description-md5: d2e66eab593038c327ecd6f751864d99
+Description-en: Transitional package for nvidia-fabricmanager-dev-515
+ This is a transitional package for nvidia-fabricmanager-dev-515, and can be
+ safely removed after the installation is complete.
+
+Package: nvidia-fabricmanager-dev-525
+Description-md5: 6d784138f631bec423b38a723527202b
+Description-en: Fabric Manager API headers and associated library (transitional package)
+ Transitional package for upgrades. This package can be safely removed.
+
+Package: nvidia-fabricmanager-dev-535
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+Description-en: Fabric Manager API headers and associated library
+ Fabric Manager API headers and associated library
+
+Package: nvidia-libopencl1-384
+Description-md5: c6dbe40660b5059827bb841b3e8d47a1
+Description-en: Transitional package for nvidia-headless-390
+ This is a transitional package for nvidia-headless-390, and can be
+ safely removed after the installation is complete.
+
+Package: nvidia-opencl-icd-384
+Description-md5: c6dbe40660b5059827bb841b3e8d47a1
+Description-en: Transitional package for nvidia-headless-390
+ This is a transitional package for nvidia-headless-390, and can be
+ safely removed after the installation is complete.
+
+Package: linux-modules-nvidia-495-nvidia-64k-5.19
+Description-md5: 098cdd380f67fc4d686fcd62d1124e2d
+Description-en: Extra drivers for nvidia-495 for the nvidia-64k flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-495-nvidia-64k-edge
+Description-md5: 098cdd380f67fc4d686fcd62d1124e2d
+Description-en: Extra drivers for nvidia-495 for the nvidia-64k flavour (dummy transitional package)
+ Transitional package for upgrades of -495 to -510.
+
+Package: linux-modules-nvidia-510-5.19.0-1010-nvidia-64k
+Description-md5: aa6a2b1b4e63679366b3c6ced796ec6b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-5.19.0-1014-nvidia-64k
+Description-md5: 9ca5a28e88da09c4b02f8d344296be7a
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-510-nvidia-64k-5.19
+Description-md5: 45eeca01d1cb06d8dd342a070c86a8e5
+Description-en: Extra drivers for nvidia-510 for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-510-nvidia-64k-edge
+Description-md5: 8951f396700aadb073b61b35d7745305
+Description-en: Extra drivers for nvidia-510 for the nvidia-64k-edge flavour
+ Install extra signed nvidia-510 modules compatible with the nvidia-64k-edge flavour.
+
+Package: linux-modules-nvidia-510-server-nvidia-64k-5.19
+Description-md5: c9f1a80526fc92a6fc9e076bac65299a
+Description-en: Extra drivers for nvidia-510-server for the nvidia-64k flavour (dummy transitional package)
+ Transitional package for upgrades of -510-server to -515-server.
+
+Package: linux-modules-nvidia-515-5.19.0-1010-nvidia-64k
+Description-md5: 754a7f95dc9bf41a15bdf1a01771f584
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-5.19.0-1014-nvidia-64k
+Description-md5: 21299a3753cbb7ba03225d0ebe228e65
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-nvidia-64k-5.19
+Description-md5: d7314bd928ccec8e24a4d2c37513d2e0
+Description-en: Extra drivers for nvidia-515 for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-515 modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1010-nvidia-64k
+Description-md5: bca0be118524159948551fc8a1e0d308
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-5.19.0-1014-nvidia-64k
+Description-md5: c99894a598bee6e2716f90e31759b7aa
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-515-server-nvidia-64k-5.19
+Description-md5: 61163e7844e976e9190f78a210bfc410
+Description-en: Extra drivers for nvidia-515-server for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-515-server modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-520-nvidia-64k-5.19
+Description-md5: 0557c94c222ffaf7bd334a1489447339
+Description-en: Extra drivers for nvidia-520 for the nvidia-64k flavour (dummy transitional package)
+ Transitional package for upgrades of -520 to -525.
+
+Package: linux-modules-nvidia-525-5.19.0-1010-nvidia-64k
+Description-md5: af1da08f2199a2e645cb5ee696e4ab26
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-5.19.0-1014-nvidia-64k
+Description-md5: 81a9012be79672c7e68d44ed1ced0178
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-nvidia-64k-5.19
+Description-md5: aa25fb3a5c2026655271928e207a1d6a
+Description-en: Extra drivers for nvidia-525 for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-525 modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1010-nvidia-64k
+Description-md5: 6cfc3456b0d6462480687d3381fe8288
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-5.19.0-1014-nvidia-64k
+Description-md5: f674a139e44d017f4e5cee4779b66ede
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-open-nvidia-64k-5.19
+Description-md5: ec654a880b9eb2fe06279a44af602d7a
+Description-en: Extra drivers for nvidia-525-open for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-525-open modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1010-nvidia-64k
+Description-md5: 34efb1ed1055d313c5c9c88ce038afc9
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-5.19.0-1014-nvidia-64k
+Description-md5: a279501efc24db30f78b544a81d8b09d
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-525-server-nvidia-64k-5.19
+Description-md5: d7a080d39ab55cf6c7f24fdd717019ff
+Description-en: Extra drivers for nvidia-525-server for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-525-server modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-530-5.19.0-1010-nvidia-64k
+Description-md5: d841d7efd18bd94fb71872be037c36d5
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-5.19.0-1014-nvidia-64k
+Description-md5: b4b769b27cb20fe977e0951bb39c573e
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-nvidia-64k-5.19
+Description-md5: 7806bdf55fd77d312381b57e2317537c
+Description-en: Extra drivers for nvidia-530 for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-530 modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1010-nvidia-64k
+Description-md5: 4f2a412be281323fb3962cd3f6f4c2d6
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1010 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-5.19.0-1014-nvidia-64k
+Description-md5: a5a06b95606f00d59ac6f3750738f9b6
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014
+ This package pulls together the Linux kernel nvidia modules for
+ version 5.19.0-1014 with the appropriate signatures.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-modules-nvidia-530-open-nvidia-64k-5.19
+Description-md5: 0f17416d6b0ff6bb9c9fad1f23a71673
+Description-en: Extra drivers for nvidia-530-open for the nvidia-64k-5.19 flavour
+ Install extra signed nvidia-530-open modules compatible with the nvidia-64k-5.19 flavour.
+
+Package: linux-objects-nvidia-510-5.19.0-1010-nvidia-64k
+Description-md5: 70ae9d881768e03b831f6f60fb9bf76c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-510-5.19.0-1014-nvidia-64k
+Description-md5: f0643fab26c8048b3abdb5d3d4d66633
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-510-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1010-nvidia-64k
+Description-md5: 38b9ba5df5c8a5b546a8c0dc42f87b87
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-5.19.0-1014-nvidia-64k
+Description-md5: 0a554b9bc6e36b5a5d14fbf720bf9b3b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1010-nvidia-64k
+Description-md5: 0b7b69dfbd07b86ebf8522f310b779ee
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-515-server-5.19.0-1014-nvidia-64k
+Description-md5: b3f702e85d047dcede510c46d7d1652b
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-515-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1010-nvidia-64k
+Description-md5: 86206895f7aeba64f11378da339e8b15
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-5.19.0-1014-nvidia-64k
+Description-md5: aa632d06a3caa1251e89ea08c3e9eccf
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1010-nvidia-64k
+Description-md5: 9e48e7b13bde81396c262fda74052684
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-open-5.19.0-1014-nvidia-64k
+Description-md5: 9f16df84689b96d3d5e24710c34cccd4
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1010-nvidia-64k
+Description-md5: 303786561e80a2924d0d1461c3fcb545
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-525-server-5.19.0-1014-nvidia-64k
+Description-md5: dd7d3b1a5949c15a73a37385fea9bb0f
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-525-server-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1010-nvidia-64k
+Description-md5: 91041744d1cef77ae5845ece10236890
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-5.19.0-1014-nvidia-64k
+Description-md5: 78fc5c5e72e03322187249b144e3b7de
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1010-nvidia-64k
+Description-md5: 0771c99c87a19bc75d52e8a189c1f908
+Description-en: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1010.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-objects-nvidia-530-open-5.19.0-1014-nvidia-64k
+Description-md5: af3690ddd803f80cfdcfda61e766164c
+Description-en: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+ This package contains the Linux kernel nvidia modules for version 5.19.0-1014.
+ .
+ You likely do not want to install this package directly. Instead, install the
+ one of the linux-modules-nvidia-530-open-nvidia-64k* meta-packages,
+ which will ensure that upgrades work correctly, and that supporting packages are
+ also installed.
+
+Package: linux-signatures-nvidia-5.19.0-1010-nvidia-64k
+Description-md5: 2d7a71ee25ab6cdfc77feeff0d570a15
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1010-nvidia-64k
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1010-nvidia-64k.
+ .
+ You likely do not want to install this package directly.
+
+Package: linux-signatures-nvidia-5.19.0-1014-nvidia-64k
+Description-md5: 245d58a9d2d07a655c98dd9286071fa8
+Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia-64k
+ This package contains the Linux kernel signatures nvidia modules for
+ version 5.19.0-1014-nvidia-64k.
+ .
+ You likely do not want to install this package directly.
+

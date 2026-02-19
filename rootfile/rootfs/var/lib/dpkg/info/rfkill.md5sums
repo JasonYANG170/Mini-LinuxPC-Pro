@@ -1,0 +1,4 @@
+917d9f3405fce08a7e21b43c9c6fbb0a  usr/sbin/rfkill
+4aeeb0e37969de4ff89c055db20e9632  usr/share/bash-completion/completions/rfkill
+55c97bba41ebc217fe88c04d9a7323bc  usr/share/doc/rfkill/copyright
+9353dba7e247109835957bea9ff02ef4  usr/share/man/man8/rfkill.8.gz

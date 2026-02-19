@@ -1,0 +1,11 @@
+[Unit]
+Description=Bluetooth management mechanism
+
+[Service]
+Type=dbus
+KillMode=process
+BusName=org.blueman.Mechanism
+ExecStart=/usr/libexec/blueman-mechanism
+
+[Install]
+WantedBy=multi-user.target

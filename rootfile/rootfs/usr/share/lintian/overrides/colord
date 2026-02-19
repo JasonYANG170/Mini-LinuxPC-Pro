@@ -1,0 +1,5 @@
+# colord is DBus-activated; this is just extra systemd-specific tuning for the service.
+colord: package-supports-alternative-init-but-no-init.d-script lib/systemd/system/colord.service
+
+# Amazingly, this is *correctly* not linked directly to libc
+colord: library-not-linked-against-libc usr/lib/x86_64-linux-gnu/colord-sensors/libcolord_sensor_dummy.so

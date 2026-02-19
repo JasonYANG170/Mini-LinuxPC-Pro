@@ -1,0 +1,2464 @@
+Package: broadcom-sta-common
+Architecture: all
+Version: 6.30.223.271-23~22.04.1
+Priority: optional
+Section: multiverse/admin
+Source: broadcom-sta
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eduard Bloch <blade@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 33
+Recommends: broadcom-sta-source, module-assistant
+Filename: pool/multiverse/b/broadcom-sta/broadcom-sta-common_6.30.223.271-23~22.04.1_all.deb
+Size: 8868
+MD5sum: e35933344d7cd70efe399e5bc4b51b3f
+SHA1: 18c56a6f8063c53ec959634e1b1fb9a16d3ccca7
+SHA256: d42a1f8a80b34c4964ceb5aacc395f4c5372ea0b6b88ceefea0eb8c53cd46974
+SHA512: e48e689c3aec8214990ffe543d885a85af0be186d823e1905263be8f4499a0d54d17768ec39c944190c22516cf31e11a5e047c10b5848116efdcbe824e4b4bd8
+Homepage: http://www.broadcom.com/support/802.11/linux_sta.php
+Description: Common files for the Broadcom STA Wireless driver
+Description-md5: a6bd57d95d48308610bc995bd8922939
+
+Package: broadcom-sta-dkms
+Architecture: all
+Version: 6.30.223.271-23~22.04.1
+Priority: optional
+Section: multiverse/admin
+Source: broadcom-sta
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eduard Bloch <blade@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14146
+Provides: broadcom-sta-modules
+Depends: dkms (>= 2.1.0.0)
+Recommends: wireless-tools
+Conflicts: broadcom-sta-modules
+Filename: pool/multiverse/b/broadcom-sta/broadcom-sta-dkms_6.30.223.271-23~22.04.1_all.deb
+Size: 2512930
+MD5sum: a7a5f5c466d127a4e39d98963f7691fe
+SHA1: b3ccac5c70ac87a09111788cb43ad69a284f434c
+SHA256: d88b093cbf312a013ec7cebf27ccb111177eb1e6aeffd59bf8bcb5685d9c2931
+SHA512: dfa8ad2caa6fc7b07625188d9c59bc0e59ce62638d73319e9ffc893d9a07c5737b609b188b780dcd54f14e25dc647b54a4968317482846c32d6369657e9f8064
+Homepage: http://www.broadcom.com/support/802.11/linux_sta.php
+Description: dkms source for the Broadcom STA Wireless driver
+Description-md5: 4c9c20d84937e0293fe598f44d785bce
+
+Package: broadcom-sta-source
+Architecture: all
+Version: 6.30.223.271-23~22.04.1
+Priority: optional
+Section: multiverse/admin
+Source: broadcom-sta
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eduard Bloch <blade@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2195
+Depends: debhelper-compat (= 12), make, xz-utils
+Recommends: module-assistant
+Filename: pool/multiverse/b/broadcom-sta/broadcom-sta-source_6.30.223.271-23~22.04.1_all.deb
+Size: 2223028
+MD5sum: dc90a8d4795635c16af1e9f0ce9dfc36
+SHA1: 78a21b9b68ea139ba733c9b29090e7c870d6596b
+SHA256: 8fe353027aee2be65110b4614fae57ec8a5d9eb40a7a2f6c7232779da3bca3cd
+SHA512: 02fd0188ca586478d27bb2cc7ab9388e69b93813706911af0089ba2cbd31c51d87bee572736f0246fcee94aeed68ebfe0f6efd115957f432faba4b05e36ce97d
+Homepage: http://www.broadcom.com/support/802.11/linux_sta.php
+Description: Source for the Broadcom STA Wireless driver
+Description-md5: 5bb170970da4a03f1c53b6f0202148ef
+
+Package: cuda-drivers-fabricmanager-525
+Architecture: arm64
+Version: 525.147.05-0ubuntu2.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-525
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Depends: cuda-drivers-fabricmanager-535
+Filename: pool/multiverse/f/fabric-manager-525/cuda-drivers-fabricmanager-525_525.147.05-0ubuntu2.22.04.1_arm64.deb
+Size: 4950
+MD5sum: 617ce7c43f3ab92e87c55b9a0abc2336
+SHA1: 881f7401992888c3c71b4228603d2529604784bc
+SHA256: 10f81dd1d3ceb21a849777e1f86f89d02bd6140abf7468870afb4b6bca368f14
+SHA512: 66cebc3fef014eead3dcfb8240482b7db1a36706effedfaabee357da7ba423a9587e08d8e43714d84bbdfebe3db54ad84cf5f0528266538f670dea9f3e7e67fd
+Description: Meta-package for FM and Driver (transitional package)
+Description-md5: 79d09248104f4f2ac9d5cef6b9817c8f
+
+Package: cuda-drivers-fabricmanager-535
+Architecture: arm64
+Version: 535.183.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-535
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Provides: cuda-drivers-fabricmanager
+Depends: nvidia-fabricmanager-535 (= 535.183.01-0ubuntu0.22.04.1)
+Conflicts: cuda-drivers-fabricmanager
+Replaces: cuda-drivers-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-535/cuda-drivers-fabricmanager-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
+Size: 4408
+MD5sum: 305770428a281a3776bbe9756031d786
+SHA1: 3c2e05a1ffeec171db27d8b560b345663277f128
+SHA256: a8b46e3cbba284a9c164b243bb6a4da6d8ff8577a2524cb3bfd3f44e7b52a03b
+SHA512: f87654ce9277708a842b565ae9c21b263bd8964e1257848ce05a987847d9aab7b5445253aca5a03b3efb823bd4e512c88cb1f4cc039e5dbf30775701aab080c4
+Description: Meta-package for FM and Driver
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+
+Package: libclamunrar
+Architecture: all
+Version: 0.103.11-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 20
+Depends: libclamunrar9
+Filename: pool/multiverse/libc/libclamunrar/libclamunrar_0.103.11-0ubuntu0.22.04.1_all.deb
+Size: 4842
+MD5sum: 300e2781a682100f9a06d49bf79a392b
+SHA1: c7fdeaebbc51830f3bece458eef2f918186b6b51
+SHA256: 39683dd0ce8bd9ff7901bd0575c3221e8dcc5b515cd6cb5df85154938e375c5a
+SHA512: e7f82433c10b8e9f168a3470d880754606dfb8eb608aae1efba38c7a86a501fbf6f3d611c3d4f98f428bddd57996d9b778dce6791d9babb8324c6c7128ccaba3
+Homepage: https://www.clamav.net/
+Description: anti-virus utility for Unix - unrar support
+Description-md5: 838276738daaffecf22ce5427760f59c
+
+Package: libclamunrar9
+Architecture: arm64
+Version: 0.103.11-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: libclamunrar
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 195
+Depends: libclamav9, libc6 (>= 2.33), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 11)
+Filename: pool/multiverse/libc/libclamunrar/libclamunrar9_0.103.11-0ubuntu0.22.04.1_arm64.deb
+Size: 97244
+MD5sum: 316488583c2b8309846ade9985c1e5d4
+SHA1: 80adc8be7d493f7e75199e5c26d63e0b449daef8
+SHA256: 1c53292ff57270f1dd01f3478794bb9d7c8e47729fbfcd2d7a158315c52d1ee0
+SHA512: d1e42a3996f75d0a5b61b8f07d11bc9c334103e61428b60530b608e5e2284026f0543b0dbd5011c41b30a92b869e72220cde80bf513cd359f7372418b85cc780
+Homepage: https://www.clamav.net/
+Description: anti-virus utility for Unix - unrar support
+Description-md5: 81aaa76cb9df5259f364d29eeca2acc6
+
+Package: libegl-mali-xlnx
+Architecture: arm64
+Version: 9p0.01rel0-1-0ubuntu1~22.04.1
+Priority: optional
+Section: multiverse/x11
+Origin: Ubuntu
+Maintainer: Alfonso Sanchez-Beato (email Canonical) <alfonso.sanchez-beato@canonical.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 7036
+Depends: libc6 (>= 2.29), libdrm2 (>= 2.4.3), libstdc++6 (>= 4.1.1), libwayland-client0 (>= 1.11.0), libwayland-server0 (>= 1.2.0), libx11-6 (>= 2:1.4.99.1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3
+Filename: pool/multiverse/libe/libegl-mali-xlnx/libegl-mali-xlnx_9p0.01rel0-1-0ubuntu1~22.04.1_arm64.deb
+Size: 1420396
+MD5sum: aadad138cda54be0417ad87a7880a91b
+SHA1: 682b079114de900f1a111ef8cc4c88b684c2a9fc
+SHA256: 0ba0313c7664e1bc2c1ff6df6ee2e8f880ebad86eba2aa3a5730a8036d556f28
+SHA512: 64b4456be51229ce3968021c9bf94104d13c0d813ce192dcf5e62e24e4c86a269f17508cd73624b69377aa107cf94eaf5c039377bcfd15c9aacfd6b415a8bede
+Description: EGL closed source libraries for Mali devices integrated
+Description-md5: 15a94cd9718097d740b66c24d31cd1eb
+
+Package: libnvidia-common-550-server
+Architecture: all
+Version: 550.54.14-0ubuntu3.22.04.1
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-550-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 58
+Provides: libnvidia-common
+Conflicts: libnvidia-common
+Breaks: libnvidia-gl-550-server (<< 390.25-0ubuntu2~)
+Replaces: libnvidia-common, libnvidia-gl-550-server (<< 390.25-0ubuntu2~)
+Filename: pool/multiverse/n/nvidia-graphics-drivers-550-server/libnvidia-common-550-server_550.54.14-0ubuntu3.22.04.1_all.deb
+Size: 14694
+MD5sum: b9805ccfb1ab39f215207c20db5ef552
+SHA1: 37616e99835f54c614cc174934d0ab3b4c55d312
+SHA256: de97204cb20fd0fd585ebddfe077c27b96b028ca1d577ee8e2cd1c8d989d8edd
+SHA512: 051b2ff2f6287999ba9d7ae2c19209955296f0221fe66eb1d9a1f9186433bcb9d7ff02ce3fa4a4e143d49e238b79afea25d2be511716654c1fcd829555d084a1
+Homepage: http://www.nvidia.com
+Description: Shared files used by the NVIDIA libraries
+Description-md5: 259c61ba4e777f5a2f1e7ee2fd1957bc
+
+Package: libnvidia-nscq-525
+Architecture: arm64
+Version: 525.147.05-0ubuntu2.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Depends: libnvidia-nscq-535
+Filename: pool/multiverse/libn/libnvidia-nscq-525/libnvidia-nscq-525_525.147.05-0ubuntu2.22.04.1_arm64.deb
+Size: 5058
+MD5sum: 2423948fdcb5b25159568574226627de
+SHA1: 76c8d808bad31481afc5be19177ee44283e04225
+SHA256: 90f2e5f2dc4e3cb86b2648f73826b94a5aa161af7df086bf53a3c29111d4be86
+SHA512: e5feccc2f3e0a80e43cd846715e3a3d5ab66fd850b95fb3a2dcf119ddb98b941e189cc74f6c622de67b8c8cffb9b15f1f9f18d7f69926732b2f60a0b35201fc2
+Description: Transitional package for libnvidia-nscq-535
+Description-md5: 86ca362cda0acfaa2c36ef6c8dc23cb5
+
+Package: libnvidia-nscq-535
+Architecture: arm64
+Version: 535.183.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1496
+Provides: libnvidia-nscq, nscq2
+Conflicts: libnvidia-nscq
+Replaces: libnvidia-nscq
+Filename: pool/multiverse/libn/libnvidia-nscq-535/libnvidia-nscq-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
+Size: 382520
+MD5sum: d7bd608c2e5a422eb97b4858d8e4524d
+SHA1: 46978e8e2d77da56ed58889db1f3baa04869cab1
+SHA256: bc400299a90276d954ef1bf50552007e09fd72d70c426c57f07738769770434f
+SHA512: 5afb3a973c4783e349f55f5a3f8b100d88e009b04fdcb7d2702bc80accff383115a59488ac9f8d8bc894f3ba2e63ce5a6a0705c6736f030fa5e5b10d37a54561
+Description: NVSwitch Configuration and Query library
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+
+Package: linux-firmware-mediatek-genio
+Architecture: arm64
+Version: 4.1-0ubuntu1~22.04
+Priority: optional
+Section: multiverse/misc
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 5021
+Provides: linux-firmware-mediatek-aiot
+Breaks: linux-firmware-mediatek-aiot
+Replaces: linux-firmware-mediatek-aiot
+Filename: pool/multiverse/l/linux-firmware-mediatek-genio/linux-firmware-mediatek-genio_4.1-0ubuntu1~22.04_arm64.deb
+Size: 2749046
+MD5sum: ce478aaaafe53ba4072a0232dcd0bb90
+SHA1: 598b6edc3653ab2417c319c28fef1d1e507edf73
+SHA256: a35416fb2f90eb6fdf0f7ba3a0d9bcb4a8a884d33d7004e5791a395c6ca9b9e8
+SHA512: b5b883e37e5f4350ead5941e55b8876980cf7d04fd5a9cd8d4dff8ca2fa85eacaa685dc8258fdd75f5b0ee76c7dab4f3f691b2747163c91f8abc4d8b7f38c3c9
+Homepage: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+Description: Firmware for Mediatek Genio boards
+Description-md5: e27aff71dfe184ec7254dfa6b974f8e3
+
+Package: linux-firmware-xilinx-ap1302
+Architecture: all
+Version: 1:2.0-0ubuntu1~22.04.1
+Priority: optional
+Section: multiverse/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 181
+Filename: pool/multiverse/l/linux-firmware-xilinx-ap1302/linux-firmware-xilinx-ap1302_2.0-0ubuntu1~22.04.1_all.deb
+Size: 157436
+MD5sum: 88c75099daf9486ae425fa209abc4265
+SHA1: 79dd42f2b37d37a719852f184a776e5b6d080af6
+SHA256: 2b925157cc8b1e1c7b7f575aafd5c8d864e91507ce358c73f2b465dda02a5aa6
+SHA512: 946716a4587d6f281c09f4b69d4fd0ff87cfe4521759d2eeeb6017ee605c46922035b566280d907621770f9491fdb556b675d68e634e182d4d5f7b9e96de1b0a
+Homepage: https://github.com/Xilinx/ap1302-firmware
+Description: Firmware for the AP1302 ISP, for Xilinx boards
+Description-md5: fc715d17498bc0635e995228851ddbc1
+
+Package: linux-modules-nvidia-495-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-510-nvidia-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-495-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14060
+MD5sum: 83845399ca2020f4a16e22f3747d9a0f
+SHA1: 7337a6959ae7adefec83253447cd032ab47a5ace
+SHA256: ea865f885a290e24e405310ac14d5a1876282e780c55826147f0a6a48c82343c
+SHA512: ccb51bf3c73fe7a8a92af6f8adaf86f76b56ce7266065c2f106c16f517822630bc2c58a139a99f73dac9aa9de42ebb951ffcf8c3a098c51554e78cfca3df04b8
+Description: Extra drivers for nvidia-495 for the nvidia flavour (dummy transitional package)
+Description-md5: 7188b86430acc7b8934c0a45d66cf718
+
+Package: linux-modules-nvidia-495-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-510-nvidia-64k-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-495-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14066
+MD5sum: 75c53c9b0d14a6fbe89fc0aab5873d48
+SHA1: 98e6e377118e9dc5f811cd54c442ead620d752be
+SHA256: 5e44f24d349e69b437b7f1fa0d9925912ea3f6da156f00f2e6b0bb1d8117ca81
+SHA512: 72d32020477ce4c2e3f5a32cdb2d870f4de822cba7280562256987da89ff501008923d4172ecb06ec7b97feb0811c1b302bcace36bbdd2f0db93e9ee955cf8db
+Description: Extra drivers for nvidia-495 for the nvidia-64k flavour (dummy transitional package)
+Description-md5: 098cdd380f67fc4d686fcd62d1124e2d
+
+Package: linux-modules-nvidia-495-nvidia-64k-edge
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 25
+Depends: linux-modules-nvidia-510-nvidia-64k-edge
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-495-nvidia-64k-edge_5.19.0-1010.10_arm64.deb
+Size: 13892
+MD5sum: 22ba139255d0ebca4830bb9aa0aef16f
+SHA1: 85314f3406df1a15266ca05f2f84f0be9be3a080
+SHA256: eeb1ca271faf6d3f7c3ef39ccf6002b1ca7ad97f3d6a3cd1b38a52c5f0e6318c
+SHA512: 471579ae560ae31db931554aa204687ffe4a06ad1d2ba51b3bb2670efae2978eb2db7331183ac3cbe919c5a6a75fe150a7a9500350feda3a21a1d427f0d13bbc
+Description: Extra drivers for nvidia-495 for the nvidia-64k flavour (dummy transitional package)
+Description-md5: 098cdd380f67fc4d686fcd62d1124e2d
+
+Package: linux-modules-nvidia-495-nvidia-edge
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 25
+Depends: linux-modules-nvidia-510-nvidia-edge
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-495-nvidia-edge_5.19.0-1010.10_arm64.deb
+Size: 13882
+MD5sum: 6f73f09810c56f6f97483ba56f499e53
+SHA1: 573717f6f3d3f2a20f3e225b8864ad29f06f9708
+SHA256: f89c33081cefaeec8325dd7c52aee2dcebf3f1c7e47b5bbb2cf29ccd420a5e5a
+SHA512: 7f48946dd5f2f71af67390151a33ea5bc2c777b46cfe80d4016ce6eb0a52ad459c9ea7121db13a0370539f0c96f4614276272afae88bd659be63dc3f68f78664
+Description: Extra drivers for nvidia-495 for the nvidia flavour (dummy transitional package)
+Description-md5: 7188b86430acc7b8934c0a45d66cf718
+
+Package: linux-modules-nvidia-510-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-510-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15620
+MD5sum: 55121a37284461fff431f904aafbd5c6
+SHA1: 21956d8cb4389b3053739dce741746749c09f91e
+SHA256: d8beee7887b80ef02aa0857519bd1d7e07c1eef300b95e8914ef7fe689b78a19
+SHA512: b769f1192f6902ea7e4489163d3e2cde06b49e1df4eeb65b3e1a6fc88583c5d108bebe97633f40394b80cf6cca2b7fd90a1612d53d10a10632fff8add2689758
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 0abed14dbd4dffe42f2f2afc2621f063
+
+Package: linux-modules-nvidia-510-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-510-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15630
+MD5sum: 49c25cd2236e4effb8f6bd3327576c76
+SHA1: bd049ee7ec64da98ac177d3d9bc9a8b983578485
+SHA256: 363e84449ebc7d27d92dd05b9aaa57548a32d4bd4cb516d69e5afa9dc1f0ee03
+SHA512: eb6557f6e9a9c9f408feca24aa3be3303f65ebe1a4ce9adda05f6f363f0801992d1ce8a132c0e6c80257045ef3a610a61acf2da8d252747242415a36f1641798
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: aa6a2b1b4e63679366b3c6ced796ec6b
+
+Package: linux-modules-nvidia-510-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-510-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15804
+MD5sum: 6ff397c6736730efdc8ed26c5922e6bf
+SHA1: 6936e31b67cc2fb8b37ae9f3d997a734abba9535
+SHA256: ffae28281822e21b6c7c8ded95bee03882f47095a5bc220724d8ff27f2e31e95
+SHA512: af85e4cab44a2e77ab57bbdece6667da68b6f2843a1adcabc7cf80cc2e3965cc11dce515a4c128eb473ad91aec4e75be8a921aefd6ff52ce6748bef5d99ba59d
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 6930419859b0c8588274caf60c88af73
+
+Package: linux-modules-nvidia-510-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-510-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15812
+MD5sum: 13d6fae3a9d216b0c2b645759fd9676d
+SHA1: 0d01ec81ff7ae79f659db7efe74dccbbeec86501
+SHA256: 4cc54bb5a53dada9b7e6de0270a7fabc1db8e4349221a275972786eb7b1ef6d5
+SHA512: ac6e17238ed32f36ecdcef5cb3a7e5cebc0e336de4e9a2ce1ea0b885430178ddba7cdb89c33cd320f04149d34f68af254d4f510d5c6fdefaf5a2b6c3cf72db6b
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 9ca5a28e88da09c4b02f8d344296be7a
+
+Package: linux-modules-nvidia-510-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-510 (= 510.108.03-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-510-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14122
+MD5sum: 2f688f5995c0e73c167c8215266ee186
+SHA1: e8785c43d362b2078e216b711020b70c8c7fe426
+SHA256: d2d3d9e81ec7ae437b69c85b3880510dcf0f7d2614c9d0c8841f5dbba590a25c
+SHA512: 7f6c2e88b76ba5a22f3738ee57510cad9e416529263bbcaed5170932da5f91de078bc6e8468078cebdf7641fd1a0591ef1460789f2fd76470d271de88e6b1cc7
+Description: Extra drivers for nvidia-510 for the nvidia-5.19 flavour
+Description-md5: d1b4b19ed3263ac9717b7c593bb7996c
+
+Package: linux-modules-nvidia-510-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-510 (= 510.108.03-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-510-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14136
+MD5sum: 93f07d9a70ad7a4bdece8c0fe3390188
+SHA1: 157c2cb553b1fc2cc5b6bbe336674d3e10420a3a
+SHA256: 9297ae29fcb91dd12954e3e881914d9ec8b770e96f94f02847ed454e26ccc553
+SHA512: 57ada214a7f23cf29ac8188f04391a2ad92006cd25f328d06a95c356e809bd0dbdd15307c50459468f9563ce4b1149108d8ae4656f2067a9827a210d58d5a8c6
+Description: Extra drivers for nvidia-510 for the nvidia-64k-5.19 flavour
+Description-md5: 45eeca01d1cb06d8dd342a070c86a8e5
+
+Package: linux-modules-nvidia-510-nvidia-64k-edge
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 25
+Provides: nvidia-dkms-510 (= 510.108.03-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-510-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-nvidia-64k-edge_5.19.0-1010.10_arm64.deb
+Size: 13958
+MD5sum: ef0bafaa122a5b97230eaaa212f13e64
+SHA1: 49b5fb7148c8714b9cc4e25f51b559fcd540e64d
+SHA256: 09c76d13bab0315029553b813cdff4422855a89037e1954f4efb905fb7d966da
+SHA512: 2b62c4c43009a4d0b769fa8a976c67b603eb9dba6c38de21c0d9a1562068c31bd2023ae1206c0ca5919935889cc4c51d8b583b0e0d6bc51c6ab4c1ea17f26f84
+Description: Extra drivers for nvidia-510 for the nvidia-64k-edge flavour
+Description-md5: 8951f396700aadb073b61b35d7745305
+
+Package: linux-modules-nvidia-510-nvidia-edge
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 25
+Provides: nvidia-dkms-510 (= 510.108.03-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-510-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-510 (>= 510.108.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-nvidia-edge_5.19.0-1010.10_arm64.deb
+Size: 13948
+MD5sum: 9321a3ff8af9ba5b2e90b2095d7473ad
+SHA1: 51a52f061c1bbd720c48d2f3f9080ae0894c8732
+SHA256: b427c8c4c1a6330a0d89bf9757f7c628560898cb4024d0da9cbe40bad4fa089c
+SHA512: 6b1667e35eecc4e0a5d8589fc071ccb0d0eceba2f471f2aea8df4e6af7060c58ca74c5044c4c0081fcf7156c76fc23b14f484fbb9fb974041a907bc968d674ba
+Description: Extra drivers for nvidia-510 for the nvidia-edge flavour
+Description-md5: 78dc7af88724522fdae595768499b9c4
+
+Package: linux-modules-nvidia-510-server-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-515-server-nvidia-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-server-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14066
+MD5sum: 93951d2faeb4cab18cb2d279fed63403
+SHA1: e71a3a84b9fe0b2848597bd7eb654c27c31935ad
+SHA256: b9fe8000a41df1834bce16acbe50dd0a124589e8d4d27baa23a7198f5e4cfe29
+SHA512: c3788664fa94915eb5f64e04faf676d74ae0a22f3c2527fab790886a2d2e64d01bcccd6e1126a29a05af1f957346c412c0f8b00fbf185eeabce61b1eee7b634a
+Description: Extra drivers for nvidia-510-server for the nvidia flavour (dummy transitional package)
+Description-md5: fd85468baaea5239288b00e80da75e6e
+
+Package: linux-modules-nvidia-510-server-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-515-server-nvidia-64k-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-510-server-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14076
+MD5sum: 5ca784cdeec8870797215ad47ae53de8
+SHA1: d59e37f2cd595dc3337c73f8efcd96710030b00d
+SHA256: 76fdbd631891ead0bae2a9f83c28d02a92a336eaf66dc7f63270b5b9e6a8718f
+SHA512: bdb069478d612a20551734b5272705bc5766720b1040d99abc48aa7cdcb0c55feb14850c2a4835edaa63d480bcf9858afed21b4f41038462f8bf45b30b2491bb
+Description: Extra drivers for nvidia-510-server for the nvidia-64k flavour (dummy transitional package)
+Description-md5: c9f1a80526fc92a6fc9e076bac65299a
+
+Package: linux-modules-nvidia-515-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-515-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15618
+MD5sum: cbd57c5a864b3202b6abadccbcf14c0f
+SHA1: e6bcf5c2d1a0394fd763e4840181a3cc8a193fe0
+SHA256: 2042e279a6adaf428a3d6c17ac413893e50979b9c82f85fd8ea23c9621ddd305
+SHA512: 069da8bfa148c3135705c8904cc607ab2f2fb2053085dcd94e04d10c91647b7055648f9b35364621bc6fd0999e0d4a75b096fb5a194c6e0b5dcf271da762d521
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: e1e4e03c3493909030ad3d85c7e51620
+
+Package: linux-modules-nvidia-515-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-515-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15628
+MD5sum: 3416e796bac646f3a7cd0e29461ebc15
+SHA1: 1dc88d8187d4f687f0332d370c84e753a4be9211
+SHA256: 08450c5e60633a56a0a05331f01d0a8680b0a28b417292ec84e0dfc696f3c29b
+SHA512: 29a3be5886a0037065ecfc459c850928ed3679a3ee3ceb53fe941d00f72090175586b0c82ffdec4aec36f15de98b227dd51e259364e9d37d779bc54db325c51c
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 754a7f95dc9bf41a15bdf1a01771f584
+
+Package: linux-modules-nvidia-515-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-515-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15806
+MD5sum: d4ee2ef3475cba63aa1b854f9603b266
+SHA1: ccca9e9a36f83a519ae8e846cd646eeda230ac11
+SHA256: a938162884384c09bfa1a9d9f1d6c3e575092f91f2995cf301b0f025271975ff
+SHA512: 72483299238be114aec5398b9715970358018e0779a157541c35bc149a29b9f38ecc030bb5c02c5956b1a75769610d55f28f2a89721e784c1fbd9358ce61a348
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: d7cb6d1f24ef8d49ab2add3a9d57d2a3
+
+Package: linux-modules-nvidia-515-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-515-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15810
+MD5sum: 32ba308dab7ba0a8bd8e80a50b1b16bc
+SHA1: 3ca272b05a88f405091f7675e9e6b075656d7054
+SHA256: 6ce88b87b2010c66428161607a4fccdbbce39f145fe63f0bd13b04eb8558d78d
+SHA512: fcd6cc5d28bdc67ab240e968f77cc1fc1e4044fa572ddb45be1b5be22a99de903876d994f93b298a1d169275c7772bd6062ae76a1f6ac5706ecbf47a4625f99a
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 21299a3753cbb7ba03225d0ebe228e65
+
+Package: linux-modules-nvidia-515-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-515 (= 515.105.01-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-515-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14126
+MD5sum: 9c690ec9926f7a7e8f3d24d95a67194d
+SHA1: c388e77a85a4d94b490082d5f30e15b2cab9af78
+SHA256: c696570d4a19c98deda355943332b741d38671ac5566230a81bb0c86471f1e27
+SHA512: 694c287eebd76eb224343e69236d8d2263cb327b7ebed68963ed52e37677c9501aa834a2c38f31e8cd73534fb7e9b10931258545defcf36d814e673499446c98
+Description: Extra drivers for nvidia-515 for the nvidia-5.19 flavour
+Description-md5: 2fd52a1ede515e53cf07d91e95354348
+
+Package: linux-modules-nvidia-515-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-515 (= 515.105.01-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-515-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-515 (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14136
+MD5sum: 68137e96296e38735930c40f905c3965
+SHA1: ce9becbc827542a8c774ab7409bae184646555fb
+SHA256: 829ba5cb9f01467d90e4ad872951700321d366038a3a4c6feb160ac5a7d53e3b
+SHA512: af597e04fba233da3ee2f2db47cafc91d6d6c1cab3084922b85ab4f96f1b2c54a026c7864fbb9a85231b4414cb733b135b8a70b398f580195a8bf97d733fb9f6
+Description: Extra drivers for nvidia-515 for the nvidia-64k-5.19 flavour
+Description-md5: d7314bd928ccec8e24a4d2c37513d2e0
+
+Package: linux-modules-nvidia-515-server-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-515-server-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15630
+MD5sum: 6dc2cc5e63cf6db14e08ae9cb7479f5b
+SHA1: 9141418a8906fc81764322eabc0d5ee54b970833
+SHA256: 66f937b863e8fd894c2cd5050f45c1a8dead4176cd64564855058fbee626916d
+SHA512: fe15a6bd374632659ffcf98d22d6a6bde4f9c47d01d2680471ef9adf63921129a1325818372bacea35ba7b09f726b86c3932a3b20c7de8deed0bb143e83446b1
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 2d9511ab0d92c1e9618add277edcabe0
+
+Package: linux-modules-nvidia-515-server-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-515-server-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15634
+MD5sum: 7d24e803169577978756bc0141151332
+SHA1: ea9d33ce9d7055487e88418b76309dc41cf609e5
+SHA256: c1d84cc9d623d02364e3439272271d64bb5cdf9ef4fc555ac44b26c937404f4d
+SHA512: 6cdda517d45588d1b0c939f1b2138aa3da8bca54fda6b26530115a505cbc0e95384400f36c526e31c52cb56e046df83b5164f7bc809c242b90d066f43ddf9197
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: bca0be118524159948551fc8a1e0d308
+
+Package: linux-modules-nvidia-515-server-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-515-server-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15808
+MD5sum: 44eb7735cd120806397d9b2959feb875
+SHA1: 0366b2efdb27892b8454a48f30ce4c48b8bfb17b
+SHA256: d95de33b8f711ac0aaa1983654d7c2d1fc907de5ae1993556e5932c4d46dbfd6
+SHA512: 18acc3d339d2f42e6b32426aa59e1a29fcc0e755c214b5181bd78e3bc18827f045374537cd6fcec402045f784efa4f1cb9f9d57f562f2e52dab1a5e4759f8f38
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 109104461afd6881a9a6a1ab4e592b09
+
+Package: linux-modules-nvidia-515-server-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-515-server-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15820
+MD5sum: fd6515c97d97066ecc05d05879f90e69
+SHA1: 3815a6ce7d6f3d115fc0e20ceb39dd9fed76891c
+SHA256: e7a4c3e2d9ec146bd1e231c3d763022f0156603e9263bc71fd5a48ed5a5d1744
+SHA512: 1a1b425d042dee10c937d09f6464dfcd1e65ad78417e7c1815a5cafb75abd62e68e9d02761a7d70e2c934aabdbce542e8a1ef87b10361c136f9d3a68e116bab8
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: c99894a598bee6e2716f90e31759b7aa
+
+Package: linux-modules-nvidia-515-server-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-515-server (= 515.105.01-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-515-server-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14134
+MD5sum: 64ffdbc764e878761aa076849641d1c8
+SHA1: 55556e82079e85344de7fe737c47eba0483531d2
+SHA256: c636e67f23df1a4ac606b9b0f403670fe091db5081c4d367d8af89af140deda9
+SHA512: ea940572722cf31f5ea222e5cc77c47aa22aa524df8f145713b212e0c1df74663ff126155e89b9a432332d90f0ef0d70849fff7055e2f9cb9da5bdc2250ad478
+Description: Extra drivers for nvidia-515-server for the nvidia-5.19 flavour
+Description-md5: 72f56870b4ef42a15249c8a18aa9be1c
+
+Package: linux-modules-nvidia-515-server-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-515-server (= 515.105.01-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-515-server-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-515-server (>= 515.105.01)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-515-server-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14146
+MD5sum: c63c24a71dc51f0824c1a2b961f20053
+SHA1: aae851aa878ffabe3140ba088d5ae23c42ba709f
+SHA256: a2ffd55b689eaea7c96815b88784440eed5f70baef9356c2be7efb7ab70cc5c8
+SHA512: 20430cd8ae6a30275fcded3da7b5bfab9aa394ad3ab4a6f972533732a4721d1001fc4c37f6d4b0035bd3719385e42346d159ba510e007963ecfb91c2e7c4a8a5
+Description: Extra drivers for nvidia-515-server for the nvidia-64k-5.19 flavour
+Description-md5: 61163e7844e976e9190f78a210bfc410
+
+Package: linux-modules-nvidia-520-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-525-nvidia-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-520-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14056
+MD5sum: cf9822f346062015e5be2ff556e50d3a
+SHA1: 10099326e8ce20f2beeaf59acd1578835371e7ea
+SHA256: e668360337d7a21d3454287c0649164df6ee48313af094018e1bc010befac376
+SHA512: 58d83e9096f5be896b04d396227a36f8d79b5d885dea2bea560873f2d632947ef6ea98c1aa139234d52e60256daaea88182d75cbedbed43e1d1a70c731a9176b
+Description: Extra drivers for nvidia-520 for the nvidia flavour (dummy transitional package)
+Description-md5: 80fc8cef3b22035f5700fe6d65da07f3
+
+Package: linux-modules-nvidia-520-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/oldlibs
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Depends: linux-modules-nvidia-525-nvidia-64k-5.19
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-520-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14070
+MD5sum: 701e6106b3bd2ba4cf1af380bd5cbe27
+SHA1: 34f8c0fc0383ea8fde749a1ccbfc186068d2293d
+SHA256: e53109ecfcb3251f1c66ce9aeba86d0bede06e7e23e30adb90aa73baae91bb37
+SHA512: 316846c305747b9ae6e96c75ca259dbf39be359d5122f30adee75d41ed35b1e4d3fd8cee8cd4c467ad5db7af8dbb477dab73de46d97c9f181dc9a63902dd7dae
+Description: Extra drivers for nvidia-520 for the nvidia-64k flavour (dummy transitional package)
+Description-md5: 0557c94c222ffaf7bd334a1489447339
+
+Package: linux-modules-nvidia-525-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-525-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-525 (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15616
+MD5sum: b024b0ac14a536c084e74f1560aa26d4
+SHA1: dff3f007df7a3a137d876af061228de531af016c
+SHA256: dd54a03088dc473f008c14c496bd3cd9fb02109e085c2aec3dbd2c5ed3d16dc2
+SHA512: 98f2eafb830948c925beb96638cba80129105aa32402e9d532b9bc7bee336f34c794d7775090b8a4002b2a2eb8318c16f3399abe2b846024cd69c2ad0485559c
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: ab16a6ce7b81ee17facb0b7398844b27
+
+Package: linux-modules-nvidia-525-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-525-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-525 (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15630
+MD5sum: 1bae03f06502db5cff064b6523774687
+SHA1: 7d077ae4f24b45cb90fa2b20f66ef3e8f91da8ab
+SHA256: c098c4719300a96f99fd86290004f61ae2862e772fccd83fb8122c15932ba815
+SHA512: 94f8beef5e1bd1e78501f581b0afc2e44ea3f205a0c530082da8aefff1d6a8887a23a30ebe2fa07292c222eef30330cb34c3f4606225f1d45a483fd4b56ec1f8
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: af1da08f2199a2e645cb5ee696e4ab26
+
+Package: linux-modules-nvidia-525-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-525-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15808
+MD5sum: bdd70a8e6c3ddda4c7f10d12134a4b58
+SHA1: fa55174cc7e56bca562e5c64347fb06b111284ee
+SHA256: c2f314a93080cd8af51385f4348224d2741712945f05d74fc1443e8f215da0a6
+SHA512: e69a3222bec1e0106015e62fb8ddeba4e2507f6455c06738edf600597c9116a1f1ca546b90c0a0efbb7c88fba3178c7be53da6503c66bd64c3acacd15e07ac1f
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 0edfb8627052dbefd8b4f023f6682e64
+
+Package: linux-modules-nvidia-525-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-525-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15814
+MD5sum: d08e00bf675b7ba314b4b11c989e85b4
+SHA1: d839a83820544bf6eeec232eff92744e7bdb6202
+SHA256: 4235092bef839ff08f0606d8486d16782b2f959f7a14d3e977e779bf2b673503
+SHA512: ccc9db1f0edf73549332f3ea57a42af874a3d43a0cca6d5e79adb09f79bd3c02aa44eb26533c7b490f6c48758bbec3b0b62a3996ac7878e9b9c8e3068ffc2a76
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 81a9012be79672c7e68d44ed1ced0178
+
+Package: linux-modules-nvidia-525-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525 (= 525.116.04-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14124
+MD5sum: aee8bb2e38c6dae2d69f12ee139322f4
+SHA1: af437043bacd458ddb6a944ad082faf3e1f62248
+SHA256: 1f241786192262bf71a4d49d33545646a27c524929f75efb397e7cab1525f862
+SHA512: f113928902c9cc81a782d9a080e295e0a53beb6fe00ec2df3503057a3d528fe067bcf6eb781a4656a3e1699bbe80ec88e0a240e1f292c6dbc5d77067b7724f9c
+Description: Extra drivers for nvidia-525 for the nvidia-5.19 flavour
+Description-md5: 08bdbdc3d6eb23d1da952ea81834c026
+
+Package: linux-modules-nvidia-525-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525 (= 525.116.04-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14136
+MD5sum: 5010824b4138027d88ad153a9d3ce351
+SHA1: 75fdd99f04bca73fefbf412ce2b0b69b7d392d5b
+SHA256: 2503ac84c45633201846df531ddb61c62f30959fbe0d79c07dc6d5099691854c
+SHA512: 5ebde08d247ea006f1609f14008380027c61d3c85da0fba4b5a463f3903c495c410ec6e2b79b982e8b984fd90274632523c7defe89e730c919cac83205c8be7c
+Description: Extra drivers for nvidia-525 for the nvidia-64k-5.19 flavour
+Description-md5: aa25fb3a5c2026655271928e207a1d6a
+
+Package: linux-modules-nvidia-525-open-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Built-Using: nvidia-dkms-525-open (= 525.105.17-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14048
+Depends: linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, nvidia-kernel-common-525 (<= 525.105.17-1), nvidia-kernel-common-525 (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-525-open-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 3592516
+MD5sum: 7026f511b8697e93e0920d3e333632d9
+SHA1: 42c7626ee59e15a61c9773df2beb78d9e6d8000e
+SHA256: b297f6b3b2dd61472db8f982953361a9e00e243a0f36750265932d92a0f7550a
+SHA512: 8d0b4c3c6e6499403f2a1fbaae15ec9a04bcb9f4946db6ae68bf7b7cc4b508ccd0bc56c73b37716feb7b053c2a8c956f3913bc5f1ec2bc9bb19b6e3ade1e1723
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: a03b968dc2126d5877f25aea9d3e8bcf
+
+Package: linux-modules-nvidia-525-open-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Built-Using: nvidia-dkms-525-open (= 525.105.17-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14033
+Depends: linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, nvidia-kernel-common-525 (<= 525.105.17-1), nvidia-kernel-common-525 (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-525-open-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 3585594
+MD5sum: ff6304e03982c69a3a188ceea8926b92
+SHA1: 80a1cae48db151d52f06119a0f377ac39c7885ff
+SHA256: beab57e3d835aef33eb3d6afc00811b2b5388f25b723f609542139ddf75bbe95
+SHA512: ca10db3ed8356559369019d7851e9940ff48f3ab8a099c94aa2a92f1090d812dd637d410372c2a61146c2b09651afb49a365482f7ffecf550883aafb3b12c004
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 6cfc3456b0d6462480687d3381fe8288
+
+Package: linux-modules-nvidia-525-open-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Built-Using: nvidia-dkms-525-open (= 525.116.04-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14048
+Depends: linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, nvidia-kernel-common-525 (<= 525.116.04-1), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-525-open-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 3592330
+MD5sum: 108362f50320af614fb70b7296dec205
+SHA1: 6f42f70a20c8b4122397150d4fd802ce1b8a163a
+SHA256: 9b90eb9f002f5b75c879cdca7c21752beee9635e0533f8d35a0e6f1fb4b81c6e
+SHA512: c66e6e4c5b49fc2648fd85bfafd05384c8c65359e17a9b189825fce33538c6b973d4496663e7a38d4b3c677154a07e1b9c45b6fe95435749c1bdf91e2ccdeb9e
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: d2e89fdedde71175f8218871e4fca1c1
+
+Package: linux-modules-nvidia-525-open-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Built-Using: nvidia-dkms-525-open (= 525.116.04-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14034
+Depends: linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, nvidia-kernel-common-525 (<= 525.116.04-1), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-525-open-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 3584384
+MD5sum: 0a385b5106db8383e6813f80d22d0cdf
+SHA1: 673fc6cc7aa44a96f2663ed79d516c82e5706d12
+SHA256: d434a03d77a27a47cb4aee0aca05050ced2eca7a4b3e2abe739c473a059c3762
+SHA512: 90bc903b9ceb1a016fc0c5eb03d1c005384c7aa8e29c514b76b4c1155c055150e37ce48b3181fbfe2e04ed7bdbbf2804f7f4aabd1ec01479fcd6bf012cfc1aa7
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: f674a139e44d017f4e5cee4779b66ede
+
+Package: linux-modules-nvidia-525-open-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525-open (= 525.116.04-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-open-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-open-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14138
+MD5sum: 3e3522f613bd74f6b20cdba0b9bce9a8
+SHA1: b5b784204d6349af656e3638475d6cba0c8c849f
+SHA256: 336273edb882339939adbf31a5a2c1b0106bccdd385457a0ad2cd2c952fb06d1
+SHA512: 7d137a0920257dbcf094d4f5846362579aa9151a4c415757b745d51ec0744ca347c81db7a40ca35f55816b869ab46c9d9e3b5b0f7ddeb1924029dc704c14fedc
+Description: Extra drivers for nvidia-525-open for the nvidia-5.19 flavour
+Description-md5: 84a071dde3ff8c9c755378e1e9233546
+
+Package: linux-modules-nvidia-525-open-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525-open (= 525.116.04-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-open-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-525 (>= 525.116.04)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-open-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14146
+MD5sum: 733243c1a5e0f2b883f94349739925cc
+SHA1: cae3d3c7b87050ea07862827278a3e558948f1a8
+SHA256: b464dd7766c94e12a568f75753e79a15276f52912ce60bb027f7f8bcad86ad7b
+SHA512: 39854f1d7d6bd69c7480378a22659d5fbbd2732dc9f777175d73257a23edef447fa2b58e7cc3bbb24d2e73bea1bd361a5a06027df2e49af759abbc4d1749ec0c
+Description: Extra drivers for nvidia-525-open for the nvidia-64k-5.19 flavour
+Description-md5: ec654a880b9eb2fe06279a44af602d7a
+
+Package: linux-modules-nvidia-525-server-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-525-server-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15630
+MD5sum: d802b69b6019df21a6270f03b495c378
+SHA1: 6fe17778930d415bc0dadff457613acc63da756e
+SHA256: 739eac5045338f86b783d0dd5af8efbdf8ea646c2abedf9834fd0da1fa214173
+SHA512: 9ad494a86c01b530b56e342cdcc82fb1b32747844d3e0668ca92fec0ea51bbfd628a80a41c1347938ef423d20f45598d1ce5076d20afe323c449dee9694b1856
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 041fe3fddaf81bd432d55021c9bb780d
+
+Package: linux-modules-nvidia-525-server-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-525-server-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15634
+MD5sum: c0baf8290ac538c2d853d90f7a34cc84
+SHA1: 82e2a282fbb0fd514b8b5fe97d07ac805ff504b0
+SHA256: f1f844f173b3b1b3660bbd71cdd25163c1ae259e7a0ce4f1834985957e684d82
+SHA512: 21f36d67ee1b473643c71e27f90278169aff370eaa0233078a7ffb916307a94b1ecc64fe205cc6abf47946ee0ba85b4555b04b61bf0e8006c9082ea71a7280e6
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 34efb1ed1055d313c5c9c88ce038afc9
+
+Package: linux-modules-nvidia-525-server-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-525-server-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15804
+MD5sum: 5b031281d73116899487cd3684af413b
+SHA1: f4583a927f06edee6f53621524537f5ff71b407f
+SHA256: 9a05d51349cf6b4725020276d94d81e373bf3e166b55f52222b9bfa8ea694ee0
+SHA512: 8f4f7a308f2fa215e83e4a512c9872464c05c783eb3ef1a58b5f7574cd80ef7cfddca7dd2e32e9d34d51735750ac509890c71578b209b8b48eb1edd27742545e
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 579432f547f86d6d27dcce7b563386fa
+
+Package: linux-modules-nvidia-525-server-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-525-server-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15814
+MD5sum: d4663a8fd1d69a7ff82269730d3aa544
+SHA1: 219165fec59e65dc14b6fa35f4df9fa953334f55
+SHA256: faa969f2d5693fdda4504d671845b21d2c1792b666ade9b2492cdb9286a25e5f
+SHA512: 55ab62a876386ae20cab89d65196ad60135be20538c981c5cf082f5806b569099d0f931d049a50d9cb2b1c0bb36c5afe596484587f006a78581aee4c637241d3
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: a279501efc24db30f78b544a81d8b09d
+
+Package: linux-modules-nvidia-525-server-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525-server (= 525.105.17-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-server-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14136
+MD5sum: cfa89b865ab2b2351ef4c3794d6f7f1f
+SHA1: c877339165626b0fa338263c0285a1a92512bdc0
+SHA256: eea2521b5c36b1ceb18bf3c34d1498ebf2d4b14603be37996782a5625b542053
+SHA512: 0a5f33e2ff7bdf2b28b5ba3040639df7ada4675435e5259b78fbe7e782e0958adc219175851aae2665fd44cde51d08b6bad827b08de798dd52b672d5a4626044
+Description: Extra drivers for nvidia-525-server for the nvidia-5.19 flavour
+Description-md5: 012e92d765b700468f7ecd224a895cea
+
+Package: linux-modules-nvidia-525-server-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-525-server (= 525.105.17-0ubuntu0.22.04.1), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-525-server-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-525-server (>= 525.105.17)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-525-server-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14148
+MD5sum: ff59e8267c2422148a447bf21744abf0
+SHA1: 2d7e41f4a2c980c351e352c7135a68c9f1fde6ff
+SHA256: ebfc3268f5b598426a79f8631a6585ba3c6edc604ae17f4447ed94f5f3f74c42
+SHA512: 6732f96cfbc18612c6543989b55ca03bb024879b82d8b69d1d0245aab85002ec8f2dd915bd9bb2cb80a2642c81d6822be9cec00ed4086d5f201153d232b915e9
+Description: Extra drivers for nvidia-525-server for the nvidia-64k-5.19 flavour
+Description-md5: d7a080d39ab55cf6c7f24fdd717019ff
+
+Package: linux-modules-nvidia-530-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, linux-signatures-nvidia-5.19.0-1010-nvidia (= 5.19.0-1010.10), linux-objects-nvidia-530-5.19.0-1010-nvidia (= 5.19.0-1010.10), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 15620
+MD5sum: 7fe1ee9531e577010d44ad199990522e
+SHA1: 51e29736227c9682c8b8c9424c8a271f5fd1f5c0
+SHA256: c5485855595da04d861b9b2954849319b8e178ae40dfeb83163372d14c7b4472
+SHA512: 081bbabcc71a12022754eb4af127cd3f75d1f57797516ee042fa8f75e39d018ae5352253aeb8e051d6c0d24e5dad7640c863d7b50d44d0e96d582d37c59b9f1c
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: cf10fc47bf32688a4f3ef66a3c7bf1db
+
+Package: linux-modules-nvidia-530-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 34
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, linux-signatures-nvidia-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), linux-objects-nvidia-530-5.19.0-1010-nvidia-64k (= 5.19.0-1010.10), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 15628
+MD5sum: 5c5afa2ef328edeb69fbdb64b782ec36
+SHA1: 557b2b90c1019ab38134b18a4f8c4599e7ac1f3c
+SHA256: 894635a952f8a53bccdb3f1cf6bc689203f70c3623c2790bc3fc06866c120e3c
+SHA512: ca79edc575caf7d9bbd5a5e72dfe8433ebd4dc45fba8ecc45b04c2ce56331c2830070e30c95ccb538f011bd91f8eb5d797bc158408a47f24c3749ac6cf7947cd
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: d841d7efd18bd94fb71872be037c36d5
+
+Package: linux-modules-nvidia-530-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, linux-signatures-nvidia-5.19.0-1014-nvidia (= 5.19.0-1014.14), linux-objects-nvidia-530-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 15806
+MD5sum: 8540251d1772f4a0df759fb04297f27e
+SHA1: c2f581c18479ec2aa0ceaf9c09fd19548595ff82
+SHA256: c1143cc46e05fa398dc924b095c875245f23dae7f93ffff7e518640ea3bef476
+SHA512: de313cd7e7b4395d0ba83e68d546df66ea319e126e0aeea78132b1f99d105e384df0bf206cb0470702feb1c9d8394fc1d8bd3d797b19229850ebb85ad1e35c23
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 69601951147386c9b7a74dc554506563
+
+Package: linux-modules-nvidia-530-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 35
+Depends: debconf (>= 0.5) | debconf-2.0, linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, linux-signatures-nvidia-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), linux-objects-nvidia-530-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 15812
+MD5sum: babc04d5801629f15f069669a5f15106
+SHA1: eff977d318e1e021ea90cf79fda1be01481ea9f0
+SHA256: 0f28a077290642cc3cc8a5b675897b920815a79c369bc345b159fd79fec6dd75
+SHA512: 4dd57bf619b7590b68a386aa439d587b2a8f85dcab809f75e1607c1483e17524ea3864d2c7ec082e2c449de9e5010bf0b584a528cdffc879fa42573294efcaae
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: b4b769b27cb20fe977e0951bb39c573e
+
+Package: linux-modules-nvidia-530-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-530 (= 530.41.03-0ubuntu0.22.04.2), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-530-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14118
+MD5sum: 9ce0ad7c17de9fa03d4bdebe39bd2eb5
+SHA1: 6913fd489eb5d79206fbcaadd9d76d1c51cad164
+SHA256: e011b7587cdee48db0743a8af1ba30a3cd433905f788f8666b6d993b71551393
+SHA512: a4bf98ccb4e9fda35c84a712ffb8b9283ffba078a6422c9e0470ad370b2422481ab0f7bf57ec550111a347bb8dc165a7eef508c7201f0b343b279e4b698a9c8f
+Description: Extra drivers for nvidia-530 for the nvidia-5.19 flavour
+Description-md5: 54b312789780c54e373383d0c1b4dc13
+
+Package: linux-modules-nvidia-530-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-530 (= 530.41.03-0ubuntu0.22.04.2), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-530-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14132
+MD5sum: 885d377b847e0e4b1da94a2ff666491c
+SHA1: f5960a73a0a6a2c5e6367b7e9ccc97cd6220bfb3
+SHA256: eb0233593470a2f15337ed3e1d49a053b1f63f654f84dfa2e9ae70bd4810d7d4
+SHA512: b5a6b5e978ef7c8f31514634c47071e5a064129f4060b1caef430e0a91db42b00bedafc0b3893beba3eaf89e99529ee04f0afe68c6d3cee15d7fa6fe42113ffe
+Description: Extra drivers for nvidia-530 for the nvidia-64k-5.19 flavour
+Description-md5: 7806bdf55fd77d312381b57e2317537c
+
+Package: linux-modules-nvidia-530-open-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Built-Using: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14410
+Depends: linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia, nvidia-kernel-common-530 (<= 530.41.03-1), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-530-open-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 3820508
+MD5sum: 71a6f1799373e0f7e3dda5bc91279ac9
+SHA1: 5fcc48b41b40c726ab926ba5b6ff989d10566e6b
+SHA256: fc14fc117431c172e4f542ace210c07e63e9f882f98744f962d7bdd2e5889be3
+SHA512: e74bf32695e809d26de1ab0e091e6c95b6be3de29716aa8f08c4611cbd02254685622729650ee66226b74139dabc39313017160875fcb6712ff9d7ed44324082
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 2309806cc6c6a4c8e01e5e031055edb2
+
+Package: linux-modules-nvidia-530-open-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Built-Using: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.1)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14396
+Depends: linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k, nvidia-kernel-common-530 (<= 530.41.03-1), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-530-open-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 3817552
+MD5sum: 7fcae688c652a59dccf19571f8d6dee6
+SHA1: e68562073c6113c5165ee88e3a156fd638cf974b
+SHA256: 7a96200841dbdbaa5f7f39e82b9a1527fa766aa2e0cc4332488d01859b54954a
+SHA512: 4ef8e2dee9d6724b8e8ae79043dc3edd816ec22f277617b41ca1479b09af13b1aac96bbd2eb71bb7ae657b7ac436f3b5c02b580018fca71c7c09ed12ce5d9259
+Description: Linux kernel nvidia modules for version 5.19.0-1010
+Description-md5: 4f2a412be281323fb3962cd3f6f4c2d6
+
+Package: linux-modules-nvidia-530-open-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Built-Using: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.2)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14407
+Depends: linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia, nvidia-kernel-common-530 (<= 530.41.03-1), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-530-open-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 3819586
+MD5sum: 7f496c0b3476599176d9df517d5d6295
+SHA1: 5d510bc84875707029e4d709107affee9ff9f8f4
+SHA256: 43716d98ab065301c54f53928adc2a1cafc23eb55553e901adf8034b20059365
+SHA512: c07f87cf6370d0c14b9d3adc88fdc62d779823b1bacb8a30ba8bc91bb76c30d5a22061e5608ee5da451afb42c87abb57e648beec0d8cb48904d22c03b480a892
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: 8f76eb1b84c3272116311e5d7ed60542
+
+Package: linux-modules-nvidia-530-open-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Built-Using: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.2)
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14392
+Depends: linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k, nvidia-kernel-common-530 (<= 530.41.03-1), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-modules-nvidia-530-open-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 3833584
+MD5sum: 99e0e204ae273f7bed3d8e61a0efb5e8
+SHA1: be2d2eafdc51229303f6a152fa99559b9a5549ec
+SHA256: 51e3a2d6bbd18ddba0046c6556ec2faaa5b39b73467a06ce92fb115a117217b6
+SHA512: 40c22fb2a3356ec7aa24a6ebedd56dcec22bd26b8996a74e0697804cc1a5a7dc09482ff5d0a34bea061f7ec12700cfd1481cedd67c817389b41e4dfc6b6004a3
+Description: Linux kernel nvidia modules for version 5.19.0-1014
+Description-md5: a5a06b95606f00d59ac6f3750738f9b6
+
+Package: linux-modules-nvidia-530-open-nvidia-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.2), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-530-open-5.19.0-1014-nvidia (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-open-nvidia-5.19_5.19.0-1014.14_arm64.deb
+Size: 14134
+MD5sum: e1330eec48709031092c2d48cc13e6ef
+SHA1: a0c2132cfd84e4388f7d1219717380a135110088
+SHA256: f9ab5a8b775e6e2886590fb6ae097a8a8608f00799e885fdaef2ba52ec9652cf
+SHA512: e70f931eac4590ded71624f9c54f1c01c23fabdd411e6dcb8adec550aae340dc7c5b02c94630637cc1d0f9968a44871e3ebaed20559eb84b970f993cadc8885d
+Description: Extra drivers for nvidia-530-open for the nvidia-5.19 flavour
+Description-md5: f486e256835b166283b599b3d450a1c9
+
+Package: linux-modules-nvidia-530-open-nvidia-64k-5.19
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 26
+Provides: nvidia-dkms-530-open (= 530.41.03-0ubuntu0.22.04.2), nvidia-prebuilt-kernel
+Depends: linux-modules-nvidia-530-open-5.19.0-1014-nvidia-64k (= 5.19.0-1014.14), nvidia-kernel-common-530 (>= 530.41.03)
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-modules-nvidia-530-open-nvidia-64k-5.19_5.19.0-1014.14_arm64.deb
+Size: 14140
+MD5sum: dc66440a0f4df73761741f1e9b7e62a6
+SHA1: 55065fe6b46727c572f656a434f0cae05d4062c6
+SHA256: e1a02c70d7609f833f95c06e420b788575c476a73748765cbd33a475ad0849a1
+SHA512: d438056cfe6780eeb3fffc7c8c00f8276e6bfa8f79c44ba8a5649f0e7020706c40631351c02c6cdb72a94d1399c1c3e122cfb28d9b5f0835854f12b7c5181f4d
+Description: Extra drivers for nvidia-530-open for the nvidia-64k-5.19 flavour
+Description-md5: 0f17416d6b0ff6bb9c9fad1f23a71673
+
+Package: linux-objects-nvidia-510-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 100846
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-510-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 39705530
+MD5sum: 3f9123bb1e0638b871e07b0d64c4b341
+SHA1: 08d6270dd7527c11c1b8539ca8e49fd469a33997
+SHA256: 1036b3e30bdf4ad204c663302ce4f8f6be2d277689cb350b1910be31194d13b7
+SHA512: b320ae4a0474d210b00b4058a2bbc56e81b7e33a9112461847b7876dce5363f508ac7a8c5f66a096f30ad3eb89af1bdcee8a28be0b0a18bf558734722956db41
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 66e64b78346937a027ba353368160061
+
+Package: linux-objects-nvidia-510-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 100844
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-510-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 39713840
+MD5sum: 83f1acf362376e51dfb413f1e3ce4ef1
+SHA1: 5fd0f9a9b1caa615d31deaaf17499324650a89cf
+SHA256: 2c6c05b5a3cbbb0641370854c40ca3a1bf947b2224ca1a03d3881a63eb7bf318
+SHA512: 963f2891bbd999c83f8381ac7489b8887a01c7c531fd7937de2f199c6522f7926feb53eb25a9f03f6b44e8d8abb42d358d6b9a02c5caac35bae1d2383a4d88e9
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 70ae9d881768e03b831f6f60fb9bf76c
+
+Package: linux-objects-nvidia-510-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 100801
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-510-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 39693494
+MD5sum: 096393b41e2610ca206129dbf631ac71
+SHA1: 8ba31ac1e48866146592e8d90bbb9204f1d57e3f
+SHA256: d5181c21c1e52ba50e867b62aebae0de6c84ad2b560f8ade6c589dd74eead2ef
+SHA512: 3363d3003d60c45b8a96f7f5c94c75d72de59c6678ae1116ab164bc147a8817574daf01aaf6accaffefd7a700c18b66c3c9adf485731ff9fcf0c90e891ca9e2c
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 0227a0eea02855c52c0ed85ea0bea25e
+
+Package: linux-objects-nvidia-510-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 100799
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-510-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 39679798
+MD5sum: fa3cf2678b4a9ebe8162a4e261482ab8
+SHA1: d77955169babfafd9d477045f4c6fb0dd9eb7d1f
+SHA256: e40b9e7b715144114aa9eacc66cd929362804ca9ddba30950db1132a2e8da0d7
+SHA512: 8dc9589af07e5abc5534ae15dc077e362297e3f6491345610d78f26be7f29d1083da6b374dd6c7b7208f061bcb1a6c4abf71e9c7f931dad8f63a1d4ef7295e10
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: f0643fab26c8048b3abdb5d3d4d66633
+
+Package: linux-objects-nvidia-515-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103876
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 41658364
+MD5sum: 8219f089f967e54226b3b4655e35ed90
+SHA1: aa18df7768c71b86cf1d233fcd6b542f47df8de2
+SHA256: 254fa5baa2ee7b40671ac2f216f13832283757b905991fc83b7613728a4838b9
+SHA512: 46b89b5304afce2daf5a5abf1c6efaaa6bc163ffeaad3d43ee7570e53eab7b299b1aff736bffbf305f83803aaf4e9a8aabf3e86057ec3d198ff02a6d78fd7bdf
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: d03a69bfa47ed380b0191a44d69e54ad
+
+Package: linux-objects-nvidia-515-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103856
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 41643030
+MD5sum: 281eb848ff4ef4a38c4f65a346ade138
+SHA1: 031929a45d064ba2e8dea1dc9e775cf7ad14b5a5
+SHA256: bf4a7d0b719080c1c66b6e52bfe920735d816711e53c5472a1c20b9174d5cfe5
+SHA512: e809d781b06a3e5fa2df36104201ea64d1102fb51fbca7abe9c5e31d4c16c44d6bfb355404cf9ebc67e28832cb0e431f3f4ba1274665b06444e3d6271c27277d
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 38b9ba5df5c8a5b546a8c0dc42f87b87
+
+Package: linux-objects-nvidia-515-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103832
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 41646356
+MD5sum: b26daaf5c7e4b6684459b849821b0f8a
+SHA1: d51bead0726cd67a998e0dac09f81f6637a3941e
+SHA256: e54d695cb6079aa0e6cfb853e91befbd02bea9cfeaf7670fa571ef95bca29afd
+SHA512: 4604ccf002c05ca1ec319add581ed3f222082d0ac051319029a864221161890eeab8b268eb98945913061a81605504532d64213d6a13144fea349dd59541e610
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 4bbf5fa084ab3b94e5e055cc6ebac41f
+
+Package: linux-objects-nvidia-515-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103809
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 41635698
+MD5sum: ec9713d2d032a5441e7415e268686021
+SHA1: c1062aed482ad71c407b386b8e7b844008c60d17
+SHA256: 6a1b5344899b2d0a35f089c190c57ea692cee63aaae188e9456508bab69ac611
+SHA512: 712129958e979c079ee54ddf005b70990ba77fd4074b5bb592b806ef58339efe80146568b718eba89171c4e222869a7887eab840c0c39132a6dd2b72e17e3aee
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 0a554b9bc6e36b5a5d14fbf720bf9b3b
+
+Package: linux-objects-nvidia-515-server-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103879
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-server-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 41654518
+MD5sum: 0e6b4b29d56374a373011c7b896b53e1
+SHA1: f82a4d744cc20fb79339bc7a23b7d11124453642
+SHA256: 60e1d44b9e09dd9d6da5bdda2258d9bfb14deee0dea872b5a9f3ca454075fee4
+SHA512: 7909c0a0cca83ec06fdec7a3aba5a516cf3da9aa22012a0e48151f720520e13cacbb7e1e7b6e23793662e987c8821851d11716f83b8aba97a00adce685f6ad68
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: bf06099c6a2efafb16ac032ea01016bd
+
+Package: linux-objects-nvidia-515-server-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103858
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-server-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 41647868
+MD5sum: 353d0ec039a1b51a508dada70f53ba72
+SHA1: 211117028c9a1d70217ba7944b95cbb42a0367d2
+SHA256: 8199e216d026789dbea134d6ee02f2e04de5b68464f04a56d53d4c174a710f12
+SHA512: dfca6bd8ea100e1ee30bbe9f2ada36357f5d855646ba323b8c0728d7f77e0c59d2bcddfa8b5ca4f8baeff4b1445028a8137d78e29ab0cc9a4cbd3f625452876c
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 0b7b69dfbd07b86ebf8522f310b779ee
+
+Package: linux-objects-nvidia-515-server-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103834
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-server-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 41642488
+MD5sum: b0876c50586448ce67a17bd4801b417e
+SHA1: 618eee4116ac9d8bc7ce937073437ce6473e1fa4
+SHA256: 74181d55de7c51a258063a79e611332a6367f7249116b25ae8f201acc84c2f83
+SHA512: 9c7553c7852809942c0ad0045a7d60251dc53417a59db22cd361ffffd742e6a4c4192b07ea07fae292d149ed535e8a9012865bf1e1c0fba33c917eadc747c16d
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: c965d2a080f15b5b7cdeec8ebe217ce5
+
+Package: linux-objects-nvidia-515-server-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 103812
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-515-server-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 41633440
+MD5sum: a637bfbd6fb98a0d4f11e4c7817c3ad8
+SHA1: 1da2c5abfc84b539229acf9bc2df1f7e074ff565
+SHA256: 96303ac94baec3d3db495e8e2c2112eded5eba6d97705288f2e0273190ee817c
+SHA512: 96a7b6bb4311c12633394bf413fe2a4d038283696e4f55665d6f81f5cc6f8e0e9f4bd7c369d5f970923e89ba8555fa1462c55c6856431ec0da88e741121046d5
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: b3f702e85d047dcede510c46d7d1652b
+
+Package: linux-objects-nvidia-525-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122668
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 55415774
+MD5sum: a5a2336f300186c4b38cb5fd21c2c3f0
+SHA1: a4931d80e239e8f252ffa40b4910190ba3ef0c98
+SHA256: f1a407b2ff3c3ac7ac472edc41e6ec40a92a87fc3cf1fd06cbdce6e664261d41
+SHA512: a9c3c17c4ec1250450ebcd72352880c3e3f168f478e4ad449667ba75cb436462547007a649b9a63a3271893ecfae414f596ce8660917ea6c5ec181b000eb928d
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: b41efc403bc1b56b90dd61f3f2ef2aec
+
+Package: linux-objects-nvidia-525-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122646
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 55393416
+MD5sum: 7a97a5d7222f86a663f968a9bbaabf9a
+SHA1: a819d5a13d747fc8a8edb9b30444e2430e92c4da
+SHA256: 6a0b801c7fdacfa6baabf5d1a8bf21b80fdb2638ce836a6d1a0d099f3266f4e0
+SHA512: f65abe9e7460c7b25e04c2b5ab46f91ae0110fe6eaeb47db73baca367765e2a95d385c6ba9bb9bd07ac9c276f96134458e04d688d9f4584a252ba7eaeedd2ebd
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 86206895f7aeba64f11378da339e8b15
+
+Package: linux-objects-nvidia-525-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122631
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 55399578
+MD5sum: af5df34b51a4d27e625f4449d2c6ad87
+SHA1: 8193df4468f2d2a7cace509e32095f8d65c67a0a
+SHA256: 0fc36673cb75d0904f2b4417f495d184045516aa96f0e7d2b845910f1e5811f0
+SHA512: 83c9b601443760142832ed881eb70e871012b18f566288eba25f3cb420f416512d559aa027426d8f4563622d9a2b5c6d0f560d17cbd655c8ea3e57b0283f184d
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 409e55c223c04b5212a9cdf843536176
+
+Package: linux-objects-nvidia-525-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122607
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 55378540
+MD5sum: 6a370c5485b826d5031749001b8dc951
+SHA1: 8affcfe2ffaaad73683871e947c449bce4e919d7
+SHA256: 83b4f20a0caea6e3e0e40cafc6828f7132ab6cafa5e24998da2628017150f557
+SHA512: 84642f6a1fd3c8d8cdfce6001a0095c1e35fcb3955256b52c112d36924105390b80a34cf0955fbdc9eb0c211f061d2fa50d26fef4e9a728cf95eb7579bb98d3b
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: aa632d06a3caa1251e89ea08c3e9eccf
+
+Package: linux-objects-nvidia-525-open-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14045
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-open-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 3599646
+MD5sum: b97daee02b0585b5ed666064ee8091a9
+SHA1: 09871e66931cf749c470912b73bccf38e57f615a
+SHA256: e828551a2c61b37759d9793794b32a3c67bb12225ebf796f24ede60a1f7f2f30
+SHA512: 7dce2b23ad943a912d0bd79db7072a7a3e8ae3943343aa1d045c65df510d118ddf98c9f9b01e23b9500e11e74492d497141ba827753583ef8c887f91e4ce8617
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: b40f2a33c5308101afbf31a0581b4c51
+
+Package: linux-objects-nvidia-525-open-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14030
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-open-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 3589376
+MD5sum: 1644839670e67f612c902fbe40aa0d61
+SHA1: 977bc29801eceab15698f254f428c6d7bfc8f3a3
+SHA256: c3071a5be6411ca31944508a3e360cca6c2d605b6f7bea37e491c030db2c0dec
+SHA512: d04ecb27a8dce5974ac9b74a3431c1a61ad836d8cccf307cc91a988ab43c8a454359e8e6f7039073d095eddd6de46bacd6fc7b9d8bb924a8a61124e664e33e4f
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 9e48e7b13bde81396c262fda74052684
+
+Package: linux-objects-nvidia-525-open-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14046
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-open-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 3601756
+MD5sum: c440c54ad1f86eafafd57b9b2585395d
+SHA1: 6afa7abb4282872701e2144e73f42c6ef2783e6e
+SHA256: 297ccda7b0710586cc146ad35ffc91429943113dba41da66f382f0c182f831c9
+SHA512: 60abb5849b1a4c9487bef1e4991ee6216ddf8d14e2740a2d008e7c162d1b8a5ba89fa50369864fbdc9bef443cc4fa7912f605bffcbe3a5b382a29d0e4046d4d5
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: a6f82132ae19af43e59267e634d25c19
+
+Package: linux-objects-nvidia-525-open-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14032
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-open-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 3588830
+MD5sum: 2253bfc1768c9883d036f4f2efabcdf2
+SHA1: d22549f79ecae84e5708f92fd98c1a96c7a2bb06
+SHA256: f32250372029db279a7004fe6215a84b101693daaed7263a8c86be852c81693b
+SHA512: c425e45040abb59c83b3c11e25137c60c7d3a3ef6274dcb6876343ee1ff20c59e4149430b91890c8725e15a5f22b0f8508bd1ec414886a542485e4fc37058d4b
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 9f16df84689b96d3d5e24710c34cccd4
+
+Package: linux-objects-nvidia-525-server-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122668
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-server-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 55413648
+MD5sum: d7cc2466824b63a2a80eb2ce16e9f285
+SHA1: db27c5f18af1a6532e729f9bcd849d0e24a2b62e
+SHA256: 3cc4253b085c525c4fe166c6e80ff9b48f6adc05c85fb8d9781e5b9b22ddbff5
+SHA512: 77172d110538ff24e2d4cfc4c81475756f6a738c41d77100799e429a88a9d2a11f23791ebf7ac47bba80cc42071d8f5ed96e56e6de437a9469a5fce32a693fee
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 871ab04ed66de652ec777e65a11bafe7
+
+Package: linux-objects-nvidia-525-server-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122651
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-server-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 55405912
+MD5sum: 8d048d9099f15fddcdc28a3441be2150
+SHA1: a1f79b558648622395b1af74f4a08c2cb4ce2857
+SHA256: bbb84cb65a282b9f1c411d90eb9ea030cf6b2d43ec8e5723a1661f4ea44ef19f
+SHA512: 2225c6d894997352f19744e092d64955fc8665e3757b791ff371293ab9b4fd6a050550e0782067a62b5b2d335860cc1e4f4d52eaea325a6e7894d147d0860347
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 303786561e80a2924d0d1461c3fcb545
+
+Package: linux-objects-nvidia-525-server-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122623
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-server-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 55382014
+MD5sum: aa60d8c36d2735718b31b15b2684162d
+SHA1: 1de93f9ae44e74c6d8418a0aeda400c8dca62389
+SHA256: 0db55d918aa6e2efbe71252db9097c01b746c6af34310f8b4e78cb4e4a24a094
+SHA512: c2e69428445927919c7005234bf3140e888348827da434a14572015060d338588a3a3a23df7b6a71133ad38423de311b5e723825c00fc9d06460fb995bc18252
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: e27ff5f5ad81dccbb6d328adb48ab917
+
+Package: linux-objects-nvidia-525-server-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122602
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-525-server-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 55374076
+MD5sum: 9d7b30eb7c46c5b397450dd20f460021
+SHA1: f36e87980a830303847adf40919896b6c962f5b7
+SHA256: 6cd62a2e465785e49a7e680bcf27123913ea33420825df9bc50f36ce0a595b9b
+SHA512: 3feb1e14417d936e54c5cd84b1a792547f6301fa2c00f01836ef6451b302558074013fa0a4958d9526ae08ebe37b03c60dad4bbf44c14189e35c600af6167e93
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: dd7d3b1a5949c15a73a37385fea9bb0f
+
+Package: linux-objects-nvidia-530-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122768
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 54930134
+MD5sum: 34b69bdc5cc95c6fb88a80dbeb1dc97d
+SHA1: 9ee70f1f3573c617db7dca365b9607b8155beb1e
+SHA256: 5d3101e5dde17b88495b4248bdfa7a449e74cdc26d77a590a6faa4a69ef65924
+SHA512: e8024ed21007aadef5d9a100b74044274b2a43483887f81fa260e72a83e0cd35556d6ca51342e8991bf7ba925e9d7c10f1a1497060af837ac92266c13b54a6a9
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 03a47f8f6993f2a5c8461b4ec1391631
+
+Package: linux-objects-nvidia-530-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122750
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 54912264
+MD5sum: 6cce124476fb2a8d90551577bbc8d1d6
+SHA1: cd45de8749e0c94aee456f838fe0e05ece23b8c0
+SHA256: 5a2e3cfe97c2c14f3201537dbf605715dc5b4ea86381dce8074ede19d6e79d98
+SHA512: 4f6fd305cb29f1efdad25547d5c60097a8c15ada1e5414b74b349e5f69710c0dcb6df1ab8c8c40eaa46834b0bcadd46e4a535034413ca7e75ffe6c4953d79327
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 91041744d1cef77ae5845ece10236890
+
+Package: linux-objects-nvidia-530-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122716
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 54920456
+MD5sum: ee50cc1ffd426cc20ad148bc01fe35ef
+SHA1: 2eb0a0ee66354fcdbaf9698baafe3651e4a0c2c3
+SHA256: a88b61b696b21dea766d5740d0ffdc39caec81a59fb19b4e87c84ff0d7fe7a74
+SHA512: 3dd94b0eb0a14778a16659bb26ce91f907d72dabde86bf87b8ff6be80cf6173b7e45e3a6517d142f6987ef5b3abc2e2b01a360b0af3dd2bec5204f8c0ba1c45d
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: ed3746298c1e541afe6f7b42d4f3581b
+
+Package: linux-objects-nvidia-530-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 122702
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 54916396
+MD5sum: ce234a7a46780e829dca0f473cd6e84e
+SHA1: a18bd5c2365c0897749b81c3df034fcd1666d502
+SHA256: 7f350552eab3f85ee8875288f1225025511db97a929ce2cb49e46b080817e074
+SHA512: 2ea50612cdfd600480ca31a008c609885adc6e82d9ec5ff789c39fa0ad739d77db61c4671409ee0b911408bc604555a85f7a65948e8856b6d7501624f0c250eb
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: 78fc5c5e72e03322187249b144e3b7de
+
+Package: linux-objects-nvidia-530-open-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14408
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-open-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 3837626
+MD5sum: faa4b3a91184ebf4da5ac43718d9457d
+SHA1: c7f6026f63fd87d8b2008a45226d63d67cb92c9b
+SHA256: a9e52f5d0a79a43e288bceedc46694cea6808bbd5d0fe43a62542efcc0909407
+SHA512: 9d8cfe278a3b7ba9d4384e8293da678837236493ef7857de00ed48aa44d1a36236d5896870fdd4c566aa973a4c7c3ee9ae54e2d7665107b17b93f38bbd85e444
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 982bb11cc6cd6971662982c9ad53c0b2
+
+Package: linux-objects-nvidia-530-open-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14393
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-open-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 3838972
+MD5sum: 464622c7f10bdc5b095e93534d0b8905
+SHA1: 5247e82939a75ffb6cb66bca54176578607e53ce
+SHA256: 74311fbf351134b1502c4371f7569531e354c11baf4aa3046f630dc64f404ed5
+SHA512: 6de9d108d05b99fb378619622f602b5c4dcdfc31d1146490af0933a748e5363d4b27cc6563595e2691fd651cbbd6dca028dee085dee561f2bb6b7ff5d0b8ca61
+Description: Linux kernel nvidia modules for version 5.19.0-1010 (objects)
+Description-md5: 0771c99c87a19bc75d52e8a189c1f908
+
+Package: linux-objects-nvidia-530-open-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14405
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-open-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 3826062
+MD5sum: b56bd2d3e450c22f26a9ff353c6d8b34
+SHA1: 29f54ad59ec3a6c84ceabfa7507c37c06edeb8a5
+SHA256: 6db9a6a43a90d059bb3627e72feb2d4389bae50287af9067b93a09b74eb18f18
+SHA512: 33fb934cd90887af4d274145cd1b7d5bd12d867a672e00a88c0765fc33e75bf3ca1139fbb01c0b955ac4d7af5efb870e52b0e3e790cb32c717a97025bc0a226d
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: dc73d4ef3552efc857f4e506461f25d8
+
+Package: linux-objects-nvidia-530-open-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-modules-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 14390
+Depends: binutils
+Filename: pool/multiverse/l/linux-restricted-modules-nvidia-5.19/linux-objects-nvidia-530-open-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 3821030
+MD5sum: 498cd13dfb9aa265f977feaf4cfa90e5
+SHA1: 5317c1b1cd900b30aa5d39d76fbdb35e1e009499
+SHA256: bb4548fca48ca1ea9cefb38fe2750224110e0126c13d386f1b4bff99f97329a1
+SHA512: 0c1cbcb5f4914567f36858b3b5d45cd44f4936b9589ad3afb36523a2987716bde4507fb8ba4cfcd5e2742bfdcad7472abe3e51b2635c0d886242d8fd2e891a15
+Description: Linux kernel nvidia modules for version 5.19.0-1014 (objects)
+Description-md5: af3690ddd803f80cfdcfda61e766164c
+
+Package: linux-signatures-nvidia-5.19.0-1010-nvidia
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 64
+Depends: linux-image-5.19.0-1010-nvidia | linux-image-unsigned-5.19.0-1010-nvidia
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-signatures-nvidia-5.19.0-1010-nvidia_5.19.0-1010.10_arm64.deb
+Size: 23068
+MD5sum: 0d4ea231c484d698220c8825a6cc3148
+SHA1: 67a8ac7ac06bcf8ae0d8f80b1a80e90eb1b6cabd
+SHA256: 01de839ac918f263a67794e5487ec597d495cd1c96bb49cc3f788bacf00dddaf
+SHA512: cfbaf1ea1e0c7b3955741778e5afbd3b01096cd99faf0d1bd65aa984c91fa6045ddcc5cdb729d5317c97e882426f95c26a8fb3c904fb6086dc82884c3f76764c
+Description: Linux kernel signatures for nvidia modules for version 5.19.0-1010-nvidia
+Description-md5: b88df409b0e4fd72d78c45a0f4f07f2f
+
+Package: linux-signatures-nvidia-5.19.0-1010-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1010.10
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 64
+Depends: linux-image-5.19.0-1010-nvidia-64k | linux-image-unsigned-5.19.0-1010-nvidia-64k
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-signatures-nvidia-5.19.0-1010-nvidia-64k_5.19.0-1010.10_arm64.deb
+Size: 23052
+MD5sum: 7452c4e1735b256af0deba147a5914ba
+SHA1: b3547aafbea9e97499bc704718cb190995b07946
+SHA256: e8fdb74fd2a0ceb497b80110ac8b4808c48ac5ab84c0133a93db3460b465192d
+SHA512: 13ae93217d92b5aaf38f2d2f1b263929dd56e27752d1da50f50e92cbd0f9a32cd17023b9c3da35d3726dc2fd2147e7f75998466f6147060794ce9644026a50c8
+Description: Linux kernel signatures for nvidia modules for version 5.19.0-1010-nvidia-64k
+Description-md5: 2d7a71ee25ab6cdfc77feeff0d570a15
+
+Package: linux-signatures-nvidia-5.19.0-1014-nvidia
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 64
+Depends: linux-image-5.19.0-1014-nvidia | linux-image-unsigned-5.19.0-1014-nvidia
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-signatures-nvidia-5.19.0-1014-nvidia_5.19.0-1014.14_arm64.deb
+Size: 22936
+MD5sum: 73678a5ff070f81029ee67045ad2c69c
+SHA1: a77a91b8b4fd0a2506b08a1051716fd7ac2a3969
+SHA256: 22adcc1d26b2d0d18465b8e3820a76bc514bb1f69cc981a75169a4e3e9df2a7e
+SHA512: e9ef5e064186f3ca1acfc4a8595767bf05f02865075a80c7c4761cd53642b2a6bc38328a0c27443536cdd34025020490538680a97cf9c7c14710c7fb7039baa9
+Description: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia
+Description-md5: 77eaa5756c7313a2ecff4b0576db31ae
+
+Package: linux-signatures-nvidia-5.19.0-1014-nvidia-64k
+Architecture: arm64
+Version: 5.19.0-1014.14
+Priority: optional
+Section: multiverse/kernel
+Source: linux-restricted-signatures-nvidia-5.19
+Origin: Ubuntu
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 64
+Depends: linux-image-5.19.0-1014-nvidia-64k | linux-image-unsigned-5.19.0-1014-nvidia-64k
+Filename: pool/multiverse/l/linux-restricted-signatures-nvidia-5.19/linux-signatures-nvidia-5.19.0-1014-nvidia-64k_5.19.0-1014.14_arm64.deb
+Size: 22918
+MD5sum: 688589d0cacde09603226ddb747318af
+SHA1: 0fc781f75d9b03622327893d1a2d3720c15a9467
+SHA256: e56d3cd74d8802561ead6424869741b409f4818157c841574a84fb0cfb4c78fc
+SHA512: 58aef39abeb6fb897be41abb7af3d7084c0f7206f232628703de9e6eb0dc8bd76ea28e03348af0949c68b31a71057ef862482fb3eb4c727426d248df930510fb
+Description: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia-64k
+Description-md5: 245d58a9d2d07a655c98dd9286071fa8
+
+Package: nvidia-fabricmanager-525
+Architecture: arm64
+Version: 525.147.05-0ubuntu2.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-525
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Depends: nvidia-fabricmanager-535
+Filename: pool/multiverse/f/fabric-manager-525/nvidia-fabricmanager-525_525.147.05-0ubuntu2.22.04.1_arm64.deb
+Size: 4960
+MD5sum: f4751714b31f6127cb4bffc58e37b79c
+SHA1: a63623ec299205459eb00ed9bb72598ef7d6c0d8
+SHA256: 7b2fe46fa60a8a191522e2fca8358047b7fbfb4bf8e4d4c4d1dbe3d5d2202c07
+SHA512: 6daaed61a9338b08a62e9b5d5eaf1781617da37c04a687ebd47418c8a071f8afce2337dad3bac5479f5cc53914f72c0aaf64e726061b73c3c5579f4b496caab2
+Description: Fabric Manager for NVSwitch based systems. (transitional package)
+Description-md5: 06ff0a5beaed94dd1612653f803516ef
+
+Package: nvidia-fabricmanager-535
+Architecture: arm64
+Version: 535.183.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-535
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 8476
+Provides: nvidia-fabricmanager
+Conflicts: nvidia-fabricmanager
+Replaces: nvidia-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
+Size: 1808998
+MD5sum: 49d6504a875558fc82c5c1cecfcb19b6
+SHA1: bf1347f1c5881e67b12b763be408728f9dd0a49c
+SHA256: ca697f6d4eb7db7e922959d0f7822c2ca8a1e8dd38d17b40e41622e51cbaf4fe
+SHA512: b076a8c4dc19f32a7190b9f86a9b4e5e28935335c936f388d7f983b0385c84678390a7f6ab0f14a0ebeb239140ca6a19cb7adb3880d6a1e8776da0ae5de57aea
+Description: Fabric Manager for NVSwitch based systems.
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+
+Package: nvidia-fabricmanager-dev-525
+Architecture: arm64
+Version: 525.147.05-0ubuntu2.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-525
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Depends: nvidia-fabricmanager-dev-535
+Filename: pool/multiverse/f/fabric-manager-525/nvidia-fabricmanager-dev-525_525.147.05-0ubuntu2.22.04.1_arm64.deb
+Size: 4974
+MD5sum: e7f5c2f6dde6eb561240a0509e592972
+SHA1: 6028625a53c4e8075d61d3bd83ada41593428fa6
+SHA256: 95b8fbb4b676a9fb2ef0ea03e95f86afa1034d2941216921662ae17dcc2192df
+SHA512: 2a05bc9229513015d8791c5b7eb77b77adf6d3e94c039640d77f9c98cf1358fce8baf6fb78068b4dcedd92ffeac6de79a10e5e57fd13123fc7447b67be206ec6
+Description: Fabric Manager API headers and associated library (transitional package)
+Description-md5: 6d784138f631bec423b38a723527202b
+
+Package: nvidia-fabricmanager-dev-535
+Architecture: arm64
+Version: 535.183.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-535
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1585
+Provides: nvidia-fabricmanager-dev
+Conflicts: nvidia-fabricmanager-dev
+Replaces: nvidia-fabricmanager-dev
+Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-dev-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
+Size: 520122
+MD5sum: d12c8504e39b0d396471eb850c966cea
+SHA1: c4e0d25ecd5b51d84682dc88d82065d88482d342
+SHA256: 4ddb40c4e6e05e21aa859ef195227212f934d18c04e099aaf3b7fb06a75ee207
+SHA512: 3fb8530d7d0dda4091396c59cb489eff6a8293ab4f0faaf84735ab3278ae3c132e973e9b93d5a4ce5787883014b0484a3e038ec2fd33d0109c59f56633c38ca6
+Description: Fabric Manager API headers and associated library
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+
+Package: nvidia-firmware-550-server-550.54.14
+Architecture: arm64
+Version: 550.54.14-0ubuntu3.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-550-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 60167
+Breaks: nvidia-firmware-550-550.54.14
+Replaces: nvidia-firmware-550-550.54.14
+Filename: pool/multiverse/n/nvidia-graphics-drivers-550-server/nvidia-firmware-550-server-550.54.14_550.54.14-0ubuntu3.22.04.1_arm64.deb
+Size: 38131074
+MD5sum: b105860815a338838432142d8fdbb48a
+SHA1: f1c1b72f08545b1b156406dda2bf10a793300924
+SHA256: f929ddbbf8b393e365d1f80e0a0c71dcc87110ef8fbd371c5ac3e8e7664daff5
+SHA512: 413c652fa37054cf8b6310e42a91fc3f869fe73efffb555870c60e9e180788f3acbcb0b44338dd869e4238bb3be7942fc7f74e3eac9055a834c88095f6a1fdf2
+Homepage: http://www.nvidia.com
+Description: Firmware files used by the kernel module
+Description-md5: a9f4cc74ba3faebf0cac0795ed2434bf
+
+Package: othman
+Architecture: all
+Version: 0.6.0-2ubuntu0.22.04.1
+Priority: extra
+Section: multiverse/misc
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Islamic Maintainers <debian-islamic-maintainers@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 120
+Depends: python3-othman (= 0.6.0-2ubuntu0.22.04.1), python3:any, python3-gi, gir1.2-gtk-3.0
+Recommends: islamic-menus
+Filename: pool/multiverse/o/othman/othman_0.6.0-2ubuntu0.22.04.1_all.deb
+Size: 60414
+MD5sum: deba7cd96fd7670c9bd896c6409d2712
+SHA1: 2c96702cce9f0b40f04218fedad9d0e5428bcd8b
+SHA256: 7fb56a61378c4965603be211a790c849d3deaba783ad3222358335260da48f44
+SHA512: 25c3225ac7d343600ea6466ada151f163aad963d981700a336594d93cfc42bced4be9b6ad0ce85639cd290800b0f659bda210fad06411f42eba4b4ea99a41398
+Homepage: http://othman.ojuba.org
+Description: electronic Quran browser
+Description-md5: b8238305290697b4d61d0fe7d875e1be
+
+Package: python3-othman
+Architecture: all
+Version: 0.6.0-2ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/python
+Source: othman
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Islamic Maintainers <debian-islamic-maintainers@lists.alioth.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 3765
+Depends: python3:any, fonts-hosny-amiri
+Breaks: python-othman
+Replaces: python-othman
+Filename: pool/multiverse/o/othman/python3-othman_0.6.0-2ubuntu0.22.04.1_all.deb
+Size: 813854
+MD5sum: e1fd49999d0afda74f2349167dcb5e60
+SHA1: f1996596f7f6b730a529b1f982dc9199bfd8840b
+SHA256: 70dfe086e4f80d83b997fe7e8cd175a7fec9767ea63408e3adfa55783bda7fb1
+SHA512: 9d718424062a279d86f987c54df825ebee5e823c8a0e5960f0d4df5de491164361e71b826154dad69d120e6df2993e4057266b2c3c06db2d8d7c6a93ebeb4a1c
+Homepage: http://othman.ojuba.org
+Description: library providing access to Quranic text with a fast search index
+Description-md5: 1dbcf92cf3e1415d46e858c72c860c65
+
+Package: r8125-dkms
+Architecture: all
+Version: 9.007.01-3ubuntu0.2
+Priority: optional
+Section: multiverse/kernel
+Source: r8125
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Hideki Yamane <henrich@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 757
+Depends: dkms (>= 2.1.0.0)
+Filename: pool/multiverse/r/r8125/r8125-dkms_9.007.01-3ubuntu0.2_all.deb
+Size: 92970
+MD5sum: 107a0de863cbc0471a9394374bfe5a0e
+SHA1: b55ff3b9c94a4ac642b77067fa7f42cc94589619
+SHA256: 64c9f98d901abf3cb3ddf8483fdaf2d250ca59e3c537eb119daa793fca37e42c
+SHA512: fa95860847143708a7dbde988cd459e8aaa2e65a00ee95df24117a29e85b509a807c1f37a3aca4c177346fb82f9051fd97e9233f14ffb8baa49ee995ae8d85a7
+Homepage: https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software
+Description: dkms source for the r8125 network driver
+Description-md5: 21605b7f80ee7a56a99a0ef7f36c7598
+
+Package: virtualbox-ext-pack
+Architecture: all
+Version: 6.1.50-1~ubuntu1.22.04.1
+Priority: extra
+Section: multiverse/misc
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Virtualbox Team <team+debian-virtualbox@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 140
+Pre-Depends: debconf
+Depends: virtualbox (>= 6.1.50-dfsg-0~) | virtualbox-6.1, virtualbox (<< 6.1.50-dfsg-z) | virtualbox-6.1, wget, debconf (>= 0.5) | debconf-2.0
+Filename: pool/multiverse/v/virtualbox-ext-pack/virtualbox-ext-pack_6.1.50-1~ubuntu1.22.04.1_all.deb
+Size: 10740
+MD5sum: 3c73ef83b270129f90693139d27e6ad9
+SHA1: 06b01787397b101e5fe1ead29a44fe43399d54a6
+SHA256: cedd580d3f54a55018329b9c04dec735cd46f3bc4dfa4af673d3b9c61c8d68c4
+SHA512: 12cf3760f4028beb9e9df6b3ce3762872ae3607e9328ede4c2ce6e0cbb2023e27a5f7a334e53ed4473b5ff29991f206342ca08aa01e2741efc2e64556ba56c5b
+Homepage: https://www.virtualbox.org
+Description: extra capabilities for VirtualBox, downloader.
+Description-md5: d34299a0a1c7bf804958800947ea531c
+
+Package: virtualbox-guest-additions-iso
+Architecture: all
+Version: 6.1.50-1~ubuntu1.22.04.1
+Priority: extra
+Section: multiverse/misc
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Virtualbox Team <team+debian-virtualbox@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 62573
+Recommends: virtualbox (>= 6.1.50)
+Conflicts: virtualbox-2.0, virtualbox-2.1, virtualbox-2.2, virtualbox-3.0, virtualbox-3.1, virtualbox-3.2, virtualbox-4.0, virtualbox-4.1, virtualbox-4.2, virtualbox-4.3, virtualbox-5.0, virtualbox-5.1, virtualbox-5.2, virtualbox-6.0
+Filename: pool/multiverse/v/virtualbox-guest-additions-iso/virtualbox-guest-additions-iso_6.1.50-1~ubuntu1.22.04.1_all.deb
+Size: 48052266
+MD5sum: a96676ecfe55ca3473f4a38b8bd7672b
+SHA1: e35b46dfc8ba586d2241c44d6f3098404bcc24b9
+SHA256: 994a7902e8a8e1b99031af3ed75e9c5c7b449b9feaa17be46e8c334c8c882fd0
+SHA512: a1b1e30c8c8fbc3eea04dcdd399b0c71be28dd2c02910a4bc02c694dd18b0ec12db5367230d0201f29915b8f19cd5ffe75e6dbb1dca17101a87852051674ef24
+Homepage: https://www.virtualbox.org
+Description: guest additions iso image for VirtualBox
+Description-md5: 11a9eaac064138ec238f7c2ee4c018df
+
+Package: xlnx-default-bitstreams
+Architecture: arm64
+Version: 2022.1-0ubuntu1~22.04.1
+Priority: optional
+Section: multiverse/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1845
+Filename: pool/multiverse/x/xlnx-default-bitstreams/xlnx-default-bitstreams_2022.1-0ubuntu1~22.04.1_arm64.deb
+Size: 43306
+MD5sum: c86139ed7f6f0e4a43398cbc8d9a29a5
+SHA1: 97ec4d9fc693e26a7bbf19982ba7fc8610a6aa0b
+SHA256: abd9901b6b0648f86ff84f8ded00ba8a1f5cadfb7edf567bce4e905d81d84e60
+SHA512: 4c589762f509a18fe4e3a2730786daabfd06ddb7d969f74e2689fbba95988698affb9b448546c32ba4e217e1a4a390a6f78bf63d85061f12c4cad4467675827c
+Description: The default FPGA firmware for Xilinx boards
+Description-md5: 29402da1dbbd1e4b346089613eb96378
+
+Package: xlnx-firmware
+Architecture: arm64
+Version: 2022.1-5-0ubuntu1~22.04
+Priority: optional
+Section: multiverse/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 4966
+Depends: u-boot-zynqmp, xilinx-bootgen | bootgen-xlnx
+Conflicts: xlnx-versal-firmware
+Filename: pool/multiverse/x/xlnx-firmware/xlnx-firmware_2022.1-5-0ubuntu1~22.04_arm64.deb
+Size: 652098
+MD5sum: d4cd24e6193a70cf437a5b7cb8827bc5
+SHA1: 6f2b58dd640065e13d0b10c16d83d13797a55553
+SHA256: d77ddca03bf667327f476a1cfea7568223a6e27f83390a79fc6fd4b63335ffc5
+SHA512: 5816d86ad28f3419858b7385dbeb100a147d4118f284732e65029ece4aa5a09b750631606260eec6a023ea33105d66e837adc6ebf75f33f6b5b9e115b9c5e5d0
+Description: Xilinx firmware for ZCU boards
+Description-md5: 46dd46d1220a348e3c4a8fee39e3d9f6
+
+Package: xlnx-versal-firmware
+Architecture: arm64
+Version: 2022.1-5-0ubuntu1~22.04
+Priority: optional
+Section: multiverse/admin
+Source: xlnx-firmware
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 51880
+Depends: u-boot-zynqmp (>= 2022.01-2022.1-update3+repack-0ubuntu1~), xilinx-bootgen
+Conflicts: xlnx-firmware
+Filename: pool/multiverse/x/xlnx-firmware/xlnx-versal-firmware_2022.1-5-0ubuntu1~22.04_arm64.deb
+Size: 26135758
+MD5sum: 291fbde812cb82686176ee2f17ed5545
+SHA1: 850e062fd2175d1c9cfa1a0b6308c7841af01c5a
+SHA256: 850e814de84d46c690d569f5460f83c60de24ce79b36ce8e9229cd1940a37819
+SHA512: 878dc86cfa7b3a3c1595481857ae48e1e58e29b5df24f2fa423a6bba176df482b98a035f4af6fcc0866523438fcf80e6cf0f5ef52087b687ff0696084ff75b2b
+Description: Xilinx firmware for Versal boards
+Description-md5: c01926cbba47abce372e7966008658eb
+

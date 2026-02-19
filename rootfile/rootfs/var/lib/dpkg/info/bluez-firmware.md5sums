@@ -1,0 +1,13 @@
+b4e142b3272cfe5a84b32fda6b4b032f  lib/firmware/BCM2033-FW.bin
+5580317158d07fc4ace90af04f8e1c73  lib/firmware/BCM2033-MD.hex
+84aa2fb49a02e436a2a79021ab5c36a3  lib/firmware/STLC2500_R4_00_03.ptc
+697d576b91fe5326822b6ba933ca6d2c  lib/firmware/STLC2500_R4_00_06.ssf
+33f17a13b315f061001c5f7be8abe3ca  lib/firmware/STLC2500_R4_02_02_WLAN.ssf
+cfe312066cf65d4db74d2574bb54463b  lib/firmware/STLC2500_R4_02_04.ptc
+6da8b6557f3a75cca09dc22ebdb7262f  lib/firmware/brcm/BCM43430A1.hcd
+8396f91f7b55de5a22e198a68fa01f5c  lib/firmware/brcm/BCM43430B0.hcd
+1ae05ba8943eeeaba67ae58d6f0ce45f  lib/firmware/brcm/BCM4345C0.hcd
+2c48ed8539dc2d6a4d33b25a65fe6371  lib/firmware/brcm/BCM4345C5.hcd
+ebd69c12bde8d2bb4a76c7140e57b80c  usr/share/doc/bluez-firmware/BCM-LEGAL.txt
+121162d9b217bf1129e7fc5f2fd25c36  usr/share/doc/bluez-firmware/changelog.Debian.gz
+88f00968ddd23240daa13cff4559ff8a  usr/share/doc/bluez-firmware/copyright

@@ -1,0 +1,149 @@
+#!/bin/sh
+
+set -e
+ 
+# source debconf library
+. /usr/share/debconf/confmodule
+ 
+CONFIGFILE=/etc/ifplugd/ifplugd.conf
+CONFIGTMP=${CONFIGFILE}.tmp
+
+DEFAULTFILE=/etc/default/ifplugd
+DEFAULTTMP=${DEFAULTFILE}.tmp
+
+write_db_conf (){
+
+	rm -f ${CONFIGTMP}
+
+	echo "# this file is deprecated - use /etc/default/ifplugd." >> ${CONFIGTMP}
+ 
+	mv ${CONFIGTMP} ${CONFIGFILE}
+}
+
+write_default (){
+
+	rm -f ${DEFAULTTMP}
+
+	(
+	    echo "# This file may be changed either manually or by running dpkg-reconfigure."
+	    echo "#"
+	    echo "# N.B.: dpkg-reconfigure deletes everything from this file except for"
+	    echo "# the assignments to variables INTERFACES, HOTPLUG_INTERFACES, ARGS and"
+	    echo "# SUSPEND_ACTION.  When run it uses the current values of those variables"
+	    echo "# as their default values, thus preserving the administrator's changes."
+            echo "#"
+            echo "# This file is sourced by both the init script /etc/init.d/ifplugd and"
+            echo "# the udev script /lib/udev/ifplugd.agent to give default values."
+            echo "# The init script starts ifplugd for all interfaces listed in"
+            echo "# INTERFACES, and the udev script starts ifplugd for all interfaces"
+            echo "# listed in HOTPLUG_INTERFACES. The special value "all" starts one"
+            echo "# ifplugd for all interfaces being present."
+	) >> $DEFAULTTMP
+
+	db_get ifplugd/interfaces || true
+	echo "INTERFACES=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/hotplug_interfaces || true
+	echo "HOTPLUG_INTERFACES=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/args || true
+	echo "ARGS=\"$RET\"" >> $DEFAULTTMP
+	db_get ifplugd/suspend_action || true
+	echo "SUSPEND_ACTION=\"$RET\"" >> $DEFAULTTMP
+ 
+	mv ${DEFAULTTMP} ${DEFAULTFILE}
+}
+
+INTERFACES_BEFORE=""
+INTERFACES_AFTER=""
+INTERFACES_START=""
+INTERFACES_STOP=""
+INTERFACES_RESTART=""
+
+search_interfaces () {
+	searchifc=$1
+	shift
+
+	for i in $@; do
+		if [ "$i" = "$searchifc" ]; then
+			return 0
+		fi
+	done
+
+	return 1
+}
+
+ifplugd_initscript () {
+	action=$1
+	shift
+
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d ifplugd $action $@
+	else
+		/etc/init.d/ifplugd $action $@
+	fi
+}
+
+case "$1" in
+    configure)
+ 		if [ -s "$DEFAULTFILE" ] ; then
+			INTERFACES=""
+			HOTPLUG_INTERFACES=""
+			. $DEFAULTFILE
+			INTERFACES_BEFORE="$INTERFACES $HOTPLUG_INTERFACES"
+		fi
+
+		write_db_conf
+		write_default
+
+		if [ -s "$DEFAULTFILE" ] ; then
+			INTERFACES=""
+			HOTPLUG_INTERFACES=""
+			. $DEFAULTFILE
+			INTERFACES_AFTER="$INTERFACES $HOTPLUG_INTERFACES"
+		fi
+
+		for IF in $INTERFACES_BEFORE ; do
+			if search_interfaces $IF $INTERFACES_AFTER ; then
+				INTERFACES_RESTART="$INTERFACES_RESTART $IF"
+			else
+				INTERFACES_STOP="$INTERFACES_STOP $IF"
+			fi
+		done
+
+		for IF in $INTERFACES_AFTER ; do
+			if search_interfaces $IF $INTERFACES_BEFORE ; then
+				: # already added to INTERFACES_RESTART
+			else
+				INTERFACES_START="$INTERFACES_START $IF"
+			fi
+		done
+
+		if [ -x "/etc/init.d/ifplugd" ]; then
+			update-rc.d ifplugd defaults >/dev/null
+			if [ "$INTERFACES_STOP" ]; then
+				ifplugd_initscript stop $INTERFACES_STOP
+			fi
+			if [ "$INTERFACES_RESTART" ]; then
+				ifplugd_initscript restart $INTERFACES_RESTART
+			fi
+			if [ "$INTERFACES_START" ]; then
+				ifplugd_initscript start $INTERFACES_START
+			fi
+		fi
+
+		if [ ! "$2" ] || [ "$2" = "<unknown>" ] ; then
+			# Fresh install
+			for F in /etc/apm/suspend.d/20ifplugd \
+				    /etc/apm/resume.d/80ifplugd /etc/apm/other.d/50ifplugd ; do
+				[ -e $F ] && mv -f $F ${F}.dpkg-old
+				ln -nsf ../scripts.d/ifplugd $F
+			done
+		fi
+        ;;
+ 
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+esac
+
+db_stop
+
+

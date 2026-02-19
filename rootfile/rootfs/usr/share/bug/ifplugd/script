@@ -1,0 +1,6 @@
+#!/bin/sh
+
+exec >&3
+
+echo " /sys/class/net/ interfaces:"
+ls -ad /sys/class/net/*/

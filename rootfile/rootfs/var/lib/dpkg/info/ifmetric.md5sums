@@ -1,0 +1,5 @@
+af4c4de18446d999bcd0bf17dc84af19  usr/sbin/ifmetric
+807db7fd35238ecd51a883b33cfe2ca0  usr/share/doc/ifmetric/README.gz
+2557f1e3853e517074e20475c7f6c022  usr/share/doc/ifmetric/changelog.Debian.gz
+da8ec70630b14c11d2f207fd13b59bc5  usr/share/doc/ifmetric/copyright
+71a9ac3ece8d8154ac701529e69afc32  usr/share/man/man8/ifmetric.8.gz

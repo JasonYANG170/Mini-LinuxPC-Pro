@@ -1,0 +1,55 @@
+# Build outputs
+out/
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+*.tmp
+*.log
+*.swp
+*~
+
+# Compiled binaries
+*.bin
+*.elf
+*.img
+*.gz
+*.bz2
+*.xz
+*.tar
+*.zip
+
+# Kernel build artifacts
+.tmp_versions/
+Module.symvers
+modules.order
+*.order
+
+# U-Boot build artifacts
+u-boot.bin
+u-boot.img
+u-boot.map
+u-boot.lds
+u-boot.srec
+u-boot.sym
+System.map
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Large binary files (optional, uncomment if needed)
+# *.tar.bz2
+# *.tar.gz
+# device/config/rootfs_tar/*.tar.bz2

@@ -1,0 +1,17 @@
+/.
+/etc
+/etc/network
+/etc/network/if-up.d
+/etc/network/if-up.d/ifmetric
+/usr
+/usr/sbin
+/usr/sbin/ifmetric
+/usr/share
+/usr/share/doc
+/usr/share/doc/ifmetric
+/usr/share/doc/ifmetric/README.gz
+/usr/share/doc/ifmetric/changelog.Debian.gz
+/usr/share/doc/ifmetric/copyright
+/usr/share/man
+/usr/share/man/man8
+/usr/share/man/man8/ifmetric.8.gz

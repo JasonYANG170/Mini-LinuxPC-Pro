@@ -1,0 +1,3 @@
+# Dell G16 microphone mute
+evdev:name:Dell WMI hotkeys:dmi:bvn*:bvr*:bd*:svnDell*:pnDellG16*:*
+ KEYBOARD_KEY_100150=f20

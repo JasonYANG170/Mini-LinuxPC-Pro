@@ -1,0 +1,6 @@
+==== BT USB CHIPS ====
+rtl8733bu_fw		 BTCOEX_20230616-0e0e	FW_VER= 0xd8c76fec
+ 
+==== BT UART CHIPS ====
+rtl8733bs_fw		 BTCOEX_20230616-0e0e	FW_VER= 0xdcc76fec
+ 

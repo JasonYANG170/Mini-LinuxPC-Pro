@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.6ubuntu1
+dpkg-maintscript-helper rm_conffile /etc/init/ssh.conf 1:7.5p1-6\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/network/if-up.d/openssh-server 1:7.9p1-1\~ -- "$@"
+# End automatically added section

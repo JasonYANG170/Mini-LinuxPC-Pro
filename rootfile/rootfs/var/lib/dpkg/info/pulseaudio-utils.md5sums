@@ -1,0 +1,17 @@
+950d8a2415f357c27684d185c695dad4  usr/bin/pa-info
+4b4af42dbba22b28f68f1476462e61c6  usr/bin/pacat
+7898c2df1c2bb18ae5a87f805174d4c9  usr/bin/pacmd
+4087a06b925c804961d91e6f7d0daa2b  usr/bin/pactl
+46c21651346ec828eede2e64b563c0e1  usr/bin/padsp
+65a713a9156d0393f9b9b699390837b1  usr/bin/pasuspender
+639f3482d853b8ed90dccabc43507e2f  usr/bin/pax11publish
+3bf3d044f0fd09dfd7a09f6037095fef  usr/share/bash-completion/completions/pactl
+732d3eb1425bdd5fe29ed5305c7973d2  usr/share/doc/pulseaudio-utils/copyright
+22bc0159337b7893caa1ea8e698d85c8  usr/share/lintian/overrides/pulseaudio-utils
+678f744c640b16817a66e46b6cfa91f5  usr/share/man/man1/pacat.1.gz
+548be77d1d1d05ef7a1e4270bff8ba9b  usr/share/man/man1/pacmd.1.gz
+508f5be645b49eae0a8deb89899643b5  usr/share/man/man1/pactl.1.gz
+88c34f3c907754e03ae7cb815c46ca7c  usr/share/man/man1/padsp.1.gz
+8daa032e13d1dc5c715959bd52710633  usr/share/man/man1/pasuspender.1.gz
+9bd8174a18a4e60e0fa561177a6ecc1a  usr/share/man/man1/pax11publish.1.gz
+10c7e534d7f255a3caacc2b164e108a8  usr/share/zsh/vendor-completions/_pulseaudio

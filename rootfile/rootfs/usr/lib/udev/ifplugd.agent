@@ -1,0 +1,86 @@
+#!/bin/sh
+# udev agent script
+
+if [ -z "$INTERFACE" ]; then
+    echo 'Bad invocation: $INTERFACE is not set' >&2
+    exit 1
+fi
+
+DAEMON_NAME=ifplugd
+DAEMON=/usr/sbin/$DAEMON_NAME
+if [ ! -x $DAEMON ]; then
+    echo "No $DAEMON_NAME executable: $DAEMON" >&2
+    exit 1
+fi
+
+CFG=/etc/default/$DAEMON_NAME
+if [ -f $CFG ]; then
+    . $CFG
+else
+    echo "No $DAEMON_NAME configuration file" >&2
+    exit 1
+fi
+
+# return true (0) if searchifc ($1) is in argument list ($@)
+# return false (1) otherwise
+search_interfaces () {
+    searchifc=$1
+    shift
+
+    for i in $@; do
+        if [ "$i" = "$searchifc" ] || [ "$i" = "all" ]; then
+            return 0
+        fi
+    done
+
+    return 1
+}
+
+# wait for networking to be available, taken from net.agent (ifupdown)
+wait_for_interface () {
+    waitifc=$1
+
+    while :; do
+        ifcstate="$(cat /sys/class/net/${waitifc}/operstate 2>/dev/null || true)"
+        if [ "$ifcstate" != down ]; then
+                return 0
+        fi
+        sleep 1
+    done
+}
+
+ifplugd_daemon () {
+    search_interfaces "$INTERFACE" $INTERFACES
+    if [ $? -gt 0 ]; then
+        # Interface isn't statically managed by ifplugd
+        search_interfaces "$INTERFACE" $HOTPLUG_INTERFACES
+        if [ $? -eq 0 ]; then
+            # Interface is in hotplug allowed list
+            case "$ACTION" in
+            add|register)
+                logger -t ifplugd -p daemon.debug "Invoking $DAEMON_NAME for $INTERFACE"
+
+                # check for interface specific arguments
+                IF1=$(echo $INTERFACE | sed "s/-/_/")
+                A=$(eval echo \$\{ARGS_${IF1}\})
+                [ -z "$A" ] && A="$ARGS"
+
+                # wait for loopback interface to exist, we may have
+                # been invoked very early in boot sequence
+                wait_for_interface lo
+
+                # spawn ifplugd daemon
+                exec $DAEMON -i $INTERFACE $A
+                ;;
+            remove|unregister)
+                logger -t ifplugd -p daemon.debug "Stopping $DAEMON_NAME for $INTERFACE"
+
+                # kill a running ifplugd daemon
+                exec $DAEMON -k -i $INTERFACE
+                ;;
+            esac
+        fi
+    fi
+}
+
+ifplugd_daemon &

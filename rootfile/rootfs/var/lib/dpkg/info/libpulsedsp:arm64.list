@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/aarch64-linux-gnu
+/usr/lib/aarch64-linux-gnu/pulseaudio
+/usr/lib/aarch64-linux-gnu/pulseaudio/libpulsedsp.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpulsedsp
+/usr/share/doc/libpulsedsp/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libpulsedsp
+/usr/share/doc/libpulsedsp/NEWS.Debian.gz
+/usr/share/doc/libpulsedsp/NEWS.gz
+/usr/share/doc/libpulsedsp/README
+/usr/share/doc/libpulsedsp/changelog.Debian.gz

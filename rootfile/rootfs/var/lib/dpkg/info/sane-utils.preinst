@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+MANPAGE=/usr/share/man/man5/sane-umax_pp.5.gz
+MANLINK=/usr/share/man/man5/umax_pp.5.gz
+
+
+if [ "$1" = upgrade ]; then
+
+    ## Remove obsolete manpages that are now provided by sane-common
+    if dpkg --compare-versions "$2" le "1.1.1-2"; then
+
+	if [ -f "$MANLINK" ] && [ -L "$MANLINK" ]; then
+	    rm -rf "$MANLINK"
+	fi
+
+
+	if [ -f "$MANPAGE" ]; then
+	    rm -rf "$MANPAGE"
+	fi
+    fi
+fi
+
+
+
+

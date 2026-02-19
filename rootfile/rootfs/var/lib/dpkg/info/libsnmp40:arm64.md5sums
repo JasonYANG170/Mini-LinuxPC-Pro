@@ -1,0 +1,17 @@
+05ac8f0f6b5132f5fc2adfe502e8fc02  usr/lib/aarch64-linux-gnu/libnetsnmp.so.40.1.0
+baa0f5e25f6bcaf64b4a52f318a88cb5  usr/lib/aarch64-linux-gnu/libnetsnmpagent.so.40.1.0
+6488c58f1b83d16ab7ae0f60d3f92054  usr/lib/aarch64-linux-gnu/libnetsnmphelpers.so.40.1.0
+16ee4a3c9db422dd15ff17d20176a442  usr/lib/aarch64-linux-gnu/libnetsnmpmibs.so.40.1.0
+6a4fee8ca288a959f451cd2a8c6db9a9  usr/lib/aarch64-linux-gnu/libsnmp.so.40.1.0
+44afc577b6d2455cf68c3190a6aef9e6  usr/share/doc/libsnmp40/AGENT.txt.gz
+a061edc5d64dc60475ddd2d640567432  usr/share/doc/libsnmp40/FAQ.gz
+93bf29cbdb484447d6dc4542406575ea  usr/share/doc/libsnmp40/NEWS.gz
+ab98942d36ef10fa9d62e9246fdeb05b  usr/share/doc/libsnmp40/README.agentx
+b39908e9af70abb157c0527ccfc108b2  usr/share/doc/libsnmp40/README.gz
+77a3305717984de3cb60ad0f2836b947  usr/share/doc/libsnmp40/README.mib2c.gz
+28318a518ae4e57216635d682651648a  usr/share/doc/libsnmp40/README.snmpv3
+8440a61d7917a5715fe654820b78644a  usr/share/doc/libsnmp40/README.thread.gz
+2dbf4b5909063d82974533a64e16ac5d  usr/share/doc/libsnmp40/TODO
+0b68cd507604dce313e2ac752322b396  usr/share/doc/libsnmp40/changelog.Debian.gz
+2e1e794ac8a41eb68efe08b4aecfecb8  usr/share/doc/libsnmp40/copyright
+ca63458be85991c3583ffdfaee47d37e  usr/share/lintian/overrides/libsnmp40

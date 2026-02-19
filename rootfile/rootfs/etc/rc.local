@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "\n****rc-local****"
+FIRST_STR="first=0"
+FIRST_READ=$(head -n 1 /etc/first)
+if [ "$FIRST_STR" = "$FIRST_READ" ]; then
+          echo "resize skip"
+  else
+          resize2fs /dev/mmcblk0p4
+          echo "resize ok"
+		  mkfs.ext4 /dev/mmcblk0p5
+		  
+          echo "first=0" > /etc/first
+fi
+
+#4G POWER
+echo 203 > /sys/class/gpio/export
+sleep 0.1
+echo out > /sys/class/gpio/gpio203/direction
+sleep 0.1
+echo 1 > /sys/class/gpio/gpio203/value
+
+
+#SDIO WIFI
+#insmod /lib/modules/5.4.125+/sunxi_rfkill.ko 
+#sleep 0.5
+#insmod /lib/modules/5.4.125+/aic8800_bsp.ko
+#sleep 0.5
+#insmod /lib/modules/5.4.125+/aic8800_fdrv.ko
+#sleep 0.5
+#insmod /lib/modules/5.4.125+/aic8800_btlpm.ko
+
+# sleep 0.5
+
+# echo 0 > /sys/class/rfkill/rfkill0/state
+# echo 0 > /proc/bluetooth/sleep/btwrite
+# sleep 0.5
+
+# echo 1 > /sys/class/rfkill/rfkill0/state
+# echo 1 > /proc/bluetooth/sleep/btwrite
+# sleep 0.5
+
+# hciattach -s 1500000 /dev/ttyS1 any 1500000 flow nosleep
+# sleep 0.5
+# hciconfig hci0 up
+
+exit 0

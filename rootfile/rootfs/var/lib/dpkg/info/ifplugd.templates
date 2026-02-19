@@ -1,0 +1,648 @@
+Template: ifplugd/interfaces
+Type: string
+Default: 
+Description: static interfaces to be watched by ifplugd:
+ Specify the interfaces to control here, separated by spaces. Ifplugd
+ processes will be started for each of these interfaces when the ifplugd
+ initscript is called with the "start" argument. You may use the magic
+ string "auto" to make the initscript start or stop ifplugd processes for
+ ALL eth and wlan interfaces that are available according to
+ /proc/net/dev.  Note that the list of interfaces appearing in
+ /proc/net/dev may depend on which kernel modules you have loaded.
+ .
+ You should not add interfaces that are hotplugged (USB or PCMCIA) here,
+ you will be asked for those in the next question.
+Description-cs.UTF-8: Statická rozhraní, která má ifplugd sledovat
+ Zadejte mezerami oddělený seznam sledovaných rozhraní. Při spuštění zaváděcího skriptu ifplugd s argumentem "start" se pro každé zadané rozhraní spustí jeden proces ifplugd. Také můžete použít magické slůvko "auto", které zařídí spuštění resp. zastavení procesů ifplugd pro VŠECHNA eth a wlan zařízení dostupná podle /proc/net/dev. Seznam zařízení zobrazených v /proc/net/dev může záviset na tom, jaké jaderné moduly máte právě zavedeny.
+ .
+ Neměli byste zde uvádět zařízení připojitelná za běhu (USB nebo PCMCIA), budete na ně dotázáni v další otázce.
+Description-da.UTF-8: faste netkort, der skal overvåges af ifplugd:
+ Angiv de netkort, der skal styres adskilt af mellemrum. Der vil blive startet en ifplugd-proces for hver af disse netkort, når ifplugd's initialiseringsscript kaldes med »startparameteren«. Du kan angive teksten »auto« for at sikre at initialiseringsscriptet starter og stopper ifplugd-processer for ALLE eth- og wlan-netkort, der er tilgængelige ifølge /proc/net/dev. Bemærk at den liste, der optræder i /proc/net/dev kan afhænge af, hvilke kernemoduler, du har indlæst.
+ .
+ Du skal ikke tilføje netkort, der kan sættes i under kørslen (f.eks. USB eller PCMCIA) her. Du vil blie spurgt om sådanne kort senere.
+Description-de.UTF-8: Zu überwachende Schnittstellen, die immer (statisch) vorhanden sind:
+ Geben Sie hier, durch Leerzeichen getrennt, die zu überwachenden Schnittstellen ein. Für jede dieser Schnittstellen wird ein ifplugd-Prozess gestartet, sobald das Init-Skript von ifplugd mit dem »start«-Argument aufgerufen wird. Sie können den magischen Wert »auto« verwenden, um für ALLE eth- und wlan-Schnittstellen, die laut /proc/net/dev verfügbar sind, einen ifplugd-Prozess zu starten bzw. zu beenden. Beachten Sie, dass die Liste der Schnittstellen, die in /proc/net/dev auftaucht, davon abhängt, welche Kernel-Module Sie geladen haben.
+ .
+ Sie sollten hier keine Schnittstellen angeben, die von hotplug gesteuert werden (USB oder PCMCIA). Um diese Schnittstellen geht es in der nächsten Frage.
+Description-es.UTF-8: interfaces estáticas que serán supervisadas por ifplugd:
+ Indique las interfaces que desea sean supervisadas, separándolas con espacios. Cuando se llame al programa de arranque de «ifplugd» con el parámetro «start» se creará un proceso de «ifplugd» por cada interfaz aquí indicada. Puede utilizar la palabra «auto» para que el programa de arranque tome en cuenta TODAS las interfaces «eth» y «wlan» disponibles según indique «/proc/net/dev». Tenga en cuenta que la lista de interfaces disponible en «/proc/net/dev» dependerá de los módulos del núcleo que haya cargado.
+ .
+ Aquí no debe añadir los interfaces que son «hotplug» (USB o PCMCIA) aquí. Se le preguntará sobre éstos en la siguiente pregunta.
+Description-eu.UTF-8: ifplugd -ek begiratu behar dituen interfaze estatikoak:
+ Ezarri kontrolatu behar diren interfazeak hemen zuriunez berezirik. Ifplugd prozesua interfaze hauetako bakoitzarentzat abiaraziko da ifplugd abiarazte script-a "start" argumentuaz exekutatzean. "auto" kate magikoa erabili dezakezu abiarazte programak /proc/net/dev-en agertzen diren eth eta wlan interfaze guztiak kontutan har ditzan.  Kontutan izan /proc/net/dev-en agertzen diren interfaze zerrenda kargaturik dituzun kernel moduluen arabera aldatu daitekeela.
+ .
+ Ez dituzu martxan konektatzen diren interfazeak (USB edo PCMCIA) hemen jarri behar, horietaz aurrerago galdetuko zaizu.
+Description-fi.UTF-8: Staattiset liitännät, joita ifplugd kuuntelee:
+ Anna kontrolloitavat verkkoliitännät välilyönnein eroteltuina. Jokaista näistä liitännöistä varten käynnistetään ifplugd-prosessi, kun ifplugd-käynnistyskomentosarjaa kutsutaan argumentilla ”start”. Merkkijonolla ”auto” voit käskeä käynnistyskomentosarjaa käynnistämään ja pysäyttämään ifplugd-prosessit kaikkia tiedoston /proc/net/dev tuntemia eth- ja wlan-liitäntöjä varten.
+ .
+ Älä lisää tähän liitäntöjä, jotka toimivat pikaliitännällä (USB ja PCMCIA). Niitä kysytään seuraavassa kysymyksessä.
+Description-fr.UTF-8: Interfaces statiques qu'ifplugd doit surveiller :
+ Veuillez préciser la liste des interfaces à contrôler, séparées par des espaces. Des processus ifplugd seront lancés pour chacune de ces interfaces lorsque le script de lancement d'ifplugd sera appelé avec le paramètre « start ». Vous pouvez utiliser le paramètre « auto » de façon à ce que le script de lancement démarre ou arrête des processus ifplugd pour TOUTES les interfaces eth et wlan disponibles dans /proc/net/dev. Veuillez noter que cette liste d'interfaces dans /proc/net/dev peut dépendre des modules du noyau qui ont été chargés.
+ .
+ Il ne faut pas ajouter ici les interfaces qui sont connectables à chaud (« hotplugged ») comme l'USB ou le PCMCIA. Leur liste vous sera demandée à part.
+Description-gl.UTF-8: Interfaces estáticas a vixiar con ifplugd:
+ Indique aquí as interfaces a controlar, separadas por espazos. Hanse iniciar procesos de ifplugd para cada unha desas interfaces ao executar o script de inicio de ifplugd co argumento "start". Pode empregar a cadea máxica "auto" para facer que o script de inicio arrinque ou deteña os procesos de ifplugd para TODAS as interfaces eth e wlan dispoñibles segundo /proc/net/dev. Teña en conta que a lista de interfaces que aparecen en /proc/net/dev pode depender dos módulos do núcleo que teña cargados.
+ .
+ Non debería engadir aquí interfaces con conexión en quente (USB ou PCMCIA); háselle preguntar por elas na seguinte pregunta.
+Description-it.UTF-8: interfacce statiche da sorvegliare con ifplugd:
+ Inserire le interfacce da controllare, separandole con degli spazi. Quando viene richiamato lo script di inizializzazione di ifplugd con argomento "start" verrà avviato un processo ifplugd per ogni interfaccia elencata. È possibile usare la stringa magica "auto" per far sì che lo script di inizializzazione avvii o fermi un processo ifplugd per TUTTE le interfacce eth e wlan che secondo /proc/net/dev sono disponibili. Notare che l'elenco delle interfacce presenti in /proc/net/dev può dipendere da quali moduli del kernel sono stati caricati.
+ .
+ Non si devono aggiungere le interfacce ad inserimento a caldo (USB o PCMCIA), saranno l'argomento della prossima domanda.
+Description-ja.UTF-8: ifplugd で監視する静的なインターフェース:
+ 制御するインターフェースを空白で区切って入力してください。ifplugd の initscript を引数 "start" で呼んだとき、ifplugd はインターフェース毎に起動します。特別な文字列 "auto" を引数に使うと、/proc/net/dev にある全ての eth と wlan のインターフェースについて、ifplugd プロセスを起動、停止させられます。注意ですが、/proc/net/dev にあるインターフェースの一覧はロードしたカーネルモジュールに依存するかもしれません。
+ .
+ ここにホットプラグ (USB や PCMCIA) するインターフェースを加えるべきではありません。これについては後で尋ねます。
+Description-nl.UTF-8: Door ifplugd te controleren statische interfaces:
+ Hier geeft u de te controleren interfaces aan, gescheiden door spaties. Er wordt een ifplugd-proces gestart voor elk van deze interfaces wanneer het ifplugd-initscript aangeroepen wordt met het 'start' argument. U kunt hier ook de magische string 'auto' aangeven, waardoor het initscript ifplugd-processen start voor alle volgens /proc/net/dev beschikbare eth en wlan interfaces. Merk op dat de in /proc/net/dev verschijnende lijst van interfaces afhankelijk kan zijn van de geladen modules.
+ .
+ Geef hier geen interfaces aan die 'hotplugged' zijn (zoals USB of PCMCIA), u krijgt daar zometeen de mogelijkheid voor.
+Description-pt.UTF-8: interfaces estáticas a ser observadas pelo ifplugd:
+ Especifique as interfaces a controlar aqui separadas por espaços. Os processos do ifplugd serão iniciados para cada uma destas interfaces quando o initscript do ifplugd é chamado com o argumento "start". Pode usar a palavra mágica "auto" para fazer o initscript arrancar ou parar os processo do ifplugd para TODAS as interfaces eth e wlan que estão disponíveis de acordo com /proc/net/dev.  Note que a lista de interfaces que aparece em /proc/net/dev pode variar dependendo dos módulos de kernel que carregou.
+ .
+ Não deverá aqui adicionar interfaces 'hotplugged' que não estejam ligadas (USB e PCMCIA), ser-lhe-ão pedidas na próxima questão.
+Description-pt_BR.UTF-8: interfaces estáticas para serem monitoradas pelo ifplugd
+ Especifique aqui as interfaces a serem controladas, separado por espaços.Processos ifplugd serão iniciados para cada interface quando o script de inicialização do ifplugd for executado com o argumento "start". Você pode utilizar a opção mágica "auto" para fazer o script de inicialização iniciar ou parar os processos ifplugd para TODAS as interfaces eth e wlan que estiverem disponíveis de acordo com /proc/net/dev. Note que a lista de interfaces aparecendo em /proc/net/dev pode depender dos módulos de kernel que foram carregados.
+ .
+ Você não deveria adicionar interfaces "hotplug" (USB ou PCMCIA) aqui, você será perguntado sobre elas na próxima questão.
+Description-ru.UTF-8: Статические интерфейсы, которые будет обслуживать ifplugd:
+ Укажите интерфейсы для управления, разделяя их пробелами. При вызове init-сценария ifplugd с параметром "start" для каждого из этих интерфейсов будет запущен процесс ifplugd. Можно указать слово "auto" и тогда init-сценарий будет запускать и останавливать процессы ifplugd для ВСЕХ имеющихся интерфейсов (согласно proc/net/dev, eth и wlan). Заметим, что список интерфейсов в /proc/net/dev зависит от загруженных модулей ядра.
+ .
+ Вам не нужно здесь указывать оперативно заменяемые интерфейсы (hotplugged) (USB или PCMCIA), про них будет следующий вопрос.
+Description-sv.UTF-8: statiska gränssnitt som ska övervakas av ifplugd:
+ Ange de nätverksgränssnitt som ska kontrolleras här, separerade med blanksteg. Ifplugd-processerna kommer att startas upp för varje av dessa gränssnitt när ifplugds init-skript kallas upp med argumentet "start". Du kan använda den magiska strängen "auto" för att init-skriptet ska starta eller stoppa ifplugd-processerna för ALLA eth och wlan-gränssnitt som är tillgängliga enligt /proc/net/dev.  Observera att listan över gränssnitt som visas i /proc/net/dev är beroende av vilka kärnmoduler du har läst in.
+ .
+ Du bör inte lägga till gränssnitt som har stöd för hotplug (USB eller PCMCIA) här, du kommer att bli tillfrågad efter dessa i nästa fråga.
+Description-vi.UTF-8: giao diện tĩnh mà trình ifplugd cần theo dõi:
+ Ở đây hãy ghi rõ các giao diện cần điều khiển, định giới bằng dấu cách. Tiến trình ifplugd sẽ được khởi chạy cho mỗi giao diện trong danh sách này khi văn lệnh khởi tạo ifplugd được gọi với đối số « start » (bắt đầu). Bạn cũng có thể sử dụng chuỗi ma thuật « auto » (tự động) để làm cho văn lệnh này khởi chạy hay dừng chạy tiến trình ifplugd cho TẤT CẢ các giao diện kiểu Ethernet (eth) và WLAN (wlan) sẵn sàng tùy theo « /proc/net/dev ». Ghi chú rằng danh sách các giao diện mà hiển thị bằng « /proc/net/dev » có thể phụ thuộc vào những mô-đun hạt nhân bạn đã nạp.
+ .
+ Ở đây bạn không nên thêm giao diện được cắm nóng (USB hay PCMCIA); đợi câu hỏi kế tiếp.
+Description-zh_TW.UTF-8: 由 ifpluged 監控的固定裝置
+ 輸入要控制的熱插拔裝置，以空白區格。當 ifplugd 初始 script 以 "start" 參數啟動時，ifplugd 程序將會啟動這些裝置。您可以使用神奇字串 "auto" 使得初始 script 啟動或停止 ifplugd 程序來監聽所有 /proc/net/dev 下的可用的 eth 和 wlan 裝置。注意，/proc/net/dev 下的裝置列表是根據載入的核心模組產生的
+ .
+ 您不應在這加入熱插拔的裝置(USB 或 PCMCIA)"，下一個問題就會詢問這些裝置了。
+
+Template: ifplugd/hotplug_interfaces
+Type: string
+Default: 
+Description: hotplugged interfaces to be watched by ifplugd:
+ Specify the hotplugged interfaces to control here, separated by spaces.
+ .
+ You may use the magic string "all" to make the hotplug script start an
+ ifplugd process for any hotplugged interface.
+ .
+ Hotplugged interfaces are usually interfaces on PCMCIA or WLAN adapters.
+Description-cs.UTF-8: Dynamicky připojitelná zařízení, která má ifplugd sledovat
+ Zadejte mezerami oddělený seznam sledovaných dynamicky připojitelných rozhraní.
+ .
+ Můžete použít magické slůvko "all", které zajistí, aby skript hotplug spustil ifplugd pro každé dynamicky připojené síťové rozhraní.
+ .
+ Dynamicky připojitelná rozhraní jsou většinou rozhraní na PCMCIA nebo WLAN adaptérech.
+Description-da.UTF-8: løse netkort, der skal overvåges af ifplugd:
+ Angiv de netkort, der kan sættes i under kørslen, som skal overvåges adskilt af mellemrum.
+ .
+ Du kan skrive »all« for at få hotplugs script til at starte en ifplugd-proces for alle netkort, der sættes i under kørslen.
+ .
+ Løse netkort forbindes normalt via PCMCIA eller WLAN.
+Description-de.UTF-8: Durch hotplug gesteuerte Schnittstellen, die von ifplugd überwacht werden sollen:
+ Bitte geben Sie hier die Schnittstellen an, die durch hotplug gesteuert werden und die Sie mit ifplugd überwachen möchten.
+ .
+ Sie können den magischen Wert »all« benutzen, damit das hotplug-Skript für alle von ihm gesteuerten Schnittstellen einen ifplugd-Prozess startet.
+ .
+ Schnittstellen auf PCMCIA- oder USB-Adaptern werden für gewöhnlich durch hotplug gesteuert.
+Description-es.UTF-8: interfaces «hotplug» que serán supervisadas por ifplugd:
+ Introduzca la lista de interfaces «hotplug» que deben ser supervisadas, separándolas con espacios.
+ .
+ Puede utilizar la palabra «all» para que el script de hotplug ejecute un proceso «ifplugd» para cada una de las interfaces «hotplug».
+ .
+ Las interfaces «hotplug» son, en la mayoría de los casos, las interfaces en los adaptadores PCMCIA y WLAN.
+Description-eu.UTF-8: Ifplugd-ek begiratu behar dituen martxan konektatzen diren interfazeak:
+ Martxan konektatzen diren interfazeak hemen ezarri zuriunez bereizirik.
+ .
+ "all" kate magikoa erabili beharko duzu makina martxan dagoenean interfaze bat konektatzen hotplug script-ak ifplugd prozesu bat abiarazi dezan.
+ .
+ Makina martxan dagoela konektatu daitezkeen interfazeak arruntean PCMCIA edo haririk gabeko gailuak dira.
+Description-fi.UTF-8: Pikaliitännällä toimivat liitännät, joita ifplugd kuuntelee:
+ Anna kontolloitavat pikaliitännät välilyönnein eroteltuina.
+ .
+ Merkkijonolla ”all” voit käskeä pikaliitäntäkomentosarjaa käynnistämään ifplugd-prosessin kaikille pikaliitännöille.
+ .
+ Pikaliitännät ovat yleensä PCMCIA- tai WLAN-sovittimien liitäntöjä.
+Description-fr.UTF-8: Interfaces connectées à chaud (« hotplugged ») qu'ifplugd doit surveiller :
+ Veuillez indiquer la liste des interfaces connectées à chaud, séparées par des espaces, et qui doivent être contrôlées par ifplugd.
+ .
+ Vous pouvez utiliser l'argument « all » pour que le script hotplug démarre un processus ifplugd pour chaque interface connectée à chaud.
+ .
+ Les interfaces connectées à chaud sont habituellement des interfaces sans fil ou des interfaces PCMCIA.
+Description-gl.UTF-8: Interfaces con conexión en quente a vixiar por ifplugd:
+ Indique as interfaces con conexión en quente a controlar aquí, separadas por espazos.
+ .
+ Pode empregar a cadea máxica "all" para facer que o script de conexión en quente inicie un proceso de ifplugd para todas as interfaces con conexión en quente.
+ .
+ As interfaces con conexión en quente adoitan ser interfaces en adaptadores PCMCIA ou WLAN.
+Description-it.UTF-8: interfacce ad inserimento a caldo da sorvegliare con ifplugd:
+ Inserire le interfacce ad inserimento a caldo da controllare, separandole con degli spazi.
+ .
+ È possibile usare la stringa magica "all" per far avviare allo script hotplug un processo ifplugd per ogni interfaccia ad inserimento a caldo.
+ .
+ Solitamente le interfacce ad inserimento a caldo sono quelle su adattatori PCMCIA o WLAN.
+Description-ja.UTF-8: ifplugd で監視するホットプラグする、インターフェース:
+ ホットプラグするインターフェースを空白で区切って入力してください。
+ .
+ 特別な文字列 "auto" を引数に使うと、ホットプラグする全てのインターフェースで、hotplug スクリプトが ifplugd プロセスを起動、停止できます。
+ .
+ ホットプラグするインターフェースは通例 PCMCIA か WLAN のアダプタ上です。
+Description-nl.UTF-8: Door ifplugd te controleren hotplug-interfaces:
+ Hier geeft u de 'hotplugged' interfaces aan, gescheiden door spaties.
+ .
+ U kunt de magische string 'all' gebruiken om het hotplug-script een ifplugd-proces te laten starten voor alle hotplug-interfaces.
+ .
+ Hotplug-interfaces zijn gewoonlijk PCMCIA- of WLAN-adaptors.
+Description-pt.UTF-8: Interfaces 'hotplugged' a ser observadas pelo ifplugd:
+ Especifique aqui as interfaces 'hotplugged' a ser controladas, separadas por espaços.
+ .
+ Pode usar a palavra mágica "all" para fazer com o 'script hotplug' inicie um processo ifplugd para qualquer interface ligada 'hotplugged'
+ .
+ Interfaces 'hotplugged' são normalmente interfaces em adaptadores PCMCIA ou WLAN.
+Description-pt_BR.UTF-8: interfaces "hotplug" para serem monitoradas pelo ifplugd
+ Especifique aqui as interfaces "hotplug" que serão controladas, separado por espaços.
+ .
+ Você pode utilizar a opção mágica "all" para fazer o script hotplug iniciar um processo ifplugd para qualquer interface "hotplug".
+ .
+ Interfaces hotplug são usualmente interfaces PCMCIA ou adaptadores WLAN.
+Description-ru.UTF-8: Оперативно заменяемые интерфейсы, которые будет обслуживать ifplugd:
+ Укажите через пробел оперативно заменяемые (hotplugged) интерфейсы.
+ .
+ Можно указать слово "all" и тогда сценарий hotplug будет запускать процесс ifplugd для любого оперативно заменяемого интерфейса.
+ .
+ Обычно оперативно заменяемые интерфейсы имеются у адаптеров PCMCIA или WLAN.
+Description-sv.UTF-8: gränssnitt med stöd för hotplug som ska övervakas av ifplugd:
+ Ange de gränssnitt med stöd för hotplug och som ska kontrolleras här, separerade med blanksteg.
+ .
+ Du kan använda den magiska strängen "all" för att hotplug-skriptet ska starta en ifplugd-process för de gränssnitt som har stöd för hotplug.
+ .
+ Gränssnitt som har stöd för hotplug är normalt sett gränssnitt på PCMCIA eller WLAN-adaptrar.
+Description-vi.UTF-8: giao diện được cắm nóng mà trình ifplugd cần theo dõi:
+ Ở đây hãy ghi rõ những giao diện được cắm nóng cần điều khiển, định giới bằng dấu cách.
+ .
+ Bạn cũng có khả năng sử dụng chuỗi ma thuật « all » (tất cả) để lam cho văn lệnh cắm nóng thì khởi chạy một tiến trình ifplugd cho bất cứ giao diện được cắm nóng nào.
+ .
+ Giao diện được cắm nóng thường là giao diện nằm trên bộ tiếp hợp kiểu PCMCIA hay WLAN.
+Description-zh_TW.UTF-8: 由 ifplugd 監控的熱插拔裝置
+ 輸入要控制的熱插拔裝置，以空白區格。
+ .
+ 您可以使用神奇字串 "all" 使得 hotplug script 啟動一個 ifplugd 程序來監控任何熱插拔裝置。
+ .
+ 熱插拔裝置通常是 PCMCIA 或 WLAN 介面卡。
+
+Template: ifplugd/args
+Type: string
+Default: -q -f -u0 -d10 -w -I
+Description: arguments to ifplugd:
+ You can give arguments to the ifplug daemon here.  Relevant options are:
+ .
+  -q Don't run script on daemon quit
+  -f Ignore detection failure and retry
+  -u Specify delay for configuring interface
+  -d Specify delay for deconfiguring interface
+  -w Wait until daemon fork finished
+  -I Don't exit on nonzero return value of program executed
+ .
+  -a Do not enable interface automatically
+  -s Use stderr instead of syslog for debugging
+  -b Do not beep (-U/-D Do not beep on interface up/down)
+  -t Specify poll time in seconds (default: 1)
+  -p Don't run script on daemon startup
+  -l Run "down" script on startup if no cable is detected
+  -W Wait until the daemon died when running daemon is killed
+  -M Use interface monitoring
+Description-cs.UTF-8: Parametry pro daemon ifplugd
+ Nyní můžete zadat parametry pro daemona ifplugd. Možnosti:
+ .
+  -q Při ukončení daemona nespustí skript
+  -f Ignoruje chyby rozpoznávání a zkouší znovu
+  -u Zadá zpoždění pro konfiguraci rozhraní
+  -d Zadá zpoždění pro dekonfiguraci rozhraní
+  -w Počká, než fork daemonu skončí
+  -I Při nenulové návratové hodnotě spuštěného programu neskončí
+ .
+  -a Nebude rozhraní povolovat automaticky
+  -s Pro ladění použije místo syslogu stderr
+  -b Nebude pípat (-U/-D Nebude pípat při nahození/shození rozhraní)
+  -t Zadá interval dotazování (v sekundách, výchozí: 1)
+  -p Při spuštění daemona nespustí skript
+  -l Pokud při spuštění není rozpoznán kabel, spustí skript "down"
+  -W Pokud je běžící daemon zabit, počká, než opravdu umře
+  -M Bude sledovat rozhraní
+Description-da.UTF-8: parametre til ifplugd:
+ Du kan give parametre til ifplug-dæmonen her. Relevante tilvalg er:
+ .
+  -q Kør ikke skript ved dæmonafslutning
+  -f Ignorer detekteringsfejl og forsøg igen
+  -u Angiv forsinkelse for konfigurerende grænseflade
+  -d Angiv forsinkelse for dekonfigurerende grænseflade
+  -w Vent indtil dæmonforgrening er færdig
+  -I Afslut ikke ved returkoder der ikke er nul, for program der køres
+ .
+  -a Aktiver ikke grænseflade automatisk
+  -s Brug stderr i steden for syslog til fejlsøgning
+  -b Beep ikke (-U/-D Beep ikke ved grænseflade op/ned)
+  -t Angiv træktid (poll) i sekunder (standard: 1)
+  -p Kør ikke skript ved dæmonopstart
+  -l Kør »down-skript« ved opstart hvis intet kabel er detekteret
+  -W Vent indtil dæmonen døde når kørende dæmon dræbes
+  -M Brug grænsefladeovervågning
+Description-de.UTF-8: Argumente für ifplugd:
+ Sie können hier Argumente für den ifplugd-Daemon angeben. Gültige Optionen sind:
+ .
+  -q  Kein Skript ausführen bei Beenden des Daemons
+  -f  Fehler bei der Erkennung ignorieren und erneut versuchen
+  -u  Verzögerung festlegen zur Konfiguration der Schnittstellen
+  -d  Verzögerung festlegen zur Dekonfiguration der Schnittstellen
+  -w  Warten auf den Abschluß des Daemon-Forks (Aufspaltung)
+  -I  Nicht beenden, wenn Rückgabewerte von ausgeführten Programmen
+      nicht Null sind
+ .
+  -a  Schnittstelle nicht automatisch aktivieren
+  -s  Nutze stderr statt syslog für Fehlersuche
+  -b  Keine Systemklänge (-U/-D: Kein Systemklang beim Aktivieren (Up)/
+      Deaktivieren (Down) der Schnittstelle
+  -t  Abfragetakt in Sekunden festlegen (Vorgabe: 1)
+  -p  Kein Skript ausführen bei Starten des Daemons
+  -l  down-Skript beim Start ausführen, wenn kein Kabel eingesteckt ist
+  -W  Bei Beendigung des laufenden Daemon-Prozesses warten, bis der
+      Prozess wirklich beendet ist
+  -M  Benutze Schnittstellenüberwachung
+Description-es.UTF-8: parámetros para ifplugd:
+ Aquí puede introducir parámetros para el servicio «ifplugd». Las opciones más relevantes son:
+ .
+  -q No ejecutar el programa al terminar el servicio
+  -f Ignorar el fallo de detección y reintentar
+  -u Indicar el tiempo de espera para configurar una interfaz
+  -d Especifiar el tiempo de espera para desconfigurar una interfaz
+  -w Esperar a que se lance el servicio en segundo plano
+  -I No salir al obtener un valor de retorno que no sea cero al ejecutar un programa
+ .
+  -a No activar la interfaz automáticamente
+  -s Utilizar la salida de error estándar en lugar de syslog para depurar
+  -b No emitir sonido (-U/-D Para no emitirlo al bajar/subir una interfaz)
+  -t Especificar el tiempo de sondeo en segundos (por omisión: 1)
+  -p No ejecutar el programa al arrancar el servicio
+  -l Ejecutar programa «down» al arrancar si no se detecta un cable
+  -W Esperar a que el servicio se pare al interrumpir al servicio en ejecución
+  -M Utilizar monitorización de interfaz
+Description-eu.UTF-8: ifplugd-rentzako argumentuak:
+ Hemen ifplugd deabruari argumentuak bidali diezazkiokezu.  Aukera garrantzitsuenak:
+ .
+  -q Ez exekutatu skripta deabrua ixtean
+  -f Alde batetara utzi antzemate errorea eta berriz saiatu
+  -u Ezarri atzerapena interfazea konfiguratzeko
+  -d Ezarri atzerapena interfazea deskonfiguratzeko
+  -w Itxoin deabru lana amaitu arte
+  -I Ez irten programa exekutatuaren zero ez den erantzun batekin
+ .
+  -a Ez gaitu interfazea automatikoki
+  -s stderr erabili sistema-erregistroa ordez arazpenerako
+  -b Ez bip egin (-U/-D Ez bip egin interfazea jaitsi/igotzerakoan)
+  -t Ezarri ilara denbora segundutan (lehenetsia: 1)
+  -p Ez exekutatu skript-a deabrua abiaraztean
+  -l Exekutatu "down" skripta abioan kablerik ez dagoela atzeman ezkero
+  -W Itxoin deabrua hil arte abiaraziriiko deabrua akabatzen denean
+  -M Erabili interfazea monitoreoa
+Description-fi.UTF-8: Ifplugdin argumentit:
+ Tässä voit antaa ifplug-taustaohjelmalle valitsimia. Olennaisia ovat:
+ .
+  -q Älä aja komentosarjaa lopetettaessa taustaohjelma
+  -f Jätä huomiotta epäonnistunut etsintä ja yritä uudelleen
+  -u Määritä liitännän käynnistyksen viive
+  -d Määritä liitännän sammuttamisen viive
+  -w Odota, että taustaohjelman haarautuminen on valmis
+  -I Älä lopeta, jos ajetun ohjelman palautusarvo ei ole nolla
+ .
+  -a Älä käynnistä liitäntää automaattisesti
+  -s Käytä oletusvirhetulostetta syslogin sijaan virheidenjäljitystilassa
+  -b Älä piippaa (-U/-D älä piippaa muutettassa liitännän tilaa)
+  -t Määritä tarkistusväli sekunneissa (oletus: 1)
+  -p Älä aja komentosarjaa käynnistettäessä komentosarja
+  -l Aja sammutuskomentosarja käynnistettäessä, jos kaapelia ei löydy
+  -W Odota kunnes taustaohjelma kuolee, kun se tapetaan
+  -M Käytä liitäntöjenseurantaa
+Description-fr.UTF-8: Paramètres à passer à ifplugd :
+ Veuillez indiquer ici des paramètres à passer au démon ifplugd. Des options possibles sont :
+ .
+  -q ne pas lancer le script lorsque le démon quitte
+  -f ignorer la détection de pannes et réessayer
+  -u indiquer le délai de configuration de l'interface
+  -w attendre jusqu'à ce que la réplication du démon soit terminée
+  -I ne pas quitter lorsque le programme exécuté retourne une valeur non nulle
+ .
+  -a ne pas activer l'interface automatiquement
+  -s utiliser stderr plutôt que syslog pour le débogage
+  -b ne pas émettre de signal sonore (-U/-D : ne pas
+     émettre de signal au démarrage/arrêt de l'interface)
+  -t indiquer l'intervalle de scrutation en secondes
+  -p ne pas lancer de script au démarrage du démon
+  -l lancer le script « down » au démarrage si aucun câble n'est détecté
+  -W attendre la mort du démon lorsque le démon en cours est tué
+  -M utiliser le suivi de l'interface
+Description-gl.UTF-8: Argumentos para ifplugd:
+ Pode fornecer aquí argumentos ao servizo ifplugd. As opcións relevantes son:
+ .
+  -q Non executar o script ao saír do servizo
+  -f Ignorar o fallo de detección e volve tentalo
+  -u Especificar o retardo para a configuración da interface
+  -d Especificar o retardo para a desconfiguración da interface
+  -w Esperar ata que remate a subdivisión do servizo
+  -I Non saír se o programa executado devolve un valor distinto de cero
+ .
+  -a Non activar a interface automaticamente
+  -s Empregar a saída estándar no canto do rexistro do sistema para depurar
+  -b Non producir pitidos (-U/-D non pitar ao erguer/baixar unha interface)
+  -t Especificar o periodo entre consultas, en segundos (1 por defecto)
+  -p Non executar o script ao iniciar o servizo
+  -l Executar o script "down" no inicio se non se detecta un cable
+  -W Esperar a que o servizo morra ao matar o servizo en execución
+  -M Empregar monitorización de interfaces
+Description-it.UTF-8: argomenti per ifplugd:
+ È possibile passare degli argomenti al demone ifplug. Le opzioni rilevanti sono:
+ .
+  -q Non esegue lo script quando il demone esce
+  -f Ignora errori di rilevamento e riprova
+  -u Specifica il ritardo per la configurazione dell'interfaccia
+  -d Specifica il ritardo per la sconfigurazione dell'interfaccia
+  -w Attende fino alla conclusione del fork del demone
+  -I Non esce quando il programma eseguito restituisce nonzero
+ .
+  -a L'interfaccia non viene attivata automaticamente
+  -s Usa stderr al posto di syslog per il debug
+  -b Non emette beep (-U/-D Non emettono il beep quando una
+     interfaccia viene attivata/disattivata)
+  -t Specifica l'intervallo di interrogazione in secondi
+     (valore predefinito: 1)
+  -p Non esegue lo script all'avvio del demone
+  -l Esegue lo script "down" all'avvio se non rileva cavi
+  -W Attende fino alla morte del demone quando viene fermato
+  -M Usa il monitor delle interfacce
+Description-ja.UTF-8: ifplugd への引数:
+ ここで ifplug デーモンへの引数を与えることができます。関係のあるオプションは以下です:
+ .
+  -q デーモン終了時にスクリプトを走らせない
+  -f 検出失敗は無視し再試行させる
+  -u インターフェースの設定の遅れを指定する
+  -d インターフェースの設定解除の遅れを指定する
+  -w デーモンがフォークを終えるまで待つ
+  -I プログラム実行の帰り値が非零でも終了しない
+ .
+  -a 自動的にインターフェースを作動させない
+  -s デバッグのため標準エラー出力の代わりに syslog を使う
+  -b ビープさせない (-U/-D インターフェースの起動/切断でビープさせない)
+  -t ポーリングの時間を秒で指定する (デフォルト: 1)
+  -p デーモンの起動時にスクリプトを走らせない
+  -l 起動時にケーブルを検知しない場合に "down" スクリプトを走らせる
+  -W 稼働中のデーモンが kill された時にデーモンが亡くなるまで待つ
+  -M インターフェースの監視を利用する
+Description-nl.UTF-8: Aan ifplugd mee te geven argumenten:
+ Hier kunt u argumenten aangeven voor de ifplug-achtergronddienst. Relevante opties zijn:
+ .
+  -q Script niet uitvoeren bij afsluiten van achtergronddienst
+  -f Mislukken detectie negeren en opnieuw proberen
+  -u Vertraging voor interface-configuratie aangeven
+  -d Vertraging voor interface-deconfiguratie aangeven
+  -w Wacht tot vork van achtergronddienst klaar is
+  -I Sluit niet af bij niet-nul resultaat van uitgevoerd programma
+ .
+  -a Interface niet automatisch activeren
+  -s stderr gebruiken i.p.v. syslog voor debugging
+  -b Geen biepen laten horen (-U/-D Geen biepen bij 'interface up/down')
+  -t Poll-tijd opgeven (in seconden)
+  -p Script niet uitvoeren bij opstarten van de achtergronddienst
+  -l 'down'-script uitvoeren bij opstarten wanneer er geen kabel gedetecteerd is
+  -W Wachten tot de achtergronddienst gestorven is wanneer 'kill' aangeroepen wordt
+  -M Interface-monitoring gebruiken
+Description-pt.UTF-8: Argumentos para o ifplugd:
+ Pode dar aqui argumentos para o ifplugd 'daemon'.  Opções relevantes são:
+ .
+  -q Não correr 'script' como 'daemon' abortar
+  -f Ignorar detecção de erros e voltar a tentar
+  -u Especificar tempo de espera para configurar a interface
+  -d Especificar tempo de espera para apagar configuração da interface
+  -w Esperar até que o fork 'daemon' termine
+  -I Não sair em caso de retorno de valor não-zero do programa executado
+ .
+  -a Não activar a interface automaticamente
+  -s Utilizar o stderr em vez do syslog para 'debugging'
+  -b Não produzir som (beep) (-U/-D Não produzir som no caso de interface up/down)
+  -t Especificar o tempo de 'poll' em segundos (por omissão: 1)
+  -p Não correr o 'script' no arranque do 'daemon'
+  -l Correr o 'script' "down" durante o arranque se o cabo não for detectado
+  -W esperar até que o 'daemon' termine quando o 'daemon' é terminado
+  -M Utilizar a monitorização da interface
+Description-ru.UTF-8: Параметры ifplugd:
+ Вы можете указать параметры для демона ifplug. Существенные параметры:
+ .
+  -q не запускать сценарий при выходе демона
+  -f игнорировать ошибки обнаружения и повторить
+  -u задать задержку при настройке интерфейса
+  -d задать задержку при деконфигурировании интерфейса
+  -w дождаться завершения работа потомка демона
+  -I не выходить при ненулевом возвращённом значении при выполнении программы
+ .
+  -a не включать интерфейс автоматически
+  -s использовать stderr вместо syslog при отладке
+  -b работать беззвучно (-U/-D не выдавать сигнал при поднятии/опускании инт.)
+  -t задать период опроса в секундах (по умолчанию 1)
+  -p не запускать сценарий при запуске демона
+  -l на старте запускать сценарий "down" при обнаружении отсутствия кабеля
+  -W при "убийстве" демона дождаться завершения его работы
+  -M использовать интерфейс мониторинга
+Description-sv.UTF-8: argument till ifplugd:
+ Du kan ange argument till ifplugd-demonen här. Relevanta val är:
+ .
+  -q Kör inte skript när demonen avslutar
+  -f Ignorera detekteringsfel och försök igen
+  -u Specificera fördröjning för konfigurationsgränssnitt
+  -d Specificera fördröjning för avkonfigurationsgränssnitt
+  -w Vänta tills demonavknoppning avslutats
+  -I Avsluta inte när det exekverade programmets
+     returvärde är skilt från noll
+ .
+  -a Aktivera inte gränssnitt automatiskt
+  -s Använd stderr istället för syslog för felsökning
+  -b Pip inte (-U/-D Pip inte när gränssnittet tas upp/ner)
+  -t Specificera undersökningstid i sekunder (standard: 1)
+  -p Kör inte skript när demonen startar
+  -l Kör "down"-skript vid start om ingen kabel hittas
+  -W Vänta tills demonen dött när den körda demonen dödas
+  -M Använd gränssnittsövervakning
+Description-vi.UTF-8: các đối số cho ifplugd:
+ Ở đây bạn có thể đưa ra các đối số cho trình nền ifplugd. Tùy chọn thích hợp:
+ .
+  -q	Trình nền thoát thì đừng chạy văn lệnh
+  -f	Không phát hiện thành công thì bỏ qua và thử lại
+  -u	Ghi rõ khoảng trễ để cấu hình giao diện
+  -d	Ghi rõ khoảng trễ để hủy cấu hình giao diện
+  -w	Đợi trình nền tạo xong tiến trình con
+  -l	Chương trình thực hiện và trả lại giá trị khác không thì đừng thoát
+ .
+  -a	Đừng tự động hiệu lực giao diện
+  -s	Dùng thiết bị lỗi chuẩn thay cho bản ghi hệ thống để gỡ lỗi
+  -b	Đừng kêu bíp
+ 	-U/-D	đừng kêu bíp khi giao diện bật/tắt
+  -t	Ghi rõ thời gian thăm dò theo giây (mặc định là 1)
+  -p	Trình nền khởi chạy thì đừng chạy văn lệnh
+  -l	Khởi chạy và không phát hiện dây cáp thì chạy văn lệnh « tắt »
+  -W	Trình nền đang chạy bị diệt thì đợi nó kết thúc
+  -M	Dùng chức năng theo dõi giao diện
+
+Template: ifplugd/suspend_action
+Type: select
+Choices: none, suspend, stop
+Choices-cs.UTF-8: nic, uspat, zastavit
+Choices-da.UTF-8: ingen, suspend (dvale), stop
+Choices-de.UTF-8: nichts, Suspend, Stop
+Choices-es.UTF-8: ninguna, suspender, detener
+Choices-eu.UTF-8: batez, eseki, gelditu
+Choices-fi.UTF-8: ei mitään, keskeytä, pysäytä
+Choices-fr.UTF-8: Aucune, Suspendre, Arrêter
+Choices-gl.UTF-8: ningunha, suspender, deter
+Choices-it.UTF-8: nessuna, sospensione, arresto
+Choices-ja.UTF-8: 何もしない, サスペンド, 停止
+Choices-nl.UTF-8: geen, suspend, stop
+Choices-pt.UTF-8: nenhuma, suspender, parar
+Choices-ru.UTF-8: ничего не делать, режим ожидания, остановить
+Choices-sv.UTF-8: ingen, vänteläge, stopp
+Choices-vi.UTF-8: không có, ngưng, dừng
+Default: stop
+Description: suspend behaviour:
+ When you put your notebook into suspend mode, you can choose between three
+ actions:
+ .
+ none: no action
+ .
+ suspend: this puts ifplugd into suspend mode. In this mode, ifplugd does
+ not check the link status. This is necessary for some broken network
+ drivers.
+ .
+ stop: this stops ifplugd. If the -q option is not given, ifplugd will stop
+ the interface. After resume, it will be restarted. This makes sense if you
+ use some mechanism (eg. guessnet or whereami) to detect your network
+ environment, which may have changed while suspending.
+Description-cs.UTF-8: Chování při uspání
+ Když svůj notebook přepnete do režimu spánku, můžete vyvolat některou ze tří akcí:
+ .
+ nic: nic se nestane
+ .
+ uspat: tím přepnete ifplugd do režimu spánku. V tomto režimu ifplugd nesleduje stav linky. To je potřeba pro některé porušené síťové ovladače.
+ .
+ zastavit: tímto ifplugd zastavíte. Nezadáte-li parametr -q, ifplugd rozhraní zastaví a po probuzení zase restartuje. To je užitečné, pokud používáte nějaký způsob zjištění síťového prostředí, ke kterému jste připojeni, protože to se může během spánku změnit. (Viz balíky guessnet nebo whereami.)
+Description-da.UTF-8: opførsel ved dvale:
+ Når du sætter din bærbare i dvaletilstand, kan du vælge mellem følgende handlinger:
+ .
+ ingen, ingen handling
+ .
+ dvale: Dette sætter ifplugd i dvaletilstand. I denne tilstand, tjekker ifplugd ikke forbindelsen. Dette kan være nødvendigt for visse fejlbehæftede netkors-drivere.
+ .
+ stop: Dette stopper ifplugd. Hvis ikke tilvalget -q er angivet, vil ifplugd stoppe netkortet. Når computeren vækkes igen, vil det blive genstartet. Dette giver mening, hvis du benytter en mekanisme (f.eks. guessnet eller whereami) til at detektere dit netværksmiljø, som kan have ændret sig under dvalen.
+Description-de.UTF-8: Suspend-Verhalten:
+ Wenn Ihr Notebook in den Suspend-Modus (Tiefschlaf) wechselt, kann eine dieser drei Aktionen ausgelöst werden:
+ .
+ nichts: keine Aktion
+ .
+ Suspend: versetzt ifplugd in den Suspend-Modus. In diesem Modus überwacht ifplugd nicht den Verbindungsstatus. Dies ist für einige kaputte Netzwerk-Treiber notwendig.
+ .
+ Stop: stoppt ifplugd. Wenn die Option »-q« nicht angegeben wurde, wird ifplugd die Schnittstelle stoppen. Nach dem Aufwachen wird sie neu gestartet. Dies ist sinnvoll, wenn Sie einen Mechanismus (z.B. guessnet oder whereami) verwenden, um Ihre Netzwerkumgebung automatisch zu erkennen, welche sich während des Tiefschlafs verändert haben könnte.
+Description-es.UTF-8: comportamiento al suspender:
+ Puede elegir entre tres acciones distintas cuando pone su portátil en modo suspendido:
+ .
+ ninguna: sin acción
+ .
+ suspender: colocar a «ifplugd» en modo suspendido. En este modo «ifplugd» no verificará el estado del enlace. Esto es necesario para algunos controladores de red que no funcionan correctamente.
+ .
+ detener: detener a «ifplugd». «Ifplugd» detendrá la interfaz, si no se lo ha iniciado con el parámetro -q. La interfaz se reiniciará al salir del modo suspendido. Esto es útil si utiliza algún mecanismo como «guessnet» o «whereami» para detectar el entorno de red y dicho entorno puede haber cambiado mientras su equipo estaba suspendido.
+Description-eu.UTF-8: eseki portamoldea:
+ Portatila esekitze moduan ipintzen hiru ekintza ezberdinen artean hautatu dezakezu:
+ .
+ batez: ez ezer egin
+ .
+ eseki: honek ifplugd esekiera moduan ipiniko du. Modu honetan ifplugd-ek ez du interfaze egoera egiaztatuko. Hau beharrezkoa da zenbait sare kontrolagailuekin.
+ .
+ gelditu: ifplugd gelditu. -q aukera ematen ez bada ifplugd-ek interfazea geldituko du. Saioa berreskuratzen abiaraziko da. Honek zentzua du zuk sare ingurunea atzemateko lanabes batenbat (adib. guessnet edo whereami) erabiltzen baduzu esekitzean aldatu egin daitezke eta.
+Description-fi.UTF-8: Keskeytyskäyttäytyminen:
+ Kun laitat kannettavan tietokoneesi keskeytystilaan, voit valita kolmesta toiminnosta:
+ .
+ ei mitään: ei toimintoa
+ .
+ keskeytä: laittaa ifplugdin keskeytystilaan. Tässä tilassa ifplugd ei tarkista liitännän tilaa. Jotkin rikkinäiset verkkoajurit vaativat tämän.
+ .
+ pysäytä: pysäyttää ifplugdin. Jos valitsinta -q ei ole annettu, ifplugd pysäyttää liitännän. Jatkamisen jälkeen se käynnistetään uudelleen. Tässä on järkeä, jos käytät jotain mekanismia (esimerkiksi guessnet tai whereami) selvittääksesi verkkoympäristösi, joka on saattanut vaihtua keskeytyksen aikana.
+Description-fr.UTF-8: Action du mode veille :
+ Lorsque vous mettez votre ordinateur portable en veille, vous avez le choix entre trois actions :
+ .
+ - Aucune : aucune action ;
+ .
+ - Suspendre : ceci met ifplugd en mode veille. Dans ce mode, il ne vérifie pas l'état de la ligne. Cela est nécessaire pour certains pilotes de réseau défectueux ;
+ .
+ - Arrêter : cette action arrête ifplugd. Si l'option -q n'est pas présente, ifplugd va arrêter l'interface. À la reprise, elle sera redémarrée. Cela présente un intérêt si vous utilisez un mécanisme tel que guessnet ou whereami pour détecter votre environnement de réseau qui peut avoir été modifié pendant la durée de la mise en veille.
+Description-gl.UTF-8: Comportamento de suspensión:
+ Pode escoller entre tres accións a realizar ao poñer o portátil en modo suspendido:
+ .
+ ningunha: ningunha acción
+ .
+ suspender: pon ifplugd en modo suspendido. Neste modo, ifplugd non comproba o estado da ligazón. Isto é necesario para algúns controladores de rede rotos.
+ .
+ deter: isto detén ifplugd. Se non se dá a opción -g, ifplugd ha deter a interface. Despois de continuar, hase reiniciar. Isto ten sentido se emprega mecanismos (coma guessnet ou whereami) para detectar o ambiente de rede, que puido ter cambiado durante a suspensión.
+Description-it.UTF-8: modalità alla sospensione:
+ Quando si mette il proprio portatile in modalità sospensione, è possibile scegliere fra tre azioni:
+ .
+ nessuna: nessuna azione
+ .
+ sospensione: anche ifplugd passa in modalità sospensione; in questa modalità ifplugd non controlla lo stato del collegamento. Questa è necessaria con alcuni driver di rete difettosi.
+ .
+ arresto: ifplugd viene fermato. Qualora non sia usata l'opzione -q, ifplugd ferma l'interfaccia. Dopo il ripristino l'interfaccia viene riattivata. Questo è utile se si utilizzano meccanismi (come guessnet o whereami) di rilevazione della rete circostante, la quale potrebbe essere cambiata durante la sospensione.
+Description-ja.UTF-8: サスペンドでの振舞い:
+ ノートブックをサスペンドするとき、3 つの動作を選択できます:
+ .
+ 何もしない: 何もしません
+ .
+ サスペンド: ifplugd をサスペンドモードにします。このモードでは、ifplugd は接続の状態を調べません。壊れたネットワークドライバの中にはこれが必要なものがあります。
+ .
+ 停止: ifplugd を停止します。もし -q オプションを与えなければ、 ifplugd はインターフェースを止めます。レジューム後には、再起動します。これが意味があるのは、サスペンド中のネットワーク環境の変化を検知できる(例えば guessnet や whereami で) 場合です。
+Description-nl.UTF-8: suspend-gedrag:
+ Wanneer u uw notebook in suspend-modus brengt, kunt u kiezen uit drie acties:
+ .
+ geen: geen actie
+ .
+ suspend: dit plaatst ifplugd in suspend-modus. In deze modus gaat ifplugd de link-status niet na. Dit is noodzakelijk voor sommige onjuist werkende netwerkstuurprogramma's
+ .
+ stop: dit stopt ifplugd. Als de -q optie niet gegeven is stopt ifplugd de interface. Na het terugkomen uit 'suspend'-modus wordt de interface herstart. Dit is zinnig als u een mechanisme om uw netwerkomgeving te detecteren (zoals bv. guessnet of whereami) gebruikt, daar dit kan veranderen wanneer u in 'suspend'-modus bent.
+Description-pt.UTF-8: suspender comportamento:
+ Quando coloca o seu notebook em modo de suspensão, pode escolher entre três acções:
+ .
+ nenhuma: nenhuma acção
+ .
+ suspender: isto coloca o ifplugd em modo de suspensão. Neste modo, o ifplugd não verifica o estado da ligação. É necessário para alguns controladores de rede danificados.
+ .
+ parar: pára o ifplugd. Se a opção -q não for dada, o ifplugd irá parar a interface. Depois de resumir será reiniciado. Isto faz sentido se utilizar qualquer mecanismo (por. ex. guessnet ou whereami) para detectar o seu ambiente de rede, que pode ter sido alterado enquanto na suspensão.
+Description-ru.UTF-8: Поведение при приостановке:
+ При переводе ноутбука в режим ожидания (suspend), можно выполнить одно из следующих трёх действий:
+ .
+ ничего не делать: ничего не делать
+ .
+ режим ожидания: перевести ifplugd в режим ожидания. В этом режиме ifplugd не проверяет состояние подключения к сети. Такое поведение требуется для некоторых некорректно работающих сетевых драйверов.
+ .
+ остановить: остановить ifplugd. Если не указан параметр -q, ifplugd остановит интерфейс. После возобновления работы, он будет перезапущен. Это нужно, если есть какой-то механизм (например, guessnet или whereami) для определения сетевых настроек, которые могут измениться, пока компьютер находился в режиме ожидания.
+Description-sv.UTF-8: beteende för vänteläge:
+ När du försätter din bärbara dator i vänteläge kan du välja mellan tre åtgärder:
+ .
+ ingen: ingen åtgärd
+ .
+ vänteläge: detta försätter ifplugd i vänteläge. I detta läge kommer ifplugd inte att kontrollera länkstatusen. Detta är nödvändigt för vissa trasiga nätverksdrivrutiner.
+ .
+ stopp: detta stoppar ifplugd. Om flaggan -q inte angivits kommer ifplugd stoppa gränssnittet. Efter återupptagning kommer den att startas om. Detta har betydelse om du använder någon mekanism (exempelvis guessnet eller whereami) för att detektera din nätverksmiljö, som kan ha ändrats under vänteläget.
+Description-vi.UTF-8: ứng xử ngưng:
+ Đặt máy tính xách tay vào chế độ ngưng thì bạn có khả năng chọn trong ba hành động khác nhau :
+ .
+ không có : không làm gì
+ .
+ ngưng: đặt ifplugd vào chế độ ngưng. Trong chế độ này, ifplugd không kiểm tra trạng thái của liên kết, mà cần thiết cho một số trình điều khiển mạng bị hỏng.
+ .
+ dừng: dừng chạy ifplugd. Không đưa ra tùy chọn « -q »  thì ifplugd dừng chạy giao diện đó. Sau khi tiếp tục lại, nó sẽ được khởi chạy lại. Có ích nếu bạn sử dụng cơ chế nào (v.d. guessnet hay whereami) để phát hiện môi trường mạng, mà có thể đã thay đổi trong khi ngưng.

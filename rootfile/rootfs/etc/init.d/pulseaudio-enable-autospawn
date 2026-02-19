@@ -1,0 +1,24 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides: pulseaudio-enable-autospawn
+# Required-Start: $local_fs
+# Required-Stop: umountfs
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Enable pulseaudio autospawn
+# Description: Enables autospawn for the pulseaudio daemon
+### END INIT INFO
+
+
+set -e
+
+. /lib/lsb/init-functions
+
+
+case "$1" in
+	start|reload|restart|force-reload)
+		echo "autospawn=yes" > /run/pulseaudio-enable-autospawn
+	;;
+	stop|status)
+	;;
+esac

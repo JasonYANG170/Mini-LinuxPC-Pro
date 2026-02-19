@@ -1,0 +1,8 @@
+72c1f45508b8cc76c8948e2bf031afc2  usr/bin/gdk-pixbuf-csource
+ac37db8e2c89cf093933760fe5510649  usr/bin/gdk-pixbuf-pixdata
+71f9e09276eb575fb54abb1b527faab9  usr/bin/gdk-pixbuf-thumbnailer
+aabb9371bedebdfc5a31227674097c8c  usr/share/doc/libgdk-pixbuf2.0-bin/copyright
+067f6cdaf5db2874444a9d992ed2e471  usr/share/man/man1/gdk-pixbuf-csource.1.gz
+0370ce497bec00d336f9934b4e243760  usr/share/man/man1/gdk-pixbuf-pixdata.1.gz
+051e0ef3e9fd0153d8667b377aca0bc8  usr/share/man/man1/gdk-pixbuf-query-loaders.1.gz
+28760916c706a331dde2b9beab8c4cd3  usr/share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer

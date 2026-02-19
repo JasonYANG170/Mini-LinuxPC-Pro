@@ -1,0 +1,68 @@
+#!/bin/sh
+set -e
+
+# Remove a no-longer used conffile
+rm_conffile() {
+	PKGNAME="$1"
+	CONFFILE="$2"
+	if [ -e "$CONFFILE" ]; then
+		md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+		old_md5sum="`dpkg-query -W -f='${Conffiles}' $PKGNAME | sed -n -e \"\\\\' $CONFFILE'{s/ obsolete$//;s/.* //p}\"`"
+		if [ "$md5sum" != "$old_md5sum" ]; then
+			echo "Obsolete conffile $CONFFILE has been modified by you."
+			echo "Saving as $CONFFILE.dpkg-old ..."
+			mv -f "$CONFFILE" "$CONFFILE".dpkg-old
+		else
+			echo "Removing obsolete conffile $CONFFILE ..."
+			rm -f "$CONFFILE"
+		fi
+	fi
+}
+
+LASTVERSION="0.28-1"
+
+case "$1" in
+    install)
+	    if dpkg --compare-versions "$2" le "$LASTVERSION"; then
+		    rm_conffile ifplugd "/etc/hotplug.d/net/ifplugd.hotplug"
+	    fi
+	    ;;
+    upgrade)
+	    ### Move old apm hook script if appropriate ###
+	    if [ -f /etc/apm/event.d/20ifplugd ] ; then
+		[ -d /etc/apm/scripts.d/ ] || mkdir /etc/apm/scripts.d/
+		if [ -f /etc/apm/scripts.d/ifplugd ] ; then
+			mv -f /etc/apm/event.d/20ifplugd /etc/apm/event.d/20ifplugd.dpkg-old
+			chmod ugo-x /etc/apm/event.d/20ifplugd.dpkg-old
+		else
+			mv -f /etc/apm/event.d/20ifplugd /etc/apm/scripts.d/ifplugd
+		fi
+		for F in /etc/apm/suspend.d/20ifplugd /etc/apm/resume.d/80ifplugd /etc/apm/other.d/50ifplugd ; do
+			[ -e $F ] && { mv -f $F ${F}.dpkg-old ; chmod ugo-x ${F}.dpkg-old ; }
+			ln -nsf ../scripts.d/ifplugd $F
+		done
+	    fi
+
+	    # rename old script (old typo bug), maybe user changed it:
+	    if [ -f /etc/apm/script.d/ifplugd ] ; then
+		    mv /etc/apm/script.d/ifplugd /etc/apm/script.d/ifplugd.dpkg-old
+	    fi
+
+	    # change permissions of the old /etc/udev/ifplugd.rules
+	    if [ -f /etc/udev/ifplugd.rules ] ; then
+		    chmod 644 /etc/udev/ifplugd.rules
+	    fi
+
+	    # Remove hand-linked /etc/udev/rules.d/030_ifplugd.rules
+	    # Now handled by dh_installudev
+	    if [ -f /etc/udev/rules.d/030_ifplugd.rules ] ; then
+		    rm -f /etc/udev/rules.d/030_ifplugd.rules
+	    fi
+
+	    if dpkg --compare-versions "$2" le "$LASTVERSION"; then
+		    rm_conffile ifplugd "/etc/hotplug.d/net/ifplugd.hotplug"
+	    fi
+	;;
+esac
+
+

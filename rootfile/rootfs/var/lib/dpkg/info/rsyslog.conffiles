@@ -1,0 +1,4 @@
+/etc/apparmor.d/usr.sbin.rsyslogd
+/etc/logcheck/ignore.d.server/rsyslog
+/etc/logrotate.d/rsyslog
+/etc/rsyslog.conf
