@@ -1,0 +1,3 @@
+# Config file for blues-alsa.service
+# Set the bluealsa option, please see bluealsa manpage
+OPTIONS=""

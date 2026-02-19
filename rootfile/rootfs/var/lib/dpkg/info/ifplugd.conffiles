@@ -1,0 +1,5 @@
+/etc/apm/scripts.d/ifplugd
+/etc/ifplugd/action.d/ifupdown
+/etc/ifplugd/ifplugd.action
+/etc/init.d/ifplugd
+/etc/pm/sleep.d/74ifplugd

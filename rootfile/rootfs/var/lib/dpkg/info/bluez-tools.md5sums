@@ -1,0 +1,13 @@
+880b8eca6e7f6bc9199f8e6112ba51b8  usr/bin/bt-adapter
+abc728c3d1ac7b4e99f2c22607671ada  usr/bin/bt-agent
+74a7a47d8d6c84adfbc49fcedd29c697  usr/bin/bt-device
+657f807364a34784d533feb0de26c49a  usr/bin/bt-network
+444a497f5b717708e733ed77fa62a7ad  usr/bin/bt-obex
+b079b94e2b4d62608d0845f550d15f3e  usr/share/doc/bluez-tools/README
+c1fd9f02917be2afb5ef9590ecab79de  usr/share/doc/bluez-tools/changelog.Debian.gz
+0a46e77dd94d6ee2d4c88541f45ce74d  usr/share/doc/bluez-tools/copyright
+e4f5e94a015efc65de8193301db0ffe0  usr/share/man/man1/bt-adapter.1.gz
+3a2190befd734c248162da1f01690a85  usr/share/man/man1/bt-agent.1.gz
+0c488c68ec41480640700b0903063161  usr/share/man/man1/bt-device.1.gz
+7b2e3b88988277035415e6a93e27dca1  usr/share/man/man1/bt-network.1.gz
+88e0761b31a7f4f1025db537d201f807  usr/share/man/man1/bt-obex.1.gz

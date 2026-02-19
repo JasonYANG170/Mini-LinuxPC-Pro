@@ -1,0 +1,7 @@
+# Yes, these are encoded in 8bit
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_de_DE.dic
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_es_ES.dic
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_fr_FR.dic
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_nb_NO.dic
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_nn_NO.dic
+liblouis-data: national-encoding usr/share/liblouis/tables/hyph_pt_PT.dic

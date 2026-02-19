@@ -1,0 +1,6 @@
+cfa0a4ed07face74d6ead3a5b0872510  usr/lib/cups/filter/commandtops
+27f36e1145e030506aaf66a3f24f2125  usr/lib/cups/filter/gziptoany
+1004e02117011714981710d4c670519c  usr/lib/cups/filter/pstops
+c7298c1d661a7793548529d2dc9cf573  usr/share/cups/mime/mime.convs
+2668d2b0deb974a1309656aee4114ba7  usr/share/doc/cups-core-drivers/copyright
+8db590e68b921c6cebed1453f3584be3  usr/share/lintian/overrides/cups-core-drivers

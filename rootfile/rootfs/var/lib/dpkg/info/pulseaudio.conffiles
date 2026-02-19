@@ -1,0 +1,7 @@
+/etc/dbus-1/system.d/pulseaudio-system.conf
+/etc/init.d/pulseaudio-enable-autospawn
+/etc/pulse/daemon.conf
+/etc/pulse/default.pa
+/etc/pulse/system.pa
+/etc/xdg/Xwayland-session.d/00-pulseaudio-x11
+/etc/xdg/autostart/pulseaudio.desktop

@@ -1,0 +1,39 @@
+# liblouis: Letters with accents (without ä ö ü) - detailed representation of french and italian accents
+#
+#  Copyright (C) 2018 SBS Schweizerische Bibliothek für Blinde, Seh- und Lesebehinderte
+#
+#  This file is part of liblouis.
+#
+#  liblouis is free software: you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as
+#  published by the Free Software Foundation, either version 2.1 of the
+#  License, or (at your option) any later version.
+#
+#  liblouis is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#  Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public
+#  License along with liblouis. If not, see
+#  <http://www.gnu.org/licenses/>.
+#
+#-------------------------------------------------------------------------------
+
+lowercase \x00E0      4-12356       à  &#224;   SMALL LATIN LETTER A WITH GRAVE
+lowercase \x00E2      4-16          â  &#226;   SMALL LATIN LETTER A WITH CIRCUMFLEX
+lowercase \x00E7      4-12346       ç  &#231;   SMALL LATIN LETTER C WITH CEDILLA
+lowercase \x00E8      4-2346        è  &#232;   SMALL LATIN LETTER E WITH GRAVE
+lowercase \x00E9      4-123456      é  &#233;   SMALL LATIN LETTER E WITH ACUTE
+lowercase \x00EA      4-126         ê  &#234;   SMALL LATIN LETTER E WITH CIRCUMFLEX
+lowercase \x00EB      4-1246        ë  &#235;   SMALL LATIN LETTER E WITH DIAERESIS
+lowercase \x00EC      4-34          ì  &#236;   SMALL LATIN LETTER I WITH GRAVE
+lowercase \x00EE      4-146         î  &#238;   SMALL LATIN LETTER I WITH CIRCUMFLEX
+lowercase \x00EF      4-12456       ï  &#239;   SMALL LATIN LETTER I WITH DIAERESIS
+lowercase \x00F2      4-346         ò  &#242;   SMALL LATIN LETTER O WITH GRAVE (covers §)
+lowercase \x00F4      4-1456        ô  &#244;   SMALL LATIN LETTER O WITH CIRCUMFLEX
+lowercase \x00F9      4-23456       ù  &#249;   SMALL LATIN LETTER U WITH GRAVE
+lowercase \x00FB      4-156         û  &#251;   SMALL LATIN LETTER U WITH CIRCUMFLEX
+lowercase \x0153      4-246         œ  &#339;   SMALL LATIN LIGATURE OE
+
+include de-accents.cti

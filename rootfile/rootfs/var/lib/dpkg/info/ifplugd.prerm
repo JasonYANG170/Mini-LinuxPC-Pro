@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+DEFAULTFILE=/etc/default/ifplugd
+INTERFACES=""
+HOTPLUG_INTERFACES=""
+
+if [ -x "/etc/init.d/ifplugd" ] && [ "$1" = remove ]; then
+	if [ -s "$DEFAULTFILE" ]; then
+		. $DEFAULTFILE
+	fi
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d ifplugd stop $INTERFACES $HOTPLUG_INTERFACES
+	else
+		/etc/init.d/ifplugd stop $INTERFACES $HOTPLUG_INTERFACES
+	fi
+fi
+
+

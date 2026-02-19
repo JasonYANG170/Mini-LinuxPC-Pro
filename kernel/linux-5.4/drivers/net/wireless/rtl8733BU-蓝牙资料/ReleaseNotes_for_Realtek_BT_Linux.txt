@@ -1,0 +1,130 @@
+Release History:
+	20230801:
+		1. Change the name from RTL8723F to RTL8733B for usb/uart
+		2. Update FW file for RTL8733B
+		3. rtk_coex: Fix a2dp sink status not change issue
+		4. rtk_coex: Fix task sleep issue
+		5. rtk_btusb: check if idVendor matches in probe func
+
+	20230526:
+		1. Update the FW files for RTL8761B, RTL8725A, RTL8822C, RTL8821D, RTL8822E, RTL8851B, RTL8852B, RTL8851A
+		2. rtk_btusb: HCI reset on BT off
+		3. rtk_btusb: fix Sparse check warning
+		4. rtk_btusb: add pid for RTL8821DU
+
+	20230413:
+		1. Update the FW files for RTL8761A, RTL8761B, RTL8725A, RTL8822C, RTL8821D, RTL8822E, RTL8852BPS, RTL8852C
+		2. Add the FW/config files for RTL8851B
+		3. rtk_btusb: fine tune ISO channel data pkts
+		4. rtk_btusb: Do not set HCI_QUIRK_RESET_ON_CLOSE
+		5. rtk_btusb: correct the log level
+		6. hci_ldisc: fix compile error after Kernel 5.17
+
+	20230313:
+		1. Update the fw files for RTL8822E, RTL8821C, RTL8852B. RTL8851A
+		2. Add the fw/config fileis for RTL8852BPS
+		3. rtk_btusb/hci_uart: [rtk_coex]delete unknown hci command debug log
+		4. rtk_btusb: support ISO channel data pkts
+
+	20230110:
+		rtk_btusb: add the pid for RTL8852CU
+		rtk_btusb/hci_uart: coex: Solve pan profile is not cleared, when use hci disconnect cmd
+		rtk_btusb: rtk_hciattach: fix firmware download issue. When the index reaches 0xff, trigger data end(0x80)
+		rtk_hciattach: fix compile warning
+		
+	20221123:
+		1. Update the fw file for RTL8761B, RTL8725A, RTK8852C, RTK8822E
+		2. rtk_btusb: support WBS alt6 for RTL8852C
+		3. rtk_btusb: Use common func interface to download special patch
+		4. rtk_coex: modify profile status of legacy cmd
+		5. rtk_hciattach/rtkbtsdio: fix the coverity defects
+
+	20220818:
+		1. Update the fw file for RTL8851A, RTL8852B
+		2. rtk_coex: Support vendor cmd for reporting the profile and state of each connection
+		3. rtk_bt/rtk_misc/rtk_coex/hci_ldisc/btrtksdio: fix the issues by coverity scan and Sparse build
+		4. rtk_bt: Add shutdown wakeup and fix failure of usb enumeration
+		5. rtk_bt: Add marco to distinguish powerkey or anykey wakeup
+		6. hci_ldisc: Add any key wakeup and shutdown wakeup mode
+
+	20220718:
+		1. Add the FW/config files for RTL8822E
+		2. Update the FW files for RTL8761B, RTL8725A, RTL8821C, RTL8723F, RTL8852A, RTL8852B, RTL8851A, RTL8852C
+		3. rtk_btusb: add the support pid for RTL8821C
+		4. rtk_btusb: add the support for RTL8822E
+		5. rtk_btusb: send the command to start LE scan when Host enter suspend (for the option as RTKBT_TV_POWERON)
+		6. rtk_hciattach: add the support for RTL8822E
+
+	20220519:
+		1. add the fw/config files for rtl8851asa, rtl8821du and rtl8851au
+		2. For RTL8852BSA, rename rtl8852bs_fw to rtl8852bsa_fw (config file as well)
+		3. update the fw file for RTL8822C, RTL8852B, RTL8761B, RTL8725A
+		4. rtk_btusb: rtk_misc: correct the limitation of firmware code size
+		5. rtk_btusb: rtk_misc: Fix coverity issue: resource leak
+		6. rtk_btusb: rtk_bt: add config to control the compile flag
+		7. rtk_btusb: rtk_misc: assign the own fw filenames for rtl8821du and rtl8851au
+		8. rtk_btusb: rtk_misc: add support pid for RTL8821C
+		9. hciattach_rtk: correct the limitation of firmware code size
+		10. btrtksdio: Create a profile for RTL8851ASA
+
+	20220330:
+		1. update the firmware file for RTL8723D and RTL8852A
+		2. rtk_btusb: fine-tune the code for Coverity defect
+		3. add support for RTL8821DU
+		4. support for Linux Kernel 5.16
+	20220110:
+		1. update the firmware files for RTL8852B, RTL8723F, RTL8761B, RTL8822C
+		2. add pid for RTL8852BE, RTL8852CE, RTL8851AU, RTL8851ASA
+		3. hci_ldisc: find-tune wakeup/resume behavior
+	20211102:
+		1. add the support for RTL8852C
+		2. update the fw files for RTL8723F, RTL8725A, RTL8761B, RTL8821C, RTL8852A, RTL8852B
+		3. coex: Filter out some cmd cmplt and status events
+		4. rtk_misc: add pid for RTL8852BU and RTL8852CU
+		5. hci_ldisc: backport 3b830a9c34d5897be07176ce4e6f2d75e2c8cfd7 to fix the compiling error after Kernel 5.10.20 or later.
+		6. hci_ldisc: fix rcu can not connect to dut after resume from suspend
+		7. hci_ldisc: Refine the write work sched
+		8. hci_ldisc: Start le scan after resuming from suspending
+		9. btrtk_sdio: remove HCI_QUIRK_RESET_ON_CLOSE
+	20210819:
+        	1. add the support for RTL8852B
+        	2. update the fw files for RTL8723F
+	20210706:
+        	1. fixed the compiling error of rtk_btusb .
+	20210628:
+		1. update fw files for RTL8822B, RTL8723D, RTL8821C, RTL8822C, RTL8821DS, RTL8761B, RTL8725A, RTL8723F
+		2. rtk_btusb: backport the usb alternate settings from Upstream
+	20210423:
+		1. update the firmware files for rtl8723f, rtl8725a, rtl8761b, rtl8822c, rtl8852a
+		2. misc: add the more support ID for RTL8852AE
+		3. btrtksdio: btrtl: add the support for 32k+ fw patch
+	20210324:
+		1. update firmware files for rtl8822b, rtl8723d, rtl8821c, rtl8822c, rtl8761b, 
+		   rtl8725a, rtl8723f
+		2. update config file to disable 3M packet type for less interference
+		3. misc: add supported USB VID/PID for RTL8723DE, RTL8821CE and RTL8822CE
+		4. misc: fine-tune fw_patch_table to maintain the supported id in only one table
+	20201202:
+		update firmware files for rtl8723d, rtl8821c, rtl8852a
+		update firmware files for rtl8723f, rtl8761b, rtl8725a
+	20201026:
+		update firmware file for rtl8822c
+		coex: Fix incorrect profile judgement issue in acl disc
+	20200812: 
+		update the config file for rtl8821cu to fix the bring-up issue on Linux Kernel 4.19+
+		add the support for RTL8723F
+	20200610:
+		update the FW files for rtl8821c and rtl8761b
+
+Software Package Feature:
+	Bluez
+	Other software based on HCI, L2CAP, RFCOMM, SCO and Management sock 
+
+Hardware Supported:
+	All Realtek Bluetooth Chip.
+
+Platform Supported:
+	Linux kernel V2.6.32-5.17
+
+CPU supported:
+	ARM/MIPS/X86

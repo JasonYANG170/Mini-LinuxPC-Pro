@@ -1,0 +1,48 @@
+#!/bin/sh
+
+set -e
+
+# remove old link
+# this was already present in 2017
+
+if [ -L /etc/alternatives/sudo ]; then
+	rm /etc/alternatives/sudo
+fi
+
+# remove legacy conffile no longer delivered
+# this was added in 1.8.21p2-1 in 2017.
+
+if [ -f /etc/sudoers.dist ]; then
+        rm /etc/sudoers.dist 
+fi
+
+# complain if no sudoers file is present
+if [ ! -f /etc/sudoers ];then
+	echo "WARNING:  /etc/sudoers not present!";
+fi
+
+# make sure sudoers has the correct permissions and owner/group
+if [ -f /etc/sudoers ];then
+    chown root:root /etc/sudoers
+    chmod 440 /etc/sudoers
+fi
+
+# if we've gotten this far .. remove the saved, unchanged old sudoers file
+rm -f /etc/sudoers.pre-conffile
+
+# the sysv init script just creates the directories in /run. This must not
+# be done on systemd systems, we use systemd-tmpfiles for that
+if [ -x "/usr/bin/deb-systemd-helper" ]; then
+	deb-systemd-helper mask 'sudo.service' || true
+fi
+
+# Automatically added by dh_installtmpfiles/13.6ubuntu1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# In case this system is running systemd, we need to ensure that all
+	# necessary tmpfiles (if any) are created before starting.
+	if [ -z "${DPKG_ROOT:-}" ] && [ -d /run/systemd/system ] ; then
+		systemd-tmpfiles --create sudo.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+

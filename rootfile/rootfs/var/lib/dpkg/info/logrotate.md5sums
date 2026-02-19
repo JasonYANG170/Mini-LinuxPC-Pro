@@ -1,0 +1,8 @@
+faac4a6b8bcd8d8a8d9ff7661feb15b2  lib/systemd/system/logrotate.service
+4a93918b064221aee602eb64e02a0612  lib/systemd/system/logrotate.timer
+f0a67b5e0a92ebaf96b823441630d3e0  usr/sbin/logrotate
+e9692f3468cef7a5b27d6face1c59f4e  usr/share/bug/logrotate/script
+3c6d5361400fe7c970db383e93f3aa97  usr/share/doc/logrotate/NEWS.Debian.gz
+fd2413c97769b0de76ea05c3f0f3eaf4  usr/share/doc/logrotate/changelog.Debian.gz
+cc53556cbd580160412ba3c173b9b0fe  usr/share/doc/logrotate/copyright
+abe979eacca3c19d6ef4fe7b77c85d09  usr/share/man/man8/logrotate.8.gz

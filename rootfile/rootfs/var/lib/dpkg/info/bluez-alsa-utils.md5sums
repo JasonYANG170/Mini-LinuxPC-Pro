@@ -1,0 +1,6 @@
+56780c93ef58786536d6cffa5fc996dc  lib/systemd/system/bluez-alsa.service
+723adbfe09449baca9d338c03b38ed5a  usr/bin/bluealsa
+0202b8ae4050dbeaf5083a290f141122  usr/bin/bluealsa-aplay
+498d0eef864fd7e8e0f6eb759920ac56  usr/share/doc/bluez-alsa-utils/copyright
+77ea8ce48421bc284820c9c139f6524b  usr/share/man/man1/bluealsa-aplay.1.gz
+82673da6b4b87c261ee07256942ea0f4  usr/share/man/man8/bluealsa.8.gz

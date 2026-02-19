@@ -1,0 +1,8 @@
+1b62d0a95cb60e0675c837309de357d4  lib/systemd/system/bluetooth-mesh.service
+a05a442b7156497112a1c7031cec5171  usr/bin/mesh-cfgclient
+0a0ae46fdebf8cffdf87635c09ff22cc  usr/bin/meshctl
+c21e48e18292ef775fda18751021e5ae  usr/lib/bluetooth/bluetooth-meshd
+2d717f704e91b938f4d96adb133e9cee  usr/share/dbus-1/system-services/org.bluez.mesh.service
+94026de7346d9e35572635672f7264e6  usr/share/doc/bluez-meshd/NEWS.Debian.gz
+cb0c29256ca7342e3b916468f058db88  usr/share/doc/bluez-meshd/changelog.Debian.gz
+3b032ce14319270ad12d0d318de495d8  usr/share/doc/bluez-meshd/copyright
