@@ -1,0 +1,139 @@
+#!/bin/sh
+#
+# suspend/resume ifplugd
+
+[ -f /etc/default/ifplugd ] || exit 0
+. /etc/default/ifplugd
+[ "$SUSPEND_ACTION" ] || [ "$SUSPEND_ACTION" != "none" ] || exit 0
+
+if [ "$SUSPEND_ACTION" = "suspend" ] ; then
+  RESUME_ACTION="resume"
+elif [ "$SUSPEND_ACTION" = "stop" ] ; then
+  RESUME_ACTION="start"
+else
+  exit 0
+fi
+
+# Hotplug interfaces
+#
+# ifplugd for interfaces in HOTPLUG_INTERFACES is started by udev.
+# The ifplugd init.d script doesn't touch them. We still want to 
+# stop/start these interfaces on suspend/resume. Here is some
+# hackery to do this.
+
+# use pm-utils functions for state save/restore, if available
+[ -f "${PM_FUNCTIONS}" ] && . "${PM_FUNCTIONS}"
+
+# name of the save/restore state
+IFPLUGD_STATE="ifplugd_ifs"
+
+# return 0 if the first parm is an element of the remaining parms
+# or they contain the special value "all"
+elem_of() {
+    local E=$1
+    shift
+    echo $@ | grep -Eq "(\\<all\\>)|(\\<${E}\\>)" 
+}
+
+# save state using pm-utils
+save_state() {
+    savestate ${IFPLUGD_STATE} 2>/dev/null
+}
+
+# load saved state using pm-utils
+load_state() {
+    restorestate ${IFPLUGD_STATE} 2>/dev/null
+}
+
+# filter only hotplug interfaces
+filter_hotplug_ifs() {
+    while read L; do
+        for IF in $L; do
+            # interface is managed statically
+            elem_of "${IF}" "${INTERFACES}" && continue
+            # interface is not managed by udev
+            elem_of "${IF}" "${HOTPLUG_INTERFACES}" || continue
+            # ignore lo
+            [ "x${IF}" = "xlo" ] && continue
+            echo -n "${IF} "
+        done 
+    done
+    echo ""
+}
+
+# get interfaces of running ifplugds for hotplug IFs
+get_running_ifs() {
+    ps --no-headers -o args -C ifplugd | \
+    sed -e 's/.*-[[:alpha:]]*i[[:space:]]*\([^[:space:]]\+\).*/\1/' | \
+    filter_hotplug_ifs
+}
+
+# get all existing hotplug IFs
+get_hotplug_ifs() {
+    local IFACES=""
+    for IF in /sys/class/net/*; do
+        echo "${IF##*/} "
+    done | filter_hotplug_ifs
+}
+
+# stop all ifplugd instances that where started by udev
+# stop_udev_ifs <action>
+stop_udev_ifs() {
+    local ACTION=$1
+    local IFACES
+    local IF
+
+    IFACES=`get_running_ifs`
+
+    # save list of interfaces we stop, so we can restart them
+    echo "${IFACES}" | save_state || true
+
+    for IF in ${IFACES}; do
+        if [ "x${ACTION}" = "xsuspend" ]; then
+            ifplugd -i ${IF} -S
+        else
+            ifplugd -i ${IF} -k
+        fi
+        # ifplugd started by udev doesn't take down the IF
+        /etc/ifplugd/ifplugd.action ${IF} down
+    done
+}
+
+# start ifplugd for all interfaces that were stopped by us
+# start_udev_ifs <action>
+start_udev_ifs() {
+    local ACTION=$1
+    local IFACES
+    local IF
+
+    # try to load list of interfaces
+    # if it can't be loaded, we just start all hotplug interfaces
+    IFACES=`load_state || get_hotplug_ifs`
+
+    for IF in ${IFACES}; do
+        if [ "x${ACTION}" = "xresume" ] && ifplugd -i ${IF} -c; then
+            ifplugd -i ${IF} -R
+        else
+            # start ifplugd just as udev would
+            INTERFACE=${IF} ACTION=add /lib/udev/ifplugd.agent
+        fi
+    done
+}
+
+
+case "$1" in
+        hibernate|suspend|suspend_hybrid)
+                /etc/init.d/ifplugd ${SUSPEND_ACTION}
+                stop_udev_ifs ${SUSPEND_ACTION}
+                ;;
+        thaw|resume)
+                if [ "x$2" != "xstandby" ]; then
+                    start_udev_ifs ${RESUME_ACTION}
+                    /etc/init.d/ifplugd ${RESUME_ACTION}
+                fi
+                ;;
+        *) exit 1
+                ;;
+esac
+
+exit 0

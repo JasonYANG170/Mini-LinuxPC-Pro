@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ -x /usr/sbin/ifmetric -a "${IF_METRIC}" ]; then
+    /usr/sbin/ifmetric "${IFACE}" "${IF_METRIC}"
+fi

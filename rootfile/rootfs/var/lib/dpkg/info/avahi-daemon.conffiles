@@ -1,0 +1,5 @@
+/etc/avahi/avahi-daemon.conf
+/etc/avahi/hosts
+/etc/dbus-1/system.d/avahi-dbus.conf
+/etc/default/avahi-daemon
+/etc/init.d/avahi-daemon

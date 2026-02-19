@@ -1,0 +1,104 @@
+# liblouis: Modified U.S. English 8 dot Computer braille table
+
+space \t 9 tab
+space \s 0 blank
+space \x00a0 a unbreakable space
+sign \x000a 78 newline
+space \x000d 0 carriage return
+digit 0 356
+digit 1 2
+digit 2 23
+digit 3 25
+digit 4 256
+digit 5 26
+digit 6 235
+digit 7 2356
+digit 8 236
+digit 9 35
+lowercase a 1
+lowercase b 12
+lowercase c 14
+lowercase d 145
+lowercase e 15
+lowercase f 124
+lowercase g 1245
+lowercase h 125
+lowercase i 24
+lowercase j 245
+lowercase k 13
+lowercase l 123
+lowercase m 134
+lowercase n 1345
+lowercase o 135
+lowercase p 1234
+lowercase q 12345
+lowercase r 1235
+lowercase s 234
+lowercase t 2345
+lowercase u 136
+lowercase v 1236
+lowercase w 2456
+lowercase x 1346
+lowercase y 13456
+lowercase z 1356
+uppercase A 17
+uppercase B 127
+uppercase C 147
+uppercase D 1457
+uppercase E 157
+uppercase F 1247
+uppercase G 12457
+uppercase H 1257
+uppercase I 247
+uppercase J 2457
+uppercase K 137
+uppercase L 1237
+uppercase M 1347
+uppercase N 13457
+uppercase O 1357
+uppercase P 12347
+uppercase Q 123457
+uppercase R 12357
+uppercase S 2347
+uppercase T 23457
+uppercase U 1367
+uppercase V 12367
+uppercase W 24567
+uppercase X 13467
+uppercase Y 134567
+uppercase Z 13567
+punctuation , 6
+punctuation ; 56
+punctuation : 156
+punctuation . 46
+punctuation ! 2346
+punctuation " 5
+punctuation ' 3
+punctuation ( 12356
+punctuation ) 23456
+punctuation - 36
+sign _ 456
+math < 126
+math = 123456
+math > 345
+sign % 146
+math + 346
+math ~ 45
+sign ` 4
+sign & 12346
+sign $ 1246
+punctuation ? 1456
+punctuation { 246
+punctuation [ 2467
+punctuation } 12456
+punctuation ] 124567
+sign ^ 457
+sign @ 47
+sign # 3456
+sign \\ 12567
+sign | 1256
+math / 34
+sign * 16
+
+pass2 @3-3 @3-0-3
+

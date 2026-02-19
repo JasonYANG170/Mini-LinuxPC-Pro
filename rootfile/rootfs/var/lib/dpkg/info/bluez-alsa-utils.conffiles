@@ -1,0 +1,3 @@
+/etc/alsa/conf.d/20-bluealsa.conf
+/etc/dbus-1/system.d/bluealsa.conf
+/etc/default/bluez-alsa
