@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y \
     rsync \
     vim \
     sudo \
+    && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
 # 下载并安装工具链
