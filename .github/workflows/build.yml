@@ -3,209 +3,86 @@ name: Build Longan H618 Firmware
 on:
   push:
     branches: [ main, master, develop ]
-    tags: [ 'v*' ]
   pull_request:
     branches: [ main, master, develop ]
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-    permissions:
-      contents: write
-
+    runs-on: ubuntu-20.04
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         submodules: recursive
-
-    - name: Free up disk space
-      run: |
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf /usr/local/share/boost
-        df -h
-
+    
     - name: Setup build environment
       run: |
-        sudo dpkg --add-architecture i386
         sudo apt-get update
         sudo apt-get install -y \
-          build-essential git libncurses5-dev libssl-dev \
-          bc bison flex u-boot-tools \
-          python3 python3-dev python3-pip swig \
-          device-tree-compiler libpython3-dev \
-          cpio gawk wget unzip dosfstools mtools kmod \
-          libc6:i386 libstdc++6:i386 zlib1g:i386
-
-        if [ ! -f /usr/bin/python ]; then
-          sudo ln -s /usr/bin/python3 /usr/bin/python
-        fi
-
-    - name: Cache toolchains
-      uses: actions/cache@v4
-      with:
-        path: |
-          build/toolchain
-          brandy/brandy-2.0/tools/toolchain
-        key: toolchains-${{ runner.os }}-v2
-        restore-keys: |
-          toolchains-${{ runner.os }}-
-
+          build-essential \
+          git \
+          libncurses5-dev \
+          libssl-dev \
+          bc \
+          bison \
+          flex \
+          u-boot-tools \
+          python3 \
+          python3-dev \
+          python3-pip \
+          swig \
+          device-tree-compiler \
+          libpython3-dev \
+          cpio \
+          gawk \
+          wget \
+          unzip \
+          dosfstools \
+          mtools \
+          kmod
+    
     - name: Download and setup toolchain
       run: |
-        mkdir -p build/toolchain
-        mkdir -p brandy/brandy-2.0/tools/toolchain
-
-        cd build/toolchain
-        [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz ] && \
-          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz || true
-        [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz ] && \
-          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/arm-linux-gnueabi/gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz || true
-
-        cd ../../brandy/brandy-2.0/tools/toolchain
-        [ ! -f gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz ] && \
-          wget -q https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-linux-gnueabi/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz || true
-        [ ! -f riscv64-linux-x86_64-20200528.tar.xz ] && \
-          wget -q https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2023.07.07/riscv64-glibc-ubuntu-20.04-gcc-nightly-2023.07.07-nightly.tar.gz \
-            -O riscv64-linux-x86_64-20200528.tar.xz || true
-        cd ../../../..
-
+        mkdir -p out
+        cd out
+        if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz ]; then
+          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
+        fi
+        tar -xf gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
+        cd ..
+    
     - name: Configure build
       run: |
         chmod +x build.sh
-        ./build.sh autoconfig -i h618 -o dragonboard -b p1 -n default -k linux-5.4 -a arm64
-
+        ./build.sh autoconfig -i h618 -o linux -b p1 -n default -k linux-5.4 -a arm64
+    
     - name: Build bootloader
       run: |
-        cp -v brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/u-boot.lds \
-              brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
-        export DTC=/usr/bin/dtc
         ./build.sh bootloader
-
+    
     - name: Build kernel
       run: |
-        sed -i 's/^obj-m += rtl8733BU-BT\//# obj-m += rtl8733BU-BT\//' \
-          kernel/linux-5.4/drivers/net/wireless/Makefile
         ./build.sh kernel
-
+    
     - name: Build rootfs
       run: |
         ./build.sh rootfs
-
+    
     - name: Pack firmware
       run: |
-        source .buildconfig
-
-        # Ensure platform output directory has .buildconfig and sboot
-        mkdir -p "${LICHEE_PLAT_OUT}"
-        cp .buildconfig "${LICHEE_PLAT_OUT}/.buildconfig"
-        [ ! -f "${LICHEE_PLAT_OUT}/sboot_${LICHEE_CHIP}.bin" ] && \
-          cp -v "device/config/chips/${LICHEE_IC}/bin/sboot_${LICHEE_CHIP}.bin" "${LICHEE_PLAT_OUT}/" 2>/dev/null || true
-
-        # Install dos2unix (needed by pack script's maybe_busybox calls)
-        sudo apt-get install -y dos2unix busybox
-
-        # Rebuild dragonsecboot from source — the prebuilt binary (glibc 2.6.24)
-        # segfaults on modern GitHub Actions runners due to old static glibc
-        # incompatibility with newer kernel memory layout/security features.
-        make -C brandy/brandy-2.0/tools/pack_tools/toc_tools clean
-        make -C brandy/brandy-2.0/tools/pack_tools/toc_tools
-
-        ./build.sh pack || {
-          echo "WARNING: Pack failed, collecting available artifacts..."
-          ls -lh out/pack_out/ 2>/dev/null || true
-        }
-
-    - name: Prepare release files
-      if: always()
-      run: |
-        mkdir -p release
-
-        # Copy from pack_out
-        cp -v out/pack_out/*.img release/ 2>/dev/null || true
-
-        # Copy individual build artifacts as fallback
-        if [ -d out/h618/p1/dragonboard ]; then
-          cp -v out/h618/p1/dragonboard/boot0_sdcard_*.bin release/ 2>/dev/null || true
-          cp -v out/h618/p1/dragonboard/u-boot-*.bin release/ 2>/dev/null || true
-          cp -v out/h618/p1/dragonboard/boot.img release/ 2>/dev/null || true
-          cp -v out/h618/p1/dragonboard/rootfs.ext4 release/ 2>/dev/null || true
-          cp -v out/h618/p1/dragonboard/sunxi.dtb release/ 2>/dev/null || true
-          cp -v out/h618/p1/dragonboard/Image.gz release/ 2>/dev/null || true
-        fi
-
-        cd release
-        if ls * >/dev/null 2>&1; then
-          zip -r "Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip" *
-          ls -lh
-        else
-          echo "WARNING: No firmware files found"
-        fi
-
-    - name: Generate release notes
-      if: always()
-      id: release_notes
-      run: |
-        if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-          IS_TAG=true
-        else
-          IS_TAG=false
-        fi
-
-        COMMIT_SHA=$(git rev-parse --short HEAD)
-        COMMIT_MSG=$(git log -1 --pretty=%B | head -1)
-        BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-        cat > release_notes.md << NOTES
-        # Mini-LinuxPC-Pro Latest Build
-
-        $([ "$IS_TAG" = "true" ] && echo "✅ Official Release" || echo "⚠️ Automated build from latest commit")
-
-        ## Build Information
-        - Commit: \`${COMMIT_SHA}\`
-        - Branch: \`${{ github.ref_name }}\`
-        - Build Date: ${BUILD_DATE}
-        - Message: ${COMMIT_MSG}
-
-        ## Hardware
-        - Board: Longan H618 / Mini-LinuxPC-Pro
-        - SoC: Allwinner H618 (ARM Cortex-A53)
-        - System: Linux 5.4
-
-        ## Flash Instructions
-        1. Download the zip or individual files
-        2. Flash to SD card using dd, Etcher, or Win32DiskImager
-        3. Insert SD card and power on
-        NOTES
-
-        echo "IS_TAG=${IS_TAG}" >> $GITHUB_OUTPUT
-
-    - name: Delete old pre-release
-      if: always() && !startsWith(github.ref, 'refs/tags/')
-      uses: dev-drprasad/delete-older-releases@v0.3.4
+        ./build.sh pack
+    
+    - name: Upload firmware artifacts
+      uses: actions/upload-artifact@v4
       with:
-        keep_latest: 1
-        delete_tag_pattern: build-
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Create Release
-      if: always()
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('build-{0}', github.sha) }}
-        name: ${{ startsWith(github.ref, 'refs/tags/') && format('Release {0}', github.ref_name) || 'Latest Build (Auto-generated)' }}
-        body_path: release_notes.md
-        files: release/*
-        prerelease: ${{ !startsWith(github.ref, 'refs/tags/') }}
-        draft: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        name: longan-h618-firmware
+        path: |
+          out/pack_out/*.img
+          out/pack_out/*.fex
+        retention-days: 30
+    
     - name: Upload build logs
       if: always()
       uses: actions/upload-artifact@v4
@@ -213,4 +90,5 @@ jobs:
         name: build-logs
         path: |
           out/**/*.log
+          out/**/build.log
         retention-days: 7
