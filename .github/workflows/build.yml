@@ -126,10 +126,13 @@ jobs:
     - name: Build bootloader
       run: |
         # Workaround for u-boot Makefile LDSCRIPT bug
-        # Create symlink in armv7 directory to the generic u-boot.lds
-        if [ ! -f brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds ]; then
-          ln -s ../u-boot.lds brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
-        fi
+        # Copy u-boot.lds to armv7 directory
+        echo "Creating u-boot.lds in armv7 directory..."
+        cp -v brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/u-boot.lds \
+           brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
+        
+        # Verify the file exists
+        ls -la brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
         
         ./build.sh bootloader
     
