@@ -146,6 +146,11 @@ jobs:
     
     - name: Build kernel
       run: |
+        # Fix rtl8733BU-BT bluetooth driver dependency issue
+        # Comment out the forced module build that causes symbol errors
+        echo "Fixing bluetooth driver build issue..."
+        sed -i 's/^obj-m += rtl8733BU-BT\//# obj-m += rtl8733BU-BT\//' kernel/linux-5.4/drivers/net/wireless/Makefile
+        
         ./build.sh kernel
     
     - name: Build rootfs
