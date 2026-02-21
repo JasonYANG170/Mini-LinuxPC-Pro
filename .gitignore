@@ -10,12 +10,14 @@ out/
 *.swp
 *~
 
-# Compiled binaries
+# Compiled binaries (but keep prebuilt firmware and rootfs)
 *.bin
+!device/config/chips/*/bin/*.bin
 *.elf
 *.img
 *.gz
 *.bz2
+!device/config/rootfs_tar/*.tar.bz2
 *.xz
 *.tar
 *.zip
@@ -49,7 +51,6 @@ System.map
 *.orig
 *.rej
 
-# Large binary files (optional, uncomment if needed)
-# *.tar.bz2
-# *.tar.gz
-# device/config/rootfs_tar/*.tar.bz2
+# Note: Prebuilt firmware and rootfs are kept for building
+# device/config/chips/*/bin/*.bin - Required bootloader binaries
+# device/config/rootfs_tar/*.tar.bz2 - Required root filesystem archives
