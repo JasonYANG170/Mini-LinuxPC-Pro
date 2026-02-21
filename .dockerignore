@@ -8,6 +8,13 @@ out/
 *.img
 *.fex
 *.log
+*.o
+*.ko
+*.cmd
+
+# Docker files
+docker-push.sh
+DOCKER-USAGE.md
 
 # IDE
 .vscode/

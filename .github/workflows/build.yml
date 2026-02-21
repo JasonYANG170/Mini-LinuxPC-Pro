@@ -9,13 +9,21 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         submodules: recursive
+    
+    - name: Free up disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/share/boost
+        df -h
     
     - name: Setup build environment
       run: |
@@ -42,6 +50,11 @@ jobs:
           dosfstools \
           mtools \
           kmod
+        
+        # Create python symlink if needed
+        if [ ! -f /usr/bin/python ]; then
+          sudo ln -s /usr/bin/python3 /usr/bin/python
+        fi
     
     - name: Download and setup toolchain
       run: |
