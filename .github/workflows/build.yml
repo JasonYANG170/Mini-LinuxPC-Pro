@@ -156,6 +156,11 @@ jobs:
     - name: Build rootfs
       run: |
         ./build.sh rootfs
+        
+        # Debug: Check what was created
+        echo "Checking output directory structure..."
+        ls -la out/h618/p1/ || echo "out/h618/p1/ not found"
+        find out/h618/p1 -name ".buildconfig" -type f 2>/dev/null || echo "No .buildconfig found in out/"
     
     - name: Pack firmware
       run: |
