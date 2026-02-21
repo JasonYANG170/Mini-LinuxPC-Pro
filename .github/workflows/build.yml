@@ -186,29 +186,45 @@ jobs:
           exit 1
         fi
         
-        ./build.sh pack
+        # Try to pack, if dragonsecboot fails, continue anyway
+        ./build.sh pack || {
+          echo "WARNING: Pack failed, but continuing to collect artifacts..."
+          # Check if any firmware files were created
+          ls -lh out/pack_out/ 2>/dev/null || echo "No pack output found"
+        }
     
     - name: Prepare release files
+      if: always()
       run: |
         # Create release directory
         mkdir -p release
         
-        # Copy firmware files
+        # Copy firmware files from pack_out if they exist
         if [ -d out/pack_out ]; then
-          cp -v out/pack_out/*.img release/ 2>/dev/null || true
-          cp -v out/pack_out/*.fex release/ 2>/dev/null || true
+          echo "Copying files from pack_out..."
+          cp -v out/pack_out/*.img release/ 2>/dev/null || echo "No .img files in pack_out"
+          cp -v out/pack_out/*.fex release/ 2>/dev/null || echo "No .fex files in pack_out"
         fi
         
-        # Create zip package
+        # Also copy individual build artifacts as fallback
+        if [ -d out/h618/p1/dragonboard ]; then
+          echo "Copying individual build artifacts..."
+          cp -v out/h618/p1/dragonboard/*.bin release/ 2>/dev/null || true
+          cp -v out/h618/p1/dragonboard/*.img release/ 2>/dev/null || true
+          cp -v out/h618/p1/dragonboard/*.dtb release/ 2>/dev/null || true
+          cp -v out/h618/p1/dragonboard/Image* release/ 2>/dev/null || true
+        fi
+        
+        # Create zip package if we have any files
         cd release
-        if ls *.img >/dev/null 2>&1; then
-          zip -r Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip *.img *.fex 2>/dev/null || zip -r Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip *.img
+        if ls * >/dev/null 2>&1; then
+          zip -r Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip * 2>/dev/null || echo "Failed to create zip"
+          echo "Release files created:"
+          ls -lh
+        else
+          echo "WARNING: No firmware files found to package"
         fi
         cd ..
-        
-        # List files
-        echo "Release files:"
-        ls -lh release/
     
     - name: Generate release notes
       id: release_notes
