@@ -134,6 +134,12 @@ jobs:
         # Verify the file exists
         ls -la brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
         
+        # Pre-build scripts including dtc to avoid parallel build issues
+        echo "Building u-boot scripts..."
+        cd brandy/brandy-2.0/u-boot-2018
+        make scripts
+        cd ../../..
+        
         ./build.sh bootloader
     
     - name: Build kernel
