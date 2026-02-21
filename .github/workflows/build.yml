@@ -117,6 +117,15 @@ jobs:
     - name: Configure build
       run: |
         chmod +x build.sh
+        
+        # Clean any previous build artifacts in u-boot
+        echo "Cleaning previous build artifacts..."
+        if [ -d brandy/brandy-2.0/u-boot-2018 ]; then
+          cd brandy/brandy-2.0/u-boot-2018
+          make distclean || true
+          cd ../../..
+        fi
+        
         ./build.sh autoconfig -i h618 -o linux -b p1 -n default -k linux-5.4 -a arm64
     
     - name: Build bootloader
