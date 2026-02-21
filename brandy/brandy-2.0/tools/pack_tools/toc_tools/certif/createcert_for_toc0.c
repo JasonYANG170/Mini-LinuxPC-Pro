@@ -24,7 +24,7 @@
 #include "toc0_const_def.h"
 #include "rsa.h"
 
-extern aw_nvc_ext_t nvc_ext;
+aw_nvc_ext_t nvc_ext;
 extern int root_rollback_used;
 /*
 ************************************************************************************************************
