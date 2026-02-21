@@ -5,10 +5,8 @@
 
 # Build outputs
 out/
-build/
 *.img
 *.fex
-*.bin
 *.log
 
 # IDE
