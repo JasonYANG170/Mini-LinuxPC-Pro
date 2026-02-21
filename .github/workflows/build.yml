@@ -188,23 +188,23 @@ jobs:
           exit 1
         fi
         
-        # Pull Ubuntu 18.04 image first
+        # Copy prebuilt sboot to platform output if missing
+        if [ ! -f "${LICHEE_PLAT_OUT}/sboot_${LICHEE_CHIP}.bin" ]; then
+          echo "Copying prebuilt sboot to platform output..."
+          cp -v device/config/chips/${LICHEE_IC}/bin/sboot_${LICHEE_CHIP}.bin "${LICHEE_PLAT_OUT}/" 2>/dev/null || true
+        fi
+        
+        # Pull Ubuntu 18.04 image for dragonsecboot compatibility
         docker pull ubuntu:18.04
         
-        # Save the real dragonsecboot path
+        # Save the real dragonsecboot and create docker wrapper
         REAL_DRAGONSECBOOT="$(pwd)/tools/pack/pctools/linux/openssl/dragonsecboot.real"
         cp tools/pack/pctools/linux/openssl/dragonsecboot "$REAL_DRAGONSECBOOT"
-        
-        # Create wrapper that uses docker with the project root mounted
         PROJECT_ROOT="$(pwd)"
         printf '#!/bin/bash\ndocker run --rm -v "%s:%s" -w "$(pwd)" ubuntu:18.04 "%s" "$@"\n' \
           "$PROJECT_ROOT" "$PROJECT_ROOT" "$REAL_DRAGONSECBOOT" \
           > tools/pack/pctools/linux/openssl/dragonsecboot
         chmod +x tools/pack/pctools/linux/openssl/dragonsecboot
-        
-        # Test the wrapper
-        echo "Testing dragonsecboot wrapper..."
-        cat tools/pack/pctools/linux/openssl/dragonsecboot
         
         ./build.sh pack || {
           echo "WARNING: Pack failed, collecting available artifacts..."
