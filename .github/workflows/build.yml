@@ -108,8 +108,11 @@ jobs:
         # Install dos2unix (needed by pack script's maybe_busybox calls)
         sudo apt-get install -y dos2unix busybox
 
-        # dragonsecboot is statically linked (x86-64), runs natively — no Docker wrapper needed.
-        # dragon (32-bit) needs i386 libs already installed in setup step.
+        # Rebuild dragonsecboot from source — the prebuilt binary (glibc 2.6.24)
+        # segfaults on modern GitHub Actions runners due to old static glibc
+        # incompatibility with newer kernel memory layout/security features.
+        make -C brandy/brandy-2.0/tools/pack_tools/toc_tools clean
+        make -C brandy/brandy-2.0/tools/pack_tools/toc_tools
 
         ./build.sh pack || {
           echo "WARNING: Pack failed, collecting available artifacts..."
