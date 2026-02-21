@@ -156,6 +156,99 @@ jobs:
       run: |
         ./build.sh pack
     
+    - name: Prepare release files
+      run: |
+        # Create release directory
+        mkdir -p release
+        
+        # Copy firmware files
+        if [ -d out/pack_out ]; then
+          cp -v out/pack_out/*.img release/ 2>/dev/null || true
+          cp -v out/pack_out/*.fex release/ 2>/dev/null || true
+        fi
+        
+        # Create zip package
+        cd release
+        if ls *.img >/dev/null 2>&1; then
+          zip -r Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip *.img *.fex 2>/dev/null || zip -r Mini-LinuxPC-Pro-H618-$(date +%Y%m%d-%H%M%S).zip *.img
+        fi
+        cd ..
+        
+        # List files
+        echo "Release files:"
+        ls -lh release/
+    
+    - name: Generate release notes
+      id: release_notes
+      run: |
+        # Determine if this is a tag
+        if [[ "${{ github.ref }}" == refs/tags/* ]]; then
+          IS_TAG=true
+          VERSION="${{ github.ref_name }}"
+        else
+          IS_TAG=false
+          VERSION="latest"
+        fi
+        
+        # Get commit info
+        COMMIT_SHA=$(git rev-parse --short HEAD)
+        COMMIT_MSG=$(git log -1 --pretty=%B)
+        BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        
+        # Create release notes
+        cat > release_notes.md << EOF
+        # Mini-LinuxPC-Pro Latest Build
+        
+        $(if [ "$IS_TAG" = "true" ]; then echo "✅ **Official Release**"; else echo "⚠️ **This is an automated build from the latest commit**"; fi)
+        
+        ## Build Information
+        - **Commit**: \`${COMMIT_SHA}\`
+        - **Branch**: \`${{ github.ref_name }}\`
+        - **Build Date**: ${BUILD_DATE}
+        - **Commit Message**: ${COMMIT_MSG}
+        
+        ## Hardware Configuration
+        - **Board**: Longan H618 / Mini-LinuxPC-Pro
+        - **SoC**: Allwinner H618 (ARM Cortex-A53)
+        - **Boot Medium**: SD Card / eMMC
+        - **System**: Linux 5.4
+        
+        ## Files
+        - \`Mini-LinuxPC-Pro-H618-*.zip\`: Complete image package (recommended)
+        - \`*.img\`: Firmware images (for SD card/eMMC flashing)
+        - \`*.fex\`: Allwinner firmware configuration files
+        
+        ## Flash Instructions
+        1. Download \`Mini-LinuxPC-Pro-H618-*.zip\` or individual \`.img\` files
+        2. Extract the zip (if downloaded zip)
+        3. Use tools like \`dd\`, Etcher, or Win32DiskImager to flash the image to SD card
+        4. Insert SD card and power on the board
+        
+        For detailed instructions, see the [README.md](https://github.com/${{ github.repository }}/blob/master/README.md)
+        
+        ---
+        
+        **Note**: Pre-release builds are automatically generated and may be unstable. For production use, please use tagged releases.
+        EOF
+        
+        echo "IS_TAG=${IS_TAG}" >> $GITHUB_OUTPUT
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ steps.release_notes.outputs.IS_TAG == 'true' && github.ref_name || format('build-{0}', github.sha) }}
+        name: ${{ steps.release_notes.outputs.IS_TAG == 'true' && format('Release {0}', github.ref_name) || format('Latest Build (Auto-generated) - {0}', github.sha) }}
+        body_path: release_notes.md
+        files: |
+          release/*.zip
+          release/*.img
+          release/*.fex
+        prerelease: ${{ steps.release_notes.outputs.IS_TAG != 'true' }}
+        draft: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
     - name: Upload firmware artifacts
       uses: actions/upload-artifact@v4
       with:
