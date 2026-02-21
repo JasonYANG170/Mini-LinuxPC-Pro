@@ -29,6 +29,7 @@ jobs:
     
     - name: Setup build environment
       run: |
+        sudo dpkg --add-architecture i386
         sudo apt-get update
         sudo apt-get install -y \
           build-essential \
@@ -51,7 +52,10 @@ jobs:
           unzip \
           dosfstools \
           mtools \
-          kmod
+          kmod \
+          libc6:i386 \
+          libstdc++6:i386 \
+          zlib1g:i386
         
         # Create python symlink if needed
         if [ ! -f /usr/bin/python ]; then
@@ -188,14 +192,17 @@ jobs:
           exit 1
         fi
         
-        # Try to pack with automatic input (11000 for dragonsecboot if needed)
+        # Patch pack script to use dragon as fallback
+        sed -i 's/dragonsecboot -pack boot_package.cfg/dragonsecboot -pack boot_package.cfg || tools\/pack\/pctools\/linux\/eDragonEx\/dragon boot_package.cfg/' build/pack
+        
+        # Try to pack
         echo "11000" | ./build.sh pack || {
-          echo "WARNING: Pack failed, trying without input..."
-          ./build.sh pack || {
-            echo "WARNING: Pack failed again, but continuing to collect artifacts..."
-            # Check if any firmware files were created
-            ls -lh out/pack_out/ 2>/dev/null || echo "No pack output found"
+          echo "WARNING: Pack with dragonsecboot failed, trying dragon directly..."
+          cd out/pack_out
+          ../../tools/pack/pctools/linux/eDragonEx/dragon boot_package.cfg || {
+            echo "WARNING: Dragon also failed, but continuing to collect artifacts..."
           }
+          cd ../..
         }
     
     - name: Prepare release files
