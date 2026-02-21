@@ -186,11 +186,14 @@ jobs:
           exit 1
         fi
         
-        # Try to pack, if dragonsecboot fails, continue anyway
-        ./build.sh pack || {
-          echo "WARNING: Pack failed, but continuing to collect artifacts..."
-          # Check if any firmware files were created
-          ls -lh out/pack_out/ 2>/dev/null || echo "No pack output found"
+        # Try to pack with automatic input (11000 for dragonsecboot if needed)
+        echo "11000" | ./build.sh pack || {
+          echo "WARNING: Pack failed, trying without input..."
+          ./build.sh pack || {
+            echo "WARNING: Pack failed again, but continuing to collect artifacts..."
+            # Check if any firmware files were created
+            ls -lh out/pack_out/ 2>/dev/null || echo "No pack output found"
+          }
         }
     
     - name: Prepare release files
