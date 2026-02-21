@@ -9,13 +9,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         submodules: recursive
+        lfs: true
+    
+    - name: Checkout LFS objects
+      run: git lfs pull
+    
+    - name: Cache build output
+      uses: actions/cache@v4
+      with:
+        path: |
+          out
+          build/toolchain/**/
+          !build/toolchain/*.tar.*
+        key: ${{ runner.os }}-build-${{ hashFiles('**/Makefile', '**/*.config') }}
+        restore-keys: |
+          ${{ runner.os }}-build-
     
     - name: Setup build environment
       run: |
@@ -43,15 +58,17 @@ jobs:
           mtools \
           kmod
     
-    - name: Download and setup toolchain
+    - name: Extract toolchains
       run: |
-        mkdir -p out
-        cd out
-        if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz ]; then
-          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
-        fi
-        tar -xf gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
-        cd ..
+        # Extract toolchains from LFS
+        cd build/toolchain
+        for f in *.tar.xz *.tar.bz2; do
+          if [ -f "$f" ]; then
+            echo "Extracting $f..."
+            tar -xf "$f"
+          fi
+        done
+        cd ../..
     
     - name: Configure build
       run: |
