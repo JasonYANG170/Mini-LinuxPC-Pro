@@ -58,13 +58,23 @@ jobs:
     
     - name: Download and setup toolchain
       run: |
-        mkdir -p out
-        cd out
+        mkdir -p build/toolchain
+        cd build/toolchain
+        
+        # Download ARM64 toolchain if not exists
         if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz ]; then
+          echo "Downloading ARM64 toolchain..."
           wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
         fi
-        tar -xf gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
-        cd ..
+        
+        # Download ARM toolchain if not exists
+        if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz ]; then
+          echo "Downloading ARM toolchain..."
+          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/arm-linux-gnueabi/gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz
+        fi
+        
+        cd ../..
+        ls -lh build/toolchain/
     
     - name: Configure build
       run: |
