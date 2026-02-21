@@ -125,6 +125,12 @@ jobs:
     
     - name: Build bootloader
       run: |
+        # Workaround for u-boot Makefile LDSCRIPT bug
+        # Create symlink in armv7 directory to the generic u-boot.lds
+        if [ ! -f brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds ]; then
+          ln -s ../u-boot.lds brandy/brandy-2.0/u-boot-2018/arch/arm/cpu/armv7/u-boot.lds
+        fi
+        
         ./build.sh bootloader
     
     - name: Build kernel
