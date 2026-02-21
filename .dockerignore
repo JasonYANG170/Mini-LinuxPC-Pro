@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Build outputs
+out/
+build/
+*.img
+*.fex
+*.bin
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+
+# CI/CD
+.github/
+
+# Temporary files
+*.tmp
+*.bak
+*.old
