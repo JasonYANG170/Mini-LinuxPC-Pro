@@ -28,14 +28,15 @@ Module.symvers
 modules.order
 *.order
 
-# U-Boot build artifacts
-u-boot.bin
-u-boot.img
-u-boot.map
-u-boot.lds
-u-boot.srec
-u-boot.sym
-System.map
+# U-Boot build artifacts (generated files in root directory)
+/u-boot.bin
+/u-boot.img
+/u-boot.map
+/u-boot.srec
+/u-boot.sym
+/System.map
+# Only ignore u-boot.lds in u-boot build output directory, not source files
+brandy/brandy-2.0/u-boot-2018/u-boot.lds
 
 # Editor files
 .vscode/
