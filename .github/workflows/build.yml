@@ -192,17 +192,23 @@ jobs:
           exit 1
         fi
         
-        # Patch pack script to use dragon as fallback
-        sed -i 's/dragonsecboot -pack boot_package.cfg/dragonsecboot -pack boot_package.cfg || tools\/pack\/pctools\/linux\/eDragonEx\/dragon boot_package.cfg/' build/pack
+        # Create a wrapper script for dragonsecboot that runs it in an older Ubuntu container
+        DRAGONSECBOOT_PATH=$(readlink -f tools/pack/pctools/linux/openssl/dragonsecboot)
+        cat > /tmp/dragonsecboot_wrapper.sh << 'WRAPPER'
+        #!/bin/bash
+        # Run dragonsecboot in Ubuntu 18.04 container for compatibility
+        WORKSPACE=$(pwd)
+        docker run --rm -v "${WORKSPACE}:${WORKSPACE}" -w "${WORKSPACE}" ubuntu:18.04 "${WORKSPACE}/tools/pack/pctools/linux/openssl/dragonsecboot" "$@"
+        WRAPPER
+        chmod +x /tmp/dragonsecboot_wrapper.sh
         
-        # Try to pack
-        echo "11000" | ./build.sh pack || {
-          echo "WARNING: Pack with dragonsecboot failed, trying dragon directly..."
-          cd out/pack_out
-          ../../tools/pack/pctools/linux/eDragonEx/dragon boot_package.cfg || {
-            echo "WARNING: Dragon also failed, but continuing to collect artifacts..."
-          }
-          cd ../..
+        # Replace dragonsecboot with wrapper
+        cp tools/pack/pctools/linux/openssl/dragonsecboot tools/pack/pctools/linux/openssl/dragonsecboot.orig
+        cp /tmp/dragonsecboot_wrapper.sh tools/pack/pctools/linux/openssl/dragonsecboot
+        
+        ./build.sh pack || {
+          echo "WARNING: Pack failed, collecting available artifacts..."
+          ls -lh out/pack_out/ 2>/dev/null || echo "No pack output found"
         }
     
     - name: Prepare release files
