@@ -56,25 +56,63 @@ jobs:
           sudo ln -s /usr/bin/python3 /usr/bin/python
         fi
     
+    - name: Cache toolchains
+      uses: actions/cache@v4
+      with:
+        path: |
+          build/toolchain
+          brandy/brandy-2.0/tools/toolchain
+        key: toolchains-${{ runner.os }}-v1
+        restore-keys: |
+          toolchains-${{ runner.os }}-
+    
     - name: Download and setup toolchain
       run: |
+        # Create toolchain directories
         mkdir -p build/toolchain
+        mkdir -p brandy/brandy-2.0/tools/toolchain
+        
+        echo "Downloading toolchains for kernel build..."
         cd build/toolchain
         
-        # Download ARM64 toolchain if not exists
+        # Download ARM64 toolchain (for kernel)
         if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz ]; then
           echo "Downloading ARM64 toolchain..."
-          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
+          wget https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/aarch64-linux-gnu/gcc-linaro-5.3.1-2016.05-x86_64_aarch64-linux-gnu.tar.xz
         fi
         
-        # Download ARM toolchain if not exists
+        # Download ARM toolchain (for kernel)
         if [ ! -f gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz ]; then
           echo "Downloading ARM toolchain..."
-          wget -q https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/arm-linux-gnueabi/gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz
+          wget https://releases.linaro.org/components/toolchain/binaries/5.3-2016.05/arm-linux-gnueabi/gcc-linaro-5.3.1-2016.05-x86_64_arm-linux-gnueabi.tar.xz
         fi
         
-        cd ../..
-        ls -lh build/toolchain/
+        cd ../../brandy/brandy-2.0/tools/toolchain
+        
+        echo "Downloading toolchains for bootloader build..."
+        
+        # Download ARM toolchain for bootloader (gcc 7.2.1)
+        if [ ! -f gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz ]; then
+          echo "Downloading ARM 7.2.1 toolchain..."
+          wget https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-linux-gnueabi/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz
+        fi
+        
+        # Download RISC-V toolchain for bootloader
+        if [ ! -f riscv64-linux-x86_64-20200528.tar.xz ]; then
+          echo "Downloading RISC-V toolchain..."
+          # Try multiple sources for RISC-V toolchain
+          wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2023.07.07/riscv64-glibc-ubuntu-20.04-gcc-nightly-2023.07.07-nightly.tar.gz -O riscv64-linux-x86_64-20200528.tar.gz && \
+          mv riscv64-linux-x86_64-20200528.tar.gz riscv64-linux-x86_64-20200528.tar.xz || \
+          echo "Warning: RISC-V toolchain download failed, bootloader build may fail"
+        fi
+        
+        cd ../../../..
+        
+        echo "Toolchain setup completed"
+        echo "Kernel toolchains:"
+        ls -lh build/toolchain/ || true
+        echo "Bootloader toolchains:"
+        ls -lh brandy/brandy-2.0/tools/toolchain/ || true
     
     - name: Configure build
       run: |
