@@ -1,7 +1,6 @@
-# Git
-.git
+# Git (keep .git for LFS, but ignore some files)
 .gitignore
-.gitattributes
+# .gitattributes is needed for LFS
 
 # Build outputs
 out/
