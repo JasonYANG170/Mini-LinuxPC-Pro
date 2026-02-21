@@ -159,6 +159,32 @@ jobs:
     
     - name: Pack firmware
       run: |
+        # Ensure .buildconfig is in the root for pack script
+        if [ -f out/h618/p1/dragonboard/.buildconfig ]; then
+          cp out/h618/p1/dragonboard/.buildconfig .buildconfig
+          echo "Copied .buildconfig to root"
+        fi
+        
+        # Debug: Check build configuration
+        echo "Checking build configuration..."
+        ls -la out/h618/p1/dragonboard/.buildconfig || echo ".buildconfig not found in out/"
+        ls -la .buildconfig || echo ".buildconfig not found in root"
+        
+        # Source the buildconfig to ensure environment is set
+        if [ -f .buildconfig ]; then
+          source .buildconfig
+          echo "Sourced .buildconfig from root"
+        elif [ -f out/h618/p1/dragonboard/.buildconfig ]; then
+          source out/h618/p1/dragonboard/.buildconfig
+          echo "Sourced .buildconfig from out/"
+        fi
+        
+        # Debug: Show pack parameters
+        echo "LICHEE_IC=${LICHEE_IC}"
+        echo "LICHEE_BOARD=${LICHEE_BOARD}"
+        echo "LICHEE_LINUX_DEV=${LICHEE_LINUX_DEV}"
+        echo "LICHEE_PLATFORM=${LICHEE_PLATFORM}"
+        
         ./build.sh pack
     
     - name: Prepare release files
