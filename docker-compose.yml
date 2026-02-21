@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  longan-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: longan-h618-build:latest
+    container_name: longan-h618-builder
+    volumes:
+      - ./out:/workspace/out
+      - ./build:/workspace/build
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
+    environment:
+      - ARCH=arm64
+      - CROSS_COMPILE=aarch64-linux-gnu-
+    command: /bin/bash
