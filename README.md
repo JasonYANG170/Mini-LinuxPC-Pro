@@ -105,15 +105,6 @@ export ARCH=arm64
 - 支持 Docker 容器化构建
 - Git LFS 管理大型二进制文件
 
-## 相关文档
-
-- [添加桌面环境](ADD_DESKTOP_ENVIRONMENT.md)
-- [构建桌面系统总结](BUILD_WITH_DESKTOP_SUMMARY.md)
-- [从 H618 项目复制桌面](COPY_DESKTOP_FROM_H618_PROJECT.md)
-- [双屏配置说明](DUAL_DISPLAY_CONFIG.md)
-- [双屏使用指南](DUAL_DISPLAY_USAGE.md)
-- [Framebuffer 映射](FRAMEBUFFER_MAPPING.md)
-
 ## 许可证
 
 本项目基于 Allwinner Longan SDK，请遵循相关许可协议。
