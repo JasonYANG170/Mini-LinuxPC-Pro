@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/pkcs7-signature">
   <!--Created automatically by update-mime-database. DO NOT EDIT!-->
-  <comment>detached S/MIME signature</comment>
   <comment xml:lang="zh_TW">分離的 S/MIME 簽章</comment>
   <comment xml:lang="zh_CN">分离的 S/MIME 签名</comment>
   <comment xml:lang="vi">chữ ký S/MIME tách rời</comment>
@@ -56,5 +55,8 @@
   <expanded-acronym>Secure/Multipurpose Internet Mail Extensions</expanded-acronym>
   <sub-class-of type="text/plain"/>
   <generic-icon name="text-x-generic"/>
+  <glob pattern="*.p7s"/>
+  <comment>PKCS#7 Signature</comment>
+  <acronym>PKCS#7</acronym>
   <glob pattern="*.p7s"/>
 </mime-type>

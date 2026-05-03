@@ -1,6 +1,6 @@
-a0434da876229c66ec441eca8f673eb5  usr/bin/ippfind
-e494015f067a913ecacdbe60c4cdc86e  usr/bin/ipptool
-ee3fd40e12c4003e8f3ddb92d908fea1  usr/sbin/ippeveprinter
+47cd8b6eddf81912eef0909fdf32a92f  usr/bin/ippfind
+626b863e1356569b39eadc2c708030a4  usr/bin/ipptool
+7817d98197e8d8a9544767ca1afc7c4f  usr/sbin/ippeveprinter
 2977664e4198af2ba52aebc0cb7f380f  usr/share/cups/ipptool/cancel-current-job.test
 185ebe86cf189f867385375474d1cdfd  usr/share/cups/ipptool/create-job-format.test
 5d8e1b70ce39d36102e79fdf18c233c6  usr/share/cups/ipptool/create-job-sheets.test

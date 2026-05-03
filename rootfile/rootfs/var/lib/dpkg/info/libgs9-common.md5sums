@@ -13,7 +13,7 @@ b70d32fbbc782deaf46e49175e2a3cd5  usr/share/color/icc/ghostscript/scrgb.icc
 79e8621d62557a547d591527405a388a  usr/share/color/icc/ghostscript/sgray.icc
 27d2435a749ae91e9974bf7a109a03e5  usr/share/color/icc/ghostscript/srgb.icc
 9016591bd5667fac78aedf730ab7538d  usr/share/doc/libgs9-common/NEWS.Debian.gz
-5c6fa66e7ff8daddbbd668ea1870e214  usr/share/doc/libgs9-common/changelog.Debian.gz
+e362da00a5f718e114536ce53be9a872  usr/share/doc/libgs9-common/changelog.Debian.gz
 35f84e6e2dc79326adccbd48ec95f123  usr/share/doc/libgs9-common/copyright
 b1ee6083c44322008c35e81a2c4154b9  usr/share/ghostscript/9.55.0/Resource/CIDFont/ArtifexBullet
 4482edfb80c713a2ce8c2af23de8bba1  usr/share/ghostscript/9.55.0/Resource/ColorSpace/DefaultCMYK

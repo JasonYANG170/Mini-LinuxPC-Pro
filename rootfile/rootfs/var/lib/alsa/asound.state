@@ -92,7 +92,7 @@ state.audiocodec {
 	control.9 {
 		iface MIXER
 		name 'LINEOUTL src LR'
-		value On
+		value Off
 		comment {
 			access 'read write'
 			type ENUMERATED
@@ -104,7 +104,7 @@ state.audiocodec {
 	control.10 {
 		iface MIXER
 		name 'LINEOUTR src LR'
-		value On
+		value Off
 		comment {
 			access 'read write'
 			type ENUMERATED

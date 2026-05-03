@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/pkcs7-mime">
   <!--Created automatically by update-mime-database. DO NOT EDIT!-->
-  <comment>PKCS#7 file</comment>
   <comment xml:lang="zh_TW">PKCS#7 檔案</comment>
   <comment xml:lang="zh_CN">PKCS#7 文件</comment>
   <comment xml:lang="uk">файл PKCS#7</comment>
@@ -34,4 +33,11 @@
   <generic-icon name="text-x-generic"/>
   <glob pattern="*.p7c"/>
   <glob pattern="*.p7m"/>
+  <comment>PKCS#7 Message and Certificates</comment>
+  <acronym>PKCS#7</acronym>
+  <glob pattern="*.p7c"/>
+  <glob pattern="*.p7m"/>
+  <glob pattern="*.spc"/>
+  <glob pattern="*.p7b"/>
+  <alias type="application/x-pkcs7-certificates"/>
 </mime-type>

@@ -327,7 +327,7 @@ libgs.so.9 libgs9 #MINVER#
  _ZN9tesseract10ParamUtils16ReadParamsFromFpENS_18SetParamConstraintEPNS_5TFileEPNS_13ParamsVectorsE@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract10ParamUtils8SetParamEPKcS2_NS_18SetParamConstraintEPNS_13ParamsVectorsE@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract10ROW_zapperEPNS_10ELIST_LINKE@Base 9.55.0~dfsg1-0ubuntu1
- _ZN9tesseract10SIMDDetect15neon_available_E@Base 9.55.0~dfsg1-0ubuntu5.9
+ _ZN9tesseract10SIMDDetect15neon_available_E@Base 9.55.0~dfsg1-0ubuntu5.10
  _ZN9tesseract10SIMDDetect6UpdateEv@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract10SIMDDetect8detectorE@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract10SIMDDetectC1Ev@Base 9.55.0~dfsg1-0ubuntu1
@@ -915,7 +915,7 @@ libgs.so.9 libgs9 #MINVER#
  _ZN9tesseract13InitIntegerFXEv@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract13IntSimdMatrix13intSimdMatrixE@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract13IntSimdMatrix15MatrixDotVectorERKNS_16GENERIC_2D_ARRAYIaEERKSt6vectorIdSaIdEEPKaPd@Base 9.55.0~dfsg1-0ubuntu1
- _ZN9tesseract13IntSimdMatrix17intSimdMatrixNEONE@Base 9.55.0~dfsg1-0ubuntu5.9
+ _ZN9tesseract13IntSimdMatrix17intSimdMatrixNEONE@Base 9.55.0~dfsg1-0ubuntu5.10
  _ZN9tesseract13LanguageModel11InitForWordEPKNS_11WERD_CHOICEEbff@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract13LanguageModel11UpdateStateEbiiPNS_16BLOB_CHOICE_LISTEPNS_18LanguageModelStateEPNS_12LMPainPointsEPNS_8WERD_RESEPNS_16BestChoiceBundleEPNS_12BlamerBundleE@Base 9.55.0~dfsg1-0ubuntu1
  _ZN9tesseract13LanguageModel12ComputeDenomEPNS_16BLOB_CHOICE_LISTE@Base 9.55.0~dfsg1-0ubuntu1

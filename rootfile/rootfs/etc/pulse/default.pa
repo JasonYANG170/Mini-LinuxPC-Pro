@@ -151,3 +151,8 @@ load-module module-filter-apply
 ### Note that those snippet files must have a .pa file extension, not .conf
 .nofail
 .include /etc/pulse/default.pa.d
+
+load-module module-bluetooth-policy
+load-module module-bluetooth-discover
+
+

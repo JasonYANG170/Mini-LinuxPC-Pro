@@ -32,16 +32,20 @@ echo 1 > /sys/class/gpio/gpio203/value
 
 # sleep 0.5
 
-# echo 0 > /sys/class/rfkill/rfkill0/state
-# echo 0 > /proc/bluetooth/sleep/btwrite
-# sleep 0.5
+ echo 0 > /sys/class/rfkill/rfkill0/state
+ sleep 0.2
+ echo 0 > /proc/bluetooth/sleep/btwrite
+ sleep 0.2
 
-# echo 1 > /sys/class/rfkill/rfkill0/state
-# echo 1 > /proc/bluetooth/sleep/btwrite
-# sleep 0.5
+ echo 1 > /sys/class/rfkill/rfkill0/state
+ sleep 0.2
+ echo 1 > /proc/bluetooth/sleep/btwrite
+ sleep 0.2
 
-# hciattach -s 1500000 /dev/ttyS1 any 1500000 flow nosleep
-# sleep 0.5
-# hciconfig hci0 up
+ hciattach -s 1500000 /dev/ttyS1 any 1500000 flow nosleep
+ sleep 0.2
+ hciconfig hci0 up
+
+# /usr/bin/pulseaudio --start
 
 exit 0

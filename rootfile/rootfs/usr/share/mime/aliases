@@ -26,6 +26,7 @@ application/nappdf application/pdf
 application/pcap application/vnd.tcpdump.pcap
 application/pgp application/pgp-encrypted
 application/photoshop image/vnd.adobe.photoshop
+application/pkcs12 application/x-pkcs12
 application/pls audio/x-scpls
 application/powerpoint application/vnd.ms-powerpoint
 application/smil application/smil+xml
@@ -100,6 +101,7 @@ application/x-pcap application/vnd.tcpdump.pcap
 application/x-pdf application/pdf
 application/x-photoshop image/vnd.adobe.photoshop
 application/x-pkcs12 application/pkcs12
+application/x-pkcs7-certificates application/pkcs7-mime
 application/x-quicktimeplayer application/x-quicktime-media-link
 application/x-rar application/vnd.rar
 application/x-rar-compressed application/vnd.rar
@@ -126,6 +128,8 @@ application/x-wia application/x-wii-rom
 application/x-wii-iso-image application/x-wii-rom
 application/x-wmf image/wmf
 application/x-wordperfect application/vnd.wordperfect
+application/x-x509-ca-cert application/pkix-cert
+application/x-x509-user-cert application/pkix-cert
 application/x-xliff application/xliff+xml
 application/x-xspf+xml application/xspf+xml
 application/x-zip application/zip

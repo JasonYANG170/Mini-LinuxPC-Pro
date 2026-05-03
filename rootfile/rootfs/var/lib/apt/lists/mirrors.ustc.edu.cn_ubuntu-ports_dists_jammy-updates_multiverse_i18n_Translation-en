@@ -95,6 +95,20 @@ Description-en: Meta-package for FM and Driver
  meta-package simultaneously while keeping version equivalence. This meta-
  package is branch-specific.
 
+Package: cuda-drivers-fabricmanager-565
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+Description-en: Meta-package for FM and Driver
+ Convenience meta-package for installing fabricmanager and the cuda-drivers
+ meta-package simultaneously while keeping version equivalence. This meta-
+ package is branch-specific.
+
+Package: cuda-drivers-fabricmanager-570
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+Description-en: Meta-package for FM and Driver
+ Convenience meta-package for installing fabricmanager and the cuda-drivers
+ meta-package simultaneously while keeping version equivalence. This meta-
+ package is branch-specific.
+
 Package: intel-media-va-driver-non-free
 Description-md5: d0cac4050b590c0314de696b91343b77
 Description-en: VAAPI driver for the Intel GEN8+ Graphics family
@@ -152,11 +166,72 @@ Description-en: Transitional package for nvidia-headless-390
  This is a transitional package for nvidia-headless-390, and can be
  safely removed after the installation is complete.
 
+Package: libnvidia-cfg1-570-server
+Description-md5: 7dce7edcd194e980223937b38f49e8b9
+Description-en: NVIDIA binary OpenGL/GLX configuration library
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This package contains the libnvidia-cfg.so.1 runtime library.
+
 Package: libnvidia-common-550-server
 Description-md5: 259c61ba4e777f5a2f1e7ee2fd1957bc
 Description-en: Shared files used by the NVIDIA libraries
  This package provides a set of files that are required by the NVIDIA
  libraries.
+
+Package: libnvidia-common-570-server
+Description-md5: 259c61ba4e777f5a2f1e7ee2fd1957bc
+Description-en: Shared files used by the NVIDIA libraries
+ This package provides a set of files that are required by the NVIDIA
+ libraries.
+
+Package: libnvidia-compute-570-server
+Description-md5: 11b7b8b816402e282453221bd66903b4
+Description-en: NVIDIA libcompute package
+ This package provides a set of libraries which enable the NVIDIA Server Driver
+ to use GPUs for parallel general purpose computation through CUDA and
+ OpenCL.
+
+Package: libnvidia-decode-570-server
+Description-md5: 82c3a05b45f86380632898c9b339df7a
+Description-en: NVIDIA Video Decoding runtime libraries
+ This package includes the NVIDIA CUDA Video Decoder (NVCUVID) library which
+ provides an interface to hardware video decoding capabilities on NVIDIA GPUs with CUDA.
+ .
+ The package also provides a VDPAU (Video Decode and Presentation API for Unix-like
+ systems) library for the NVIDIA vendor implementation.
+
+Package: libnvidia-encode-570-server
+Description-md5: 21b4191ea88e49a7e948a2b89cfed901
+Description-en: NVENC Video Encoding runtime library
+ The NVENC Video Encoding library provides an interface to video encoder
+ hardware on supported NVIDIA GPUs.
+ .
+ This package contains the nvidia-encode runtime library.
+
+Package: libnvidia-extra-570-server
+Description-md5: d919c13960893adb9b27fa15ab4b33a4
+Description-en: Extra libraries for the NVIDIA Server Driver
+ This package provides an additional set of libraries to be used with
+ the NVIDIA Server Driver.
+
+Package: libnvidia-fbc1-570-server
+Description-md5: 19123a53d351a2e540ca869d1e74f9d2
+Description-en: NVIDIA OpenGL-based Framebuffer Capture runtime library
+ The NVIDIA OpenGL-based Framebuffer Capture (NvFBCOpenGL) library provides
+ a high performance, low latency interface to capture and optionally encode an
+ OpenGL framebuffer. NvFBCOpenGL is a private API that is only available to
+ approved partners for use in remote graphics scenarios.
+ .
+ This package contains the NvFBCOpenGL runtime library.
+
+Package: libnvidia-gl-570-server
+Description-md5: d899ab089124230e29489e7dcc9f137a
+Description-en: NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD
+ This package provides the NVIDIA OpenGL/GLX/EGL/GLES libraries and the
+ Vulkan ICD.
 
 Package: libnvidia-nscq-450
 Description-md5: 06d90fb68ae67655c00815a4db03a64e
@@ -193,6 +268,33 @@ Description-md5: 06d90fb68ae67655c00815a4db03a64e
 Description-en: NVSwitch Configuration and Query library
  NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
  stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: libnvidia-nscq-565
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+Description-en: NVSwitch Configuration and Query library
+ NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
+ stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: libnvidia-nscq-570
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+Description-en: NVSwitch Configuration and Query library
+ NVIDIA NVSwitch Configuration and Query (NSCQ) library provides a
+ stable driver API used by DCGM for monitoring NVSwitch devices.
+
+Package: libunrar-dev
+Description-md5: 675e7731b5a40df32d5d1257157daeb0
+Description-en: Unarchiver for .rar files (non-free version) - development files
+ This package contains the static library for the libunrar library.
+
+Package: libunrar-headers
+Description-md5: dae68737a7d31b0a99862e68ad5a7c3a
+Description-en: Unarchiver for .rar files (non-free version) - development header files
+ This package contains the header files for the libunrar library.
+
+Package: libunrar5
+Description-md5: c337a222882750df1e56ffa55407084b
+Description-en: Unarchiver for .rar files (non-free version) - shared library
+ library for unarchiving .rar files
 
 Package: linux-firmware-xilinx-ap1302
 Description-md5: fc715d17498bc0635e995228851ddbc1
@@ -1594,6 +1696,84 @@ Description-en: Linux kernel signatures for nvidia modules for version 5.19.0-10
  .
  You likely do not want to install this package directly.
 
+Package: mumax3
+Description-md5: 31b32b8b874fff7a3226df456e85a895
+Description-en: GPU-accelerated micromagnetic simulator
+ mumax3 is a GPU-accelerated micromagnetic simulation program developed
+ at the DyNaMat group of Prof. Van Waeyenberge at Ghent University.
+ .
+ A speed-up of the order of 100x compared to CPU-based simulations can
+ easily be reached, even with relatively inexpensive gaming
+ GPUs. Additionally, the software is optimized for low memory use and
+ can handle about 16 million FD cells with 2GB of GPU RAM.
+ .
+ Features:
+  - Landau-Lifshitz micromagnetic formalism
+  - Magnetostatic field
+  - Heisenberg exchange
+  - Arbitrary inter-region exchange like RKKY coupling
+  - Dzyaloshinskii-Moriya interaction
+  - Spin-transfer torque (Zhang-Li and Slonczewski)
+  - Uniaxial and cubic magnetocrystalline anisotropy
+  - Thermal fluctuations (Brown)
+  - Voronoi tessellation
+  - Time- and space dependent material parameters
+  - Arbitrary complex excitation (field, current)
+  - Simulation window can automatically follow a moving domain wall
+  - Edge charges can be removed to simulate an infinitely long geometry
+  - Optional 1D, 2D or 3D periodic boundary conditions
+
+Package: nvidia-compute-utils-570-server
+Description-md5: 22d91d0fcba51df4741637e102ab12c2
+Description-en: NVIDIA compute utilities
+ This package provides utility binaries for paraller general purpose
+ computing use cases with the NVIDIA Server Driver.
+ .
+ CUDA MPS is a feature that allows multiple CUDA processes to share a single
+ GPU context. CUDA MPS should be transparent to CUDA programs.
+ .
+ CUDA MPS requires a device that supports Unified Virtual Address (UVA) and
+ has compute capability SM 3.5 or higher.
+ Pre-CUDA 4.0 APIs are not supported under CUDA MPS.
+
+Package: nvidia-dkms-570-server
+Description-md5: ec8c193060b5458922cc0bda62df7796
+Description-en: NVIDIA DKMS package
+ This package builds the NVIDIA kernel module needed by the userspace
+ driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel, and automatically rebuilt for
+ any new kernel headers that are installed.
+
+Package: nvidia-dkms-570-server-open
+Description-md5: dafa8f35853882b3010cba056bb022d0
+Description-en: NVIDIA DKMS package (open kernel module)
+ This package builds the open NVIDIA kernel module needed by the userspace
+ driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel, and automatically rebuilt for
+ any new kernel headers that are installed.
+
+Package: nvidia-driver-570-server
+Description-md5: 897d460f9872b6623eba97d25f23556a
+Description-en: NVIDIA Server Driver metapackage
+ This metapackage depends on the NVIDIA binary driver and on all of its libraries,
+ to provide hardware acceleration for OpenGL/GLX/EGL/GLES/Vulkan
+ applications on either X11 or on Wayland.
+ .
+ See /usr/share/doc/nvidia-driver-570-server/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+
+Package: nvidia-driver-570-server-open
+Description-md5: d7a2dea82ffd9482edb9cdd684371901
+Description-en: NVIDIA driver (open kernel) metapackage
+ This metapackage depends on the NVIDIA binary driver and on all of its libraries,
+ to provide hardware acceleration for OpenGL/GLX/EGL/GLES/Vulkan
+ applications on either X11 or on Wayland.
+ .
+ See /usr/share/doc/nvidia-driver-570-server/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+
 Package: nvidia-fabricmanager-450
 Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
 Description-en: Fabric Manager for NVSwitch based systems.
@@ -1622,6 +1802,16 @@ Description-en: Fabric Manager for NVSwitch based systems. (transitional package
  Transitional package for upgrades. This package can be safely removed.
 
 Package: nvidia-fabricmanager-535
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+Description-en: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+
+Package: nvidia-fabricmanager-565
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+Description-en: Fabric Manager for NVSwitch based systems.
+ Fabric Manager for NVIDIA NVSwitch based systems.
+
+Package: nvidia-fabricmanager-570
 Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
 Description-en: Fabric Manager for NVSwitch based systems.
  Fabric Manager for NVIDIA NVSwitch based systems.
@@ -1658,11 +1848,101 @@ Description-md5: 565605cc6a127d423c88c38e5c2f9a26
 Description-en: Fabric Manager API headers and associated library
  Fabric Manager API headers and associated library
 
+Package: nvidia-fabricmanager-dev-565
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+Description-en: Fabric Manager API headers and associated library
+ Fabric Manager API headers and associated library
+
+Package: nvidia-fabricmanager-dev-570
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+Description-en: Fabric Manager API headers and associated library
+ Fabric Manager API headers and associated library
+
 Package: nvidia-firmware-550-server-550.54.14
 Description-md5: a9f4cc74ba3faebf0cac0795ed2434bf
 Description-en: Firmware files used by the kernel module
  This package installs required firmware files for the NVIDIA kernel
  module.
+
+Package: nvidia-firmware-570-server-570.86.15
+Description-md5: a9f4cc74ba3faebf0cac0795ed2434bf
+Description-en: Firmware files used by the kernel module
+ This package installs required firmware files for the NVIDIA kernel
+ module.
+
+Package: nvidia-headless-570-server
+Description-md5: 67a94704d675166592a00924c85583e2
+Description-en: NVIDIA headless metapackage
+ This metapackage installs the NVIDIA Server Driver and the libraries that enable
+ parallel general purpose computation through CUDA and
+ OpenCL.
+ .
+ Install this package if you do not need X11 or Wayland support, which is
+ provided by the nvidia-driver-570-server metapackage.
+
+Package: nvidia-headless-570-server-open
+Description-md5: bd1b9a701d1d1bdb5adea246c6c4d3d2
+Description-en: NVIDIA headless metapackage (open kernel module)
+ This metapackage installs the NVIDIA driver and the libraries that enable
+ parallel general purpose computation through CUDA and
+ OpenCL.
+ .
+ Install this package if you do not need X11 or Wayland support, which is
+ provided by the nvidia-driver-570-server metapackage.
+
+Package: nvidia-headless-no-dkms-570-server
+Description-md5: 69d1b3a38a409d61b06fc383792f7dbd
+Description-en: NVIDIA headless metapackage - no DKMS
+ This metapackage installs the NVIDIA Server Driver and the libraries that enable
+ parallel general purpose computation through CUDA and
+ OpenCL. DKMS will not be installed, and, therefore, the kernel module
+ will not be built.
+ .
+ Install this package if you do not need X11 or Wayland support, which is
+ provided by the nvidia-driver-570-server metapackage.
+
+Package: nvidia-headless-no-dkms-570-server-open
+Description-md5: 808626b1ebfe115f2ff3af640f251701
+Description-en: NVIDIA headless metapackage - no DKMS (open kernel module)
+ This metapackage installs the NVIDIA driver and the libraries that enable
+ parallel general purpose computation through CUDA and
+ OpenCL. DKMS will not be installed, and, therefore, the kernel module
+ will not be built.
+ .
+ Install this package if you do not need X11 or Wayland support, which is
+ provided by the nvidia-driver-570-server metapackage.
+
+Package: nvidia-imex-565
+Description-md5: f7a765b2a95d4cabcc9695466d5f6cc8
+Description-en: IMEX Manager for NVIDIA based systems.
+ IMEX Manager for NVIDIA systems.
+
+Package: nvidia-imex-570
+Description-md5: f7a765b2a95d4cabcc9695466d5f6cc8
+Description-en: IMEX Manager for NVIDIA based systems.
+ IMEX Manager for NVIDIA systems.
+
+Package: nvidia-kernel-common-570-server
+Description-md5: caa64a2a10d329a0475baf9ebcdb40d5
+Description-en: Shared files used with the kernel module
+ This package installs all the optional accessory files for the NVIDIA
+ kernel module.
+ .
+ Install this package if you want to blacklist any conflicting kernel
+ modules, and if you want udev to load the the NVIDIA kernel modules,
+ and to create the uvm devices automatically.
+
+Package: nvidia-kernel-source-570-server
+Description-md5: dc60d6861ca351f7cadc7d8fcc74e854
+Description-en: NVIDIA kernel source package
+ This package provides the NVIDIA kernel source needed by the userspace
+ driver.
+
+Package: nvidia-kernel-source-570-server-open
+Description-md5: 2694f1253ed6bd4cfbccf1e22ec25a3d
+Description-en: NVIDIA kernel source package
+ This package provides the open NVIDIA kernel source needed by the userspace
+ driver.
 
 Package: nvidia-libopencl1-384
 Description-md5: c6dbe40660b5059827bb841b3e8d47a1
@@ -1675,6 +1955,11 @@ Description-md5: c6dbe40660b5059827bb841b3e8d47a1
 Description-en: Transitional package for nvidia-headless-390
  This is a transitional package for nvidia-headless-390, and can be
  safely removed after the installation is complete.
+
+Package: nvidia-utils-570-server
+Description-md5: 4e4bcf98bdc87ac5b44ccdaec6901913
+Description-en: NVIDIA Server Driver support binaries
+ This package contains supporting binaries for the NVIDIA Server Driver.
 
 Package: othman
 Description-md5: b8238305290697b4d61d0fe7d875e1be
@@ -1700,6 +1985,21 @@ Description-en: dkms source for the r8125 network driver
  .
  This package provides the dkms source code for the r8125 kernel modules.
  Kernel source or headers are required to compile these modules.
+
+Package: rar
+Description-md5: 649b872741c4c5402456879832c70c03
+Description-en: Archiver for .rar files
+ This is the RAR archiver from Eugene Roshal. It supports multiple volume
+ archives and damage protection. It can also create SFX-archives. There are
+ versions which run on DOS, Windows, FreeBSD, BSDI.
+ .
+ This program is shareware and you must register it after 40 days of use.
+
+Package: unrar
+Description-md5: 363f696bb115028ffafb265ccc9f32fb
+Description-en: Unarchiver for .rar files (non-free version)
+ Unrar can extract files from .rar archives. If you want to create .rar
+ archives, install package rar.
 
 Package: virtualbox
 Description-md5: 30f96d22c1a6ca04db16bdc1e79ad965
@@ -1813,6 +2113,16 @@ Description-en: x86 virtualization solution - kernel module source
  The source is placed under /usr/src, and after decompression it can
  be built to produce a virtualbox-modules-_KVERS_ providing
  "virtualbox-modules" package.
+
+Package: xserver-xorg-video-nvidia-570-server
+Description-md5: 51c9ba885bc78c02015bfca3e79d758e
+Description-en: NVIDIA binary Xorg driver
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ See /usr/share/doc/nvidia-driver-570-server/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
 
 Package: libegl-mali-xlnx
 Description-md5: 15a94cd9718097d740b66c24d31cd1eb

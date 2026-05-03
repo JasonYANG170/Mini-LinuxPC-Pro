@@ -1,4 +1,5 @@
 unix
 systemd
 mkhomedir
+gnome-keyring
 capability

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/pkcs8">
   <!--Created automatically by update-mime-database. DO NOT EDIT!-->
-  <comment>PKCS#8 private key</comment>
   <comment xml:lang="zh_TW">PKCS#8 私人金鑰</comment>
   <comment xml:lang="zh_CN">PKCS#8 私钥</comment>
   <comment xml:lang="uk">закритий ключ PKCS#8</comment>
@@ -48,4 +47,8 @@
   <acronym>PKCS</acronym>
   <expanded-acronym>Public-Key Cryptography Standards</expanded-acronym>
   <glob pattern="*.p8"/>
+  <comment>PKCS#8 Personal Key</comment>
+  <acronym>PKCS#8</acronym>
+  <glob weight="75" pattern="*.p8"/>
+  <glob weight="55" pattern="*.pkcs8"/>
 </mime-type>
