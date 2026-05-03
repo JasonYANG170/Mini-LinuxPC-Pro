@@ -56,6 +56,7 @@ application/vnd.sun.xml.writer.template application/zip
 text/troff text/plain
 text/richtext text/plain
 text/x-python3 text/x-python
+application/pkcs7-mime+pem application/x-pem-file
 text/tcl text/plain
 image/x-portable-bitmap image/x-portable-anymap
 application/x-shellscript application/x-executable
@@ -66,13 +67,14 @@ text/xmcd text/plain
 text/x-csharp text/x-csrc
 application/pgp-signature text/plain
 application/x-lzma-compressed-tar application/x-lzma
-image/x-ilbm application/x-iff
+text/x-apt-sources-list text/plain
 audio/webm video/webm
-text/x-gettext-translation text/plain
+image/x-ilbm application/x-iff
 application/vnd.ms-works application/x-ole-storage
 text/x-fortran text/plain
 text/x-modelica text/plain
 text/x-c++hdr text/x-chdr
+text/x-gettext-translation text/plain
 application/vnd.oasis.opendocument.graphics-flat-xml application/xml
 application/mbox text/plain
 audio/x-opus+ogg audio/ogg
@@ -186,6 +188,7 @@ application/vnd.sun.xml.calc application/zip
 inode/mount-point inode/directory
 application/vnd.mozilla.xul+xml application/xml
 text/vnd.senx.warpscript text/plain
+application/x-pem-file text/plain
 image/x-canon-crw image/x-dcraw
 application/vnd.oasis.opendocument.spreadsheet-flat-xml application/xml
 application/vnd.ms-word.template.macroEnabled.12 application/vnd.openxmlformats-officedocument.wordprocessingml.template
@@ -203,6 +206,7 @@ application/sieve application/xml
 text/x-authors text/plain
 text/x-tex text/plain
 application/xml-dtd text/plain
+application/pkcs8+pem application/x-pem-file
 image/svg+xml-compressed application/gzip
 audio/ogg application/ogg
 application/x-apple-systemprofiler+xml application/xml
@@ -320,11 +324,15 @@ font/otf font/ttf
 application/x-windows-themepack application/vnd.ms-cab-compressed
 image/x-kodak-kdc image/x-dcraw
 image/x-kodak-kdc image/tiff
+application/pkix-crl+pem application/x-pem-file
 text/x-nfo text/x-readme
 text/x-maven+xml application/xml
 application/vnd.openxmlformats-officedocument.presentationml.slide application/zip
 x-content/win32-software x-content/software
+application/x-spkac+base64 text/plain
 application/x-cb7 application/x-7z-compressed
+application/pkix-cert+pem application/x-pem-file
+application/x-pem-key application/x-pem-file
 application/vnd.oasis.opendocument.image application/zip
 application/vnd.ms-publisher application/x-ole-storage
 application/vnd.comicbook-rar application/vnd.rar
@@ -344,6 +352,7 @@ application/x-zip-compressed-fb2 application/zip
 application/x-gzdvi application/gzip
 application/vnd.openxmlformats-officedocument.presentationml.template application/zip
 text/x-common-lisp text/plain
+application/pkcs12+pem application/x-pem-file
 image/x-portable-graymap image/x-portable-anymap
 application/vnd.oasis.opendocument.chart application/zip
 text/x-iptables text/plain
@@ -406,6 +415,7 @@ text/x-changelog text/plain
 text/x-go text/plain
 text/html text/plain
 audio/x-aiff application/x-iff
+application/pkcs10+pem application/x-pem-file
 video/x-theora+ogg video/ogg
 text/x-xslfo application/xml
 text/x-scss text/plain

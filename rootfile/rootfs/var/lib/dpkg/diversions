@@ -1,3 +1,6 @@
+/usr/share/dict/words
+/usr/share/dict/words.pre-dictionaries-common
+dictionaries-common
 /usr/share/vim/vim82/doc/help.txt
 /usr/share/vim/vim82/doc/help.txt.vim-tiny
 vim-runtime

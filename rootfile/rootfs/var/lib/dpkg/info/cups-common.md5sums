@@ -14,6 +14,6 @@ a9c07cb38b672a386164e8e084a23949  usr/share/cups/locale/zh_CN/cups_zh_CN.po
 b08f0a6b23e3787a1fcec9242472a73b  usr/share/cups/ppdc/font.defs
 12525089a284f21debef17384317f280  usr/share/cups/ppdc/media.defs
 34546608cbe8d9e707614ecbe6c1cab3  usr/share/cups/ppdc/raster.defs
-1341ebf7aa16e43c01af745dbae430b1  usr/share/doc/cups-common/changelog.Debian.gz
+9bb0ccc4cdf9296e6d011c19a9ebb1b7  usr/share/doc/cups-common/changelog.Debian.gz
 2668d2b0deb974a1309656aee4114ba7  usr/share/doc/cups-common/copyright
 f271c98d8392777fd08ef980f737bfa4  usr/share/lintian/overrides/cups-common

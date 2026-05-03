@@ -90,7 +90,7 @@ Description-md5: 79d09248104f4f2ac9d5cef6b9817c8f
 
 Package: cuda-drivers-fabricmanager-535
 Architecture: arm64
-Version: 535.183.01-0ubuntu0.22.04.1
+Version: 535.230.02-0ubuntu0.22.04.1
 Priority: optional
 Section: multiverse/libs
 Source: fabric-manager-535
@@ -99,15 +99,61 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Installed-Size: 16
 Provides: cuda-drivers-fabricmanager
-Depends: nvidia-fabricmanager-535 (= 535.183.01-0ubuntu0.22.04.1)
+Depends: nvidia-fabricmanager-535 (= 535.230.02-0ubuntu0.22.04.1)
 Conflicts: cuda-drivers-fabricmanager
 Replaces: cuda-drivers-fabricmanager
-Filename: pool/multiverse/f/fabric-manager-535/cuda-drivers-fabricmanager-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
-Size: 4408
-MD5sum: 305770428a281a3776bbe9756031d786
-SHA1: 3c2e05a1ffeec171db27d8b560b345663277f128
-SHA256: a8b46e3cbba284a9c164b243bb6a4da6d8ff8577a2524cb3bfd3f44e7b52a03b
-SHA512: f87654ce9277708a842b565ae9c21b263bd8964e1257848ce05a987847d9aab7b5445253aca5a03b3efb823bd4e512c88cb1f4cc039e5dbf30775701aab080c4
+Filename: pool/multiverse/f/fabric-manager-535/cuda-drivers-fabricmanager-535_535.230.02-0ubuntu0.22.04.1_arm64.deb
+Size: 4412
+MD5sum: 8f97462be070df367427cb01108d6ce3
+SHA1: 4796d22e0bad44fc7ea1fffdf36ea7b070c4bfe1
+SHA256: 2b65e297a2961cfa318c1900b8d1451b19aae5503f3b84ed6f0c0d268b656a0c
+SHA512: e124509da0b1bb56048a353daef77f47d38c5df3cf64a113789acbad030abdc79966dcbef36f9a32d42f71af4cdb8e60551945c8ee0b9d03bb690696ad23e20b
+Description: Meta-package for FM and Driver
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+
+Package: cuda-drivers-fabricmanager-565
+Architecture: arm64
+Version: 565.57.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-565
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Provides: cuda-drivers-fabricmanager
+Depends: nvidia-fabricmanager-565 (= 565.57.01-0ubuntu0.22.04.1)
+Conflicts: cuda-drivers-fabricmanager
+Replaces: cuda-drivers-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-565/cuda-drivers-fabricmanager-565_565.57.01-0ubuntu0.22.04.1_arm64.deb
+Size: 4402
+MD5sum: 87c37ffea0e2941818944362f4dc9204
+SHA1: 17d437bbb713ae63f0b07ef5a52b6c9ebe3f0a9f
+SHA256: f6c2780fd57cad5f11cd335f928718666163ef5868e3ae4d8a7cecf7cdbf83db
+SHA512: 6b9788183ddfa849a55c879092c5ba51fc49bc6791982027ed72265ffceadd4825a13db5594ae2895837f470a930784ade7c6cad282f97a516992c028bf6d5db
+Description: Meta-package for FM and Driver
+Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
+
+Package: cuda-drivers-fabricmanager-570
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-570
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16
+Provides: cuda-drivers-fabricmanager
+Depends: nvidia-fabricmanager-570 (= 570.86.15-0ubuntu0.22.04.1)
+Conflicts: cuda-drivers-fabricmanager
+Replaces: cuda-drivers-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-570/cuda-drivers-fabricmanager-570_570.86.15-0ubuntu0.22.04.1_arm64.deb
+Size: 4410
+MD5sum: 89501a947d1f362c2c2eb328c6d81e7e
+SHA1: 5c7fe14bd98bd5744364555edd5baa9e95149809
+SHA256: 36c5b14a3fd8086048ecc3bce26c29cd96a5ace55bbbcfe1be4f04617db5104e
+SHA512: 8dace6f5a40b4aad3f13d06c6cdc125e325b1bad262c2fd3d323527694f3cbe1ae8f32b518fdb50e1d686712a85f745701def4eeef820a32c3f9cc2e3f906723
 Description: Meta-package for FM and Driver
 Description-md5: 6715a1a6e39ab2cdf04d9fe216556c20
 
@@ -173,6 +219,31 @@ SHA512: 64b4456be51229ce3968021c9bf94104d13c0d813ce192dcf5e62e24e4c86a269f17508c
 Description: EGL closed source libraries for Mali devices integrated
 Description-md5: 15a94cd9718097d740b66c24d31cd1eb
 
+Package: libnvidia-cfg1-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 421
+Provides: libnvidia-cfg1-any
+Depends: libc6 (>= 2.17)
+Conflicts: libnvidia-cfg1-any
+Replaces: libnvidia-cfg1-any
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-cfg1-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 158500
+MD5sum: a22db49cdc3f7a79000e396a24c22882
+SHA1: 696139a8b4a8dcb72cd64812cf792e61e8ae040e
+SHA256: de30c294211aadc7d8488c71986933d2e40251e2be75635da86f567c549de590
+SHA512: 816e55b89e21b701d8245b02bfbc6696ab0692f3e93d3c10f64fd4f8d2fafe87a19fcc51a3631c721ea4ab50eae5b9361cbdeef9a49d6473d99ae95f13748514
+Homepage: http://www.nvidia.com
+Description: NVIDIA binary OpenGL/GLX configuration library
+Description-md5: 7dce7edcd194e980223937b38f49e8b9
+
 Package: libnvidia-common-550-server
 Architecture: all
 Version: 550.54.14-0ubuntu3.22.04.1
@@ -198,6 +269,181 @@ Homepage: http://www.nvidia.com
 Description: Shared files used by the NVIDIA libraries
 Description-md5: 259c61ba4e777f5a2f1e7ee2fd1957bc
 
+Package: libnvidia-common-570-server
+Architecture: all
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 79
+Provides: libnvidia-common
+Conflicts: libnvidia-common
+Replaces: libnvidia-common
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-common-570-server_570.86.15-0ubuntu0.22.04.4_all.deb
+Size: 16132
+MD5sum: ca02570709fc1012a745f1c1299a7c06
+SHA1: ad6be8ff4d0e878f2a111e95e4de41764dad888d
+SHA256: d9ce5535abb20392ee6a0964127e7be752cb1f2e5617c3f0283d3805f10c2f6e
+SHA512: c9e0e9cb8134f4f55b5752a506ac75a369b52b046aa6666764853a6f5c7c71b88dab40251e8f7b1dba1eed585e4204cd7d35929a25160ddc2baabe6f80f328b8
+Homepage: http://www.nvidia.com
+Description: Shared files used by the NVIDIA libraries
+Description-md5: 259c61ba4e777f5a2f1e7ee2fd1957bc
+
+Package: libnvidia-compute-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 256035
+Provides: libcuda-10.0-1, libcuda-10.1-1, libcuda-10.2-1, libcuda-11.0-1, libcuda-11.1-1, libcuda-11.2-1, libcuda-11.3-1, libcuda-11.4-1, libcuda-11.5-1, libcuda-11.6-1, libcuda-11.7-1, libcuda-11.8-1, libcuda-12.0-1, libcuda-12.1-1, libcuda-12.2-1, libcuda-12.3-1, libcuda-12.4-1, libcuda-12.5-1, libcuda-12.6-1, libcuda-12.7-1, libcuda-12.8-1, libcuda-5.0-1, libcuda-5.5-1, libcuda-6.0-1, libcuda-6.5-1, libcuda-7.0-1, libcuda-7.5-1, libcuda-8.0-1, libcuda-9.0-1, libcuda-9.1-1, libcuda-9.2-1, libcuda.so.1 (= 570.86.15-0ubuntu0.22.04.4), libcuda1 (= 570.86.15-0ubuntu0.22.04.4), libnvidia-compute, libnvidia-ml.so.1 (= 570.86.15-0ubuntu0.22.04.4), libnvidia-ml1 (= 570.86.15-0ubuntu0.22.04.4), nvidia-opencl-icd, opencl-icd
+Depends: libc6 (>= 2.25), libgcc-s1 (>= 4.2)
+Conflicts: libcuda-10.0-1, libcuda-10.1-1, libcuda-10.2-1, libcuda-11.0-1, libcuda-11.1-1, libcuda-11.2-1, libcuda-11.3-1, libcuda-11.4-1, libcuda-11.5-1, libcuda-11.6-1, libcuda-11.7-1, libcuda-11.8-1, libcuda-12.0-1, libcuda-12.1-1, libcuda-12.2-1, libcuda-12.3-1, libcuda-12.4-1, libcuda-12.5-1, libcuda-12.6-1, libcuda-12.7-1, libcuda-12.8-1, libcuda-5.0-1, libcuda-5.5-1, libcuda-6.0-1, libcuda-6.5-1, libcuda-7.0-1, libcuda-7.5-1, libcuda-8.0-1, libcuda-9.0-1, libcuda-9.1-1, libcuda-9.2-1, libnvidia-compute, nvidia-opencl-icd
+Replaces: libcuda-10.0-1, libcuda-10.1-1, libcuda-10.2-1, libcuda-11.0-1, libcuda-11.1-1, libcuda-11.2-1, libcuda-11.3-1, libcuda-11.4-1, libcuda-11.5-1, libcuda-11.6-1, libcuda-11.7-1, libcuda-11.8-1, libcuda-12.0-1, libcuda-12.1-1, libcuda-12.2-1, libcuda-12.3-1, libcuda-12.4-1, libcuda-12.5-1, libcuda-12.6-1, libcuda-12.7-1, libcuda-12.8-1, libcuda-5.0-1, libcuda-5.5-1, libcuda-6.0-1, libcuda-6.5-1, libcuda-7.0-1, libcuda-7.5-1, libcuda-8.0-1, libcuda-9.0-1, libcuda-9.1-1, libcuda-9.2-1, libnvidia-compute, nvidia-opencl-icd
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-compute-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 47471142
+MD5sum: 0b9c92deec4fc307a14be82d12771d3c
+SHA1: aed9d7da806c5f64350c885c564c466dc498c639
+SHA256: d601f9a37483e53e821df789c421fb58c6cfd8ca55430f594751a10376ff7086
+SHA512: 584c0e095fb5ae578a57de1fbfea2c32eb21a09ae1486e869a342a2ebb98c165652f92f4e2db9c024530c7315112ecf6e6b94b3b1671eda5530472d0645309c2
+Homepage: http://www.nvidia.com
+Description: NVIDIA libcompute package
+Description-md5: 11b7b8b816402e282453221bd66903b4
+
+Package: libnvidia-decode-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 16706
+Provides: libnvidia-decode
+Depends: libnvidia-compute-570-server (= 570.86.15-0ubuntu0.22.04.4), libc6 (>= 2.17), libx11-6, libxext6
+Conflicts: libnvidia-decode
+Replaces: libnvidia-decode
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-decode-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 2822720
+MD5sum: fe67f23b0079cd8d42c01f01b4ab0fc2
+SHA1: f1ec74cec66cb364213bdfde7a6455d2619c3efa
+SHA256: 70fdb3adc980aab153cea66bdc1d9b6049b32042b066dab04f6596218f8270d2
+SHA512: aae5fd5188fc4c219a0a166ab15f8809893612d60f331ea36bfc48779f2f25fb8329cde12defbd50880f51698a05065f995255c0ade2b3c746aa2a37fefa242c
+Homepage: http://www.nvidia.com
+Description: NVIDIA Video Decoding runtime libraries
+Description-md5: 82c3a05b45f86380632898c9b339df7a
+
+Package: libnvidia-encode-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 289
+Provides: libnvidia-encode
+Depends: libc6 (>= 2.17), libnvidia-decode-570-server (>= 570.86.15)
+Conflicts: libnvidia-encode
+Replaces: libnvidia-encode
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-encode-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 106240
+MD5sum: 6052d11d20b54d307cab68ca85703630
+SHA1: cac0746f1407cb577d95041cdbabcc2fd92587ee
+SHA256: 508f474cd566056d7baaee65b14cc509246305b8a043bf66cd11be1b2ffcd58b
+SHA512: fe424670160a395c56e5d37817c6c526707ee00c2547fc14c9c34a86ddbb94b0d5dde118a8053764bc05d1f5983f79e3c77d0ce5cbe386427547fb69f472eac1
+Homepage: http://www.nvidia.com
+Description: NVENC Video Encoding runtime library
+Description-md5: 21b4191ea88e49a7e948a2b89cfed901
+
+Package: libnvidia-extra-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 201
+Provides: libnvidia-extra
+Depends: libc6 (>= 2.17)
+Conflicts: libnvidia-extra
+Breaks: libnvidia-common-570-server (<< 440.64-0ubuntu3~)
+Replaces: libnvidia-common-570-server (<< 440.64-0ubuntu3~), libnvidia-extra
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-extra-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 75818
+MD5sum: 85f766e3688ab3fafbe4b123483215fe
+SHA1: 81a7c8f337b905da711d537d98eabc49761cde67
+SHA256: 16a364539fbf5a58908b578c0a9c253f00bedad6ca0905788ef7ecd9f974c303
+SHA512: 5e0a659a60aa251dcdbf1dd695239f1eb3cf3bef5898851c43db122cb055ee9da866a5f3f1de94e3a8d7d1fb6c9e1dd6f1fd138573470a5566b37a14b857b1fc
+Homepage: http://www.nvidia.com
+Description: Extra libraries for the NVIDIA Server Driver
+Description-md5: d919c13960893adb9b27fa15ab4b33a4
+
+Package: libnvidia-fbc1-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 282
+Provides: libnvidia-fbc1
+Depends: libc6 (>= 2.17), libx11-6, libxext6
+Conflicts: libnvidia-fbc1
+Replaces: libnvidia-fbc1
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-fbc1-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 92700
+MD5sum: d1e4937ded44226829942bfab28e40f6
+SHA1: 4d5692452642c18a27c3064cb806af17a88e3185
+SHA256: d845e841f61056613deeb00e942856f1e23d2cbfaac528d1cc6aa8eef45cd625
+SHA512: 9d7361d7e99100c284d94e7f760817da07687fad9d0941f09f933ffb2e0b7bbcb99a652a4374b9fbd51e5c992b664f8319a42eeeaac926f0162c109c8bdd1569
+Homepage: http://www.nvidia.com
+Description: NVIDIA OpenGL-based Framebuffer Capture runtime library
+Description-md5: 19123a53d351a2e540ca869d1e74f9d2
+
+Package: libnvidia-gl-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 414943
+Provides: libegl-vendor, libglx-vendor, libnvidia-gl
+Depends: libnvidia-common-570-server, libc6 (>= 2.17), libdrm2 (>= 2.4.75), libgbm1 (>= 21.3.0~rc1), libgcc-s1 (>= 4.2), libx11-6, libx11-xcb1 (>= 2:1.7.5), libxcb-dri3-0 (>= 1.13), libxcb-present0, libxcb1 (>= 1.12), libxext6, libnvidia-egl-wayland1
+Conflicts: libnvidia-gl
+Replaces: libnvidia-gl
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/libnvidia-gl-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 154929096
+MD5sum: f4e79438b0eaead7cc2a083f285f2e66
+SHA1: e693bbb4c8721e3ecf61b8053867d7f963e152e9
+SHA256: a856df8ded9a32179ef941b8c31c2b49d649fd2e2746fb9d5f0be82cc120e882
+SHA512: f3dd377c39df1df278500e24e7d67140b8913383fef7d6baa64d7c0e690808404f51a30dfa0564d82d8944ab671ea50e2844e7f9f5ba3b0c48a5f2e569095cfb
+Homepage: http://www.nvidia.com
+Description: NVIDIA OpenGL/GLX/EGL/GLES GLVND libraries and Vulkan ICD
+Description-md5: d899ab089124230e29489e7dcc9f137a
+
 Package: libnvidia-nscq-525
 Architecture: arm64
 Version: 525.147.05-0ubuntu2.22.04.1
@@ -219,7 +465,7 @@ Description-md5: 86ca362cda0acfaa2c36ef6c8dc23cb5
 
 Package: libnvidia-nscq-535
 Architecture: arm64
-Version: 535.183.01-0ubuntu0.22.04.1
+Version: 535.230.02-0ubuntu0.22.04.1
 Priority: optional
 Section: multiverse/libs
 Origin: Ubuntu
@@ -229,14 +475,125 @@ Installed-Size: 1496
 Provides: libnvidia-nscq, nscq2
 Conflicts: libnvidia-nscq
 Replaces: libnvidia-nscq
-Filename: pool/multiverse/libn/libnvidia-nscq-535/libnvidia-nscq-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
-Size: 382520
-MD5sum: d7bd608c2e5a422eb97b4858d8e4524d
-SHA1: 46978e8e2d77da56ed58889db1f3baa04869cab1
-SHA256: bc400299a90276d954ef1bf50552007e09fd72d70c426c57f07738769770434f
-SHA512: 5afb3a973c4783e349f55f5a3f8b100d88e009b04fdcb7d2702bc80accff383115a59488ac9f8d8bc894f3ba2e63ce5a6a0705c6736f030fa5e5b10d37a54561
+Filename: pool/multiverse/libn/libnvidia-nscq-535/libnvidia-nscq-535_535.230.02-0ubuntu0.22.04.1_arm64.deb
+Size: 382474
+MD5sum: 3291a4ae89ac031b5c948e4092eeaa75
+SHA1: 31edfe4e08c8b818dcc7f48248a8c56d91120f69
+SHA256: 41511f1b3820ef67f89850783eb0a5a85bf9211d595cdec926096224cf68d4f1
+SHA512: f6fa5117ecee0e5a6a7e7c33df407c382d05527f088a639eeee1270f2f785a7bf9a1d03f550748f4dcfcdd473d8910ff55a448f2285950530407ee2e920bae3b
 Description: NVSwitch Configuration and Query library
 Description-md5: 06d90fb68ae67655c00815a4db03a64e
+
+Package: libnvidia-nscq-565
+Architecture: arm64
+Version: 565.57.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1680
+Provides: libnvidia-nscq, nscq2
+Conflicts: libnvidia-nscq
+Replaces: libnvidia-nscq
+Filename: pool/multiverse/libn/libnvidia-nscq-565/libnvidia-nscq-565_565.57.01-0ubuntu0.22.04.1_arm64.deb
+Size: 424080
+MD5sum: dc48452c0b5898fc54c9e2748241528b
+SHA1: bece19a8b95c02a63ed01e771ff5ae5915135e2e
+SHA256: 1a01687dc5852cbcf1842c26d0d355092eb6bbbba537216a86b5aaa1801b6335
+SHA512: c24ff5ec61cd1d2935382ccf9de3463d1d53eaaca1f39c678b4e653e7dd2eaa8fa9c5acf44efd4a554a04573dba5212a5f6382fe22a46586481983e7f3fde11e
+Description: NVSwitch Configuration and Query library
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+
+Package: libnvidia-nscq-570
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1680
+Provides: libnvidia-nscq, nscq2
+Conflicts: libnvidia-nscq
+Replaces: libnvidia-nscq
+Filename: pool/multiverse/libn/libnvidia-nscq-570/libnvidia-nscq-570_570.86.15-0ubuntu0.22.04.1_arm64.deb
+Size: 423918
+MD5sum: 59550bab06f3025e08e211b922b8243b
+SHA1: a1500dae6f8e8b4988e15b992229e306ecfe568c
+SHA256: 5a2fbf679087f981425bbb02518dc3bbb24cd823a68bd2ff11f28db554ebf838
+SHA512: 455d338d912440ac29b503cb4077b04ff6f4451f71a1c8b7fc9d97f3cf2a6da3fe49bb50ed8fcf52b2e22081ec81f159b67743aaa39ff2cd00860eaa2af5768e
+Description: NVSwitch Configuration and Query library
+Description-md5: 06d90fb68ae67655c00815a4db03a64e
+
+Package: libunrar-dev
+Architecture: arm64
+Version: 1:6.1.5-1ubuntu0.1
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libdevel
+Source: unrar-nonfree
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: UnRar maintainer team <team+unrar-nonfree@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 555
+Depends: libunrar5 (= 1:6.1.5-1ubuntu0.1), libunrar-headers (= 1:6.1.5-1ubuntu0.1)
+Filename: pool/multiverse/u/unrar-nonfree/libunrar-dev_6.1.5-1ubuntu0.1_arm64.deb
+Size: 160588
+MD5sum: f9dcb9c2560f3d47a10098a349f61c7c
+SHA1: 889ddb2db24e2222f61e02d095d3d6842f8ed096
+SHA256: d4b5d7b0062764256057a3e6c208658c03d30f23d68eb34664807f789c50f725
+SHA512: 94059e43501f5981f222911ef5b09d67457c97171d22cd61a886ba518f405565aa8c6dea9267b45e23d0b1ae5ce134a0f1b686897c9416fce4944d94f14d750b
+Homepage: https://www.rarlab.com/
+Description: Unarchiver for .rar files (non-free version) - development files
+Description-md5: 675e7731b5a40df32d5d1257157daeb0
+
+Package: libunrar-headers
+Architecture: all
+Version: 1:6.1.5-1ubuntu0.1
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libdevel
+Source: unrar-nonfree
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: UnRar maintainer team <team+unrar-nonfree@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 206
+Breaks: libunrar-dev (<= 1:5.9.4-1)
+Filename: pool/multiverse/u/unrar-nonfree/libunrar-headers_6.1.5-1ubuntu0.1_all.deb
+Size: 49324
+MD5sum: e6ab7728cab065f8665e295cdb854153
+SHA1: 4e14616287ebab4f8293bd9248c3e0a1d08ca607
+SHA256: db27247403a28cd6d8c6371dc7d7f47b7e35d273b5b917f919cc0c403d8e5eff
+SHA512: 9906eb48168f1a54480cc8938af99520ebd3cc22b4205c11a36aea9514379a84a41e7a17a77b88e518654c7e49764bbfcad0139a6a859e9d51ece7d07253a1f4
+Homepage: https://www.rarlab.com/
+Description: Unarchiver for .rar files (non-free version) - development header files
+Description-md5: dae68737a7d31b0a99862e68ad5a7c3a
+
+Package: libunrar5
+Architecture: arm64
+Version: 1:6.1.5-1ubuntu0.1
+Multi-Arch: same
+Priority: optional
+Section: multiverse/libs
+Source: unrar-nonfree
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: UnRar maintainer team <team+unrar-nonfree@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 186
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2)
+Filename: pool/multiverse/u/unrar-nonfree/libunrar5_6.1.5-1ubuntu0.1_arm64.deb
+Size: 96418
+MD5sum: 1cd44169e5f0230d7cd5176508029b4b
+SHA1: fdcace08e1f78603b6b11b612213e4690da968f6
+SHA256: 1666699ee28278662dc0b4746b0c8fc495c4466c02ff7a2b7d63cf9c56014a08
+SHA512: cef162014aae8b42fa1f693a032c2d171d29fa07980f77b8be9e65c831f498e4dc73ebad7f95127f2738ffe51639fa5aa9b8ec27f09e6dcd74f0fc662439662b
+Homepage: https://www.rarlab.com/
+Description: Unarchiver for .rar files (non-free version) - shared library
+Description-md5: c337a222882750df1e56ffa55407084b
 
 Package: linux-firmware-mediatek-genio
 Architecture: arm64
@@ -2185,6 +2542,130 @@ SHA512: 58aef39abeb6fb897be41abb7af3d7084c0f7206f232628703de9e6eb0dc8bd76ea28e03
 Description: Linux kernel signatures for nvidia modules for version 5.19.0-1014-nvidia-64k
 Description-md5: 245d58a9d2d07a655c98dd9286071fa8
 
+Package: nvidia-compute-utils-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 329
+Provides: nvidia-compute-utils, nvidia-persistenced
+Depends: libnvidia-compute-570-server, adduser, libc6 (>= 2.17)
+Conflicts: nvidia-compute-utils, nvidia-persistenced
+Replaces: nvidia-compute-utils, nvidia-persistenced
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-compute-utils-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 116098
+MD5sum: f901ea01a16adad52cd3470f29339f21
+SHA1: 498922b71cfe9cdf5ce401410beb8fedbdd02808
+SHA256: 53d23619f40ed191e2372ba15beb264f98a95124f70a78030407fb5136b083e4
+SHA512: eac6fe922c51629300f886d2c1f2c9a44d403cecc6dc30b40d235b2c830692f03e168021fbe6f39d0eae316ebd29468da631b1ca89cfd5b3c984429c1ecfd7d6
+Homepage: http://www.nvidia.com
+Description: NVIDIA compute utilities
+Description-md5: 22d91d0fcba51df4741637e102ab12c2
+
+Package: nvidia-dkms-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 239
+Provides: nvidia-dkms-kernel
+Depends: dkms, nvidia-kernel-source-570-server (<= 570.86.15-1), nvidia-kernel-source-570-server (>= 570.86.15), nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15), nvidia-firmware-570-server-570.86.15
+Conflicts: nvidia-dkms-kernel
+Replaces: nvidia-dkms-kernel
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-dkms-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 49854
+MD5sum: 1cfd61d8d9e3a1dfb9355f2e91776ecd
+SHA1: 009096f33e183513f02056c7c88bcae7d5923494
+SHA256: 7ea54336a8907e58c1224f4b9dba38bf846f187b8e8ac1ab177288bb7820620f
+SHA512: eba7ad5774dbb14f43bd72c972f672bde28ebe72dfbeaa35cd8cfb12f90382ca5ef145857def1eb5a26da9084801e398f871d0786e3be890706d416209a12da8
+Homepage: http://www.nvidia.com
+Description: NVIDIA DKMS package
+Description-md5: ec8c193060b5458922cc0bda62df7796
+
+Package: nvidia-dkms-570-server-open
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 48
+Provides: nvidia-dkms-kernel
+Depends: dkms, nvidia-kernel-source-570-server-open (<= 570.86.15-1), nvidia-kernel-source-570-server-open (>= 570.86.15), nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15)
+Conflicts: nvidia-dkms-kernel
+Replaces: nvidia-dkms-kernel
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-dkms-570-server-open_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 14172
+MD5sum: 66c66c9560e0b9cbffd45db57680d0d8
+SHA1: a282afcbe1131394538baa0d8141a5a5f75ffba9
+SHA256: f030a30b827ec662a65f90ca7cbb35d505266ec4996b7e0b16fd83bb01459012
+SHA512: bfba8382949ef91333b889c14021a64044fd96e512da936185d6d2baa1631f30a56a0e2306321775dfd06bb5f0e691c1ccfe1001771bf88327c96ea66a54879f
+Homepage: http://www.nvidia.com
+Description: NVIDIA DKMS package (open kernel module)
+Description-md5: dafa8f35853882b3010cba056bb022d0
+
+Package: nvidia-driver-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1377
+Depends: libnvidia-gl-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-dkms-570-server (<= 570.86.15-1), nvidia-dkms-570-server (>= 570.86.15), nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15), nvidia-kernel-source-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-compute-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-extra-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-compute-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-decode-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-encode-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), xserver-xorg-video-nvidia-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-cfg1-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-fbc1-570-server (= 570.86.15-0ubuntu0.22.04.4)
+Suggests: nvidia-settings, nvidia-prime (>= 0.8)
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-driver-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 488788
+MD5sum: c90864432b9ddf8e95e2384ec9a2870c
+SHA1: 1f19dafd4eb7dd3416c5034b05dea5d2b3acca8a
+SHA256: 87f8b26e3624987ffeaa1362b987162b326a1f31f01c3fe5117b131a7eadafe3
+SHA512: 523211b838d69c8f58dcf7c9e429dce5eb6a892ca53d2e9144afb2c129f6870e4f96cb7025ef483f9805e93f8bd4f6cdd7aabefaa0480d73c7cd4c43b577c52e
+Homepage: http://www.nvidia.com
+Description: NVIDIA Server Driver metapackage
+Modaliases: nvidia(pci:v000010DEd00001340sv*sd*bc03sc*i*, pci:v000010DEd00001341sv*sd*bc03sc*i*, pci:v000010DEd00001344sv*sd*bc03sc*i*, pci:v000010DEd00001346sv*sd*bc03sc*i*, pci:v000010DEd00001347sv*sd*bc03sc*i*, pci:v000010DEd00001348sv*sd*bc03sc*i*, pci:v000010DEd00001349sv*sd*bc03sc*i*, pci:v000010DEd0000134Bsv*sd*bc03sc*i*, pci:v000010DEd0000134Dsv*sd*bc03sc*i*, pci:v000010DEd0000134Esv*sd*bc03sc*i*, pci:v000010DEd0000134Fsv*sd*bc03sc*i*, pci:v000010DEd0000137Asv*sd*bc03sc*i*, pci:v000010DEd0000137Bsv*sd*bc03sc*i*, pci:v000010DEd00001380sv*sd*bc03sc*i*, pci:v000010DEd00001381sv*sd*bc03sc*i*, pci:v000010DEd00001382sv*sd*bc03sc*i*, pci:v000010DEd00001390sv*sd*bc03sc*i*, pci:v000010DEd00001391sv*sd*bc03sc*i*, pci:v000010DEd00001392sv*sd*bc03sc*i*, pci:v000010DEd00001393sv*sd*bc03sc*i*, pci:v000010DEd00001398sv*sd*bc03sc*i*, pci:v000010DEd00001399sv*sd*bc03sc*i*, pci:v000010DEd0000139Asv*sd*bc03sc*i*, pci:v000010DEd0000139Bsv*sd*bc03sc*i*, pci:v000010DEd0000139Csv*sd*bc03sc*i*, pci:v000010DEd0000139Dsv*sd*bc03sc*i*, pci:v000010DEd000013B0sv*sd*bc03sc*i*, pci:v000010DEd000013B1sv*sd*bc03sc*i*, pci:v000010DEd000013B2sv*sd*bc03sc*i*, pci:v000010DEd000013B3sv*sd*bc03sc*i*, pci:v000010DEd000013B4sv*sd*bc03sc*i*, pci:v000010DEd000013B6sv*sd*bc03sc*i*, pci:v000010DEd000013B9sv*sd*bc03sc*i*, pci:v000010DEd000013BAsv*sd*bc03sc*i*, pci:v000010DEd000013BBsv*sd*bc03sc*i*, pci:v000010DEd000013BCsv*sd*bc03sc*i*, pci:v000010DEd000013C0sv*sd*bc03sc*i*, pci:v000010DEd000013C2sv*sd*bc03sc*i*, pci:v000010DEd000013D7sv*sd*bc03sc*i*, pci:v000010DEd000013D8sv*sd*bc03sc*i*, pci:v000010DEd000013D9sv*sd*bc03sc*i*, pci:v000010DEd000013DAsv*sd*bc03sc*i*, pci:v000010DEd000013F0sv*sd*bc03sc*i*, pci:v000010DEd000013F1sv*sd*bc03sc*i*, pci:v000010DEd000013F2sv*sd*bc03sc*i*, pci:v000010DEd000013F3sv*sd*bc03sc*i*, pci:v000010DEd000013F8sv*sd*bc03sc*i*, pci:v000010DEd000013F9sv*sd*bc03sc*i*, pci:v000010DEd000013FAsv*sd*bc03sc*i*, pci:v000010DEd000013FBsv*sd*bc03sc*i*, pci:v000010DEd00001401sv*sd*bc03sc*i*, pci:v000010DEd00001402sv*sd*bc03sc*i*, pci:v000010DEd00001406sv*sd*bc03sc*i*, pci:v000010DEd00001407sv*sd*bc03sc*i*, pci:v000010DEd00001427sv*sd*bc03sc*i*, pci:v000010DEd00001430sv*sd*bc03sc*i*, pci:v000010DEd00001431sv*sd*bc03sc*i*, pci:v000010DEd00001436sv*sd*bc03sc*i*, pci:v000010DEd000015F0sv*sd*bc03sc*i*, pci:v000010DEd000015F7sv*sd*bc03sc*i*, pci:v000010DEd000015F8sv*sd*bc03sc*i*, pci:v000010DEd000015F9sv*sd*bc03sc*i*, pci:v000010DEd00001617sv*sd*bc03sc*i*, pci:v000010DEd00001618sv*sd*bc03sc*i*, pci:v000010DEd00001619sv*sd*bc03sc*i*, pci:v000010DEd0000161Asv*sd*bc03sc*i*, pci:v000010DEd00001667sv*sd*bc03sc*i*, pci:v000010DEd0000174Dsv*sd*bc03sc*i*, pci:v000010DEd0000174Esv*sd*bc03sc*i*, pci:v000010DEd0000179Csv*sd*bc03sc*i*, pci:v000010DEd000017C2sv*sd*bc03sc*i*, pci:v000010DEd000017C8sv*sd*bc03sc*i*, pci:v000010DEd000017F0sv*sd*bc03sc*i*, pci:v000010DEd000017F1sv*sd*bc03sc*i*, pci:v000010DEd000017FDsv*sd*bc03sc*i*, pci:v000010DEd00001B00sv*sd*bc03sc*i*, pci:v000010DEd00001B02sv*sd*bc03sc*i*, pci:v000010DEd00001B06sv*sd*bc03sc*i*, pci:v000010DEd00001B30sv*sd*bc03sc*i*, pci:v000010DEd00001B38sv*sd*bc03sc*i*, pci:v000010DEd00001B80sv*sd*bc03sc*i*, pci:v000010DEd00001B81sv*sd*bc03sc*i*, pci:v000010DEd00001B82sv*sd*bc03sc*i*, pci:v000010DEd00001B83sv*sd*bc03sc*i*, pci:v000010DEd00001B84sv*sd*bc03sc*i*, pci:v000010DEd00001B87sv*sd*bc03sc*i*, pci:v000010DEd00001BA0sv*sd*bc03sc*i*, pci:v000010DEd00001BA1sv*sd*bc03sc*i*, pci:v000010DEd00001BA2sv*sd*bc03sc*i*, pci:v000010DEd00001BB0sv*sd*bc03sc*i*, pci:v000010DEd00001BB1sv*sd*bc03sc*i*, pci:v000010DEd00001BB4sv*sd*bc03sc*i*, pci:v000010DEd00001BB5sv*sd*bc03sc*i*, pci:v000010DEd00001BB6sv*sd*bc03sc*i*, pci:v000010DEd00001BB7sv*sd*bc03sc*i*, pci:v000010DEd00001BB8sv*sd*bc03sc*i*, pci:v000010DEd00001BB9sv*sd*bc03sc*i*, pci:v000010DEd00001BBBsv*sd*bc03sc*i*, pci:v000010DEd00001BC7sv*sd*bc03sc*i*, pci:v000010DEd00001BE0sv*sd*bc03sc*i*, pci:v000010DEd00001BE1sv*sd*bc03sc*i*, pci:v000010DEd00001C02sv*sd*bc03sc*i*, pci:v000010DEd00001C03sv*sd*bc03sc*i*, pci:v000010DEd00001C04sv*sd*bc03sc*i*, pci:v000010DEd00001C06sv*sd*bc03sc*i*, pci:v000010DEd00001C07sv*sd*bc03sc*i*, pci:v000010DEd00001C09sv*sd*bc03sc*i*, pci:v000010DEd00001C20sv*sd*bc03sc*i*, pci:v000010DEd00001C21sv*sd*bc03sc*i*, pci:v000010DEd00001C22sv*sd*bc03sc*i*, pci:v000010DEd00001C23sv*sd*bc03sc*i*, pci:v000010DEd00001C30sv*sd*bc03sc*i*, pci:v000010DEd00001C31sv*sd*bc03sc*i*, pci:v000010DEd00001C60sv*sd*bc03sc*i*, pci:v000010DEd00001C61sv*sd*bc03sc*i*, pci:v000010DEd00001C62sv*sd*bc03sc*i*, pci:v000010DEd00001C81sv*sd*bc03sc*i*, pci:v000010DEd00001C82sv*sd*bc03sc*i*, pci:v000010DEd00001C83sv*sd*bc03sc*i*, pci:v000010DEd00001C8Csv*sd*bc03sc*i*, pci:v000010DEd00001C8Dsv*sd*bc03sc*i*, pci:v000010DEd00001C8Fsv*sd*bc03sc*i*, pci:v000010DEd00001C90sv*sd*bc03sc*i*, pci:v000010DEd00001C91sv*sd*bc03sc*i*, pci:v000010DEd00001C92sv*sd*bc03sc*i*, pci:v000010DEd00001C94sv*sd*bc03sc*i*, pci:v000010DEd00001C96sv*sd*bc03sc*i*, pci:v000010DEd00001CB1sv*sd*bc03sc*i*, pci:v000010DEd00001CB2sv*sd*bc03sc*i*, pci:v000010DEd00001CB3sv*sd*bc03sc*i*, pci:v000010DEd00001CB6sv*sd*bc03sc*i*, pci:v000010DEd00001CBAsv*sd*bc03sc*i*, pci:v000010DEd00001CBBsv*sd*bc03sc*i*, pci:v000010DEd00001CBCsv*sd*bc03sc*i*, pci:v000010DEd00001CBDsv*sd*bc03sc*i*, pci:v000010DEd00001CFAsv*sd*bc03sc*i*, pci:v000010DEd00001CFBsv*sd*bc03sc*i*, pci:v000010DEd00001D01sv*sd*bc03sc*i*, pci:v000010DEd00001D02sv*sd*bc03sc*i*, pci:v000010DEd00001D10sv*sd*bc03sc*i*, pci:v000010DEd00001D11sv*sd*bc03sc*i*, pci:v000010DEd00001D12sv*sd*bc03sc*i*, pci:v000010DEd00001D13sv*sd*bc03sc*i*, pci:v000010DEd00001D16sv*sd*bc03sc*i*, pci:v000010DEd00001D33sv*sd*bc03sc*i*, pci:v000010DEd00001D34sv*sd*bc03sc*i*, pci:v000010DEd00001D52sv*sd*bc03sc*i*, pci:v000010DEd00001D81sv*sd*bc03sc*i*, pci:v000010DEd00001DB1sv*sd*bc03sc*i*, pci:v000010DEd00001DB3sv*sd*bc03sc*i*, pci:v000010DEd00001DB4sv*sd*bc03sc*i*, pci:v000010DEd00001DB5sv*sd*bc03sc*i*, pci:v000010DEd00001DB6sv*sd*bc03sc*i*, pci:v000010DEd00001DB7sv*sd*bc03sc*i*, pci:v000010DEd00001DB8sv*sd*bc03sc*i*, pci:v000010DEd00001DBAsv*sd*bc03sc*i*, pci:v000010DEd00001DF0sv*sd*bc03sc*i*, pci:v000010DEd00001DF2sv*sd*bc03sc*i*, pci:v000010DEd00001DF6sv*sd*bc03sc*i*, pci:v000010DEd00001E02sv*sd*bc03sc*i*, pci:v000010DEd00001E04sv*sd*bc03sc*i*, pci:v000010DEd00001E07sv*sd*bc03sc*i*, pci:v000010DEd00001E09sv*sd*bc03sc*i*, pci:v000010DEd00001E30sv*sd*bc03sc*i*, pci:v000010DEd00001E36sv*sd*bc03sc*i*, pci:v000010DEd00001E78sv*sd*bc03sc*i*, pci:v000010DEd00001E81sv*sd*bc03sc*i*, pci:v000010DEd00001E82sv*sd*bc03sc*i*, pci:v000010DEd00001E84sv*sd*bc03sc*i*, pci:v000010DEd00001E87sv*sd*bc03sc*i*, pci:v000010DEd00001E89sv*sd*bc03sc*i*, pci:v000010DEd00001E90sv*sd*bc03sc*i*, pci:v000010DEd00001E91sv*sd*bc03sc*i*, pci:v000010DEd00001E93sv*sd*bc03sc*i*, pci:v000010DEd00001EB0sv*sd*bc03sc*i*, pci:v000010DEd00001EB1sv*sd*bc03sc*i*, pci:v000010DEd00001EB5sv*sd*bc03sc*i*, pci:v000010DEd00001EB6sv*sd*bc03sc*i*, pci:v000010DEd00001EC2sv*sd*bc03sc*i*, pci:v000010DEd00001EC7sv*sd*bc03sc*i*, pci:v000010DEd00001ED0sv*sd*bc03sc*i*, pci:v000010DEd00001ED1sv*sd*bc03sc*i*, pci:v000010DEd00001ED3sv*sd*bc03sc*i*, pci:v000010DEd00001EF5sv*sd*bc03sc*i*, pci:v000010DEd00001F02sv*sd*bc03sc*i*, pci:v000010DEd00001F03sv*sd*bc03sc*i*, pci:v000010DEd00001F06sv*sd*bc03sc*i*, pci:v000010DEd00001F07sv*sd*bc03sc*i*, pci:v000010DEd00001F08sv*sd*bc03sc*i*, pci:v000010DEd00001F0Asv*sd*bc03sc*i*, pci:v000010DEd00001F0Bsv*sd*bc03sc*i*, pci:v000010DEd00001F10sv*sd*bc03sc*i*, pci:v000010DEd00001F11sv*sd*bc03sc*i*, pci:v000010DEd00001F12sv*sd*bc03sc*i*, pci:v000010DEd00001F14sv*sd*bc03sc*i*, pci:v000010DEd00001F15sv*sd*bc03sc*i*, pci:v000010DEd00001F36sv*sd*bc03sc*i*, pci:v000010DEd00001F42sv*sd*bc03sc*i*, pci:v000010DEd00001F47sv*sd*bc03sc*i*, pci:v000010DEd00001F50sv*sd*bc03sc*i*, pci:v000010DEd00001F51sv*sd*bc03sc*i*, pci:v000010DEd00001F54sv*sd*bc03sc*i*, pci:v000010DEd00001F55sv*sd*bc03sc*i*, pci:v000010DEd00001F76sv*sd*bc03sc*i*, pci:v000010DEd00001F82sv*sd*bc03sc*i*, pci:v000010DEd00001F83sv*sd*bc03sc*i*, pci:v000010DEd00001F91sv*sd*bc03sc*i*, pci:v000010DEd00001F95sv*sd*bc03sc*i*, pci:v000010DEd00001F96sv*sd*bc03sc*i*, pci:v000010DEd00001F97sv*sd*bc03sc*i*, pci:v000010DEd00001F98sv*sd*bc03sc*i*, pci:v000010DEd00001F99sv*sd*bc03sc*i*, pci:v000010DEd00001F9Csv*sd*bc03sc*i*, pci:v000010DEd00001F9Dsv*sd*bc03sc*i*, pci:v000010DEd00001F9Fsv*sd*bc03sc*i*, pci:v000010DEd00001FA0sv*sd*bc03sc*i*, pci:v000010DEd00001FB0sv*sd*bc03sc*i*, pci:v000010DEd00001FB1sv*sd*bc03sc*i*, pci:v000010DEd00001FB2sv*sd*bc03sc*i*, pci:v000010DEd00001FB6sv*sd*bc03sc*i*, pci:v000010DEd00001FB7sv*sd*bc03sc*i*, pci:v000010DEd00001FB8sv*sd*bc03sc*i*, pci:v000010DEd00001FB9sv*sd*bc03sc*i*, pci:v000010DEd00001FBAsv*sd*bc03sc*i*, pci:v000010DEd00001FBBsv*sd*bc03sc*i*, pci:v000010DEd00001FBCsv*sd*bc03sc*i*, pci:v000010DEd00001FDDsv*sd*bc03sc*i*, pci:v000010DEd00001FF0sv*sd*bc03sc*i*, pci:v000010DEd00001FF2sv*sd*bc03sc*i*, pci:v000010DEd00001FF9sv*sd*bc03sc*i*, pci:v000010DEd000020B0sv*sd*bc03sc*i*, pci:v000010DEd000020B2sv*sd*bc03sc*i*, pci:v000010DEd000020B3sv*sd*bc03sc*i*, pci:v000010DEd000020B5sv*sd*bc03sc*i*, pci:v000010DEd000020B6sv*sd*bc03sc*i*, pci:v000010DEd000020B7sv*sd*bc03sc*i*, pci:v000010DEd000020BDsv*sd*bc03sc*i*, pci:v000010DEd000020F1sv*sd*bc03sc*i*, pci:v000010DEd000020F3sv*sd*bc03sc*i*, pci:v000010DEd000020F5sv*sd*bc03sc*i*, pci:v000010DEd000020F6sv*sd*bc03sc*i*, pci:v000010DEd000020FDsv*sd*bc03sc*i*, pci:v000010DEd00002182sv*sd*bc03sc*i*, pci:v000010DEd00002184sv*sd*bc03sc*i*, pci:v000010DEd00002187sv*sd*bc03sc*i*, pci:v000010DEd00002188sv*sd*bc03sc*i*, pci:v000010DEd00002189sv*sd*bc03sc*i*, pci:v000010DEd00002191sv*sd*bc03sc*i*, pci:v000010DEd00002192sv*sd*bc03sc*i*, pci:v000010DEd000021C4sv*sd*bc03sc*i*, pci:v000010DEd000021D1sv*sd*bc03sc*i*, pci:v000010DEd00002203sv*sd*bc03sc*i*, pci:v000010DEd00002204sv*sd*bc03sc*i*, pci:v000010DEd00002206sv*sd*bc03sc*i*, pci:v000010DEd00002207sv*sd*bc03sc*i*, pci:v000010DEd00002208sv*sd*bc03sc*i*, pci:v000010DEd0000220Asv*sd*bc03sc*i*, pci:v000010DEd0000220Dsv*sd*bc03sc*i*, pci:v000010DEd00002216sv*sd*bc03sc*i*, pci:v000010DEd00002230sv*sd*bc03sc*i*, pci:v000010DEd00002231sv*sd*bc03sc*i*, pci:v000010DEd00002232sv*sd*bc03sc*i*, pci:v000010DEd00002233sv*sd*bc03sc*i*, pci:v000010DEd00002235sv*sd*bc03sc*i*, pci:v000010DEd00002236sv*sd*bc03sc*i*, pci:v000010DEd00002237sv*sd*bc03sc*i*, pci:v000010DEd00002238sv*sd*bc03sc*i*, pci:v000010DEd00002321sv*sd*bc03sc*i*, pci:v000010DEd00002322sv*sd*bc03sc*i*, pci:v000010DEd00002324sv*sd*bc03sc*i*, pci:v000010DEd00002329sv*sd*bc03sc*i*, pci:v000010DEd0000232Csv*sd*bc03sc*i*, pci:v000010DEd00002330sv*sd*bc03sc*i*, pci:v000010DEd00002331sv*sd*bc03sc*i*, pci:v000010DEd00002335sv*sd*bc03sc*i*, pci:v000010DEd00002339sv*sd*bc03sc*i*, pci:v000010DEd0000233Asv*sd*bc03sc*i*, pci:v000010DEd0000233Bsv*sd*bc03sc*i*, pci:v000010DEd00002342sv*sd*bc03sc*i*, pci:v000010DEd00002348sv*sd*bc03sc*i*, pci:v000010DEd00002414sv*sd*bc03sc*i*, pci:v000010DEd00002420sv*sd*bc03sc*i*, pci:v000010DEd00002438sv*sd*bc03sc*i*, pci:v000010DEd00002460sv*sd*bc03sc*i*, pci:v000010DEd00002482sv*sd*bc03sc*i*, pci:v000010DEd00002484sv*sd*bc03sc*i*, pci:v000010DEd00002486sv*sd*bc03sc*i*, pci:v000010DEd00002487sv*sd*bc03sc*i*, pci:v000010DEd00002488sv*sd*bc03sc*i*, pci:v000010DEd00002489sv*sd*bc03sc*i*, pci:v000010DEd0000248Asv*sd*bc03sc*i*, pci:v000010DEd0000249Csv*sd*bc03sc*i*, pci:v000010DEd0000249Dsv*sd*bc03sc*i*, pci:v000010DEd000024A0sv*sd*bc03sc*i*, pci:v000010DEd000024B0sv*sd*bc03sc*i*, pci:v000010DEd000024B1sv*sd*bc03sc*i*, pci:v000010DEd000024B6sv*sd*bc03sc*i*, pci:v000010DEd000024B7sv*sd*bc03sc*i*, pci:v000010DEd000024B8sv*sd*bc03sc*i*, pci:v000010DEd000024B9sv*sd*bc03sc*i*, pci:v000010DEd000024BAsv*sd*bc03sc*i*, pci:v000010DEd000024BBsv*sd*bc03sc*i*, pci:v000010DEd000024C7sv*sd*bc03sc*i*, pci:v000010DEd000024C9sv*sd*bc03sc*i*, pci:v000010DEd000024DCsv*sd*bc03sc*i*, pci:v000010DEd000024DDsv*sd*bc03sc*i*, pci:v000010DEd000024E0sv*sd*bc03sc*i*, pci:v000010DEd000024FAsv*sd*bc03sc*i*, pci:v000010DEd00002503sv*sd*bc03sc*i*, pci:v000010DEd00002504sv*sd*bc03sc*i*, pci:v000010DEd00002507sv*sd*bc03sc*i*, pci:v000010DEd00002508sv*sd*bc03sc*i*, pci:v000010DEd00002520sv*sd*bc03sc*i*, pci:v000010DEd00002521sv*sd*bc03sc*i*, pci:v000010DEd00002523sv*sd*bc03sc*i*, pci:v000010DEd00002531sv*sd*bc03sc*i*, pci:v000010DEd00002544sv*sd*bc03sc*i*, pci:v000010DEd00002560sv*sd*bc03sc*i*, pci:v000010DEd00002563sv*sd*bc03sc*i*, pci:v000010DEd00002571sv*sd*bc03sc*i*, pci:v000010DEd00002582sv*sd*bc03sc*i*, pci:v000010DEd00002584sv*sd*bc03sc*i*, pci:v000010DEd000025A0sv*sd*bc03sc*i*, pci:v000010DEd000025A2sv*sd*bc03sc*i*, pci:v000010DEd000025A5sv*sd*bc03sc*i*, pci:v000010DEd000025A6sv*sd*bc03sc*i*, pci:v000010DEd000025A7sv*sd*bc03sc*i*, pci:v000010DEd000025A9sv*sd*bc03sc*i*, pci:v000010DEd000025AAsv*sd*bc03sc*i*, pci:v000010DEd000025ABsv*sd*bc03sc*i*, pci:v000010DEd000025ACsv*sd*bc03sc*i*, pci:v000010DEd000025ADsv*sd*bc03sc*i*, pci:v000010DEd000025B0sv*sd*bc03sc*i*, pci:v000010DEd000025B2sv*sd*bc03sc*i*, pci:v000010DEd000025B6sv*sd*bc03sc*i*, pci:v000010DEd000025B8sv*sd*bc03sc*i*, pci:v000010DEd000025B9sv*sd*bc03sc*i*, pci:v000010DEd000025BAsv*sd*bc03sc*i*, pci:v000010DEd000025BBsv*sd*bc03sc*i*, pci:v000010DEd000025BCsv*sd*bc03sc*i*, pci:v000010DEd000025BDsv*sd*bc03sc*i*, pci:v000010DEd000025E0sv*sd*bc03sc*i*, pci:v000010DEd000025E2sv*sd*bc03sc*i*, pci:v000010DEd000025E5sv*sd*bc03sc*i*, pci:v000010DEd000025ECsv*sd*bc03sc*i*, pci:v000010DEd000025EDsv*sd*bc03sc*i*, pci:v000010DEd000025F9sv*sd*bc03sc*i*, pci:v000010DEd000025FAsv*sd*bc03sc*i*, pci:v000010DEd000025FBsv*sd*bc03sc*i*, pci:v000010DEd00002684sv*sd*bc03sc*i*, pci:v000010DEd00002685sv*sd*bc03sc*i*, pci:v000010DEd00002689sv*sd*bc03sc*i*, pci:v000010DEd000026B1sv*sd*bc03sc*i*, pci:v000010DEd000026B2sv*sd*bc03sc*i*, pci:v000010DEd000026B3sv*sd*bc03sc*i*, pci:v000010DEd000026B5sv*sd*bc03sc*i*, pci:v000010DEd000026B9sv*sd*bc03sc*i*, pci:v000010DEd000026BAsv*sd*bc03sc*i*, pci:v000010DEd00002702sv*sd*bc03sc*i*, pci:v000010DEd00002704sv*sd*bc03sc*i*, pci:v000010DEd00002705sv*sd*bc03sc*i*, pci:v000010DEd00002709sv*sd*bc03sc*i*, pci:v000010DEd00002717sv*sd*bc03sc*i*, pci:v000010DEd00002730sv*sd*bc03sc*i*, pci:v000010DEd00002757sv*sd*bc03sc*i*, pci:v000010DEd00002770sv*sd*bc03sc*i*, pci:v000010DEd00002782sv*sd*bc03sc*i*, pci:v000010DEd00002783sv*sd*bc03sc*i*, pci:v000010DEd00002786sv*sd*bc03sc*i*, pci:v000010DEd00002788sv*sd*bc03sc*i*, pci:v000010DEd000027A0sv*sd*bc03sc*i*, pci:v000010DEd000027B0sv*sd*bc03sc*i*, pci:v000010DEd000027B1sv*sd*bc03sc*i*, pci:v000010DEd000027B2sv*sd*bc03sc*i*, pci:v000010DEd000027B6sv*sd*bc03sc*i*, pci:v000010DEd000027B8sv*sd*bc03sc*i*, pci:v000010DEd000027BAsv*sd*bc03sc*i*, pci:v000010DEd000027BBsv*sd*bc03sc*i*, pci:v000010DEd000027E0sv*sd*bc03sc*i*, pci:v000010DEd000027FBsv*sd*bc03sc*i*, pci:v000010DEd00002803sv*sd*bc03sc*i*, pci:v000010DEd00002805sv*sd*bc03sc*i*, pci:v000010DEd00002808sv*sd*bc03sc*i*, pci:v000010DEd00002820sv*sd*bc03sc*i*, pci:v000010DEd00002822sv*sd*bc03sc*i*, pci:v000010DEd00002838sv*sd*bc03sc*i*, pci:v000010DEd00002860sv*sd*bc03sc*i*, pci:v000010DEd00002882sv*sd*bc03sc*i*, pci:v000010DEd000028A0sv*sd*bc03sc*i*, pci:v000010DEd000028A1sv*sd*bc03sc*i*, pci:v000010DEd000028A3sv*sd*bc03sc*i*, pci:v000010DEd000028B0sv*sd*bc03sc*i*, pci:v000010DEd000028B8sv*sd*bc03sc*i*, pci:v000010DEd000028B9sv*sd*bc03sc*i*, pci:v000010DEd000028BAsv*sd*bc03sc*i*, pci:v000010DEd000028BBsv*sd*bc03sc*i*, pci:v000010DEd000028E0sv*sd*bc03sc*i*, pci:v000010DEd000028E1sv*sd*bc03sc*i*, pci:v000010DEd000028F8sv*sd*bc03sc*i*, pci:v000010DEd00002901sv*sd*bc03sc*i*, pci:v000010DEd00001EB8sv*sd*bc03sc*i*, pci:v000010DEd00001DB2sv*sd*bc03sc*i*)
+Pmaliases: nvidia(pci:v000010DEd00001E02sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E04sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E07sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E30sv000010DEsd0000129Ebc03sc*i*, pci:v000010DEd00001E36sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E78sv000010DEsd000013D9bc03sc*i*, pci:v000010DEd00001E81sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E82sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E84sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E87sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E89sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E90sv00001D05sd00001069bc03sc*i*, pci:v000010DEd00001E91sv00008086sd00003012bc03sc*i*, pci:v000010DEd00001E93sv00001D05sd00001089bc03sc*i*, pci:v000010DEd00001EB0sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EB1sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EB5sv00001A58sd0000200Abc03sc*i*, pci:v000010DEd00001EB6sv000017AAsd000022BAbc03sc*i*, pci:v000010DEd00001EC2sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EC7sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001ED0sv000017AAsd00003FFEbc03sc*i*, pci:v000010DEd00001ED1sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001ED3sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001EF5sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F02sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F03sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F06sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F07sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F08sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F0Asv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F10sv00008086sd00002087bc03sc*i*, pci:v000010DEd00001F11sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F12sv000017AAsd00003803bc03sc*i*, pci:v000010DEd00001F14sv00001A58sd00003002bc03sc*i*, pci:v000010DEd00001F15sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F36sv00001414sd00000032bc03sc*i*, pci:v000010DEd00001F42sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F47sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F50sv000017AAsd00003FFEbc03sc*i*, pci:v000010DEd00001F51sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F54sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001F55sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F76sv0000102Bsd00002900bc03sc*i*, pci:v000010DEd00001F82sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F83sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F91sv00001A58sd00001001bc03sc*i*, pci:v000010DEd00001F95sv00001E83sd00003E30bc03sc*i*, pci:v000010DEd00001F96sv00001462sd00001297bc03sc*i*, pci:v000010DEd00001F97sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F98sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F99sv00001E83sd00003E30bc03sc*i*, pci:v000010DEd00001F9Csv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F9Dsv00001462sd0000132Ebc03sc*i*, pci:v000010DEd00001F9Fsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FA0sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB0sv000017AAsd000012DBbc03sc*i*, pci:v000010DEd00001FB1sv000017AAsd00001488bc03sc*i*, pci:v000010DEd00001FB2sv000017AAsd00001489bc03sc*i*, pci:v000010DEd00001FB6sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB7sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB8sv000017AAsd000022C1bc03sc*i*, pci:v000010DEd00001FB9sv000017AAsd000022C1bc03sc*i*, pci:v000010DEd00001FBAsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FBBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FBCsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FDDsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FF0sv000017AAsd00001612bc03sc*i*, pci:v000010DEd00001FF2sv000017AAsd000018FFbc03sc*i*, pci:v000010DEd00001FF9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000020B0sv000010DEsd00001450bc03sc*i*, pci:v000010DEd000020B2sv000010DEsd00001625bc03sc*i*, pci:v000010DEd000020B3sv000010DEsd000014A8bc03sc*i*, pci:v000010DEd000020B5sv000010DEsd00001642bc03sc*i*, pci:v000010DEd000020B6sv000010DEsd00001492bc03sc*i*, pci:v000010DEd000020B7sv000010DEsd00001852bc03sc*i*, pci:v000010DEd000020BDsv000010DEsd000017F4bc03sc*i*, pci:v000010DEd000020F1sv000010DEsd0000145Fbc03sc*i*, pci:v000010DEd000020F3sv000010DEsd000017A2bc03sc*i*, pci:v000010DEd000020F5sv000010DEsd0000179Abc03sc*i*, pci:v000010DEd000020F6sv000017AAsd0000180Abc03sc*i*, pci:v000010DEd000020FDsv000010DEsd000017F8bc03sc*i*, pci:v000010DEd00002182sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002184sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002187sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002188sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002191sv000017AAsd0000381Ebc03sc*i*, pci:v000010DEd00002192sv0000*sd0000*bc03sc*i*, pci:v000010DEd000021C4sv0000*sd0000*bc03sc*i*, pci:v000010DEd000021D1sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002203sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002204sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002206sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002207sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002208sv0000*sd0000*bc03sc*i*, pci:v000010DEd0000220Asv0000*sd0000*bc03sc*i*, pci:v000010DEd0000220Dsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002216sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002230sv000017AAsd00001459bc03sc*i*, pci:v000010DEd00002231sv000017AAsd0000147Ebc03sc*i*, pci:v000010DEd00002232sv000017AAsd0000163Cbc03sc*i*, pci:v000010DEd00002233sv000017AAsd0000165Abc03sc*i*, pci:v000010DEd00002235sv000010DEsd0000145Abc03sc*i*, pci:v000010DEd00002236sv000010DEsd00001482bc03sc*i*, pci:v000010DEd00002237sv000010DEsd0000152Fbc03sc*i*, pci:v000010DEd00002238sv000010DEsd00001677bc03sc*i*, pci:v000010DEd00002321sv000010DEsd00001839bc03sc*i*, pci:v000010DEd00002322sv000010DEsd000017A4bc03sc*i*, pci:v000010DEd00002324sv000010DEsd000017A8bc03sc*i*, pci:v000010DEd00002329sv000010DEsd0000198Cbc03sc*i*, pci:v000010DEd0000232Csv000010DEsd00002063bc03sc*i*, pci:v000010DEd00002330sv000010DEsd000016C1bc03sc*i*, pci:v000010DEd00002331sv000010DEsd00001626bc03sc*i*, pci:v000010DEd00002335sv000010DEsd000018BFbc03sc*i*, pci:v000010DEd00002339sv000010DEsd000017FCbc03sc*i*, pci:v000010DEd0000233Asv000010DEsd0000183Abc03sc*i*, pci:v000010DEd0000233Bsv000010DEsd00001996bc03sc*i*, pci:v000010DEd00002342sv000010DEsd00001809bc03sc*i*, pci:v000010DEd00002348sv000010DEsd000018D2bc03sc*i*, pci:v000010DEd00002414sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002420sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002438sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002460sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002482sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002484sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002486sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002487sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002488sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002489sv0000*sd0000*bc03sc*i*, pci:v000010DEd0000248Asv0000*sd0000*bc03sc*i*, pci:v000010DEd0000249Csv00001D05sd00001194bc03sc*i*, pci:v000010DEd0000249Dsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024A0sv00001D05sd00001192bc03sc*i*, pci:v000010DEd000024B0sv000017AAsd000014ADbc03sc*i*, pci:v000010DEd000024B1sv000010DEsd00001658bc03sc*i*, pci:v000010DEd000024B6sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024C7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024C9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024DCsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024DDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024FAsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002503sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002504sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002507sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002508sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002520sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002521sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002523sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002531sv000017AAsd0000151Dbc03sc*i*, pci:v000010DEd00002544sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002560sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002563sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002571sv000017AAsd00001611bc03sc*i*, pci:v000010DEd00002582sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002584sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A0sv00001D05sd00001196bc03sc*i*, pci:v000010DEd000025A2sv00001D05sd00001195bc03sc*i*, pci:v000010DEd000025A5sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A6sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025AAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ABsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ACsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ADsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025B0sv000017AAsd00001878bc03sc*i*, pci:v000010DEd000025B2sv000017AAsd00001879bc03sc*i*, pci:v000010DEd000025B6sv000010DEsd0000157Ebc03sc*i*, pci:v000010DEd000025B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BCsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E2sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E5sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ECsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025EDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025F9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025FAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025FBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002684sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002685sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002689sv0000*sd0000*bc03sc*i*, pci:v000010DEd000026B1sv000017AAsd000016A1bc03sc*i*, pci:v000010DEd000026B2sv000017AAsd000017FAbc03sc*i*, pci:v000010DEd000026B3sv000017AAsd00001934bc03sc*i*, pci:v000010DEd000026B5sv000010DEsd000017DAbc03sc*i*, pci:v000010DEd000026B9sv000010DEsd000018CFbc03sc*i*, pci:v000010DEd000026BAsv000010DEsd00001990bc03sc*i*, pci:v000010DEd00002702sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002704sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002705sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002709sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002717sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002730sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002757sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002770sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002782sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002783sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002786sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002788sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027A0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027B0sv000017AAsd000016FAbc03sc*i*, pci:v000010DEd000027B1sv000017AAsd0000180Cbc03sc*i*, pci:v000010DEd000027B2sv000017AAsd0000181Bbc03sc*i*, pci:v000010DEd000027B6sv000010DEsd00001933bc03sc*i*, pci:v000010DEd000027B8sv000010DEsd000016EEbc03sc*i*, pci:v000010DEd000027BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000027BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000027E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027FBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002803sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002805sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002808sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002820sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002822sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002838sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002860sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002882sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A1sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A3sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028B0sv000017AAsd00001871bc03sc*i*, pci:v000010DEd000028B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000028BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000028E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028E1sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028F8sv0000*sd0000*bc03sc*i*)
+Support: PB
+Description-md5: 897d460f9872b6623eba97d25f23556a
+
+Package: nvidia-driver-570-server-open
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 32
+Depends: libnvidia-gl-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-dkms-570-server-open (<= 570.86.15-1), nvidia-dkms-570-server-open (>= 570.86.15), nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15), nvidia-kernel-source-570-server-open (= 570.86.15-0ubuntu0.22.04.4), libnvidia-compute-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-extra-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-compute-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-decode-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-encode-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), xserver-xorg-video-nvidia-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-cfg1-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-fbc1-570-server (= 570.86.15-0ubuntu0.22.04.4)
+Recommends: nvidia-settings, nvidia-prime (>= 0.8)
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-driver-570-server-open_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 11964
+MD5sum: 265d4f677338c1e094afbb009271a044
+SHA1: 51726a8943c76e14c0e204dbd65b7c14da8387b9
+SHA256: 52673f2acc2734e4a96efd43140a86435bbc2a50e6849ec5b2722b20ea4f8ad6
+SHA512: 3687488774741d2b17ffdfff51b563593dd86b89e34a932b89f03f63a3fb38485c8f2f7308243a1c1f6623283e3848890c9bffcddc09b01454b22a89f5e24c20
+Homepage: http://www.nvidia.com
+Description: NVIDIA driver (open kernel) metapackage
+Modaliases: nvidia(pci:v000010DEd00001E02sv*sd*bc03sc*i*, pci:v000010DEd00001E04sv*sd*bc03sc*i*, pci:v000010DEd00001E07sv*sd*bc03sc*i*, pci:v000010DEd00001E09sv*sd*bc03sc*i*, pci:v000010DEd00001E30sv*sd*bc03sc*i*, pci:v000010DEd00001E36sv*sd*bc03sc*i*, pci:v000010DEd00001E78sv*sd*bc03sc*i*, pci:v000010DEd00001E81sv*sd*bc03sc*i*, pci:v000010DEd00001E82sv*sd*bc03sc*i*, pci:v000010DEd00001E84sv*sd*bc03sc*i*, pci:v000010DEd00001E87sv*sd*bc03sc*i*, pci:v000010DEd00001E89sv*sd*bc03sc*i*, pci:v000010DEd00001E90sv*sd*bc03sc*i*, pci:v000010DEd00001E91sv*sd*bc03sc*i*, pci:v000010DEd00001E93sv*sd*bc03sc*i*, pci:v000010DEd00001EB0sv*sd*bc03sc*i*, pci:v000010DEd00001EB1sv*sd*bc03sc*i*, pci:v000010DEd00001EB5sv*sd*bc03sc*i*, pci:v000010DEd00001EB6sv*sd*bc03sc*i*, pci:v000010DEd00001EC2sv*sd*bc03sc*i*, pci:v000010DEd00001EC7sv*sd*bc03sc*i*, pci:v000010DEd00001ED0sv*sd*bc03sc*i*, pci:v000010DEd00001ED1sv*sd*bc03sc*i*, pci:v000010DEd00001ED3sv*sd*bc03sc*i*, pci:v000010DEd00001EF5sv*sd*bc03sc*i*, pci:v000010DEd00001F02sv*sd*bc03sc*i*, pci:v000010DEd00001F03sv*sd*bc03sc*i*, pci:v000010DEd00001F06sv*sd*bc03sc*i*, pci:v000010DEd00001F07sv*sd*bc03sc*i*, pci:v000010DEd00001F08sv*sd*bc03sc*i*, pci:v000010DEd00001F0Asv*sd*bc03sc*i*, pci:v000010DEd00001F0Bsv*sd*bc03sc*i*, pci:v000010DEd00001F10sv*sd*bc03sc*i*, pci:v000010DEd00001F11sv*sd*bc03sc*i*, pci:v000010DEd00001F12sv*sd*bc03sc*i*, pci:v000010DEd00001F14sv*sd*bc03sc*i*, pci:v000010DEd00001F15sv*sd*bc03sc*i*, pci:v000010DEd00001F36sv*sd*bc03sc*i*, pci:v000010DEd00001F42sv*sd*bc03sc*i*, pci:v000010DEd00001F47sv*sd*bc03sc*i*, pci:v000010DEd00001F50sv*sd*bc03sc*i*, pci:v000010DEd00001F51sv*sd*bc03sc*i*, pci:v000010DEd00001F54sv*sd*bc03sc*i*, pci:v000010DEd00001F55sv*sd*bc03sc*i*, pci:v000010DEd00001F76sv*sd*bc03sc*i*, pci:v000010DEd00001F82sv*sd*bc03sc*i*, pci:v000010DEd00001F83sv*sd*bc03sc*i*, pci:v000010DEd00001F91sv*sd*bc03sc*i*, pci:v000010DEd00001F95sv*sd*bc03sc*i*, pci:v000010DEd00001F96sv*sd*bc03sc*i*, pci:v000010DEd00001F97sv*sd*bc03sc*i*, pci:v000010DEd00001F98sv*sd*bc03sc*i*, pci:v000010DEd00001F99sv*sd*bc03sc*i*, pci:v000010DEd00001F9Csv*sd*bc03sc*i*, pci:v000010DEd00001F9Dsv*sd*bc03sc*i*, pci:v000010DEd00001F9Fsv*sd*bc03sc*i*, pci:v000010DEd00001FA0sv*sd*bc03sc*i*, pci:v000010DEd00001FB0sv*sd*bc03sc*i*, pci:v000010DEd00001FB1sv*sd*bc03sc*i*, pci:v000010DEd00001FB2sv*sd*bc03sc*i*, pci:v000010DEd00001FB6sv*sd*bc03sc*i*, pci:v000010DEd00001FB7sv*sd*bc03sc*i*, pci:v000010DEd00001FB8sv*sd*bc03sc*i*, pci:v000010DEd00001FB9sv*sd*bc03sc*i*, pci:v000010DEd00001FBAsv*sd*bc03sc*i*, pci:v000010DEd00001FBBsv*sd*bc03sc*i*, pci:v000010DEd00001FBCsv*sd*bc03sc*i*, pci:v000010DEd00001FDDsv*sd*bc03sc*i*, pci:v000010DEd00001FF0sv*sd*bc03sc*i*, pci:v000010DEd00001FF2sv*sd*bc03sc*i*, pci:v000010DEd00001FF9sv*sd*bc03sc*i*, pci:v000010DEd000020B0sv*sd*bc03sc*i*, pci:v000010DEd000020B2sv*sd*bc03sc*i*, pci:v000010DEd000020B3sv*sd*bc03sc*i*, pci:v000010DEd000020B5sv*sd*bc03sc*i*, pci:v000010DEd000020B6sv*sd*bc03sc*i*, pci:v000010DEd000020B7sv*sd*bc03sc*i*, pci:v000010DEd000020BDsv*sd*bc03sc*i*, pci:v000010DEd000020F1sv*sd*bc03sc*i*, pci:v000010DEd000020F3sv*sd*bc03sc*i*, pci:v000010DEd000020F5sv*sd*bc03sc*i*, pci:v000010DEd000020F6sv*sd*bc03sc*i*, pci:v000010DEd000020FDsv*sd*bc03sc*i*, pci:v000010DEd00002182sv*sd*bc03sc*i*, pci:v000010DEd00002184sv*sd*bc03sc*i*, pci:v000010DEd00002187sv*sd*bc03sc*i*, pci:v000010DEd00002188sv*sd*bc03sc*i*, pci:v000010DEd00002189sv*sd*bc03sc*i*, pci:v000010DEd00002191sv*sd*bc03sc*i*, pci:v000010DEd00002192sv*sd*bc03sc*i*, pci:v000010DEd000021C4sv*sd*bc03sc*i*, pci:v000010DEd000021D1sv*sd*bc03sc*i*, pci:v000010DEd00002203sv*sd*bc03sc*i*, pci:v000010DEd00002204sv*sd*bc03sc*i*, pci:v000010DEd00002206sv*sd*bc03sc*i*, pci:v000010DEd00002207sv*sd*bc03sc*i*, pci:v000010DEd00002208sv*sd*bc03sc*i*, pci:v000010DEd0000220Asv*sd*bc03sc*i*, pci:v000010DEd0000220Dsv*sd*bc03sc*i*, pci:v000010DEd00002216sv*sd*bc03sc*i*, pci:v000010DEd00002230sv*sd*bc03sc*i*, pci:v000010DEd00002231sv*sd*bc03sc*i*, pci:v000010DEd00002232sv*sd*bc03sc*i*, pci:v000010DEd00002233sv*sd*bc03sc*i*, pci:v000010DEd00002235sv*sd*bc03sc*i*, pci:v000010DEd00002236sv*sd*bc03sc*i*, pci:v000010DEd00002237sv*sd*bc03sc*i*, pci:v000010DEd00002238sv*sd*bc03sc*i*, pci:v000010DEd00002321sv*sd*bc03sc*i*, pci:v000010DEd00002322sv*sd*bc03sc*i*, pci:v000010DEd00002324sv*sd*bc03sc*i*, pci:v000010DEd00002329sv*sd*bc03sc*i*, pci:v000010DEd0000232Csv*sd*bc03sc*i*, pci:v000010DEd00002330sv*sd*bc03sc*i*, pci:v000010DEd00002331sv*sd*bc03sc*i*, pci:v000010DEd00002335sv*sd*bc03sc*i*, pci:v000010DEd00002339sv*sd*bc03sc*i*, pci:v000010DEd0000233Asv*sd*bc03sc*i*, pci:v000010DEd0000233Bsv*sd*bc03sc*i*, pci:v000010DEd00002342sv*sd*bc03sc*i*, pci:v000010DEd00002348sv*sd*bc03sc*i*, pci:v000010DEd00002414sv*sd*bc03sc*i*, pci:v000010DEd00002420sv*sd*bc03sc*i*, pci:v000010DEd00002438sv*sd*bc03sc*i*, pci:v000010DEd00002460sv*sd*bc03sc*i*, pci:v000010DEd00002482sv*sd*bc03sc*i*, pci:v000010DEd00002484sv*sd*bc03sc*i*, pci:v000010DEd00002486sv*sd*bc03sc*i*, pci:v000010DEd00002487sv*sd*bc03sc*i*, pci:v000010DEd00002488sv*sd*bc03sc*i*, pci:v000010DEd00002489sv*sd*bc03sc*i*, pci:v000010DEd0000248Asv*sd*bc03sc*i*, pci:v000010DEd0000249Csv*sd*bc03sc*i*, pci:v000010DEd0000249Dsv*sd*bc03sc*i*, pci:v000010DEd000024A0sv*sd*bc03sc*i*, pci:v000010DEd000024B0sv*sd*bc03sc*i*, pci:v000010DEd000024B1sv*sd*bc03sc*i*, pci:v000010DEd000024B6sv*sd*bc03sc*i*, pci:v000010DEd000024B7sv*sd*bc03sc*i*, pci:v000010DEd000024B8sv*sd*bc03sc*i*, pci:v000010DEd000024B9sv*sd*bc03sc*i*, pci:v000010DEd000024BAsv*sd*bc03sc*i*, pci:v000010DEd000024BBsv*sd*bc03sc*i*, pci:v000010DEd000024C7sv*sd*bc03sc*i*, pci:v000010DEd000024C9sv*sd*bc03sc*i*, pci:v000010DEd000024DCsv*sd*bc03sc*i*, pci:v000010DEd000024DDsv*sd*bc03sc*i*, pci:v000010DEd000024E0sv*sd*bc03sc*i*, pci:v000010DEd000024FAsv*sd*bc03sc*i*, pci:v000010DEd00002503sv*sd*bc03sc*i*, pci:v000010DEd00002504sv*sd*bc03sc*i*, pci:v000010DEd00002507sv*sd*bc03sc*i*, pci:v000010DEd00002508sv*sd*bc03sc*i*, pci:v000010DEd00002520sv*sd*bc03sc*i*, pci:v000010DEd00002521sv*sd*bc03sc*i*, pci:v000010DEd00002523sv*sd*bc03sc*i*, pci:v000010DEd00002531sv*sd*bc03sc*i*, pci:v000010DEd00002544sv*sd*bc03sc*i*, pci:v000010DEd00002560sv*sd*bc03sc*i*, pci:v000010DEd00002563sv*sd*bc03sc*i*, pci:v000010DEd00002571sv*sd*bc03sc*i*, pci:v000010DEd00002582sv*sd*bc03sc*i*, pci:v000010DEd00002584sv*sd*bc03sc*i*, pci:v000010DEd000025A0sv*sd*bc03sc*i*, pci:v000010DEd000025A2sv*sd*bc03sc*i*, pci:v000010DEd000025A5sv*sd*bc03sc*i*, pci:v000010DEd000025A6sv*sd*bc03sc*i*, pci:v000010DEd000025A7sv*sd*bc03sc*i*, pci:v000010DEd000025A9sv*sd*bc03sc*i*, pci:v000010DEd000025AAsv*sd*bc03sc*i*, pci:v000010DEd000025ABsv*sd*bc03sc*i*, pci:v000010DEd000025ACsv*sd*bc03sc*i*, pci:v000010DEd000025ADsv*sd*bc03sc*i*, pci:v000010DEd000025B0sv*sd*bc03sc*i*, pci:v000010DEd000025B2sv*sd*bc03sc*i*, pci:v000010DEd000025B6sv*sd*bc03sc*i*, pci:v000010DEd000025B8sv*sd*bc03sc*i*, pci:v000010DEd000025B9sv*sd*bc03sc*i*, pci:v000010DEd000025BAsv*sd*bc03sc*i*, pci:v000010DEd000025BBsv*sd*bc03sc*i*, pci:v000010DEd000025BCsv*sd*bc03sc*i*, pci:v000010DEd000025BDsv*sd*bc03sc*i*, pci:v000010DEd000025E0sv*sd*bc03sc*i*, pci:v000010DEd000025E2sv*sd*bc03sc*i*, pci:v000010DEd000025E5sv*sd*bc03sc*i*, pci:v000010DEd000025ECsv*sd*bc03sc*i*, pci:v000010DEd000025EDsv*sd*bc03sc*i*, pci:v000010DEd000025F9sv*sd*bc03sc*i*, pci:v000010DEd000025FAsv*sd*bc03sc*i*, pci:v000010DEd000025FBsv*sd*bc03sc*i*, pci:v000010DEd00002684sv*sd*bc03sc*i*, pci:v000010DEd00002685sv*sd*bc03sc*i*, pci:v000010DEd00002689sv*sd*bc03sc*i*, pci:v000010DEd000026B1sv*sd*bc03sc*i*, pci:v000010DEd000026B2sv*sd*bc03sc*i*, pci:v000010DEd000026B3sv*sd*bc03sc*i*, pci:v000010DEd000026B5sv*sd*bc03sc*i*, pci:v000010DEd000026B9sv*sd*bc03sc*i*, pci:v000010DEd000026BAsv*sd*bc03sc*i*, pci:v000010DEd00002702sv*sd*bc03sc*i*, pci:v000010DEd00002704sv*sd*bc03sc*i*, pci:v000010DEd00002705sv*sd*bc03sc*i*, pci:v000010DEd00002709sv*sd*bc03sc*i*, pci:v000010DEd00002717sv*sd*bc03sc*i*, pci:v000010DEd00002730sv*sd*bc03sc*i*, pci:v000010DEd00002757sv*sd*bc03sc*i*, pci:v000010DEd00002770sv*sd*bc03sc*i*, pci:v000010DEd00002782sv*sd*bc03sc*i*, pci:v000010DEd00002783sv*sd*bc03sc*i*, pci:v000010DEd00002786sv*sd*bc03sc*i*, pci:v000010DEd00002788sv*sd*bc03sc*i*, pci:v000010DEd000027A0sv*sd*bc03sc*i*, pci:v000010DEd000027B0sv*sd*bc03sc*i*, pci:v000010DEd000027B1sv*sd*bc03sc*i*, pci:v000010DEd000027B2sv*sd*bc03sc*i*, pci:v000010DEd000027B6sv*sd*bc03sc*i*, pci:v000010DEd000027B8sv*sd*bc03sc*i*, pci:v000010DEd000027BAsv*sd*bc03sc*i*, pci:v000010DEd000027BBsv*sd*bc03sc*i*, pci:v000010DEd000027E0sv*sd*bc03sc*i*, pci:v000010DEd000027FBsv*sd*bc03sc*i*, pci:v000010DEd00002803sv*sd*bc03sc*i*, pci:v000010DEd00002805sv*sd*bc03sc*i*, pci:v000010DEd00002808sv*sd*bc03sc*i*, pci:v000010DEd00002820sv*sd*bc03sc*i*, pci:v000010DEd00002822sv*sd*bc03sc*i*, pci:v000010DEd00002838sv*sd*bc03sc*i*, pci:v000010DEd00002860sv*sd*bc03sc*i*, pci:v000010DEd00002882sv*sd*bc03sc*i*, pci:v000010DEd000028A0sv*sd*bc03sc*i*, pci:v000010DEd000028A1sv*sd*bc03sc*i*, pci:v000010DEd000028A3sv*sd*bc03sc*i*, pci:v000010DEd000028B0sv*sd*bc03sc*i*, pci:v000010DEd000028B8sv*sd*bc03sc*i*, pci:v000010DEd000028B9sv*sd*bc03sc*i*, pci:v000010DEd000028BAsv*sd*bc03sc*i*, pci:v000010DEd000028BBsv*sd*bc03sc*i*, pci:v000010DEd000028E0sv*sd*bc03sc*i*, pci:v000010DEd000028E1sv*sd*bc03sc*i*, pci:v000010DEd000028F8sv*sd*bc03sc*i*, pci:v000010DEd00002901sv*sd*bc03sc*i*, pci:v000010DEd00001DB2sv*sd*bc03sc*i*)
+Pmaliases: nvidia(pci:v000010DEd00001E02sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E04sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E07sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E30sv000010DEsd0000129Ebc03sc*i*, pci:v000010DEd00001E36sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E78sv000010DEsd000013D9bc03sc*i*, pci:v000010DEd00001E81sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E82sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E84sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E87sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E89sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001E90sv00001D05sd00001069bc03sc*i*, pci:v000010DEd00001E91sv00008086sd00003012bc03sc*i*, pci:v000010DEd00001E93sv00001D05sd00001089bc03sc*i*, pci:v000010DEd00001EB0sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EB1sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EB5sv00001A58sd0000200Abc03sc*i*, pci:v000010DEd00001EB6sv000017AAsd000022BAbc03sc*i*, pci:v000010DEd00001EC2sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001EC7sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001ED0sv000017AAsd00003FFEbc03sc*i*, pci:v000010DEd00001ED1sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001ED3sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001EF5sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F02sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F03sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F06sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F07sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F08sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F0Asv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F10sv00008086sd00002087bc03sc*i*, pci:v000010DEd00001F11sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F12sv000017AAsd00003803bc03sc*i*, pci:v000010DEd00001F14sv00001A58sd00003002bc03sc*i*, pci:v000010DEd00001F15sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F36sv00001414sd00000032bc03sc*i*, pci:v000010DEd00001F42sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F47sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F50sv000017AAsd00003FFEbc03sc*i*, pci:v000010DEd00001F51sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F54sv000017AAsd00003FD0bc03sc*i*, pci:v000010DEd00001F55sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F76sv0000102Bsd00002900bc03sc*i*, pci:v000010DEd00001F82sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F83sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F91sv00001A58sd00001001bc03sc*i*, pci:v000010DEd00001F95sv00001E83sd00003E30bc03sc*i*, pci:v000010DEd00001F96sv00001462sd00001297bc03sc*i*, pci:v000010DEd00001F97sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F98sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F99sv00001E83sd00003E30bc03sc*i*, pci:v000010DEd00001F9Csv0000*sd0000*bc03sc*i*, pci:v000010DEd00001F9Dsv00001462sd0000132Ebc03sc*i*, pci:v000010DEd00001F9Fsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FA0sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB0sv000017AAsd000012DBbc03sc*i*, pci:v000010DEd00001FB1sv000017AAsd00001488bc03sc*i*, pci:v000010DEd00001FB2sv000017AAsd00001489bc03sc*i*, pci:v000010DEd00001FB6sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB7sv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FB8sv000017AAsd000022C1bc03sc*i*, pci:v000010DEd00001FB9sv000017AAsd000022C1bc03sc*i*, pci:v000010DEd00001FBAsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FBBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FBCsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FDDsv0000*sd0000*bc03sc*i*, pci:v000010DEd00001FF0sv000017AAsd00001612bc03sc*i*, pci:v000010DEd00001FF2sv000017AAsd000018FFbc03sc*i*, pci:v000010DEd00001FF9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000020B0sv000010DEsd00001450bc03sc*i*, pci:v000010DEd000020B2sv000010DEsd00001625bc03sc*i*, pci:v000010DEd000020B3sv000010DEsd000014A8bc03sc*i*, pci:v000010DEd000020B5sv000010DEsd00001642bc03sc*i*, pci:v000010DEd000020B6sv000010DEsd00001492bc03sc*i*, pci:v000010DEd000020B7sv000010DEsd00001852bc03sc*i*, pci:v000010DEd000020BDsv000010DEsd000017F4bc03sc*i*, pci:v000010DEd000020F1sv000010DEsd0000145Fbc03sc*i*, pci:v000010DEd000020F3sv000010DEsd000017A2bc03sc*i*, pci:v000010DEd000020F5sv000010DEsd0000179Abc03sc*i*, pci:v000010DEd000020F6sv000017AAsd0000180Abc03sc*i*, pci:v000010DEd000020FDsv000010DEsd000017F8bc03sc*i*, pci:v000010DEd00002182sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002184sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002187sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002188sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002191sv000017AAsd0000381Ebc03sc*i*, pci:v000010DEd00002192sv0000*sd0000*bc03sc*i*, pci:v000010DEd000021C4sv0000*sd0000*bc03sc*i*, pci:v000010DEd000021D1sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002203sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002204sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002206sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002207sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002208sv0000*sd0000*bc03sc*i*, pci:v000010DEd0000220Asv0000*sd0000*bc03sc*i*, pci:v000010DEd0000220Dsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002216sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002230sv000017AAsd00001459bc03sc*i*, pci:v000010DEd00002231sv000017AAsd0000147Ebc03sc*i*, pci:v000010DEd00002232sv000017AAsd0000163Cbc03sc*i*, pci:v000010DEd00002233sv000017AAsd0000165Abc03sc*i*, pci:v000010DEd00002235sv000010DEsd0000145Abc03sc*i*, pci:v000010DEd00002236sv000010DEsd00001482bc03sc*i*, pci:v000010DEd00002237sv000010DEsd0000152Fbc03sc*i*, pci:v000010DEd00002238sv000010DEsd00001677bc03sc*i*, pci:v000010DEd00002321sv000010DEsd00001839bc03sc*i*, pci:v000010DEd00002322sv000010DEsd000017A4bc03sc*i*, pci:v000010DEd00002324sv000010DEsd000017A8bc03sc*i*, pci:v000010DEd00002329sv000010DEsd0000198Cbc03sc*i*, pci:v000010DEd0000232Csv000010DEsd00002063bc03sc*i*, pci:v000010DEd00002330sv000010DEsd000016C1bc03sc*i*, pci:v000010DEd00002331sv000010DEsd00001626bc03sc*i*, pci:v000010DEd00002335sv000010DEsd000018BFbc03sc*i*, pci:v000010DEd00002339sv000010DEsd000017FCbc03sc*i*, pci:v000010DEd0000233Asv000010DEsd0000183Abc03sc*i*, pci:v000010DEd0000233Bsv000010DEsd00001996bc03sc*i*, pci:v000010DEd00002342sv000010DEsd00001809bc03sc*i*, pci:v000010DEd00002348sv000010DEsd000018D2bc03sc*i*, pci:v000010DEd00002414sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002420sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002438sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002460sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002482sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002484sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002486sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002487sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002488sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002489sv0000*sd0000*bc03sc*i*, pci:v000010DEd0000248Asv0000*sd0000*bc03sc*i*, pci:v000010DEd0000249Csv00001D05sd00001194bc03sc*i*, pci:v000010DEd0000249Dsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024A0sv00001D05sd00001192bc03sc*i*, pci:v000010DEd000024B0sv000017AAsd000014ADbc03sc*i*, pci:v000010DEd000024B1sv000010DEsd00001658bc03sc*i*, pci:v000010DEd000024B6sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024C7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024C9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024DCsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024DDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000024E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000024FAsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002503sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002504sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002507sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002508sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002520sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002521sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002523sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002531sv000017AAsd0000151Dbc03sc*i*, pci:v000010DEd00002544sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002560sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002563sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002571sv000017AAsd00001611bc03sc*i*, pci:v000010DEd00002582sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002584sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A0sv00001D05sd00001196bc03sc*i*, pci:v000010DEd000025A2sv00001D05sd00001195bc03sc*i*, pci:v000010DEd000025A5sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A6sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A7sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025A9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025AAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ABsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ACsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ADsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025B0sv000017AAsd00001878bc03sc*i*, pci:v000010DEd000025B2sv000017AAsd00001879bc03sc*i*, pci:v000010DEd000025B6sv000010DEsd0000157Ebc03sc*i*, pci:v000010DEd000025B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BCsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025BDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E2sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025E5sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025ECsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025EDsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025F9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000025FAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000025FBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002684sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002685sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002689sv0000*sd0000*bc03sc*i*, pci:v000010DEd000026B1sv000017AAsd000016A1bc03sc*i*, pci:v000010DEd000026B2sv000017AAsd000017FAbc03sc*i*, pci:v000010DEd000026B3sv000017AAsd00001934bc03sc*i*, pci:v000010DEd000026B5sv000010DEsd000017DAbc03sc*i*, pci:v000010DEd000026B9sv000010DEsd000018CFbc03sc*i*, pci:v000010DEd000026BAsv000010DEsd00001990bc03sc*i*, pci:v000010DEd00002702sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002704sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002705sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002709sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002717sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002730sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002757sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002770sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002782sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002783sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002786sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002788sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027A0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027B0sv000017AAsd000016FAbc03sc*i*, pci:v000010DEd000027B1sv000017AAsd0000180Cbc03sc*i*, pci:v000010DEd000027B2sv000017AAsd0000181Bbc03sc*i*, pci:v000010DEd000027B6sv000010DEsd00001933bc03sc*i*, pci:v000010DEd000027B8sv000010DEsd000016EEbc03sc*i*, pci:v000010DEd000027BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000027BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000027E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000027FBsv0000*sd0000*bc03sc*i*, pci:v000010DEd00002803sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002805sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002808sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002820sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002822sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002838sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002860sv0000*sd0000*bc03sc*i*, pci:v000010DEd00002882sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A1sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028A3sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028B0sv000017AAsd00001871bc03sc*i*, pci:v000010DEd000028B8sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028B9sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028BAsv0000*sd0000*bc03sc*i*, pci:v000010DEd000028BBsv0000*sd0000*bc03sc*i*, pci:v000010DEd000028E0sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028E1sv0000*sd0000*bc03sc*i*, pci:v000010DEd000028F8sv0000*sd0000*bc03sc*i*)
+Support: PB
+Description-md5: d7a2dea82ffd9482edb9cdd684371901
+
 Package: nvidia-fabricmanager-525
 Architecture: arm64
 Version: 525.147.05-0ubuntu2.22.04.1
@@ -2207,7 +2688,7 @@ Description-md5: 06ff0a5beaed94dd1612653f803516ef
 
 Package: nvidia-fabricmanager-535
 Architecture: arm64
-Version: 535.183.01-0ubuntu0.22.04.1
+Version: 535.230.02-0ubuntu0.22.04.1
 Priority: optional
 Section: multiverse/libs
 Source: fabric-manager-535
@@ -2218,12 +2699,56 @@ Installed-Size: 8476
 Provides: nvidia-fabricmanager
 Conflicts: nvidia-fabricmanager
 Replaces: nvidia-fabricmanager
-Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
-Size: 1808998
-MD5sum: 49d6504a875558fc82c5c1cecfcb19b6
-SHA1: bf1347f1c5881e67b12b763be408728f9dd0a49c
-SHA256: ca697f6d4eb7db7e922959d0f7822c2ca8a1e8dd38d17b40e41622e51cbaf4fe
-SHA512: b076a8c4dc19f32a7190b9f86a9b4e5e28935335c936f388d7f983b0385c84678390a7f6ab0f14a0ebeb239140ca6a19cb7adb3880d6a1e8776da0ae5de57aea
+Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-535_535.230.02-0ubuntu0.22.04.1_arm64.deb
+Size: 1809928
+MD5sum: 69efe90938d2c7bbb16e3ec78ef6d67e
+SHA1: 688dd95b12245e306083fcb838302b52b840f7b9
+SHA256: b8a3575a132d3d97cb31493aab91ef4fa7d951078f179f510c57ff878a8cec26
+SHA512: 606a3949346b05eeb6237f2c7e751e13af895ef4fb20fd5244119e043e7e98a6decb1650e71168b0c01f6be9263d7181bfbfad7548f4596c84322264753232ef
+Description: Fabric Manager for NVSwitch based systems.
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+
+Package: nvidia-fabricmanager-565
+Architecture: arm64
+Version: 565.57.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-565
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 30571
+Provides: nvidia-fabricmanager
+Conflicts: nvidia-fabricmanager
+Replaces: nvidia-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-565/nvidia-fabricmanager-565_565.57.01-0ubuntu0.22.04.1_arm64.deb
+Size: 6084828
+MD5sum: 9720dac1a672b2556a73e893cbbd2174
+SHA1: bf7aa468b2d6fae8f72f03cd6c3701e638743994
+SHA256: 4141cebcefcbcdda48ee13a271d229aeaf7e87bee459389f0b5721cc4fe9cf67
+SHA512: f17791047623bbd5e90076c29163e9d0498734a212c84222a220d2f516269cde21318f997ea47ff2d83a4c7482dd83fd2698d6168e2f8235ee16d1ee3630c608
+Description: Fabric Manager for NVSwitch based systems.
+Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
+
+Package: nvidia-fabricmanager-570
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-570
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 36394
+Provides: nvidia-fabricmanager
+Conflicts: nvidia-fabricmanager
+Replaces: nvidia-fabricmanager
+Filename: pool/multiverse/f/fabric-manager-570/nvidia-fabricmanager-570_570.86.15-0ubuntu0.22.04.1_arm64.deb
+Size: 7698552
+MD5sum: ca95039e3fd5f6b36814ef2779be4684
+SHA1: 23317dc4bd3c7659be4b31d5144452b59051d4fe
+SHA256: c3fc2406e8199d6eae41063aa420fe6bf89b75e6f97ae8df862ef67dcca28ba5
+SHA512: 528d8ce2586a1b45e6f93e255c0a45ded9a2c0f170d2e528a58ae0eb62cc9cb1e84225a8b9ec080519cf88eea516c0ae3a5ff91ad68833c26e6db703080fd935
 Description: Fabric Manager for NVSwitch based systems.
 Description-md5: 3d49e1346de8fc10beaca066b0eb5df0
 
@@ -2249,7 +2774,7 @@ Description-md5: 6d784138f631bec423b38a723527202b
 
 Package: nvidia-fabricmanager-dev-535
 Architecture: arm64
-Version: 535.183.01-0ubuntu0.22.04.1
+Version: 535.230.02-0ubuntu0.22.04.1
 Priority: optional
 Section: multiverse/libs
 Source: fabric-manager-535
@@ -2260,12 +2785,56 @@ Installed-Size: 1585
 Provides: nvidia-fabricmanager-dev
 Conflicts: nvidia-fabricmanager-dev
 Replaces: nvidia-fabricmanager-dev
-Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-dev-535_535.183.01-0ubuntu0.22.04.1_arm64.deb
-Size: 520122
-MD5sum: d12c8504e39b0d396471eb850c966cea
-SHA1: c4e0d25ecd5b51d84682dc88d82065d88482d342
-SHA256: 4ddb40c4e6e05e21aa859ef195227212f934d18c04e099aaf3b7fb06a75ee207
-SHA512: 3fb8530d7d0dda4091396c59cb489eff6a8293ab4f0faaf84735ab3278ae3c132e973e9b93d5a4ce5787883014b0484a3e038ec2fd33d0109c59f56633c38ca6
+Filename: pool/multiverse/f/fabric-manager-535/nvidia-fabricmanager-dev-535_535.230.02-0ubuntu0.22.04.1_arm64.deb
+Size: 519844
+MD5sum: 2aa3373af43bc616ac936f1f07a8e6d2
+SHA1: 07de436523b6b7cfd5e45255a5533df2a6179b92
+SHA256: 7c0bd9583c8c764f5958dafaf31c5dfa1445b396df22b04306d18a7697428100
+SHA512: 5cd68e43f58a17968ddc0209ba44e1bff0b15830ce09899747593fd4143e3f719a145576fd76aabea11150cdcdf1246c4403417a02dec8981ccbd26a08920d19
+Description: Fabric Manager API headers and associated library
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+
+Package: nvidia-fabricmanager-dev-565
+Architecture: arm64
+Version: 565.57.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-565
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2021
+Provides: nvidia-fabricmanager-dev
+Conflicts: nvidia-fabricmanager-dev
+Replaces: nvidia-fabricmanager-dev
+Filename: pool/multiverse/f/fabric-manager-565/nvidia-fabricmanager-dev-565_565.57.01-0ubuntu0.22.04.1_arm64.deb
+Size: 616018
+MD5sum: 42905f12dee84359170c49882408d36b
+SHA1: 525e5b5dbc2065b2188fe988b3cf7fa303e523d9
+SHA256: 57aefe92782f1da28701e790d127118f2b723fe0b1257445f0a84a74509b7f8a
+SHA512: 18a31a7e59231f8a8a13bdff0db50885ad4135dfd96f0f77135ba3f64a3a4f0a655d3cdb2a21229fd9464cf9367c37859984bc5d1fdbabfb42c95047edd17faa
+Description: Fabric Manager API headers and associated library
+Description-md5: 565605cc6a127d423c88c38e5c2f9a26
+
+Package: nvidia-fabricmanager-dev-570
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Source: fabric-manager-570
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 2604
+Provides: nvidia-fabricmanager-dev
+Conflicts: nvidia-fabricmanager-dev
+Replaces: nvidia-fabricmanager-dev
+Filename: pool/multiverse/f/fabric-manager-570/nvidia-fabricmanager-dev-570_570.86.15-0ubuntu0.22.04.1_arm64.deb
+Size: 822258
+MD5sum: a8d2a16b2890b12ce4f7c0a23c908e46
+SHA1: a30c48e5c8144599c051054012739623c6c8b875
+SHA256: 034623e1e7872fecb1a780e32bf553eedc0da2d6c2037449b14283f840dff203
+SHA512: 83a69377a4219770bef26f817fe73a24568484752882906f9bf7cdc3cc2af12e3b1b4982e50d0454d0157ca3a96871e911fb547dd267891986c0e3e53c120e42
 Description: Fabric Manager API headers and associated library
 Description-md5: 565605cc6a127d423c88c38e5c2f9a26
 
@@ -2290,6 +2859,257 @@ SHA512: 413c652fa37054cf8b6310e42a91fc3f869fe73efffb555870c60e9e180788f3acbcb0b4
 Homepage: http://www.nvidia.com
 Description: Firmware files used by the kernel module
 Description-md5: a9f4cc74ba3faebf0cac0795ed2434bf
+
+Package: nvidia-firmware-570-server-570.86.15
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 89567
+Breaks: nvidia-firmware-570-570.86.15
+Replaces: nvidia-firmware-570-570.86.15
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-firmware-570-server-570.86.15_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 65572980
+MD5sum: 6990939c7a8b22edb209d3fe16fcd489
+SHA1: 7c610c24e37f4c9f689d6f1b074b295377e938be
+SHA256: b854c1c4b55a4a4ece8212f70a76a0e60b1644fc7159f8210d7f35628268e5b1
+SHA512: 28423fd97880f7c22392eb36a5d23ad313ed4c2aa294389f09404c6d372556af6d29f3458ed0a02ecf816e7227351dd2f539e5755237b1e7a4c972b435215ec0
+Homepage: http://www.nvidia.com
+Description: Firmware files used by the kernel module
+Description-md5: a9f4cc74ba3faebf0cac0795ed2434bf
+
+Package: nvidia-headless-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 32
+Provides: nvidia-headless
+Depends: nvidia-headless-no-dkms-570-server, nvidia-dkms-570-server
+Conflicts: nvidia-headless
+Replaces: nvidia-headless
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-headless-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 10454
+MD5sum: 5a51d67443d9629b88f71373fb7bfebf
+SHA1: 9aeccd99e6a944c90a4aea3ee6146f7cc26442c1
+SHA256: 14e999ae69f6341a2bd666ca244788d8abd37c90990d050de3afa93e17db9955
+SHA512: 3709d5cc7e1f28fb28bc2b3781141e925552f293a1356ae69e61bdedccfd794c055de28faa5c6dcd81c2b8987f03887da1eb3b45909925005e372dcc9d53807c
+Homepage: http://www.nvidia.com
+Description: NVIDIA headless metapackage
+Description-md5: 67a94704d675166592a00924c85583e2
+
+Package: nvidia-headless-570-server-open
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 32
+Provides: nvidia-headless
+Depends: nvidia-headless-no-dkms-570-server-open, nvidia-dkms-570-server-open
+Conflicts: nvidia-headless
+Replaces: nvidia-headless
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-headless-570-server-open_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 10474
+MD5sum: 667920c196e63db5c894c84188a170c4
+SHA1: d3129e9937ec681b04978efe94d352467af02a46
+SHA256: 9354afc5b79061aa77d19c877f6b53682f0501b1e9e313ddbf607420901f3426
+SHA512: 2bf58af4629768f99009fa1b3312629bc2b256e8e7f1b9574175ee96b009872dd5cbe33ff7c2f0abf2d9ec7e25d89053aaa908cc50e19e4ada65bf5a09f948b7
+Homepage: http://www.nvidia.com
+Description: NVIDIA headless metapackage (open kernel module)
+Description-md5: bd1b9a701d1d1bdb5adea246c6c4d3d2
+
+Package: nvidia-headless-no-dkms-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 32
+Depends: nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15), nvidia-kernel-source-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-compute-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-compute-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-cfg1-570-server (= 570.86.15-0ubuntu0.22.04.4)
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-headless-no-dkms-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 10548
+MD5sum: b0b9b7fecc79b7916e3feb4dfb24f72d
+SHA1: 0a3d074c36c79cf219d1de257999d3f05c5ded1c
+SHA256: 19f507e11b7b8889205b9cc2a5f378893510c0064d4eda3372886ae12ce89e80
+SHA512: 2feb3d932e98f287d6ef2221d6950220845d2a145de8e5abd3a99a2864772b4a11e7ea5fd9bfa4092e1391a2cb3462f8be1bacd5a4eb1cf7631d7b5951dbdaee
+Homepage: http://www.nvidia.com
+Description: NVIDIA headless metapackage - no DKMS
+Description-md5: 69d1b3a38a409d61b06fc383792f7dbd
+
+Package: nvidia-headless-no-dkms-570-server-open
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 32
+Depends: nvidia-kernel-common-570-server (<= 570.86.15-1), nvidia-kernel-common-570-server (>= 570.86.15), nvidia-kernel-source-570-server-open (= 570.86.15-0ubuntu0.22.04.4), libnvidia-compute-570-server (= 570.86.15-0ubuntu0.22.04.4), nvidia-compute-utils-570-server (= 570.86.15-0ubuntu0.22.04.4), libnvidia-cfg1-570-server (= 570.86.15-0ubuntu0.22.04.4)
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-headless-no-dkms-570-server-open_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 10562
+MD5sum: c0a0a7ab448c4c8217fef97872b50603
+SHA1: 61b58c51e35bb6fdccd08a279732df42a2af0460
+SHA256: aa6e025f7eca23855a0a1790962d79680535535151d1699165dd9f94eb59f801
+SHA512: cacf54dddc90cde112754eacec328f4f0d98fed8ea44d2ce5b81f712d87b5c52972910ce410e4b157114374fb5f66d80bf39e6f51e1b15cef09df01a165f71b5
+Homepage: http://www.nvidia.com
+Description: NVIDIA headless metapackage - no DKMS (open kernel module)
+Description-md5: 808626b1ebfe115f2ff3af640f251701
+
+Package: nvidia-imex-565
+Architecture: arm64
+Version: 565.57.01-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 29616
+Provides: nvidia-imex
+Conflicts: nvidia-imex
+Replaces: nvidia-imex
+Filename: pool/multiverse/n/nvidia-imex-565/nvidia-imex-565_565.57.01-0ubuntu0.22.04.1_arm64.deb
+Size: 10160724
+MD5sum: c4afdc43c221b9f8358867d735233585
+SHA1: ed0c4c4ebab9c5647007cf4242de17f3509e14fb
+SHA256: 0fc34002fc236d914840ec9a3aca85a5643c22ee1cf7f6605b0d81807063d069
+SHA512: 77c5be9a8e059f56f40727ec9672603509c64d3d3d9a6eae44be54afeae66a34e38945da7937686a02f09c1f0e20448d75b83ce3bc9f2b0b1dc4d5adf249b681
+Description: IMEX Manager for NVIDIA based systems.
+Description-md5: f7a765b2a95d4cabcc9695466d5f6cc8
+
+Package: nvidia-imex-570
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.1
+Priority: optional
+Section: multiverse/libs
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 29644
+Provides: nvidia-imex
+Conflicts: nvidia-imex
+Replaces: nvidia-imex
+Filename: pool/multiverse/n/nvidia-imex-570/nvidia-imex-570_570.86.15-0ubuntu0.22.04.1_arm64.deb
+Size: 10165718
+MD5sum: 8ec7f017815e8e12e2c0436a6ddb9740
+SHA1: 862bfefb5e11d1dcdd0ff690670a63315af99ac5
+SHA256: cc7cd993c9c781cbe4602b585f1b73a42afb68465d6227697efb5b5c65906e24
+SHA512: ac3d7cca25cc5e9fb1b8b6c56a80009b3a75bfe1853aa3aa5b06322e00059f0ff656efd60fd6ac7e95c0d1d4f05cbc3fb538eb11ba83a76ebfae7cd2b4db062b
+Description: IMEX Manager for NVIDIA based systems.
+Description-md5: f7a765b2a95d4cabcc9695466d5f6cc8
+
+Package: nvidia-kernel-common-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 459
+Provides: nvidia-kernel-common
+Depends: libc6 (>= 2.34), libpciaccess0 (>= 0.10.7), nvidia-firmware-570-server-570.86.15
+Conflicts: nvidia-kernel-common
+Replaces: nvidia-kernel-common
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-kernel-common-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 39628
+MD5sum: 44a014b1c7d438bf46ef608f1b8c7f32
+SHA1: bf901800ae692e1cf13418b138e31211e867b53d
+SHA256: 314ed8345bb307accac54c6c0d74793eeac6d87eb7e8885374c299194851bbfd
+SHA512: 63a09ebe24ecdf93ce71496bb3b15f2d8275723aa82a3431a0790d9c8d3f0408f20a5eedaf2fb8301afbfe97b842b90f8e9dbdce47ea596b471e4c148b556ee2
+Homepage: http://www.nvidia.com
+Description: Shared files used with the kernel module
+Description-md5: caa64a2a10d329a0475baf9ebcdb40d5
+
+Package: nvidia-kernel-source-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 106926
+Provides: nvidia-kernel-source
+Conflicts: nvidia-kernel-source
+Replaces: nvidia-kernel-source
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-kernel-source-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 72633642
+MD5sum: f7a3d9af405a411dafde3b9e1ac4d8ea
+SHA1: 968d30b7103345476b2cd170d743c2e13e4d58ed
+SHA256: aedebebf8489c80f32bc867ec509e2d90b93d9811f34f930ea09e29fa6206064
+SHA512: 42add5c8101100b13fe4a6f2bc07902723220002acf107e4960c99b002555c44a42e4c713474cd42cfbb204219d947c5ba150ccd888c4770bbc66ceb2037af74
+Homepage: http://www.nvidia.com
+Description: NVIDIA kernel source package
+Description-md5: dc60d6861ca351f7cadc7d8fcc74e854
+
+Package: nvidia-kernel-source-570-server-open
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Multi-Arch: foreign
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 27276
+Provides: nvidia-kernel-source
+Conflicts: nvidia-kernel-source
+Replaces: nvidia-kernel-source
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-kernel-source-570-server-open_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 6827976
+MD5sum: b02c254927547dc501b0716c2fcd12c9
+SHA1: 30a15e2df42dd7aa79aee20d1fae2dc30a88b845
+SHA256: b0fe85a6e9fbc1d13a9629e1a7a958566b92468c180fdf7697b6af0871c07ec5
+SHA512: 1bbbc20fd8d4a6c49144026dc01ebb01c563c426c300b075b56e11163593a12cce53450edbe95953c791eebbd1e1c38244b5f81fca032c20bab3293a43bb50a0
+Homepage: http://www.nvidia.com
+Description: NVIDIA kernel source package
+Description-md5: 2694f1253ed6bd4cfbccf1e22ec25a3d
+
+Package: nvidia-utils-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/libs
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 1531
+Provides: nvidia-smi, nvidia-utils
+Depends: libc6 (>= 2.17), libnvidia-compute-570-server (>= 570.86.15)
+Suggests: nvidia-driver-570-server
+Conflicts: nvidia-smi, nvidia-utils
+Replaces: nvidia-smi, nvidia-utils
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/nvidia-utils-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 538394
+MD5sum: ff6ec2f590e947d40e99c513d36ad7d7
+SHA1: 71910bd901a401f8c16c9196f6727237b02a2358
+SHA256: 95938d1f11ab7e0e47cbd9706782c99d233bbb2247149b68c806c6eb2eae21c8
+SHA512: cd5baf1a4bae000e2687572cb46455219433b73acec1df873be10068a330fa19edd144ed11e4d4671fa91943b9ec340dafd9dc56d1ad892b50b58969bcaae581
+Homepage: http://www.nvidia.com
+Description: NVIDIA Server Driver support binaries
+Description-md5: 4e4bcf98bdc87ac5b44ccdaec6901913
 
 Package: othman
 Architecture: all
@@ -2339,7 +3159,7 @@ Description-md5: 1dbcf92cf3e1415d46e858c72c860c65
 
 Package: r8125-dkms
 Architecture: all
-Version: 9.007.01-3ubuntu0.2
+Version: 9.007.01-3ubuntu0.3
 Priority: optional
 Section: multiverse/kernel
 Source: r8125
@@ -2349,15 +3169,37 @@ Original-Maintainer: Hideki Yamane <henrich@debian.org>
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Installed-Size: 757
 Depends: dkms (>= 2.1.0.0)
-Filename: pool/multiverse/r/r8125/r8125-dkms_9.007.01-3ubuntu0.2_all.deb
-Size: 92970
-MD5sum: 107a0de863cbc0471a9394374bfe5a0e
-SHA1: b55ff3b9c94a4ac642b77067fa7f42cc94589619
-SHA256: 64c9f98d901abf3cb3ddf8483fdaf2d250ca59e3c537eb119daa793fca37e42c
-SHA512: fa95860847143708a7dbde988cd459e8aaa2e65a00ee95df24117a29e85b509a807c1f37a3aca4c177346fb82f9051fd97e9233f14ffb8baa49ee995ae8d85a7
+Filename: pool/multiverse/r/r8125/r8125-dkms_9.007.01-3ubuntu0.3_all.deb
+Size: 93068
+MD5sum: 06c6f7138e7e0644a167a10c1afe59af
+SHA1: b2155676f621c3f25920b1c1a4b51a2335a0ef33
+SHA256: 82e22530f8a2ff21b3d9f6167638f32f644cb8bbb6a0325a9b4788bbc018024c
+SHA512: 16e5a1cd4207f9874538aad0d48c55af9d4c243cbe65d4c3d9af6732fee23c77ff19da7266ea4bf8e2fca32bc826b3a2053245f7cce71400774aad9008331c4e
 Homepage: https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software
 Description: dkms source for the r8125 network driver
 Description-md5: 21605b7f80ee7a56a99a0ef7f36c7598
+
+Package: unrar
+Architecture: arm64
+Version: 1:6.1.5-1ubuntu0.1
+Priority: optional
+Section: multiverse/utils
+Source: unrar-nonfree
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: UnRar maintainer team <team+unrar-nonfree@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 314
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2)
+Filename: pool/multiverse/u/unrar-nonfree/unrar_6.1.5-1ubuntu0.1_arm64.deb
+Size: 148494
+MD5sum: 52590d1c066e127f1dfd52fd5e09b957
+SHA1: 0a3b15c7fb4a3a12a616d89ae60502a43577d983
+SHA256: 55ef7275bb83c32d2c0d86a825855fef131af72ac31692db68905d935e6520c4
+SHA512: b6848e9aa4d692b5a2851e29e179241392031dbed33a6ed2914d24c018bbb95f83b8fb24620b375ca293be9c6859f6129c3729717dd5f9c7ff569962409adcce
+Homepage: https://www.rarlab.com/
+Description: Unarchiver for .rar files (non-free version)
+Description-md5: 363f696bb115028ffafb265ccc9f32fb
 
 Package: virtualbox-ext-pack
 Architecture: all
@@ -2461,4 +3303,28 @@ SHA256: 850e814de84d46c690d569f5460f83c60de24ce79b36ce8e9229cd1940a37819
 SHA512: 878dc86cfa7b3a3c1595481857ae48e1e58e29b5df24f2fa423a6bba176df482b98a035f4af6fcc0866523438fcf80e6cf0f5ef52087b687ff0696084ff75b2b
 Description: Xilinx firmware for Versal boards
 Description-md5: c01926cbba47abce372e7966008658eb
+
+Package: xserver-xorg-video-nvidia-570-server
+Architecture: arm64
+Version: 570.86.15-0ubuntu0.22.04.4
+Priority: optional
+Section: multiverse/x11
+Source: nvidia-graphics-drivers-570-server
+Origin: Ubuntu
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 4728
+Provides: nvidia-driver-binary, xorg-driver-binary, xorg-driver-video
+Depends: libnvidia-cfg1-570-server (= 570.86.15-0ubuntu0.22.04.4), xorg-video-abi-25 | xorg-video-abi-24 | xorg-video-abi-23 | xorg-video-abi-20 | xorg-video-abi-19 | xorg-video-abi-18 | xorg-video-abi-15 | xorg-video-abi-14 | xorg-video-abi-13 | xorg-video-abi-12 | xorg-video-abi-11 | xorg-video-abi-10 | xorg-video-abi-8 | xorg-video-abi-6.0, xserver-xorg-core (>= 2:1.19.6-1ubuntu2~), libc6 (>= 2.17)
+Conflicts: nvidia-driver-binary, xorg-driver-binary
+Replaces: nvidia-driver-binary, xorg-driver-binary
+Filename: pool/multiverse/n/nvidia-graphics-drivers-570-server/xserver-xorg-video-nvidia-570-server_570.86.15-0ubuntu0.22.04.4_arm64.deb
+Size: 1584034
+MD5sum: 1de6787e0f485ad5e7cbd6475e1e5c6a
+SHA1: 343c2e4088e2281f5f7f06f29f278a9194b596fc
+SHA256: f28dc48eee792e78f6d51ce3eb82dd7e12c4f54dd562e7d55b858770696596d6
+SHA512: aa9db080b29526b15dbe15a56ebbd65c5140b35dedcddbc6a1786a966b4d9250401ef408494807c4be60e6c1cc0539b88ed5be48f0abb53b7c847da98d4c15a7
+Homepage: http://www.nvidia.com
+Description: NVIDIA binary Xorg driver
+Description-md5: 51c9ba885bc78c02015bfca3e79d758e
 

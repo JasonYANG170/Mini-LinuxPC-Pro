@@ -1,7 +1,7 @@
-d0ffd2e741fe680a2c98bcf3ccb89dd1  usr/lib/aarch64-linux-gnu/libsoup-2.4.so.1.11.2
+bd483a75ad0a935e05c5e3467e4f3415  usr/lib/aarch64-linux-gnu/libsoup-2.4.so.1.11.2
 1834f1795c297a69cf6ed77d6ee8a992  usr/share/doc/libsoup2.4-1/AUTHORS
 20d2e17c027e2307b04dd6efcd0b4ac4  usr/share/doc/libsoup2.4-1/NEWS.gz
 7252cc5f3c0ff78fc90485a83c3f4d78  usr/share/doc/libsoup2.4-1/README
-7c636579bfbe0c16edf34162737484c3  usr/share/doc/libsoup2.4-1/changelog.Debian.gz
+b6a83993956cb7d4c315ac4449ce7fee  usr/share/doc/libsoup2.4-1/changelog.Debian.gz
 5d057efa45d4c730bcf7275200cbffd9  usr/share/doc/libsoup2.4-1/copyright
 d1aa229d9ac06cadfc29db02641f9baa  usr/share/lintian/overrides/libsoup2.4-1

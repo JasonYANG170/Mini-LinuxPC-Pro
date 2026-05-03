@@ -39,7 +39,7 @@ if [ "$1" = configure ]; then
     fi
 fi
 
-# Automatically added by dh_apparmor/3.0.4-2ubuntu2.4
+# Automatically added by dh_apparmor/3.0.4-2ubuntu2.3build2
 if [ "$1" = "configure" ]; then
     APP_PROFILE="/etc/apparmor.d/usr.sbin.cupsd"
     if [ -f "$APP_PROFILE" ]; then

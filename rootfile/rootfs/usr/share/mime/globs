@@ -5,6 +5,10 @@ application/x-doom-wad:*.wad
 application/x-cd-image:*.iso
 text/html:*.htm
 application/vnd.apple.keynote:*.key
+application/pkix-crl:*.crl
+application/pkcs8:*.p8
+application/x-pkcs12:*.p12
+application/pkix-cert:*.cer
 application/vnd.appimage:*.appimage
 text/x-sagemath:*.sage
 text/x-python3:*.py3x
@@ -12,6 +16,10 @@ text/x-python:*.wsgi
 text/x-python3:*.py3
 text/x-python:*.py
 text/x-python:*.pyx
+application/pkcs8:*.pkcs8
+application/pkix-cert:*.crt
+application/x-pkcs12:*.pfx
+application/pkix-cert:*.cert
 text/x-ldif:*.ldif
 application/x-perl:*.perl
 application/x-rpm:*.rpm
@@ -54,6 +62,7 @@ application/x-magicpoint:*.mgp
 text/vbscript:*.vbs
 application/vnd.nintendo.snes.rom:*.sfc
 application/x-pkcs7-certificates:*.p7b
+application/pkcs7-mime:*.p7b
 text/spreadsheet:*.sylk
 application/x-xbel:*.xbel
 image/jpeg:*.jpeg
@@ -65,6 +74,7 @@ application/sql:*.sql
 application/x-ufraw:*.ufraw
 application/vnd.oasis.opendocument.formula-template:*.otf
 font/otf:*.otf
+application/pkcs7-mime:*.p7c
 application/pkcs7-mime:*.p7c
 application/x-gameboy-rom:*.gb
 image/x-msod:*.msod
@@ -134,6 +144,7 @@ text/rust:*.rs
 text/x-copying:copying
 image/x-gimp-gih:*.gih
 application/pkcs7-mime:*.p7m
+application/pkcs7-mime:*.p7m
 application/vnd.oasis.opendocument.presentation-template:*.otp
 application/x-kformula:*.kfo
 application/x-tar:*.tar
@@ -167,6 +178,7 @@ text/markdown:*.md
 application/ld+json:*.jsonld
 text/x-meson:meson.build
 audio/x-mo3:*.mo3
+application/pkcs7-signature:*.p7s
 application/pkcs7-signature:*.p7s
 text/x-troff-me:*.me
 application/vnd.mozilla.xul+xml:*.xul
@@ -331,6 +343,7 @@ application/mbox:*.mbox
 application/vnd.nintendo.snes.rom:*.smc
 application/vnd.ms-powerpoint:*.ppt
 text/vcard:*.vcard
+text/x-apt-sources-list:sources.list
 application/x-bzip:*.bz
 application/vnd.ms-excel.sheet.macroEnabled.12:*.xlsm
 image/x-fuji-raf:*.raf
@@ -339,6 +352,7 @@ application/x-genesis-rom:*.smd
 video/3gpp:*.3gp
 application/x-partial-download:*.wkdownload
 application/x-x509-ca-cert:*.pem
+application/x-pem-file:*.pem
 text/x-svsrc:*.sv
 application/mathematica:*.nb
 image/x-tga:*.vda
@@ -487,6 +501,7 @@ application/oxps:*.oxps
 image/jpm:*.jpgm
 application/gpx+xml:*.gpx
 application/dicom:*.dcm
+application/pkcs10:*.csr
 application/smil+xml:*.kino
 application/x-dia-diagram:*.dia
 application/x-abiword:*.zabw
@@ -770,6 +785,7 @@ application/x-kontour:*.kon
 text/plain:*,v
 application/x-netcdf:*.cdf
 application/pkcs10:*.p10
+application/pkcs10:*.p10
 text/x-microdvd:*.sub
 text/x-mpsub:*.sub
 text/x-subviewer:*.sub
@@ -829,8 +845,8 @@ application/x-ica:*.ica
 application/x-navi-animation:*.ani
 text/x-emacs-lisp:*.el
 text/x-txt2tags:*.t2t
-image/x-tga:*.icb
 application/xml:*.xbl
+image/x-tga:*.icb
 audio/x-wav:*.wav
 audio/mp4:*.f4a
 text/x-changelog:changelog
@@ -890,6 +906,7 @@ application/x-gba-rom:*.gba
 application/x-x509-ca-cert:*.der
 application/x-desktop:*.desktop
 application/x-pkcs7-certificates:*.spc
+application/pkcs7-mime:*.spc
 video/ogg:*.ogv
 image/vnd.microsoft.icon:*.ico
 image/tiff:*.tiff
@@ -1014,6 +1031,7 @@ application/vnd.framemaker:*.fm
 audio/x-speex+ogg:*.spx
 audio/x-speex:*.spx
 application/x-shared-library-la:*.la
+application/x-spkac:*.spkac
 application/x-bzip-compressed-tar:*.tb2
 text/x-xslfo:*.fo
 text/x-makefile:*.mak
