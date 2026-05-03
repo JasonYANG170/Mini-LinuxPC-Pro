@@ -1,7 +1,5 @@
 .buildconfig
-.gitignore
 device/product
-kernel/Android.mk
 out/
 test/
 rootfile/
