@@ -60,3 +60,15 @@ scanner:!::saned
 avahi:!::
 saned:!::
 colord:!::
+ds-hx1x:!::
+tss:!::
+crontab:!::
+avahi-autoipd:!::
+whoopsie:!::
+geoclue:!::
+fwupd-refresh:!::
+lightdm:!::
+nopasswdlogin:!::
+gdm:!::
+snapd-range-524288-root:!::
+snap_daemon:!::

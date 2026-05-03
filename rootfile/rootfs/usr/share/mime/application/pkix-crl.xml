@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/pkix-crl">
   <!--Created automatically by update-mime-database. DO NOT EDIT!-->
-  <comment>certificate revocation list</comment>
   <comment xml:lang="zh_TW">憑證撤銷清單</comment>
   <comment xml:lang="zh_CN">证书吊销列表</comment>
   <comment xml:lang="uk">список відкликання сертифікатів</comment>
@@ -27,4 +26,8 @@
   <comment xml:lang="ca">llista de revocació de certificats</comment>
   <comment xml:lang="bg">Списък с отхвърлени сертификати</comment>
   <glob pattern="*.crl"/>
+  <comment>Certificate Revocation List</comment>
+  <acronym>CRL</acronym>
+  <expanded-acronym>Certificate Revocation List</expanded-acronym>
+  <glob weight="75" pattern="*.crl"/>
 </mime-type>

@@ -54,8 +54,8 @@ net_raw:x:3004:root
 i2c:x:113:
 rtkit:x:114:
 bluetooth:x:115:
-pulse:x:116:
-pulse-access:x:117:
+pulse:x:116:root
+pulse-access:x:117:root
 lpadmin:x:118:
 ssl-cert:x:119:
 scanner:x:120:saned
@@ -63,3 +63,14 @@ avahi:x:121:
 saned:x:122:
 colord:x:123:
 ds-hx1x:x:1000:
+tss:x:124:
+crontab:x:125:
+avahi-autoipd:x:126:
+whoopsie:x:127:
+geoclue:x:128:
+fwupd-refresh:x:129:
+lightdm:x:130:
+nopasswdlogin:x:131:
+gdm:x:132:
+snapd-range-524288-root:x:524288:
+snap_daemon:x:584788:

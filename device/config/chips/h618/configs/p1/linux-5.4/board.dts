@@ -1001,9 +1001,9 @@
 	screen0_output_scan      = <0>;
 	screen0_output_aspect_ratio = <8>;
 
-	screen1_output_type      = <2>;
-	screen1_output_mode      = <11>;
-	screen1_output_format    = <1>;
+	screen1_output_type      = <0>;
+	screen1_output_mode      = <0>;
+	screen1_output_format    = <0>;
 	screen1_output_bits      = <0>;
 	screen1_output_eotf      = <4>;
 	screen1_output_cs        = <260>;
@@ -1011,15 +1011,15 @@
 	screen1_output_range     = <2>;
 	screen1_output_scan      = <0>;
 	screen1_output_aspect_ratio = <8>;
-	dev0_output_type         = <4>;
+	dev0_output_type         = <3>;
 	dev0_output_mode         = <10>;
 	dev0_screen_id           = <0>;
 	dev0_do_hpd              = <1>;
 
-	dev1_output_type         = <2>;
-	dev1_output_mode         = <11>;
+	dev1_output_type         = <0>;
+	dev1_output_mode         = <0>;
 	dev1_screen_id           = <1>;
-	dev1_do_hpd              = <1>;
+	dev1_do_hpd              = <0>;
 
 	dev2_output_type         = <0>;
 	def_output_dev           = <0>;
@@ -1030,8 +1030,8 @@
 	fb0_height               = <1080>;
 
 	fb1_format               = <0>;
-	fb1_width                = <0>;
-	fb1_height               = <0>;
+	fb1_width                = <320>;
+	fb1_height               = <170>;
 
 	chn_cfg_mode             = <1>;
 

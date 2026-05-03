@@ -11,6 +11,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q!
+|2,0,1742734491,,"q!"
 
 # Search String History (newest to oldest):
 
@@ -23,26 +25,286 @@
 # Registers:
 
 # File marks:
-'0  21  19  /usr/lib/systemd/system/networking.service
-|4,48,21,19,1728638463,"/usr/lib/systemd/system/networking.service"
-'1  2  89  /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
-|4,49,2,89,1728638407,"/usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf"
+'0  155  0  /etc/pulse/default.pa
+|4,48,155,0,1742778638,"/etc/pulse/default.pa"
+'1  44  0  /etc/systemd/system.conf
+|4,49,44,0,1742776785,"/etc/systemd/system.conf"
+'2  11  0  ~/.config/systemd/user/pulseaudio.service
+|4,50,11,0,1742776575,"~/.config/systemd/user/pulseaudio.service"
+'3  49  0  /etc/rc.local
+|4,51,49,0,1742776520,"/etc/rc.local"
+'4  50  0  /etc/rc.local
+|4,52,50,0,1742776355,"/etc/rc.local"
+'5  50  0  /etc/rc.local
+|4,53,50,0,1742776355,"/etc/rc.local"
+'6  48  0  /etc/rc.local
+|4,54,48,0,1742776201,"/etc/rc.local"
+'7  48  0  /etc/rc.local
+|4,55,48,0,1742776201,"/etc/rc.local"
+'8  48  0  /etc/rc.local
+|4,56,48,0,1742776201,"/etc/rc.local"
+'9  48  0  /etc/rc.local
+|4,57,48,0,1742776201,"/etc/rc.local"
 
 # Jumplist (newest first):
--'  21  19  /usr/lib/systemd/system/networking.service
-|4,39,21,19,1728638463,"/usr/lib/systemd/system/networking.service"
--'  1  0  /usr/lib/systemd/system/networking.service
-|4,39,1,0,1728638456,"/usr/lib/systemd/system/networking.service"
--'  2  89  /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
-|4,39,2,89,1728638407,"/usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf"
--'  2  89  /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
-|4,39,2,89,1728638407,"/usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf"
--'  1  0  /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
-|4,39,1,0,1728638387,"/usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf"
--'  1  0  /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
-|4,39,1,0,1728638387,"/usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf"
+-'  155  0  /etc/pulse/default.pa
+|4,39,155,0,1742778638,"/etc/pulse/default.pa"
+-'  1  0  /etc/pulse/default.pa
+|4,39,1,0,1742778616,"/etc/pulse/default.pa"
+-'  44  0  /etc/systemd/system.conf
+|4,39,44,0,1742776785,"/etc/systemd/system.conf"
+-'  44  0  /etc/systemd/system.conf
+|4,39,44,0,1742776785,"/etc/systemd/system.conf"
+-'  1  0  /etc/systemd/system.conf
+|4,39,1,0,1742776732,"/etc/systemd/system.conf"
+-'  1  0  /etc/systemd/system.conf
+|4,39,1,0,1742776732,"/etc/systemd/system.conf"
+-'  11  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,11,0,1742776575,"~/.config/systemd/user/pulseaudio.service"
+-'  11  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,11,0,1742776575,"~/.config/systemd/user/pulseaudio.service"
+-'  11  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,11,0,1742776575,"~/.config/systemd/user/pulseaudio.service"
+-'  11  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,11,0,1742776575,"~/.config/systemd/user/pulseaudio.service"
+-'  1  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,1,0,1742776565,"~/.config/systemd/user/pulseaudio.service"
+-'  1  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,1,0,1742776565,"~/.config/systemd/user/pulseaudio.service"
+-'  1  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,1,0,1742776565,"~/.config/systemd/user/pulseaudio.service"
+-'  1  0  ~/.config/systemd/user/pulseaudio.service
+|4,39,1,0,1742776565,"~/.config/systemd/user/pulseaudio.service"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  49  0  /etc/rc.local
+|4,39,49,0,1742776520,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776513,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  50  0  /etc/rc.local
+|4,39,50,0,1742776355,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776340,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  48  0  /etc/rc.local
+|4,39,48,0,1742776201,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  1  0  /etc/rc.local
+|4,39,1,0,1742776129,"/etc/rc.local"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
+-'  8  0  /etc/bluetooth/main.conf
+|4,39,8,0,1742734540,"/etc/bluetooth/main.conf"
 
 # History of marks within files (newest to oldest):
+
+> /etc/pulse/default.pa
+	*	1742778636	0
+	"	155	0
+	^	155	0
+	.	154	0
+	+	154	35
+	+	156	37
+	+	154	0
+
+> /etc/systemd/system.conf
+	*	1742776782	0
+	"	44	0
+	^	44	0
+	.	44	0
+	+	45	22
+	+	44	0
+
+> ~/.config/systemd/user/pulseaudio.service
+	*	1742776575	0
+	"	11	0
+	^	11	0
+	.	10	23
+	+	10	23
+
+> /etc/rc.local
+	*	1742776519	0
+	"	49	0
+	^	49	1
+	.	49	0
+	+	35	0
+	+	36	0
+	+	38	0
+	+	36	9
+	+	38	9
+	+	36	9
+	+	38	9
+	+	40	0
+	+	41	0
+	+	43	0
+	+	41	9
+	+	43	9
+	+	45	0
+	+	46	0
+	+	47	0
+	+	46	9
+	+	50	0
+	+	49	0
+
+> /etc/bluetooth/main.conf
+	*	1742734538	0
+	"	8	0
+	^	8	0
+	.	7	15
+	+	6	0
+	+	7	15
 
 > /usr/lib/systemd/system/networking.service
 	*	1728638463	0

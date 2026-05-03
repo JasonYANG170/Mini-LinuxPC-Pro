@@ -15,9 +15,9 @@ Description-en: OpenSymbol TrueType font
  bullets (needed for bullets in LibreOffice) and non-latin character
 
 Package: gir1.2-lokdocview-0.1
-Description-md5: 7dc30c9eaf0ca4f765d8e934afd2126b
-Description-en: GTK3 widget wrapping LibreOffice functionality - introspection
- LOKDocView is the GTK3 widget that wraps the libreoffice functionality and
+Description-md5: ca7a3d455bc38a9416655710de7eeb49
+Description-en: GTK+ 3 widget wrapping LibreOffice functionality - introspection
+ LOKDocView is the GTK+ 3 widget that wraps the libreoffice functionality and
  exposes a simple API for applications to use this widget.
  .
  This package contains the Introspection data.
@@ -130,8 +130,8 @@ Description-en: LibreOffice UNO runtime environment -- Java library
  This package contains the public Java libraries.
 
 Package: liblibreofficekitgtk
-Description-md5: 52a3fee7a3b817ab39c00dba0ffe0a7f
-Description-en: GTK3 widget wrapping LibreOffice functionality
+Description-md5: 2cf971144745f2eee2ba5629a44fdd65
+Description-en: GTK+ 3 widget wrapping LibreOffice functionality
  This package contains a (basic) GTK+ document viewer widget (used
  by e.g. LOKDocView)
 
@@ -236,13 +236,13 @@ Description-en: office productivity suite -- GNOME integration
   * evolution
 
 Package: libreoffice-gtk3
-Description-md5: 146f765cda9a463edbf2032242a5150f
+Description-md5: 44b29fdd57298ae70df2d76275839bc8
 Description-en: office productivity suite -- GTK+ 3 integration
  LibreOffice is a full-featured office productivity suite that provides
  a near drop-in replacement for Microsoft(R) Office.
  .
- This package contains the Gtk plugin for drawing LibreOffices widgets
- with Gtk+ 3 and Gtk/GNOMEish print dialog when running under GNOME.
+ This package contains the GTK+ plugin for drawing LibreOffices widgets
+ with GTK+ 3 and GTK+/GNOMEish print dialog when running under GNOME.
 
 Package: libreoffice-help-ca
 Description-md5: d6b57c84305eb2009f0f7cca49b022f1
@@ -1264,6 +1264,26 @@ Description-en: office productivity suite -- Hungarian language package
  .
  This package contains the localization of LibreOffice in
  Hungarian.
+ It contains the user interface, the templates and the autotext features.
+ (please note that not all this is available for all possible languages).
+ You can switch user interface language using the locales system.
+ .
+ Spelling dictionaries, hyphenation patterns, thesauri and help are not
+ included in this package. There are some available in separate packages
+ (myspell-*, hyphen-*, mythes-*, libreoffice-help-*)
+ .
+ If you just want to be able to spellcheck etc. in other languages, you can
+ install extra dictionaries/hyphenation patterns/thesauri independently of
+ the language packs.
+
+Package: libreoffice-l10n-hy
+Description-md5: d2636a5f89ebe8156c3d20ddeff2f07a
+Description-en: office productivity suite -- Armenian language package
+ LibreOffice is a full-featured office productivity suite that provides
+ a near drop-in replacement for Microsoft(R) Office.
+ .
+ This package contains the localization of LibreOffice in
+ Armenian.
  It contains the user interface, the templates and the autotext features.
  (please note that not all this is available for all possible languages).
  You can switch user interface language using the locales system.
@@ -2624,6 +2644,15 @@ Description-en: common data for LOKDocView
  This package contains architecture-independent data (e.g. the selection
  handlers).
 
+Package: libreofficekit-data
+Description-md5: 9859813cd8462f5d488366ee3cfaed15
+Description-en: common data for LOKDocView
+ LOKDocView is the GTK+ 3 widget that wraps the libreoffice functionality and
+ exposes a simple API for applications to use this widget.
+ .
+ This package contains architecture-independent data (e.g. the selection
+ handlers).
+
 Package: libreofficekit-dev
 Description-md5: 93284f0d29b8ae961670b7a6faf3d2ba
 Description-en: LibreOfficeKit -- headers
@@ -2822,4 +2851,27 @@ Description-en: LibreOffice UNO runtime environment -- Java support
  imagine.
  .
  This package contains the Java support in the URE.
+
+Package: gir1.2-lokdocview-0.1
+Description-md5: 7dc30c9eaf0ca4f765d8e934afd2126b
+Description-en: GTK3 widget wrapping LibreOffice functionality - introspection
+ LOKDocView is the GTK3 widget that wraps the libreoffice functionality and
+ exposes a simple API for applications to use this widget.
+ .
+ This package contains the Introspection data.
+
+Package: liblibreofficekitgtk
+Description-md5: 52a3fee7a3b817ab39c00dba0ffe0a7f
+Description-en: GTK3 widget wrapping LibreOffice functionality
+ This package contains a (basic) GTK+ document viewer widget (used
+ by e.g. LOKDocView)
+
+Package: libreoffice-gtk3
+Description-md5: 146f765cda9a463edbf2032242a5150f
+Description-en: office productivity suite -- GTK+ 3 integration
+ LibreOffice is a full-featured office productivity suite that provides
+ a near drop-in replacement for Microsoft(R) Office.
+ .
+ This package contains the Gtk plugin for drawing LibreOffices widgets
+ with Gtk+ 3 and Gtk/GNOMEish print dialog when running under GNOME.
 

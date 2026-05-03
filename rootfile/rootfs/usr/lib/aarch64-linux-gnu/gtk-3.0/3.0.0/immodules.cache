@@ -16,6 +16,9 @@
 "/usr/lib/aarch64-linux-gnu/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.so" 
 "cyrillic_translit" "Cyrillic (Transliterated)" "gtk30" "/usr/share/locale" "" 
 
+"/usr/lib/aarch64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ibus.so" 
+"ibus" "IBus (Intelligent Input Bus)" "ibus" "" "ja:ko:zh:*" 
+
 "/usr/lib/aarch64-linux-gnu/gtk-3.0/3.0.0/immodules/im-inuktitut.so" 
 "inuktitut" "Inuktitut (Transliterated)" "gtk30" "/usr/share/locale" "iu" 
 

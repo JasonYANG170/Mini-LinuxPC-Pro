@@ -26,7 +26,7 @@ if [ "$1" = "purge" ]; then
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_apparmor/3.0.4-2ubuntu2.4
+# Automatically added by dh_apparmor/3.0.4-2ubuntu2.3build2
 if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.cupsd" ] ; then
     rm -f "/etc/apparmor.d/disable/usr.sbin.cupsd" || true
     rm -f "/etc/apparmor.d/force-complain/usr.sbin.cupsd" || true
