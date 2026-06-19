@@ -48,12 +48,7 @@ jobs:
         API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
 
         echo "Fetching release assets..."
-        ASSETS=$(curl -s "$API_URL" | python3 -c "
-        import json, sys
-        data = json.load(sys.stdin)
-        for a in data.get('assets', []):
-            print(a['name'] + '\t' + a['browser_download_url'])
-        ")
+        ASSETS=$(curl -s "$API_URL" | python3 -c "import json,sys; data=json.load(sys.stdin); [print(a['name']+'\t'+a['browser_download_url']) for a in data.get('assets',[])]")
 
         if [ -z "$ASSETS" ]; then
           echo "ERROR: Release not found!"
@@ -81,6 +76,20 @@ jobs:
         echo "=== U-boot toolchain ==="
         ls -lh *.tar.xz 2>/dev/null
 
+    - name: Download dtc binary from Release
+      run: |
+        TOOLCHAIN_TAG="toolchains"
+        REPO="${{ github.repository }}"
+        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
+        
+        mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
+        cd brandy/brandy-2.0/u-boot-2018/scripts/dtc
+        
+        echo "Downloading dtc binary..."
+        curl -s "$API_URL" | python3 -c "import json,sys; data=json.load(sys.stdin); [print(a['browser_download_url']) for a in data.get('assets',[]) if a['name']=='dtc']" | wget -qi - -O dtc
+        chmod +x dtc
+        ls -la dtc
+
     - name: Download rootfs from Release
       run: |
         TOOLCHAIN_TAG="toolchains"
@@ -88,15 +97,7 @@ jobs:
         API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
 
         cd rootfile
-        ROOTFS_URL=$(curl -s "$API_URL" | python3 -c "
-        import json, sys, os
-        rootfs_type = os.environ.get('ROOTFS_TYPE', 'server')
-        data = json.load(sys.stdin)
-        for a in data.get('assets', []):
-            if 'rootfs' in a['name'] and rootfs_type in a['name']:
-                print(a['browser_download_url'])
-                break
-        ")
+        ROOTFS_URL=$(curl -s "$API_URL" | python3 -c "import json,sys,os; rootfs_type=os.environ.get('ROOTFS_TYPE','server'); data=json.load(sys.stdin); [print(a['browser_download_url']) for a in data.get('assets',[]) if 'rootfs' in a['name'] and rootfs_type in a['name']]")
 
         if [ -z "$ROOTFS_URL" ]; then
           echo "ERROR: Rootfs not found"
@@ -115,28 +116,6 @@ jobs:
           tar -xf "$ROOTFS_FILE"
         fi
         ls -la rootfs/ | head -10
-
-    - name: Download dtc binary from Release
-      run: |
-        TOOLCHAIN_TAG="toolchains"
-        REPO="${{ github.repository }}"
-        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
-        
-        mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
-        cd brandy/brandy-2.0/u-boot-2018/scripts/dtc
-        
-        echo "Downloading dtc binary..."
-        URL=$(curl -s "$API_URL" | python3 -c "
-        import json, sys
-        data = json.load(sys.stdin)
-        for a in data.get("assets", []):
-            if a["name"] == "dtc":
-                print(a["browser_download_url"])
-                break
-        ")
-        wget -q "$URL" -O dtc
-        chmod +x dtc
-        ls -la dtc
 
     - name: Extract toolchains
       run: |
