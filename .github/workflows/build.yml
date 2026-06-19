@@ -41,89 +41,60 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y build-essential git libncurses5-dev libssl-dev bc bison flex u-boot-tools python3 python3-dev python3-pip swig device-tree-compiler libpython3-dev cpio gawk wget unzip dosfstools mtools kmod xz-utils fakeroot
 
-    - name: Download all assets from Release
+    - name: Download toolchains from Release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        TOOLCHAIN_TAG="toolchains"
-        REPO="${{ github.repository }}"
-        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
+        # 使用 gh release download 下载所有工具链
+        mkdir -p /tmp/assets
+        gh release download toolchains --repo ${{ github.repository }} --dir /tmp/assets --pattern "*.tar.xz" --pattern "*.tar.bz2" --pattern "dtc" --pattern "rootfs.cpio.gz" --clobber
 
-        echo "Fetching release assets..."
-        ASSETS=$(curl -s "$API_URL" | python3 -c "import json,sys; data=json.load(sys.stdin); [print(a['name']+'\t'+a['browser_download_url']) for a in data.get('assets',[])]")
+        echo "=== Downloaded assets ==="
+        ls -lh /tmp/assets/
 
-        if [ -z "$ASSETS" ]; then
-          echo "ERROR: Release not found!"
-          exit 1
-        fi
-
-        # 下载内核工具链 (build/toolchain)
+        # 放置内核工具链
         mkdir -p build/toolchain
-        cd build/toolchain
-        echo "$ASSETS" | grep -E 'gcc-(arm|linaro)' | grep -v '7.2.1' | while IFS=$'\t' read name url; do
-          echo "Downloading $name..."
-          wget -q "$url" -O "$name"
-        done
+        cp /tmp/assets/gcc-arm-*.tar.xz /tmp/assets/gcc-linaro-5*.tar.* /tmp/assets/gcc-linaro-aarch64.tar.xz /tmp/assets/gcc-linaro-arm.tar.xz /tmp/assets/gcc-linaro.tar.bz2 build/toolchain/ 2>/dev/null || true
 
-        # 下载 u-boot 工具链 (brandy/brandy-2.0/tools/toolchain)
-        cd $GITHUB_WORKSPACE
+        # 放置 u-boot 工具链
         mkdir -p brandy/brandy-2.0/tools/toolchain
-        cd brandy/brandy-2.0/tools/toolchain
-        echo "$ASSETS" | grep '7.2.1' | while IFS=$'\t' read name url; do
-          echo "Downloading $name for u-boot..."
-          wget -q "$url" -O "$name"
-        done
+        cp /tmp/assets/gcc-linaro-7*.tar.xz brandy/brandy-2.0/tools/toolchain/ 2>/dev/null || true
 
-        # 下载 dtc 二进制
-        cd $GITHUB_WORKSPACE
+        # 放置 dtc
         mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
-        cd brandy/brandy-2.0/u-boot-2018/scripts/dtc
-        echo "$ASSETS" | grep -E '^dtc\b' | while IFS=$'\t' read name url; do
-          echo "Downloading $name..."
-          wget -q "$url" -O "$name"
-          chmod +x "$name"
-        done
+        cp /tmp/assets/dtc brandy/brandy-2.0/u-boot-2018/scripts/dtc/
+        chmod +x brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
 
-        # 下载 rootfs.cpio.gz (内核 ramdisk)
-        cd $GITHUB_WORKSPACE/kernel/linux-5.4
-        echo "$ASSETS" | grep 'rootfs.cpio' | while IFS=$'\t' read name url; do
-          echo "Downloading $name..."
-          wget -q "$url" -O "$name"
-        done
+        # 放置 rootfs.cpio.gz (ramdisk)
+        cp /tmp/assets/rootfs.cpio.gz kernel/linux-5.4/
 
-        echo "=== Downloaded files ==="
-        echo "Kernel toolchains:"
-        ls -lh $GITHUB_WORKSPACE/build/toolchain/*.tar.xz 2>/dev/null
-        echo "U-boot toolchain:"
-        ls -lh $GITHUB_WORKSPACE/brandy/brandy-2.0/tools/toolchain/*.tar.xz 2>/dev/null
-        echo "DTC:"
-        ls -la $GITHUB_WORKSPACE/brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc 2>/dev/null
-        echo "Ramdisk:"
-        ls -lh $GITHUB_WORKSPACE/kernel/linux-5.4/rootfs.cpio.gz 2>/dev/null
+        echo "=== Placed files ==="
+        echo "Kernel toolchains:"; ls -lh build/toolchain/
+        echo "U-boot toolchain:"; ls -lh brandy/brandy-2.0/tools/toolchain/
+        echo "DTC:"; ls -la brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
+        echo "Ramdisk:"; ls -lh kernel/linux-5.4/rootfs.cpio.gz
 
     - name: Download rootfs from Release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        TOOLCHAIN_TAG="toolchains"
-        REPO="${{ github.repository }}"
-        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
-
         cd rootfile
-        ROOTFS_URL=$(curl -s "$API_URL" | python3 -c "import json,sys,os; rootfs_type=os.environ.get('ROOTFS_TYPE','server'); data=json.load(sys.stdin); [print(a['browser_download_url']) for a in data.get('assets',[]) if 'rootfs' in a['name'] and rootfs_type in a['name']]")
+        gh release download toolchains --repo ${{ github.repository }} --dir . --pattern "rootfs*${ROOTFS_TYPE}*" --clobber
 
-        if [ -z "$ROOTFS_URL" ]; then
-          echo "ERROR: Rootfs not found"
+        ROOTFS_FILE=$(ls rootfs*${ROOTFS_TYPE}* 2>/dev/null | head -1)
+        if [ -z "$ROOTFS_FILE" ]; then
+          echo "ERROR: Rootfs not found for type $ROOTFS_TYPE"
           exit 1
         fi
 
-        ROOTFS_FILE=$(basename "$ROOTFS_URL")
-        echo "Downloading $ROOTFS_FILE..."
-        wget -q "$ROOTFS_URL" -O "$ROOTFS_FILE"
-
-        echo "Extracting rootfs..."
+        echo "Extracting $ROOTFS_FILE..."
         rm -rf rootfs
         if [[ "$ROOTFS_FILE" == *.tar.gz ]]; then
           tar -zxf "$ROOTFS_FILE"
         else
           tar -xf "$ROOTFS_FILE"
         fi
+        rm -f "$ROOTFS_FILE"
         ls -la rootfs/ | head -10
 
     - name: Extract toolchains
