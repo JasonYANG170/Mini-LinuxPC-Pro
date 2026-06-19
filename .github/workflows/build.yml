@@ -97,6 +97,15 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
+    - name: Copy rootfs to output
+      run: |
+        # 读取配置获取输出目录
+        source .buildconfig
+        mkdir -p ${LICHEE_PLAT_OUT}
+        cp test/dragonboard/rootfs.ext4 ${LICHEE_PLAT_OUT}/
+        echo "Copied rootfs.ext4 to ${LICHEE_PLAT_OUT}/"
+        ls -lh ${LICHEE_PLAT_OUT}/rootfs.ext4
+
     - name: Pack firmware
       run: ./build.sh pack
 
