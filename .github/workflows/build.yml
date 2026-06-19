@@ -116,6 +116,28 @@ jobs:
         fi
         ls -la rootfs/ | head -10
 
+    - name: Download dtc binary from Release
+      run: |
+        TOOLCHAIN_TAG="toolchains"
+        REPO="${{ github.repository }}"
+        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
+        
+        mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
+        cd brandy/brandy-2.0/u-boot-2018/scripts/dtc
+        
+        echo "Downloading dtc binary..."
+        URL=$(curl -s "$API_URL" | python3 -c "
+        import json, sys
+        data = json.load(sys.stdin)
+        for a in data.get("assets", []):
+            if a["name"] == "dtc":
+                print(a["browser_download_url"])
+                break
+        ")
+        wget -q "$URL" -O dtc
+        chmod +x dtc
+        ls -la dtc
+
     - name: Extract toolchains
       run: |
         echo "Extracting kernel toolchains..."
