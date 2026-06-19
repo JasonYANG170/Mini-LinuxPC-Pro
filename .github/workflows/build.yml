@@ -6,21 +6,36 @@ on:
   pull_request:
     branches: [ main, master, develop ]
   workflow_dispatch:
+    inputs:
+      rootfs_type:
+        description: 'Rootfs type'
+        required: false
+        default: 'server'
+        type: choice
+        options:
+          - server
+          - desktop
+
+env:
+  ROOTFS_TYPE: ${{ github.event.inputs.rootfs_type || 'server' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         submodules: recursive
-        lfs: true
-    
-    - name: Checkout LFS objects
-      run: git lfs pull
-    
+        lfs: false
+
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet /usr/local/lib/android 2>/dev/null
+        sudo apt-get clean
+        df -h
+
     - name: Cache build output
       uses: actions/cache@v4
       with:
@@ -28,78 +43,123 @@ jobs:
           out
           build/toolchain/**/
           !build/toolchain/*.tar.*
-        key: ${{ runner.os }}-build-${{ hashFiles('**/Makefile', '**/*.config') }}
+        key: ${{ runner.os }}-h618-${{ hashFiles('**/Makefile', '**/*.config') }}
         restore-keys: |
-          ${{ runner.os }}-build-
-    
+          ${{ runner.os }}-h618-
+
     - name: Setup build environment
       run: |
         sudo apt-get update
         sudo apt-get install -y \
-          build-essential \
-          git \
-          libncurses5-dev \
-          libssl-dev \
-          bc \
-          bison \
-          flex \
-          u-boot-tools \
-          python3 \
-          python3-dev \
-          python3-pip \
-          swig \
-          device-tree-compiler \
-          libpython3-dev \
-          cpio \
-          gawk \
-          wget \
-          unzip \
-          dosfstools \
-          mtools \
-          kmod
-    
+          build-essential git libncurses5-dev libssl-dev \
+          bc bison flex u-boot-tools python3 python3-dev python3-pip \
+          swig device-tree-compiler libpython3-dev cpio gawk \
+          wget unzip dosfstools mtools kmod xz-utils
+
+    - name: Download toolchains from Release
+      run: |
+        TOOLCHAIN_TAG="toolchains"
+        REPO="${{ github.repository }}"
+        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
+
+        echo "Fetching release assets..."
+        ASSETS=$(curl -s "$API_URL" | python3 -c "
+        import json, sys
+        data = json.load(sys.stdin)
+        for a in data.get('assets', []):
+            if a['name'].startswith('gcc-'):
+                print(a['name'] + '\t' + a['browser_download_url'])
+        ")
+
+        if [ -z "$ASSETS" ]; then
+          echo "ERROR: Release '$TOOLCHAIN_TAG' not found. Run upload-toolchains.sh first!"
+          exit 1
+        fi
+
+        cd build/toolchain
+        rm -f *.tar.xz *.tar.bz2
+
+        echo "$ASSETS" | while IFS=$'\t' read name url; do
+          echo "Downloading $name..."
+          wget -q "$url" -O "$name"
+        done
+
+        echo "=== Downloaded toolchains ==="
+        ls -lh *.tar.xz *.tar.bz2
+
+    - name: Download rootfs from Release
+      run: |
+        TOOLCHAIN_TAG="toolchains"
+        REPO="${{ github.repository }}"
+        API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
+
+        cd rootfile
+
+        ROOTFS_URL=$(curl -s "$API_URL" | python3 -c "
+        import json, sys, os
+        rootfs_type = os.environ['ROOTFS_TYPE']
+        data = json.load(sys.stdin)
+        for a in data.get('assets', []):
+            if 'rootfs' in a['name'] and rootfs_type in a['name']:
+                print(a['browser_download_url'])
+                break
+        ")
+
+        if [ -z "$ROOTFS_URL" ]; then
+          echo "ERROR: Rootfs not found for type '$ROOTFS_TYPE'"
+          exit 1
+        fi
+
+        ROOTFS_FILE=$(basename "$ROOTFS_URL")
+        echo "Downloading $ROOTFS_FILE..."
+        wget -q "$ROOTFS_URL" -O "$ROOTFS_FILE"
+
+        echo "Extracting rootfs..."
+        rm -rf rootfs
+        if [[ "$ROOTFS_FILE" == *.tar.gz ]]; then
+          tar -zxf "$ROOTFS_FILE"
+        else
+          tar -xf "$ROOTFS_FILE"
+        fi
+
+        echo "=== Rootfs contents ==="
+        ls -la rootfs/ | head -20
+
     - name: Extract toolchains
       run: |
-        # Extract toolchains from LFS
         cd build/toolchain
         for f in *.tar.xz *.tar.bz2; do
-          if [ -f "$f" ]; then
-            echo "Extracting $f..."
+          if [ -f "$f" ] && [ $(stat -c%s "$f") -gt 1000 ]; then
+            echo "Extracting $f ($(du -h "$f" | cut -f1))..."
             tar -xf "$f"
           fi
         done
-        cd ../..
-    
+
     - name: Configure build
       run: |
         chmod +x build.sh
-        ./build.sh autoconfig -i h618 -o linux -b p1 -n default -k linux-5.4 -a arm64
-    
+        # 1 1 0 0 0 = h618, p1, default, linux-5.4, arm64
+        echo -e "1\n1\n0\n0\n0" | ./build.sh config
+
     - name: Build bootloader
-      run: |
-        ./build.sh bootloader
-    
+      run: ./build.sh bootloader
+
     - name: Build kernel
-      run: |
-        ./build.sh kernel
-    
+      run: ./build.sh kernel
+
     - name: Build rootfs
-      run: |
-        ./build.sh rootfs
-    
+      run: ./build.sh rootfs
+
     - name: Pack firmware
-      run: |
-        ./build.sh pack
-    
+      run: ./build.sh pack
+
     - name: Upload firmware artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: longan-h618-firmware
-        path: |
-          out/pack_out/*.img
-          out/pack_out/*.fex
+        name: longan-h618-${{ env.ROOTFS_TYPE }}-firmware
+        path: out/pack_out/*.img
         retention-days: 30
-    
+
     - name: Upload build logs
       if: always()
       uses: actions/upload-artifact@v4
