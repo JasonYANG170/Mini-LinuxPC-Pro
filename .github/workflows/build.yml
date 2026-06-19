@@ -6,18 +6,6 @@ on:
   pull_request:
     branches: [ main, master, develop ]
   workflow_dispatch:
-    inputs:
-      rootfs_type:
-        description: Rootfs type
-        required: false
-        default: server
-        type: choice
-        options:
-          - server
-          - desktop
-
-env:
-  ROOTFS_TYPE: ${{ github.event.inputs.rootfs_type || 'server' }}
 
 jobs:
   build:
@@ -45,57 +33,38 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # 使用 gh release download 下载所有工具链
         mkdir -p /tmp/assets
-        gh release download toolchains --repo ${{ github.repository }} --dir /tmp/assets --pattern "*.tar.xz" --pattern "*.tar.bz2" --pattern "dtc" --pattern "rootfs.cpio.gz" --clobber
+        gh release download toolchains --repo ${{ github.repository }} --dir /tmp/assets --pattern "*.tar.xz" --pattern "*.tar.bz2" --pattern "dtc" --pattern "rootfs.cpio.gz" --pattern "rootfs.ext4" --clobber
 
-        echo "=== Downloaded assets ==="
+        echo "=== Downloaded ==="
         ls -lh /tmp/assets/
 
-        # 放置内核工具链
+        # 内核工具链
         mkdir -p build/toolchain
         cp /tmp/assets/gcc-arm-*.tar.xz /tmp/assets/gcc-linaro-5*.tar.* /tmp/assets/gcc-linaro-aarch64.tar.xz /tmp/assets/gcc-linaro-arm.tar.xz /tmp/assets/gcc-linaro.tar.bz2 build/toolchain/ 2>/dev/null || true
 
-        # 放置 u-boot 工具链
+        # u-boot 工具链
         mkdir -p brandy/brandy-2.0/tools/toolchain
         cp /tmp/assets/gcc-linaro-7*.tar.xz brandy/brandy-2.0/tools/toolchain/ 2>/dev/null || true
 
-        # 放置 dtc
+        # dtc
         mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
         cp /tmp/assets/dtc brandy/brandy-2.0/u-boot-2018/scripts/dtc/
         chmod +x brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
 
-        # 放置 rootfs.cpio.gz (ramdisk)
+        # rootfs.cpio.gz (ramdisk)
         cp /tmp/assets/rootfs.cpio.gz kernel/linux-5.4/
 
-        echo "=== Placed files ==="
-        echo "Kernel toolchains:"; ls -lh build/toolchain/
-        echo "U-boot toolchain:"; ls -lh brandy/brandy-2.0/tools/toolchain/
-        echo "DTC:"; ls -la brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
-        echo "Ramdisk:"; ls -lh kernel/linux-5.4/rootfs.cpio.gz
+        # rootfs.ext4 (预构建)
+        mkdir -p test/dragonboard
+        cp /tmp/assets/rootfs.ext4 test/dragonboard/
 
-    - name: Download rootfs from Release
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        cd rootfile
-        gh release download toolchains --repo ${{ github.repository }} --dir . --pattern "rootfs*${ROOTFS_TYPE}*" --clobber
-
-        ROOTFS_FILE=$(ls rootfs*${ROOTFS_TYPE}* 2>/dev/null | head -1)
-        if [ -z "$ROOTFS_FILE" ]; then
-          echo "ERROR: Rootfs not found for type $ROOTFS_TYPE"
-          exit 1
-        fi
-
-        echo "Extracting $ROOTFS_FILE..."
-        rm -rf rootfs
-        if [[ "$ROOTFS_FILE" == *.tar.gz ]]; then
-          tar -zxf "$ROOTFS_FILE"
-        else
-          tar -xf "$ROOTFS_FILE"
-        fi
-        rm -f "$ROOTFS_FILE"
-        ls -la rootfs/ | head -10
+        echo "=== Placed ==="
+        echo "Toolchains:"; ls build/toolchain/ | head -5
+        echo "U-boot TC:"; ls brandy/brandy-2.0/tools/toolchain/
+        echo "DTC:"; file brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
+        echo "Ramdisk:"; file kernel/linux-5.4/rootfs.cpio.gz
+        echo "Rootfs.ext4:"; ls -lh test/dragonboard/rootfs.ext4
 
     - name: Extract toolchains
       run: |
@@ -128,16 +97,13 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
-    - name: Build rootfs
-      run: ./build.sh rootfs
-
     - name: Pack firmware
       run: ./build.sh pack
 
     - name: Upload firmware
       uses: actions/upload-artifact@v4
       with:
-        name: longan-h618-${{ env.ROOTFS_TYPE }}-firmware
+        name: longan-h618-firmware
         path: out/pack_out/*.img
         retention-days: 30
 
