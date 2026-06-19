@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       rootfs_type:
-        description: 'Rootfs type'
+        description: Rootfs type
         required: false
-        default: 'server'
+        default: server
         type: choice
         options:
           - server
@@ -36,27 +36,12 @@ jobs:
         sudo apt-get clean
         df -h
 
-    - name: Cache build output
-      uses: actions/cache@v4
-      with:
-        path: |
-          out
-          build/toolchain/**/
-          !build/toolchain/*.tar.*
-        key: ${{ runner.os }}-h618-${{ hashFiles('**/Makefile', '**/*.config') }}
-        restore-keys: |
-          ${{ runner.os }}-h618-
-
     - name: Setup build environment
       run: |
         sudo apt-get update
-        sudo apt-get install -y \
-          build-essential git libncurses5-dev libssl-dev \
-          bc bison flex u-boot-tools python3 python3-dev python3-pip \
-          swig device-tree-compiler libpython3-dev cpio gawk \
-          wget unzip dosfstools mtools kmod xz-utils
+        sudo apt-get install -y build-essential git libncurses5-dev libssl-dev bc bison flex u-boot-tools python3 python3-dev python3-pip swig device-tree-compiler libpython3-dev cpio gawk wget unzip dosfstools mtools kmod xz-utils
 
-    - name: Download toolchains from Release
+    - name: Download all toolchains from Release
       run: |
         TOOLCHAIN_TAG="toolchains"
         REPO="${{ github.repository }}"
@@ -67,25 +52,34 @@ jobs:
         import json, sys
         data = json.load(sys.stdin)
         for a in data.get('assets', []):
-            if a['name'].startswith('gcc-'):
-                print(a['name'] + '\t' + a['browser_download_url'])
+            print(a['name'] + '\t' + a['browser_download_url'])
         ")
 
         if [ -z "$ASSETS" ]; then
-          echo "ERROR: Release '$TOOLCHAIN_TAG' not found. Run upload-toolchains.sh first!"
+          echo "ERROR: Release not found!"
           exit 1
         fi
 
+        # 下载内核工具链 (build/toolchain)
+        mkdir -p build/toolchain
         cd build/toolchain
-        rm -f *.tar.xz *.tar.bz2
-
-        echo "$ASSETS" | while IFS=$'\t' read name url; do
+        echo "$ASSETS" | grep -E 'gcc-(arm|linaro)' | grep -v '7.2.1' | while IFS=$'\t' read name url; do
           echo "Downloading $name..."
           wget -q "$url" -O "$name"
         done
+        echo "=== Kernel toolchains ==="
+        ls -lh *.tar.xz *.tar.bz2 2>/dev/null
 
-        echo "=== Downloaded toolchains ==="
-        ls -lh *.tar.xz *.tar.bz2
+        # 下载 u-boot 工具链 (brandy/brandy-2.0/tools/toolchain)
+        cd $GITHUB_WORKSPACE
+        mkdir -p brandy/brandy-2.0/tools/toolchain
+        cd brandy/brandy-2.0/tools/toolchain
+        echo "$ASSETS" | grep '7.2.1' | while IFS=$'\t' read name url; do
+          echo "Downloading $name for u-boot..."
+          wget -q "$url" -O "$name"
+        done
+        echo "=== U-boot toolchain ==="
+        ls -lh *.tar.xz 2>/dev/null
 
     - name: Download rootfs from Release
       run: |
@@ -94,10 +88,9 @@ jobs:
         API_URL="https://api.github.com/repos/${REPO}/releases/tags/${TOOLCHAIN_TAG}"
 
         cd rootfile
-
         ROOTFS_URL=$(curl -s "$API_URL" | python3 -c "
         import json, sys, os
-        rootfs_type = os.environ['ROOTFS_TYPE']
+        rootfs_type = os.environ.get('ROOTFS_TYPE', 'server')
         data = json.load(sys.stdin)
         for a in data.get('assets', []):
             if 'rootfs' in a['name'] and rootfs_type in a['name']:
@@ -106,7 +99,7 @@ jobs:
         ")
 
         if [ -z "$ROOTFS_URL" ]; then
-          echo "ERROR: Rootfs not found for type '$ROOTFS_TYPE'"
+          echo "ERROR: Rootfs not found"
           exit 1
         fi
 
@@ -121,24 +114,32 @@ jobs:
         else
           tar -xf "$ROOTFS_FILE"
         fi
-
-        echo "=== Rootfs contents ==="
-        ls -la rootfs/ | head -20
+        ls -la rootfs/ | head -10
 
     - name: Extract toolchains
       run: |
+        echo "Extracting kernel toolchains..."
         cd build/toolchain
         for f in *.tar.xz *.tar.bz2; do
           if [ -f "$f" ] && [ $(stat -c%s "$f") -gt 1000 ]; then
-            echo "Extracting $f ($(du -h "$f" | cut -f1))..."
+            echo "  $f"
             tar -xf "$f"
           fi
         done
 
+        echo "Extracting u-boot toolchain..."
+        cd $GITHUB_WORKSPACE/brandy/brandy-2.0/tools/toolchain
+        for f in *.tar.xz; do
+          if [ -f "$f" ] && [ $(stat -c%s "$f") -gt 1000 ]; then
+            echo "  $f"
+            tar -xf "$f"
+          fi
+        done
+        ls -la
+
     - name: Configure build
       run: |
         chmod +x build.sh
-        # 1 1 0 0 0 = h618, p1, default, linux-5.4, arm64
         echo -e "1\n1\n0\n0\n0" | ./build.sh config
 
     - name: Build bootloader
@@ -153,7 +154,7 @@ jobs:
     - name: Pack firmware
       run: ./build.sh pack
 
-    - name: Upload firmware artifacts
+    - name: Upload firmware
       uses: actions/upload-artifact@v4
       with:
         name: longan-h618-${{ env.ROOTFS_TYPE }}-firmware
