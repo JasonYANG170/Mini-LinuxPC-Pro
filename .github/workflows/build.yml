@@ -36,23 +36,18 @@ jobs:
         mkdir -p /tmp/assets
         gh release download toolchains --repo ${{ github.repository }} --dir /tmp/assets --pattern "*.tar.xz" --pattern "*.tar.bz2" --pattern "dtc" --pattern "rootfs.cpio.gz" --pattern "rootfs.ext4" --clobber
 
-        # 内核工具链
         mkdir -p build/toolchain
         cp /tmp/assets/gcc-arm-*.tar.xz /tmp/assets/gcc-linaro-5*.tar.* /tmp/assets/gcc-linaro-aarch64.tar.xz /tmp/assets/gcc-linaro-arm.tar.xz /tmp/assets/gcc-linaro.tar.bz2 build/toolchain/ 2>/dev/null || true
 
-        # u-boot 工具链
         mkdir -p brandy/brandy-2.0/tools/toolchain
         cp /tmp/assets/gcc-linaro-7*.tar.xz brandy/brandy-2.0/tools/toolchain/ 2>/dev/null || true
 
-        # dtc
         mkdir -p brandy/brandy-2.0/u-boot-2018/scripts/dtc
         cp /tmp/assets/dtc brandy/brandy-2.0/u-boot-2018/scripts/dtc/
         chmod +x brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
 
-        # rootfs.cpio.gz (ramdisk)
         cp /tmp/assets/rootfs.cpio.gz kernel/linux-5.4/
 
-        # rootfs.ext4 (预构建)
         mkdir -p test/dragonboard
         cp /tmp/assets/rootfs.ext4 test/dragonboard/
 
@@ -83,35 +78,27 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
-    - name: Prepare output and debug
+    - name: Prepare output
       run: |
         source .buildconfig
-        
-        # 创建输出目录
         mkdir -p ${LICHEE_PLAT_OUT}
         cp .buildconfig ${LICHEE_PLAT_OUT}/
         cp test/dragonboard/rootfs.ext4 ${LICHEE_PLAT_OUT}/
-        
         if [ -d "out/kernel/staging" ]; then
           cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
         fi
-        
-        # 调试：检查 dragonsecboot
-        echo "=== Debug dragonsecboot ==="
-        which dragonsecboot || echo "dragonsecboot not in PATH"
-        ls -la tools/pack/pctools/linux/openssl/dragonsecboot 2>/dev/null || echo "dragonsecboot not found in tools"
-        file tools/pack/pctools/linux/openssl/dragonsecboot 2>/dev/null
-        
-        # 测试 dragonsecboot 是否能执行
-        echo "=== Test dragonsecboot ==="
-        tools/pack/pctools/linux/openssl/dragonsecboot --help 2>&1 || echo "dragonsecboot failed with exit code $?"
-        
-        # 检查 pack_out 目录
-        echo "=== Pack out directory ==="
-        ls -la out/pack_out/ 2>/dev/null | head -20
 
-    - name: Pack firmware
-      run: ./build.sh pack
+    - name: Pack firmware (Docker)
+      run: |
+        docker run --rm \
+          -v ${{ github.workspace }}:/workspace \
+          -w /workspace \
+          ubuntu:18.04 \
+          bash -c "
+            apt-get update && apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file &&
+            chmod +x build.sh &&
+            ./build.sh pack
+          "
 
     - name: Upload firmware
       uses: actions/upload-artifact@v4
