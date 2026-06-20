@@ -36,9 +36,6 @@ jobs:
         mkdir -p /tmp/assets
         gh release download toolchains --repo ${{ github.repository }} --dir /tmp/assets --pattern "*.tar.xz" --pattern "*.tar.bz2" --pattern "dtc" --pattern "rootfs.cpio.gz" --pattern "rootfs.ext4" --clobber
 
-        echo "=== Downloaded ==="
-        ls -lh /tmp/assets/
-
         # 内核工具链
         mkdir -p build/toolchain
         cp /tmp/assets/gcc-arm-*.tar.xz /tmp/assets/gcc-linaro-5*.tar.* /tmp/assets/gcc-linaro-aarch64.tar.xz /tmp/assets/gcc-linaro-arm.tar.xz /tmp/assets/gcc-linaro.tar.bz2 build/toolchain/ 2>/dev/null || true
@@ -59,29 +56,18 @@ jobs:
         mkdir -p test/dragonboard
         cp /tmp/assets/rootfs.ext4 test/dragonboard/
 
-        echo "=== Placed ==="
-        echo "Toolchains:"; ls build/toolchain/ | head -5
-        echo "U-boot TC:"; ls brandy/brandy-2.0/tools/toolchain/
-        echo "DTC:"; file brandy/brandy-2.0/u-boot-2018/scripts/dtc/dtc
-        echo "Ramdisk:"; file kernel/linux-5.4/rootfs.cpio.gz
-        echo "Rootfs.ext4:"; ls -lh test/dragonboard/rootfs.ext4
-
     - name: Extract toolchains
       run: |
-        echo "Extracting kernel toolchains..."
         cd build/toolchain
         for f in *.tar.xz *.tar.bz2; do
           if [ -f "$f" ] && [ $(stat -c%s "$f") -gt 1000 ]; then
-            echo "  $f"
             tar -xf "$f"
           fi
         done
 
-        echo "Extracting u-boot toolchain..."
         cd $GITHUB_WORKSPACE/brandy/brandy-2.0/tools/toolchain
         for f in *.tar.xz; do
           if [ -f "$f" ] && [ $(stat -c%s "$f") -gt 1000 ]; then
-            echo "  $f"
             tar -xf "$f"
           fi
         done
@@ -97,27 +83,32 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
-    - name: Prepare output directory
+    - name: Prepare output and debug
       run: |
-        # 读取配置
         source .buildconfig
         
         # 创建输出目录
         mkdir -p ${LICHEE_PLAT_OUT}
-        
-        # 复制 .buildconfig 到输出目录（pack 脚本需要）
         cp .buildconfig ${LICHEE_PLAT_OUT}/
-        
-        # 复制 rootfs.ext4
         cp test/dragonboard/rootfs.ext4 ${LICHEE_PLAT_OUT}/
         
-        # 复制内核产物
         if [ -d "out/kernel/staging" ]; then
           cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
         fi
         
-        echo "=== Output directory ==="
-        ls -lh ${LICHEE_PLAT_OUT}/
+        # 调试：检查 dragonsecboot
+        echo "=== Debug dragonsecboot ==="
+        which dragonsecboot || echo "dragonsecboot not in PATH"
+        ls -la tools/pack/pctools/linux/openssl/dragonsecboot 2>/dev/null || echo "dragonsecboot not found in tools"
+        file tools/pack/pctools/linux/openssl/dragonsecboot 2>/dev/null
+        
+        # 测试 dragonsecboot 是否能执行
+        echo "=== Test dragonsecboot ==="
+        tools/pack/pctools/linux/openssl/dragonsecboot --help 2>&1 || echo "dragonsecboot failed with exit code $?"
+        
+        # 检查 pack_out 目录
+        echo "=== Pack out directory ==="
+        ls -la out/pack_out/ 2>/dev/null | head -20
 
     - name: Pack firmware
       run: ./build.sh pack
