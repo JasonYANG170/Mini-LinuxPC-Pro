@@ -87,9 +87,14 @@ jobs:
         if [ -d "out/kernel/staging" ]; then
           cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
         fi
+        echo "=== .buildconfig paths ==="
+        grep "LICHEE_TOP_DIR\|LICHEE_CHIP_CONFIG_DIR\|LICHEE_PLAT_OUT" .buildconfig
 
     - name: Pack firmware (Docker)
       run: |
+        # 获取 .buildconfig 中的路径
+        source .buildconfig
+        
         docker run --rm \
           -v ${{ github.workspace }}:/workspace \
           -w /workspace \
@@ -98,7 +103,11 @@ jobs:
             apt-get update && apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file &&
             chmod +x build.sh &&
             chmod +x build/mkcommon.sh &&
-            echo -e '1\n1\n0\n0\n0' | ./build.sh config &&
+            # 从输出目录复制 .buildconfig 到根目录
+            cp ${LICHEE_PLAT_OUT}/.buildconfig . &&
+            # 修正路径（替换 /home/runner/work/... 为 /workspace）
+            sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' .buildconfig &&
+            sed -i 's|/root/longan-h618.emcp.test|/workspace|g' .buildconfig &&
             ./build.sh pack
           "
 
