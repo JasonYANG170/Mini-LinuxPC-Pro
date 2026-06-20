@@ -75,7 +75,7 @@ jobs:
         find . -name "rules.mk" -exec sed -i 's/^CC\t\t= gcc$/CC\t\t= gcc -fcommon/' {} \;
         find . -name "rules.mk" -exec sed -i 's/^CXX\t\t= g++$/CXX\t\t= g++ -fcommon/' {} \;
         # 修改 makefile 链接也加 -fcommon
-        sed -i 's/-lstdc++ -static/-lstdc++ -fcommon -static/' makefile
+        sed -i "s/PLATFORM_LIBS = -lstdc++/PLATFORM_LIBS = -lstdc++ -fcommon/" makefile
         make -j$(nproc)
         echo "=== dragonsecboot compiled ==="
         file dragonsecboot
