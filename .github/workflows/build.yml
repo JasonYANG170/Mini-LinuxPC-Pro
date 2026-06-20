@@ -97,6 +97,8 @@ jobs:
           bash -c "
             apt-get update && apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file &&
             chmod +x build.sh &&
+            chmod +x build/mkcommon.sh &&
+            echo -e '1\n1\n0\n0\n0' | ./build.sh config &&
             ./build.sh pack
           "
 
