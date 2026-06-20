@@ -71,15 +71,27 @@ jobs:
       run: |
         cd brandy/brandy-2.0/tools/pack_tools/toc_tools
         make clean 2>/dev/null || true
-        # 修改 rules.mk 添加 -fcommon 到编译器
-        find . -name "rules.mk" -exec sed -i 's/^CC\t\t= gcc$/CC\t\t= gcc -fcommon/' {} \;
-        find . -name "rules.mk" -exec sed -i 's/^CXX\t\t= g++$/CXX\t\t= g++ -fcommon/' {} \;
-        # 修改 makefile 链接也加 -fcommon
-        sed -i "s/PLATFORM_LIBS = -lstdc++/PLATFORM_LIBS = -lstdc++ -fcommon/" makefile
+        # 用环境变量强制所有编译都加 -fcommon
+        export CFLAGS="-fcommon"
+        export CXXFLAGS="-fcommon"
+        export LDFLAGS="-fcommon"
+        # 替换所有子目录的编译器调用
+        find . -name "*.c" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
+        find . -name "*.c" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
+        find . -name "Makefile" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
+        find . -name "Makefile" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
+        find . -name "makefile" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
+        find . -name "makefile" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
+        find . -name "rules.mk" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
+        find . -name "rules.mk" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
+        find . -name "config.mk" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
+        find . -name "config.mk" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
+        # 验证
+        echo "=== rules.mk ==="
+        grep "CC\|CXX" rules.mk | head -5
         make -j$(nproc)
         echo "=== dragonsecboot compiled ==="
         file dragonsecboot
-        ls -lh dragonsecboot
 
     - name: Configure build
       run: |
