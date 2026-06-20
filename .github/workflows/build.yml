@@ -67,6 +67,15 @@ jobs:
           fi
         done
 
+    - name: Compile dragonsecboot from source
+      run: |
+        cd brandy/brandy-2.0/tools/pack_tools/toc_tools
+        make clean 2>/dev/null || true
+        make -j$(nproc)
+        echo "=== dragonsecboot compiled ==="
+        file dragonsecboot
+        ls -lh dragonsecboot
+
     - name: Configure build
       run: |
         chmod +x build.sh
@@ -78,49 +87,22 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
-    - name: Prepare output and fix paths
+    - name: Prepare output
       run: |
         source .buildconfig
-        
-        # 创建输出目录
         mkdir -p ${LICHEE_PLAT_OUT}
         cp .buildconfig ${LICHEE_PLAT_OUT}/
         cp test/dragonboard/rootfs.ext4 ${LICHEE_PLAT_OUT}/
-        
         if [ -d "out/kernel/staging" ]; then
           cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
         fi
-        
-        # 修正根目录 .buildconfig 路径
-        sed -i "s|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|$(pwd)|g" .buildconfig
-        
-        # 修正输出目录 .buildconfig 路径
-        sed -i "s|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|$(pwd)|g" ${LICHEE_PLAT_OUT}/.buildconfig
 
-    - name: Pack firmware (Docker)
+    - name: Pack firmware
       run: |
-        WORKSPACE=$(pwd)
-        
-        docker run --rm \
-          -v ${WORKSPACE}:/workspace \
-          -w /workspace \
-          ubuntu:22.04 \
-          bash -c "
-            dpkg --add-architecture i386 &&
-            apt-get update &&
-            apt-get install -y build-essential python3 python-is-python3 busybox dos2unix bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file libc6:i386 libstdc++6:i386 zlib1g:i386 &&
-            chmod +x build.sh &&
-            chmod +x build/mkcommon.sh &&
-            chmod +x tools/pack/pctools/linux/fsbuild200/fsbuild &&
-            chmod +x tools/pack/pctools/linux/openssl/dragonsecboot &&
-            # 修正 .buildconfig 路径
-            sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' .buildconfig &&
-            sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' out/h618/p1/dragonboard/.buildconfig &&
-            # 运行 config 启动 buildserver
-            echo -e '1\n1\n0\n0\n0' | ./build.sh config &&
-            # 运行 pack
-            ./build.sh pack
-          "
+        # 确保 dragonsecboot 有执行权限
+        chmod +x tools/pack/pctools/linux/openssl/dragonsecboot
+        chmod +x tools/pack/pctools/linux/openssl/*
+        ./build.sh pack
 
     - name: Upload firmware
       uses: actions/upload-artifact@v4
