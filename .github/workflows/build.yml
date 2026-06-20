@@ -70,6 +70,11 @@ jobs:
     - name: Compile dragonsecboot from source
       run: |
         cd brandy/brandy-2.0/tools/pack_tools/toc_tools
+        # 修复 GCC 10+ 多重定义问题
+        sed -i 's/^PLATFORM_LIBS = -lstdc++/PLATFORM_LIBS = -lstdc++ -fcommon/' makefile
+        # 修复所有子目录的编译标志
+        find . -name "*.c" -exec sed -i 's/^CFLAGS\t=/CFLAGS\t= -fcommon /' {} \; 2>/dev/null || true
+        find . -name "config.mk" -exec sed -i 's/^CFLAGS\t=/CFLAGS\t= -fcommon /' {} \; 2>/dev/null || true
         make clean 2>/dev/null || true
         CFLAGS="-fcommon" CXXFLAGS="-fcommon" make -j$(nproc)
         echo "=== dragonsecboot compiled ==="
@@ -99,7 +104,6 @@ jobs:
 
     - name: Pack firmware
       run: |
-        # 确保 dragonsecboot 有执行权限
         chmod +x tools/pack/pctools/linux/openssl/dragonsecboot
         chmod +x tools/pack/pctools/linux/openssl/*
         ./build.sh pack
