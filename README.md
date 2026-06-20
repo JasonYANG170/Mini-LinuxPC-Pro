@@ -1,7 +1,9 @@
-# Longan H618
+# Mini-LinuxPC-Pro
 
 Allwinner H618 SoC 的 Linux BSP 构建系统，基于 Longan SDK。
 
+这个镜像是原厂SDK Linux5.15内核编译的，需要最新Linux6.X主线内核的可以看下**Armbian镜像**: [Armbian-Mini-LinuxPC-Pro](https://github.com/JasonYANG170/Armbian-Mini-LinuxPC-Pro)  
+不过也需要先刷这个镜像作为底包再dd命令刷入Armbian
 ## 硬件信息
 
 - **SoC**: Allwinner H618 (ARM Cortex-A53, 四核)
