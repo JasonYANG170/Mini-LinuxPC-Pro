@@ -91,19 +91,31 @@ jobs:
           cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
         fi
         
-        # 修正根目录 .buildconfig 路径（供 check_env 使用）
+        # 修正根目录 .buildconfig 路径
         sed -i "s|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|$(pwd)|g" .buildconfig
         
-        # 修正输出目录 .buildconfig 路径（供 pack 脚本使用）
+        # 修正输出目录 .buildconfig 路径
         sed -i "s|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|$(pwd)|g" ${LICHEE_PLAT_OUT}/.buildconfig
-        
-        echo "=== 根目录 .buildconfig ==="
-        grep "LICHEE_TOP_DIR\|LICHEE_CHIP_CONFIG_DIR" .buildconfig
-        echo "=== 输出目录 .buildconfig ==="
-        grep "LICHEE_TOP_DIR\|LICHEE_CHIP_CONFIG_DIR" ${LICHEE_PLAT_OUT}/.buildconfig
 
-    - name: Pack firmware
-      run: ./build.sh pack
+    - name: Pack firmware (Docker)
+      run: |
+        # 获取当前工作目录的绝对路径
+        WORKSPACE=$(pwd)
+        
+        docker run --rm \
+          -v ${WORKSPACE}:/workspace \
+          -w /workspace \
+          ubuntu:22.04 \
+          bash -c "
+            apt-get update && apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file &&
+            chmod +x build.sh &&
+            chmod +x build/mkcommon.sh &&
+            # 修正根目录 .buildconfig 路径
+            sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' .buildconfig &&
+            # 修正输出目录 .buildconfig 路径
+            sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' out/h618/p1/dragonboard/.buildconfig &&
+            ./build.sh pack
+          "
 
     - name: Upload firmware
       uses: actions/upload-artifact@v4
