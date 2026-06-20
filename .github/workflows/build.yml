@@ -71,7 +71,7 @@ jobs:
       run: |
         cd brandy/brandy-2.0/tools/pack_tools/toc_tools
         make clean 2>/dev/null || true
-        make -j$(nproc)
+        CFLAGS="-fcommon" CXXFLAGS="-fcommon" make -j$(nproc)
         echo "=== dragonsecboot compiled ==="
         file dragonsecboot
         ls -lh dragonsecboot
