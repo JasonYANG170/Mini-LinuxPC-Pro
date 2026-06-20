@@ -67,32 +67,6 @@ jobs:
           fi
         done
 
-    - name: Compile dragonsecboot from source
-      run: |
-        cd brandy/brandy-2.0/tools/pack_tools/toc_tools
-        make clean 2>/dev/null || true
-        # 用环境变量强制所有编译都加 -fcommon
-        export CFLAGS="-fcommon"
-        export CXXFLAGS="-fcommon"
-        export LDFLAGS="-fcommon"
-        # 替换所有子目录的编译器调用
-        find . -name "*.c" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
-        find . -name "*.c" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
-        find . -name "Makefile" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
-        find . -name "Makefile" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
-        find . -name "makefile" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
-        find . -name "makefile" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
-        find . -name "rules.mk" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
-        find . -name "rules.mk" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
-        find . -name "config.mk" -exec sed -i 's/\bgcc\b/gcc -fcommon/g' {} \;
-        find . -name "config.mk" -exec sed -i 's/\bg++\b/g++ -fcommon/g' {} \;
-        # 验证
-        echo "=== rules.mk ==="
-        grep "CC\|CXX" rules.mk | head -5
-        make -j$(nproc)
-        echo "=== dragonsecboot compiled ==="
-        file dragonsecboot
-
     - name: Configure build
       run: |
         chmod +x build.sh
@@ -104,27 +78,33 @@ jobs:
     - name: Build kernel
       run: ./build.sh kernel
 
-    - name: Prepare output
+    - name: Collect build outputs
       run: |
         source .buildconfig
-        mkdir -p ${LICHEE_PLAT_OUT}
-        cp .buildconfig ${LICHEE_PLAT_OUT}/
-        cp test/dragonboard/rootfs.ext4 ${LICHEE_PLAT_OUT}/
-        if [ -d "out/kernel/staging" ]; then
-          cp -r out/kernel/staging/* ${LICHEE_PLAT_OUT}/ 2>/dev/null || true
-        fi
+        mkdir -p $GITHUB_WORKSPACE/output
+        
+        # u-boot
+        cp ${LICHEE_BRANDY_OUT_DIR}/u-boot-sun50iw9p1.bin $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        cp brandy/brandy-2.0/u-boot-2018/u-boot.bin $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        cp brandy/brandy-2.0/u-boot-2018/spl/u-boot-spl.bin $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        
+        # kernel
+        cp out/kernel/staging/vmlinux $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        cp out/kernel/staging/Image.gz $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        cp out/kernel/staging/sunxi.dtb $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        
+        # rootfs
+        cp test/dragonboard/rootfs.ext4 $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        cp kernel/linux-5.4/rootfs.cpio.gz $GITHUB_WORKSPACE/output/ 2>/dev/null || true
+        
+        echo "=== Build outputs ==="
+        ls -lh $GITHUB_WORKSPACE/output/
 
-    - name: Pack firmware
-      run: |
-        chmod +x tools/pack/pctools/linux/openssl/dragonsecboot
-        chmod +x tools/pack/pctools/linux/openssl/*
-        ./build.sh pack
-
-    - name: Upload firmware
+    - name: Upload build outputs
       uses: actions/upload-artifact@v4
       with:
-        name: longan-h618-firmware
-        path: out/pack_out/*.img
+        name: longan-h618-build-outputs
+        path: output/*
         retention-days: 30
 
     - name: Upload build logs
