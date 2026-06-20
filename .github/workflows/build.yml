@@ -99,7 +99,6 @@ jobs:
 
     - name: Pack firmware (Docker)
       run: |
-        # 获取当前工作目录的绝对路径
         WORKSPACE=$(pwd)
         
         docker run --rm \
@@ -107,13 +106,19 @@ jobs:
           -w /workspace \
           ubuntu:22.04 \
           bash -c "
-            apt-get update && apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file &&
+            dpkg --add-architecture i386 &&
+            apt-get update &&
+            apt-get install -y bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file libc6:i386 libstdc++6:i386 zlib1g:i386 &&
             chmod +x build.sh &&
             chmod +x build/mkcommon.sh &&
-            # 修正根目录 .buildconfig 路径
+            chmod +x tools/pack/pctools/linux/fsbuild200/fsbuild &&
+            chmod +x tools/pack/pctools/linux/openssl/dragonsecboot &&
+            # 修正 .buildconfig 路径
             sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' .buildconfig &&
-            # 修正输出目录 .buildconfig 路径
             sed -i 's|/home/runner/work/Mini-LinuxPC-Pro/Mini-LinuxPC-Pro|/workspace|g' out/h618/p1/dragonboard/.buildconfig &&
+            # 运行 config 启动 buildserver
+            echo -e '1\n1\n0\n0\n0' | ./build.sh config &&
+            # 运行 pack
             ./build.sh pack
           "
 
