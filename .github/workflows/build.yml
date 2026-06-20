@@ -108,7 +108,7 @@ jobs:
           bash -c "
             dpkg --add-architecture i386 &&
             apt-get update &&
-            apt-get install -y build-essential bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file libc6:i386 libstdc++6:i386 zlib1g:i386 &&
+            apt-get install -y build-essential python3 python-is-python3 bc bison flex libssl-dev u-boot-tools cpio dosfstools mtools kmod xz-utils file libc6:i386 libstdc++6:i386 zlib1g:i386 &&
             chmod +x build.sh &&
             chmod +x build/mkcommon.sh &&
             chmod +x tools/pack/pctools/linux/fsbuild200/fsbuild &&
