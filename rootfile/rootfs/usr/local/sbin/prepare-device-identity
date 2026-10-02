@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+if [ ! -e /etc/shadow ]; then
+    umask 077
+    awk -F: '{ print $1 ":!:0:0:99999:7:::" }' /etc/passwd > /etc/shadow
+    chmod 600 /etc/shadow
+fi
+/usr/bin/ssh-keygen -A
