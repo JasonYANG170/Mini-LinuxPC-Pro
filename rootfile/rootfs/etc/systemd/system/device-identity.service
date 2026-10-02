@@ -1,0 +1,7 @@
+[Unit]
+Description=Create unique SSH host keys and locked account database
+Before=ssh.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/prepare-device-identity
+RemainAfterExit=yes

@@ -5,3 +5,12 @@ test/
 rootfile/
 
 
+
+# Private deployment credentials
+.env
+.env.local
+wifi_credentials.local.h
+rootfile/rootfs/etc/shadow*
+rootfile/rootfs/etc/ssh/ssh_host_*_key*
+rootfile/rootfs/etc/ssl/private/*.key
+rootfile/rootfs/root/.bash_history
