@@ -1,3 +1,5 @@
+[简体中文](README.md) | [English](README_en.md)
+
 # Mini-LinuxPC-Pro
 
 Allwinner H618 SoC 的 Linux BSP 构建系统，基于 Longan SDK。
